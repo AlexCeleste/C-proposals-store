@@ -1,0 +1,1553 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>@font-face {
+  font-family: octicons-link;
+  src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM+8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB/aFGpk3jaTY6xa8JAGMW/O62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v+k/0an2i+itHDw3v2+9+DBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3/I7AtxEJLtzzuZfI+VVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy/Lt7Kc+0vWY/gAgIIEqAN9we0pwKXreiMasxvabDQMM4riO+qxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw+ymhce7vwM9jSqO8JyVd5RH9gyTt2+J/yUmYlIR0s04n6+7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv/ocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi+W2+MjCzMIDApSwvXzC97Z4Ig8N/BxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh/8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT+AEjAwuDFpBmA9KMDEwMCh9i/v8H8sH0/4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9/lqYwOGZxeUelN2U2R6+cArgtCJpauW7UQBqnFkUsjAY/kOU1cP+DAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl+vvmM/byA48e6tWrKArm4ZJlCbdsrxksL1AwWn/yBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO//sdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd/89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF+9JOS0nbaaYDCQfwCJ7Au3AHj+LO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm+EBXuAbHmIMSRMs+4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL+hD7C1xoaHeLJSEao0FEW14ckxC+TU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13/+lm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl+9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O/AdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB///AA8AAQAAAAAAAAAAAAAAAAABAAAAAA==) format('woff');
+}
+
+@media (prefers-color-scheme: dark) {
+  body,
+  [data-theme="dark"] {
+    /*dark*/
+    color-scheme: dark;
+    --color-prettylights-syntax-comment: #8b949e;
+    --color-prettylights-syntax-constant: #79c0ff;
+    --color-prettylights-syntax-entity: #d2a8ff;
+    --color-prettylights-syntax-storage-modifier-import: #c9d1d9;
+    --color-prettylights-syntax-entity-tag: #7ee787;
+    --color-prettylights-syntax-keyword: #ff7b72;
+    --color-prettylights-syntax-string: #a5d6ff;
+    --color-prettylights-syntax-variable: #ffa657;
+    --color-prettylights-syntax-brackethighlighter-unmatched: #f85149;
+    --color-prettylights-syntax-invalid-illegal-text: #f0f6fc;
+    --color-prettylights-syntax-invalid-illegal-bg: #8e1519;
+    --color-prettylights-syntax-carriage-return-text: #f0f6fc;
+    --color-prettylights-syntax-carriage-return-bg: #b62324;
+    --color-prettylights-syntax-string-regexp: #7ee787;
+    --color-prettylights-syntax-markup-list: #f2cc60;
+    --color-prettylights-syntax-markup-heading: #1f6feb;
+    --color-prettylights-syntax-markup-italic: #c9d1d9;
+    --color-prettylights-syntax-markup-bold: #c9d1d9;
+    --color-prettylights-syntax-markup-deleted-text: #ffdcd7;
+    --color-prettylights-syntax-markup-deleted-bg: #67060c;
+    --color-prettylights-syntax-markup-inserted-text: #aff5b4;
+    --color-prettylights-syntax-markup-inserted-bg: #033a16;
+    --color-prettylights-syntax-markup-changed-text: #ffdfb6;
+    --color-prettylights-syntax-markup-changed-bg: #5a1e02;
+    --color-prettylights-syntax-markup-ignored-text: #c9d1d9;
+    --color-prettylights-syntax-markup-ignored-bg: #1158c7;
+    --color-prettylights-syntax-meta-diff-range: #d2a8ff;
+    --color-prettylights-syntax-brackethighlighter-angle: #8b949e;
+    --color-prettylights-syntax-sublimelinter-gutter-mark: #484f58;
+    --color-prettylights-syntax-constant-other-reference-link: #a5d6ff;
+    --color-fg-default: #e6edf3;
+    --color-fg-muted: #848d97;
+    --color-fg-subtle: #6e7681;
+    --color-canvas-default: #0d1117;
+    --color-canvas-subtle: #161b22;
+    --color-border-default: #30363d;
+    --color-border-muted: #21262d;
+    --color-neutral-muted: rgba(110,118,129,0.4);
+    --color-accent-fg: #2f81f7;
+    --color-accent-emphasis: #1f6feb;
+    --color-success-fg: #3fb950;
+    --color-success-emphasis: #238636;
+    --color-attention-fg: #d29922;
+    --color-attention-emphasis: #9e6a03;
+    --color-attention-subtle: rgba(187,128,9,0.15);
+    --color-danger-fg: #f85149;
+    --color-danger-emphasis: #da3633;
+    --color-done-fg: #a371f7;
+    --color-done-emphasis: #8957e5;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body,
+  [data-theme="light"] {
+    /*light*/
+    color-scheme: light;
+    --color-prettylights-syntax-comment: #57606a;
+    --color-prettylights-syntax-constant: #0550ae;
+    --color-prettylights-syntax-entity: #6639ba;
+    --color-prettylights-syntax-storage-modifier-import: #24292f;
+    --color-prettylights-syntax-entity-tag: #116329;
+    --color-prettylights-syntax-keyword: #cf222e;
+    --color-prettylights-syntax-string: #0a3069;
+    --color-prettylights-syntax-variable: #953800;
+    --color-prettylights-syntax-brackethighlighter-unmatched: #82071e;
+    --color-prettylights-syntax-invalid-illegal-text: #f6f8fa;
+    --color-prettylights-syntax-invalid-illegal-bg: #82071e;
+    --color-prettylights-syntax-carriage-return-text: #f6f8fa;
+    --color-prettylights-syntax-carriage-return-bg: #cf222e;
+    --color-prettylights-syntax-string-regexp: #116329;
+    --color-prettylights-syntax-markup-list: #3b2300;
+    --color-prettylights-syntax-markup-heading: #0550ae;
+    --color-prettylights-syntax-markup-italic: #24292f;
+    --color-prettylights-syntax-markup-bold: #24292f;
+    --color-prettylights-syntax-markup-deleted-text: #82071e;
+    --color-prettylights-syntax-markup-deleted-bg: #ffebe9;
+    --color-prettylights-syntax-markup-inserted-text: #116329;
+    --color-prettylights-syntax-markup-inserted-bg: #dafbe1;
+    --color-prettylights-syntax-markup-changed-text: #953800;
+    --color-prettylights-syntax-markup-changed-bg: #ffd8b5;
+    --color-prettylights-syntax-markup-ignored-text: #eaeef2;
+    --color-prettylights-syntax-markup-ignored-bg: #0550ae;
+    --color-prettylights-syntax-meta-diff-range: #8250df;
+    --color-prettylights-syntax-brackethighlighter-angle: #57606a;
+    --color-prettylights-syntax-sublimelinter-gutter-mark: #8c959f;
+    --color-prettylights-syntax-constant-other-reference-link: #0a3069;
+    --color-fg-default: #1F2328;
+    --color-fg-muted: #656d76;
+    --color-fg-subtle: #6e7781;
+    --color-canvas-default: #ffffff;
+    --color-canvas-subtle: #f6f8fa;
+    --color-border-default: #d0d7de;
+    --color-border-muted: hsla(210,18%,87%,1);
+    --color-neutral-muted: rgba(175,184,193,0.2);
+    --color-accent-fg: #0969da;
+    --color-accent-emphasis: #0969da;
+    --color-success-fg: #1a7f37;
+    --color-success-emphasis: #1f883d;
+    --color-attention-fg: #9a6700;
+    --color-attention-emphasis: #9a6700;
+    --color-attention-subtle: #fff8c5;
+    --color-danger-fg: #d1242f;
+    --color-danger-emphasis: #cf222e;
+    --color-done-fg: #8250df;
+    --color-done-emphasis: #8250df;
+  }
+}
+
+body {
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: var(--color-canvas-default);
+}
+
+.markdown-body .octicon-link:before {
+  font: normal normal normal 16px/1 octicons-link;
+  display: inline-block;
+  text-decoration: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  content: '\f05c';
+  vertical-align: middle;
+}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  margin: 0;
+  color: var(--color-fg-default);
+  background-color: var(--color-canvas-default);
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body h1:hover .anchor .octicon-link:before,
+.markdown-body h2:hover .anchor .octicon-link:before,
+.markdown-body h3:hover .anchor .octicon-link:before,
+.markdown-body h4:hover .anchor .octicon-link:before,
+.markdown-body h5:hover .anchor .octicon-link:before,
+.markdown-body h6:hover .anchor .octicon-link:before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-color: currentColor;
+  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' aria-hidden='true'><path fill-rule='evenodd' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'></path></svg>");
+  mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' aria-hidden='true'><path fill-rule='evenodd' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'></path></svg>");
+}
+
+.markdown-body details,
+.markdown-body figcaption,
+.markdown-body figure {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body [hidden] {
+  display: none !important;
+}
+
+.markdown-body a {
+  background-color: transparent;
+  color: var(--color-accent-fg);
+  text-decoration: none;
+}
+
+.markdown-body abbr[title] {
+  border-bottom: none;
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: var(--base-text-weight-semibold, 600);
+}
+
+.markdown-body dfn {
+  font-style: italic;
+}
+
+.markdown-body h1 {
+  margin: .67em 0;
+  font-weight: var(--base-text-weight-semibold, 600);
+  padding-bottom: .3em;
+  font-size: 2em;
+  border-bottom: 1px solid var(--color-border-muted);
+}
+
+.markdown-body mark {
+  background-color: var(--color-attention-subtle);
+  color: var(--color-fg-default);
+}
+
+.markdown-body small {
+  font-size: 90%;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body sup {
+  top: -0.5em;
+}
+
+.markdown-body img {
+  border-style: none;
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: var(--color-canvas-default);
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace;
+  font-size: 1em;
+}
+
+.markdown-body figure {
+  margin: 1em 40px;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  overflow: hidden;
+  background: transparent;
+  border-bottom: 1px solid var(--color-border-muted);
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: var(--color-border-default);
+  border: 0;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+  overflow: visible;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body [type=button],
+.markdown-body [type=reset],
+.markdown-body [type=submit] {
+  -webkit-appearance: button;
+  appearance: button;
+}
+
+.markdown-body [type=checkbox],
+.markdown-body [type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body [type=number]::-webkit-inner-spin-button,
+.markdown-body [type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.markdown-body [type=search]::-webkit-search-cancel-button,
+.markdown-body [type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body ::-webkit-input-placeholder {
+  color: inherit;
+  opacity: .54;
+}
+
+.markdown-body ::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body ::placeholder {
+  color: var(--color-fg-subtle);
+  opacity: 1;
+}
+
+.markdown-body hr::before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  overflow: auto;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body details:not([open])>*:not(summary) {
+  display: none !important;
+}
+
+.markdown-body a:focus,
+.markdown-body [role=button]:focus,
+.markdown-body input[type=radio]:focus,
+.markdown-body input[type=checkbox]:focus {
+  outline: 2px solid var(--color-accent-fg);
+  outline-offset: -2px;
+  box-shadow: none;
+}
+
+.markdown-body a:focus:not(:focus-visible),
+.markdown-body [role=button]:focus:not(:focus-visible),
+.markdown-body input[type=radio]:focus:not(:focus-visible),
+.markdown-body input[type=checkbox]:focus:not(:focus-visible) {
+  outline: solid 1px transparent;
+}
+
+.markdown-body a:focus-visible,
+.markdown-body [role=button]:focus-visible,
+.markdown-body input[type=radio]:focus-visible,
+.markdown-body input[type=checkbox]:focus-visible {
+  outline: 2px solid var(--color-accent-fg);
+  outline-offset: -2px;
+  box-shadow: none;
+}
+
+.markdown-body a:not([class]):focus,
+.markdown-body a:not([class]):focus-visible,
+.markdown-body input[type=radio]:focus,
+.markdown-body input[type=radio]:focus-visible,
+.markdown-body input[type=checkbox]:focus,
+.markdown-body input[type=checkbox]:focus-visible {
+  outline-offset: 0;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  line-height: 10px;
+  color: var(--color-fg-default);
+  vertical-align: middle;
+  background-color: var(--color-canvas-subtle);
+  border: solid 1px var(--color-neutral-muted);
+  border-bottom-color: var(--color-neutral-muted);
+  border-radius: 6px;
+  box-shadow: inset 0 -1px 0 var(--color-neutral-muted);
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: var(--base-text-weight-semibold, 600);
+  line-height: 1.25;
+}
+
+.markdown-body h2 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  padding-bottom: .3em;
+  font-size: 1.5em;
+  border-bottom: 1px solid var(--color-border-muted);
+}
+
+.markdown-body h3 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  font-size: 1.25em;
+}
+
+.markdown-body h4 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  font-size: 1em;
+}
+
+.markdown-body h5 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  font-size: .875em;
+}
+
+.markdown-body h6 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  font-size: .85em;
+  color: var(--color-fg-muted);
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+  padding: 0 1em;
+  color: var(--color-fg-muted);
+  border-left: .25em solid var(--color-border-default);
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body tt,
+.markdown-body code,
+.markdown-body samp {
+  font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  font-size: 12px;
+  word-wrap: normal;
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-body input::-webkit-outer-spin-button,
+.markdown-body input::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body .mr-2 {
+  margin-right: var(--base-size-8, 8px) !important;
+}
+
+.markdown-body::before {
+  display: table;
+  content: "";
+}
+
+.markdown-body::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body .absent {
+  color: var(--color-danger-fg);
+}
+
+.markdown-body .anchor {
+  float: left;
+  padding-right: 4px;
+  margin-left: -20px;
+  line-height: 1;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body details {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: var(--color-fg-default);
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1 tt,
+.markdown-body h1 code,
+.markdown-body h2 tt,
+.markdown-body h2 code,
+.markdown-body h3 tt,
+.markdown-body h3 code,
+.markdown-body h4 tt,
+.markdown-body h4 code,
+.markdown-body h5 tt,
+.markdown-body h5 code,
+.markdown-body h6 tt,
+.markdown-body h6 code {
+  padding: 0 .2em;
+  font-size: inherit;
+}
+
+.markdown-body summary h1,
+.markdown-body summary h2,
+.markdown-body summary h3,
+.markdown-body summary h4,
+.markdown-body summary h5,
+.markdown-body summary h6 {
+  display: inline-block;
+}
+
+.markdown-body summary h1 .anchor,
+.markdown-body summary h2 .anchor,
+.markdown-body summary h3 .anchor,
+.markdown-body summary h4 .anchor,
+.markdown-body summary h5 .anchor,
+.markdown-body summary h6 .anchor {
+  margin-left: -40px;
+}
+
+.markdown-body summary h1,
+.markdown-body summary h2 {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.markdown-body ul.no-list,
+.markdown-body ol.no-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.markdown-body ol[type="a s"] {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body ol[type="A s"] {
+  list-style-type: upper-alpha;
+}
+
+.markdown-body ol[type="i s"] {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol[type="I s"] {
+  list-style-type: upper-roman;
+}
+
+.markdown-body ol[type="1"] {
+  list-style-type: decimal;
+}
+
+.markdown-body div>ol:not([type]) {
+  list-style-type: decimal;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: var(--base-text-weight-semibold, 600);
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body table th {
+  font-weight: var(--base-text-weight-semibold, 600);
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid var(--color-border-default);
+}
+
+.markdown-body table td>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table tr {
+  background-color: var(--color-canvas-default);
+  border-top: 1px solid var(--color-border-muted);
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: var(--color-canvas-subtle);
+}
+
+.markdown-body table img {
+  background-color: transparent;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body .emoji {
+  max-width: none;
+  vertical-align: text-top;
+  background-color: transparent;
+}
+
+.markdown-body span.frame {
+  display: block;
+  overflow: hidden;
+}
+
+.markdown-body span.frame>span {
+  display: block;
+  float: left;
+  width: auto;
+  padding: 7px;
+  margin: 13px 0 0;
+  overflow: hidden;
+  border: 1px solid var(--color-border-default);
+}
+
+.markdown-body span.frame span img {
+  display: block;
+  float: left;
+}
+
+.markdown-body span.frame span span {
+  display: block;
+  padding: 5px 0 0;
+  clear: both;
+  color: var(--color-fg-default);
+}
+
+.markdown-body span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+
+.markdown-body span.align-center>span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.markdown-body span.align-center span img {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.markdown-body span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+
+.markdown-body span.align-right>span {
+  display: block;
+  margin: 13px 0 0;
+  overflow: hidden;
+  text-align: right;
+}
+
+.markdown-body span.align-right span img {
+  margin: 0;
+  text-align: right;
+}
+
+.markdown-body span.float-left {
+  display: block;
+  float: left;
+  margin-right: 13px;
+  overflow: hidden;
+}
+
+.markdown-body span.float-left span {
+  margin: 13px 0 0;
+}
+
+.markdown-body span.float-right {
+  display: block;
+  float: right;
+  margin-left: 13px;
+  overflow: hidden;
+}
+
+.markdown-body span.float-right>span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: right;
+}
+
+.markdown-body code,
+.markdown-body tt {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  white-space: break-spaces;
+  background-color: var(--color-neutral-muted);
+  border-radius: 6px;
+}
+
+.markdown-body code br,
+.markdown-body tt br {
+  display: none;
+}
+
+.markdown-body del code {
+  text-decoration: inherit;
+}
+
+.markdown-body samp {
+  font-size: 85%;
+}
+
+.markdown-body pre code {
+  font-size: 100%;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  color: var(--color-fg-default);
+  background-color: var(--color-canvas-subtle);
+  border-radius: 6px;
+}
+
+.markdown-body pre code,
+.markdown-body pre tt {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body .csv-data td,
+.markdown-body .csv-data th {
+  padding: 5px;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 1;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.markdown-body .csv-data .blob-num {
+  padding: 10px 8px 9px;
+  text-align: right;
+  background: var(--color-canvas-default);
+  border: 0;
+}
+
+.markdown-body .csv-data tr {
+  border-top: 0;
+}
+
+.markdown-body .csv-data th {
+  font-weight: var(--base-text-weight-semibold, 600);
+  background: var(--color-canvas-subtle);
+  border-top: 0;
+}
+
+.markdown-body [data-footnote-ref]::before {
+  content: "[";
+}
+
+.markdown-body [data-footnote-ref]::after {
+  content: "]";
+}
+
+.markdown-body .footnotes {
+  font-size: 12px;
+  color: var(--color-fg-muted);
+  border-top: 1px solid var(--color-border-default);
+}
+
+.markdown-body .footnotes ol {
+  padding-left: 16px;
+}
+
+.markdown-body .footnotes ol ul {
+  display: inline-block;
+  padding-left: 16px;
+  margin-top: 16px;
+}
+
+.markdown-body .footnotes li {
+  position: relative;
+}
+
+.markdown-body .footnotes li:target::before {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -24px;
+  pointer-events: none;
+  content: "";
+  border: 2px solid var(--color-accent-emphasis);
+  border-radius: 6px;
+}
+
+.markdown-body .footnotes li:target {
+  color: var(--color-fg-default);
+}
+
+.markdown-body .footnotes .data-footnote-backref g-emoji {
+  font-family: monospace;
+}
+
+.markdown-body .pl-c {
+  color: var(--color-prettylights-syntax-comment);
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: var(--color-prettylights-syntax-constant);
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: var(--color-prettylights-syntax-entity);
+}
+
+.markdown-body .pl-smi,
+.markdown-body .pl-s .pl-s1 {
+  color: var(--color-prettylights-syntax-storage-modifier-import);
+}
+
+.markdown-body .pl-ent {
+  color: var(--color-prettylights-syntax-entity-tag);
+}
+
+.markdown-body .pl-k {
+  color: var(--color-prettylights-syntax-keyword);
+}
+
+.markdown-body .pl-s,
+.markdown-body .pl-pds,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sre,
+.markdown-body .pl-sr .pl-sra {
+  color: var(--color-prettylights-syntax-string);
+}
+
+.markdown-body .pl-v,
+.markdown-body .pl-smw {
+  color: var(--color-prettylights-syntax-variable);
+}
+
+.markdown-body .pl-bu {
+  color: var(--color-prettylights-syntax-brackethighlighter-unmatched);
+}
+
+.markdown-body .pl-ii {
+  color: var(--color-prettylights-syntax-invalid-illegal-text);
+  background-color: var(--color-prettylights-syntax-invalid-illegal-bg);
+}
+
+.markdown-body .pl-c2 {
+  color: var(--color-prettylights-syntax-carriage-return-text);
+  background-color: var(--color-prettylights-syntax-carriage-return-bg);
+}
+
+.markdown-body .pl-sr .pl-cce {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-string-regexp);
+}
+
+.markdown-body .pl-ml {
+  color: var(--color-prettylights-syntax-markup-list);
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-markup-heading);
+}
+
+.markdown-body .pl-mi {
+  font-style: italic;
+  color: var(--color-prettylights-syntax-markup-italic);
+}
+
+.markdown-body .pl-mb {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-markup-bold);
+}
+
+.markdown-body .pl-md {
+  color: var(--color-prettylights-syntax-markup-deleted-text);
+  background-color: var(--color-prettylights-syntax-markup-deleted-bg);
+}
+
+.markdown-body .pl-mi1 {
+  color: var(--color-prettylights-syntax-markup-inserted-text);
+  background-color: var(--color-prettylights-syntax-markup-inserted-bg);
+}
+
+.markdown-body .pl-mc {
+  color: var(--color-prettylights-syntax-markup-changed-text);
+  background-color: var(--color-prettylights-syntax-markup-changed-bg);
+}
+
+.markdown-body .pl-mi2 {
+  color: var(--color-prettylights-syntax-markup-ignored-text);
+  background-color: var(--color-prettylights-syntax-markup-ignored-bg);
+}
+
+.markdown-body .pl-mdr {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-meta-diff-range);
+}
+
+.markdown-body .pl-ba {
+  color: var(--color-prettylights-syntax-brackethighlighter-angle);
+}
+
+.markdown-body .pl-sg {
+  color: var(--color-prettylights-syntax-sublimelinter-gutter-mark);
+}
+
+.markdown-body .pl-corl {
+  text-decoration: underline;
+  color: var(--color-prettylights-syntax-constant-other-reference-link);
+}
+
+.markdown-body g-emoji {
+  display: inline-block;
+  min-width: 1ch;
+  font-family: "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 1em;
+  font-style: normal !important;
+  font-weight: var(--base-text-weight-normal, 400);
+  line-height: 1;
+  vertical-align: -0.075em;
+}
+
+.markdown-body g-emoji img {
+  width: 1em;
+  height: 1em;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item label {
+  font-weight: var(--base-text-weight-normal, 400);
+}
+
+.markdown-body .task-list-item.enabled label {
+  cursor: pointer;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 4px;
+}
+
+.markdown-body .task-list-item .handle {
+  display: none;
+}
+
+.markdown-body .task-list-item-checkbox {
+  margin: 0 .2em .25em -1.4em;
+  vertical-align: middle;
+}
+
+.markdown-body .contains-task-list:dir(rtl) .task-list-item-checkbox {
+  margin: 0 -1.6em .25em .2em;
+}
+
+.markdown-body .contains-task-list {
+  position: relative;
+}
+
+.markdown-body .contains-task-list:hover .task-list-item-convert-container,
+.markdown-body .contains-task-list:focus-within .task-list-item-convert-container {
+  display: block;
+  width: auto;
+  height: 24px;
+  overflow: visible;
+  clip: auto;
+}
+
+.markdown-body ::-webkit-calendar-picker-indicator {
+  filter: invert(50%);
+}
+
+.markdown-body .markdown-alert {
+  padding: var(--base-size-8, 8px) var(--base-size-16, 16px);
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid var(--color-border-default);
+}
+
+.markdown-body .markdown-alert>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body .markdown-alert>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body .markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: var(--base-text-weight-medium, 500);
+  align-items: center;
+  line-height: 1;
+}
+
+.markdown-body .markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-accent-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-accent-fg);
+}
+
+.markdown-body .markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-done-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-done-fg);
+}
+
+.markdown-body .markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-attention-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-attention-fg);
+}
+
+.markdown-body .markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-success-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-success-fg);
+}
+
+.markdown-body .markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-danger-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-danger-fg);
+}
+</style><title>named-loops-2</title></head><body><article class="markdown-body"><pre><code>Proposal for C2y
+WG14 3658
+
+Title:               Simplified lexical scope for labels
+Author, affiliation: Alex Celeste, Perforce
+                     Jan Schultke
+                     Sarah Quiñones
+Date:                2025-07-24
+Proposal category:   Feature refinement
+Target audience:     Compiler implementers, users
+</code></pre>
+<div class="markdown-heading"><h2 class="heading-element">Abstract</h2><a id="user-content-abstract" class="anchor" aria-label="Permalink: Abstract" href="#abstract"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Named loops were accepted into C2Y with consensus from WG14 at the Fall 2024
+meeting. However, the feature as adopted remains contentious because of some
+problems caused by reusing the <code>label:</code> feature in this way. This paper aims
+to show how the major scoping problems of labels can be resolved without
+needing to move away from label syntax, which would deviate from existing
+practice in the field. This paper aims to maintain consistency between C and
+a corresponding C++ feature that is being discussed by WG21.</p>
+<hr>
+<div class="markdown-heading"><h1 class="heading-element">Simplified lexical scope for labels</h1><a id="user-content-simplified-lexical-scope-for-labels" class="anchor" aria-label="Permalink: Simplified lexical scope for labels" href="#simplified-lexical-scope-for-labels"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<pre><code>Reply-to:     Alex Celeste (aceleste@perforce.com)
+Document No:  N3658
+Revises:      N3474
+Date:         2025-07-24
+</code></pre>
+<div class="markdown-heading"><h2 class="heading-element">Summary of Changes</h2><a id="user-content-summary-of-changes" class="anchor" aria-label="Permalink: Summary of Changes" href="#summary-of-changes"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<div class="markdown-heading"><h3 class="heading-element">N3658</h3><a id="user-content-n3658" class="anchor" aria-label="Permalink: N3658" href="#n3658"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<ul>
+<li>apply feedback from Reflector to tidy up wording</li>
+<li>modify Prior Art to talk about label scopes (not named loops in general)</li>
+<li>rebase against latest draft N3550</li>
+</ul>
+<div class="markdown-heading"><h3 class="heading-element">N3474</h3><a id="user-content-n3474" class="anchor" aria-label="Permalink: N3474" href="#n3474"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<ul>
+<li>original proposal, but refer back to <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3355.htm" rel="nofollow">N3355</a> and <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n2859.pdf" rel="nofollow">N2859</a>
+</li>
+</ul>
+<div class="markdown-heading"><h2 class="heading-element">Introduction</h2><a id="user-content-introduction" class="anchor" aria-label="Permalink: Introduction" href="#introduction"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>After adoption of N3355 into C2Y, which provides the core "named loop" functionality,
+various potential issues were identified and laid out by Keane <em>et al.</em> in
+<a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3377.pdf" rel="nofollow">N3377 "Named Loops Should Name Their Loops"</a>.</p>
+<p>For a discussion of the motivations for adopting the functionality itself, which has already been
+accepted into C2Y, please refer to <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3355.htm" rel="nofollow">N3355</a>.</p>
+<div class="markdown-heading"><h3 class="heading-element">Scoping Issues</h3><a id="user-content-scoping-issues" class="anchor" aria-label="Permalink: Scoping Issues" href="#scoping-issues"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>The most important issue identified in that document is that N3355's proposed syntax reuses
+labels, which are currently defined in C to have "function scope". This is a single, non-nesting,
+lexically-unordered scope that spans the entire body of a function definition, in order to allow
+code like this:</p>
+<pre><code>void f (int x, int y)
+{
+  if (x == y) {
+    goto mylabel;  // looks "into" two braced scopes on subsequent lines
+  }                // to find the declaration of the label to jump to
+  
+  for (int z = 0; z &lt; y; ++ z) {
+    if (z &gt; x) {
+      mylabel:
+      g ();
+    }
+  }
+}
+</code></pre>
+<p>...as well as forward jumps within the same level of bracing (used for early-exits), jumps backward
+and potentially into nested braces, and so on. This is useful functionality and core to how <code>goto</code>
+works in C.</p>
+<p>A consequence of this is that, without extensions such as GCC's
+<a href="https://gcc.gnu.org/onlinedocs/gcc/Local-Labels.html" rel="nofollow">locally declared labels</a>, it is not possible to reuse the same label name twice within the same
+function body:</p>
+<pre><code>#define SomeWork(X) ({          \
+  if (bad (X)) goto failblock;  \
+  ...work                       \
+failblock:                      \
+  result;                       \
+})
+
+// cannot be used this way:
+void f (int x, int y) {
+  y = SomeWork(x);
+  y = SomeWork(x);  // error - duplicate 'failblock'
+}
+</code></pre>
+<p>GCC adds locally declared labels (just) to make this possible:</p>
+<pre><code>#define MoreWork(X) ({          \
+  __label__ failblock;          \
+  if (bad (X)) goto failblock;  \
+  ...work                       \
+failblock:                      \
+  result;                       \
+})
+
+void g (int x, int y) {
+  y = MoreWork(x);
+  y = MoreWork(x);  // OK
+}
+</code></pre>
+<p>The <code>__label__</code> feature declares an identifier has having block scope, which can later be used to
+define a <code>goto</code> target. The advantage of this for GCC is that it does not interfere with common
+use of labels in non-GNU parts of the code.</p>
+<p>For named loops, this manifests as every loop in a function having to have a distinct name, even
+if the loop was introduced by a macro. Kean <em>et al.</em> provide an example of an update macro which
+expands to a named loop, but the problem generalizes to:</p>
+<pre><code>void h (int x, int y) {
+  loop: for (int z = 0; z &lt; x; ++ z) {
+    if (z == 10) break loop;
+  }
+  
+  loop: for (int z = 0; z &lt; y; ++ z) {
+    if (z == 10) break loop;
+  }
+}
+</code></pre>
+<p>It is clear enough to a human reader what this means - the name is associated with the block, and
+there is only one reasonable target for the <code>break</code> in each loop - so reusing the name <code>loop</code>
+<em>ought</em> to make exactly as much sense as reusing the name <code>z</code> for the loop counter.
+But C's label scoping rules do not allow this.</p>
+<div class="markdown-heading"><h3 class="heading-element">Other issues</h3><a id="user-content-other-issues" class="anchor" aria-label="Permalink: Other issues" href="#other-issues"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>N3377 also raises a stylistic concern about whether the loop label properly implies the jump target.
+We believe this is ultimately a subjective matter and do not address it here.</p>
+<p>Any syntax will become intuitive if a user makes use of it enough (see also:
+declaration-reflects-use, ternary operators, <code>[static]</code>, ...).</p>
+<p>N3377 raises a concern that because labels can be freely positioned within a block in C23 (and in
+many implementations, already could), an implementation is not required to associate a label with
+the entity it "names". We do not believe this is a real barrier to implementability; from experience
+(Helix QAC already internally treats labels as separate statements, "associating" them with the next
+block item), this is easy enough to work with.</p>
+<div class="markdown-heading"><h2 class="heading-element">Proposed solution</h2><a id="user-content-proposed-solution" class="anchor" aria-label="Permalink: Proposed solution" href="#proposed-solution"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Whereas Keane <em>et al.</em> propose a new kind of syntax for label names, which adds new scoping rules
+for the new form, we propose simply <em>relaxing</em> the scoping rules around labels, for the scenarios
+where the code makes intuitive sense.</p>
+<p>Instead of contorting the concept of "scope" to use it to define labels in a way that <code>goto</code> can
+then use, we propose that the special lookup property becomes associated <em>with the</em> <code>goto</code>
+<em>statement</em> specifically, rather than with labels.</p>
+<p>Labels are not objects and do not have a value (outside of <a href="https://gcc.gnu.org/onlinedocs/gcc/Labels-as-Values.html" rel="nofollow">extensions</a> which we do not propose
+to adopt); they have no storage, and no storage duration, and cannot be used in arbitrary expressions
+(again outside of extensions). Therefore, instead of treating them as having a single consistent
+scope, or kind of scope, we suggest that their lookup should be made <em>entirely context dependent</em>:</p>
+<ul>
+<li>an identifier that appears as the operand to <code>break</code> or <code>continue</code> <em>shall</em> name a containing
+control structure.</li>
+<li>an identifier that appears as the operand to <code>goto</code> <em>shall not</em> be the identifier of more than
+one label within the containing function.</li>
+</ul>
+<p>The effect of this is implicit: labelled <code>break</code> and <code>continue</code> "just work", because the jump
+target is already defined in terms of the containing named control structure ("...the jump exits
+the <code>switch</code> or iteration statement named by the label ..."; "... the jump is to the
+loop-continuation of the iteration statement named by the label ..."). Specifying that lookup
+refers to an "innermost enclosing" control structure is more direct than using scope as a
+tool of abstraction here.</p>
+<p>The <code>goto</code> statement also defines its action in terms of "a label located somewhere in the
+enclosing function" and does not need to make reference to any kind of scope for this to work.</p>
+<p>All existing valid C code making use of <code>goto</code> continues to be valid with these relaxed
+constraints. Additionally, the desirable code above, where the same identifier can name more
+than one loop or <code>switch</code> in the same function body, works in the intuitive and expected way
+without needing additional text.</p>
+<div class="markdown-heading"><h2 class="heading-element">Impact</h2><a id="user-content-impact" class="anchor" aria-label="Permalink: Impact" href="#impact"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>The GCC <a href="https://gcc.gnu.org/onlinedocs/gcc/Labels-as-Values.html" rel="nofollow">Labels as Values</a> extension allows label names to appear within arbitrary expressions,
+and therefore uses a more traditional form of lookup.</p>
+<p>Since this extension is used with <code>goto *</code>, we suggest that the label-address operator <code>&amp;&amp;</code> should
+impose the same constraint as <code>goto</code> itself on any identifier that appears as its operand.</p>
+<p>This should mean all existing code using <code>&amp;&amp;</code> continues to work.</p>
+<p>Currently, the same label (not just the same identifier) can be used to both name a control
+structure, and as the target of a <code>goto</code>. This should continue to work without change so long as
+only one control structure has the given name. If two control structures share the same name,
+the user should not expect <code>goto</code> to work because the target is ambiguous. There is no special
+overlap between constraints here.</p>
+<div class="markdown-heading"><h2 class="heading-element">Alternatives</h2><a id="user-content-alternatives" class="anchor" aria-label="Permalink: Alternatives" href="#alternatives"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<div class="markdown-heading"><h3 class="heading-element">N3377</h3><a id="user-content-n3377" class="anchor" aria-label="Permalink: N3377" href="#n3377"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>A number of potential issues with the alternative syntax proposed in N3377
+<a href="https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2025/p3568r0.html#opposition-to-n3377" rel="nofollow">were also identified by Schultke <em>et al.</em> in P3568</a>.</p>
+<p>N3377 introduces a new kind of label, increasing complexity of the language for users and for
+tooling. It occupies a new position in the syntax, which rules out certain extensions that aim
+to put context-sensitive keywords in that place. Subjectively, it may be more difficult to read
+as it adopts a "middle-endian" convention, and does not fix the subjective issues with label
+placement at the beginning of a loop. It is not symmetric with the rest of the language syntax
+and would not permit extensibility such as block-breaking (not currently proposed for C, but
+logically consistent and present in other languages).</p>
+<p>Further discussion in greater detail is provided in <a href="https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2025/p3568r0.html" rel="nofollow">P3568</a>.</p>
+<div class="markdown-heading"><h3 class="heading-element">GNU locally declared labels</h3><a id="user-content-gnu-locally-declared-labels" class="anchor" aria-label="Permalink: GNU locally declared labels" href="#gnu-locally-declared-labels"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Locally declared labels can be used effectively to solve the specific problem of designing macros
+that are meant to be self-contained and not clash with the user scope or other macros within it.
+The feature is already widely-used in order to provide this capability, especially in combination
+with statement expressions. However, outside of macros, writing it out is subjectively ugly, and
+raises complexity because it requires an explicit opt-in to the "right" semantics by way of an
+extra declaration. It requires a new keyword and introduces more complicated scoping concepts
+instead of simplifying them.</p>
+<p>The interactions between locally-declared labels, regular labels, and other GNU C extensions, is
+also not necessarily entirely clear: by changing the scope discipline, the power of <code>goto</code> is
+also changed to <em>implicitly</em> allow emergent functionalities like jumping out of nested function
+invocations.</p>
+<div class="markdown-heading"><h3 class="heading-element">gensym</h3><a id="user-content-gensym" class="anchor" aria-label="Permalink: gensym" href="#gensym"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>A <a href="http://clhs.lisp.se/Body/f_gensym.htm" rel="nofollow"><code>gensym</code></a> macro could be provided by the implementation or built atop other features like
+<a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3457.htm" rel="nofollow"><code>__COUNTER__</code></a>. This could be used to create new identifiers at the point of expansion, which
+would allow every expansion of a macro relying on label names to be unique.</p>
+<p>This also requires the user to opt-in to the correct or intuitive behaviour, and is similarly
+subjectively ugly and potentially quite difficult to use correctly, depending on how the expansion
+rules are defined. This seems unnecessarily complicated compared to the other available options,
+and cannot be used for the non-macro case at all.</p>
+<div class="markdown-heading"><h2 class="heading-element">C++ Compatibility</h2><a id="user-content-c-compatibility" class="anchor" aria-label="Permalink: C++ Compatibility" href="#c-compatibility"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p><a href="https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2025/p3568r0.html" rel="nofollow">A similar proposal</a> has been presented to WG21 as P3568.</p>
+<p><a href="https://github.com/cplusplus/papers/issues/2212">WG21 voted to strongly support the feature itself</a>, but did not express a strong preference
+between the N3355 syntax and the N3377 syntax.</p>
+<p>WG21 expects to adopt whichever syntax WG14 prefers.</p>
+<div class="markdown-heading"><h2 class="heading-element">Prior Art</h2><a id="user-content-prior-art" class="anchor" aria-label="Permalink: Prior Art" href="#prior-art"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>See <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3355.htm" rel="nofollow">N3355</a> for discussion of Prior Art for the named loop feature itself.</p>
+<p>Loop names may shadow outer loop names in <a href="https://doc.rust-lang.org/reference/names/scopes.html?highlight=label#loop-label-scopes" rel="nofollow">Rust</a>:</p>
+<pre><code>// Loop label shadowing example.
+'a: for outer in 0..5 {
+    'a: for inner in 0..5 {
+        // This terminates the inner loop, but the outer loop continues to run.
+        break 'a;
+    }
+}
+</code></pre>
+<p>This is also allowed in <a href="https://perldoc.perl.org/perlsyn#Loop-Control" rel="nofollow">Perl</a>.</p>
+<p>In <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/branch.html" rel="nofollow">Java</a> (see also <a href="https://docs.oracle.com/javase/specs/jls/se18/jls18.pdf" rel="nofollow">JLS</a> 14.7, 14.15, 14.16), a label's scope is the statement
+it labels, and it cannot be reused within that scope; but it can be reused elsewhere in
+the same method (so two loops can have the same name, but only if they are not nested
+inside one another).</p>
+<p>On the other hand, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/label" rel="nofollow">Javascript</a> does not allow duplicate labels at all, even though
+it supports the same <code>break</code> and <code>continue</code> statement syntax. See <a href="https://ecma-international.org/wp-content/uploads/ECMA-262_14th_edition_june_2023.pdf" rel="nofollow">ECMA-262</a> 8.3.1.</p>
+<div class="markdown-heading"><h3 class="heading-element">Teachability</h3><a id="user-content-teachability" class="anchor" aria-label="Permalink: Teachability" href="#teachability"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>(i.e. consistency with the Prior Art of C itself)</p>
+<p>The advantage of the existing structured jump operators is that the user does not
+need to think about where they jump <em>to</em>, whereas with <code>goto</code>, knowing where the
+target label is, is core to understanding what the jump itself will do.</p>
+<p>We consider that the same principle continues to hold with the named jump variants:</p>
+<ul>
+<li>a <code>break</code> statement always jumps <em>forwards and outwards</em>, regardless of what it
+may or may not name;</li>
+<li>a <code>continue</code> statement always jumps <em>to the end</em> of a containing block (some users
+think of it as jumping "back" to the start, but this isn't quite true and is it
+specified as a forward jump)</li>
+</ul>
+<p>Even with names changing <em>which</em> block the jump targets the end of, the direction of
+the jump and its local effect on execution of the currently-enclosing block is
+completely consistent, no matter what containing control structure is targeted.
+Therefore, statement-local reasoning doesn't change at all, and zooming slightly
+outwards, the reasoning is consistent (<em>more</em> consistent when considering the ability
+to eliminate the asymmetric behaviour of unlabeled jumps w.r.t <code>switch</code>).</p>
+<div class="markdown-heading"><h2 class="heading-element">Proposed wording</h2><a id="user-content-proposed-wording" class="anchor" aria-label="Permalink: Proposed wording" href="#proposed-wording"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>The proposed changes are based on the latest public draft of C2y, which is
+<a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3550.pdf" rel="nofollow">N3550</a>. Bolded text is new text when inlined into an existing sentence.</p>
+<p>Modify 6.2.1 "Scopes of identifiers, type names, and compound literals":</p>
+<p>Modify paragraph 2 to remove the concept of "function scope":</p>
+<blockquote>
+<p>For each different entity <strong>other than a label</strong> that an identifier designates,...</p>
+<p>...name spaces. There are <strong>three</strong> kinds of scopes: file, block, and function prototype.
+(A <em>function prototype</em> is a declaration of a function.)</p>
+</blockquote>
+<p>Delete paragraph 3, and replace by:</p>
+<blockquote>
+<p>A label name is the only kind of identifier that is not associated with any scope.
+The same identifier can appear as the name of more than one label within the same function.
+An identifier that is the name of a label can be used by a <code>goto</code> statement from anywhere
+in the function in which the label appears, including any point before its definition.<sup>footnote)</sup></p>
+<p>footnote) if there is more than one label with the same identifier in a function, the identifier
+cannot be used with <code>goto</code> as the <code>goto</code> statement will not be able to determine the intended target.</p>
+</blockquote>
+<p>A description of the mechanics of named <code>break</code> and <code>continue</code>, or even <code>goto</code>, is not needed here.
+The Constraint is applied in the definition of <code>goto</code> and does not need to be repeated.</p>
+<p>Modify 6.8.2 "Labeled statements":</p>
+<p>Delete paragraph 3 ("shall be unique").</p>
+<p>Modify paragraph 7 to add a number ("1") to the EXAMPLE, and add a second example after it:</p>
+<blockquote>
+<p><strong>EXAMPLE 2</strong>  Labels with the same identifier may name more than one statement within the
+same function:</p>
+<pre><code>loop: for (int z = 0; z &lt; x; ++ z) {
+  /* loop may be used from here, referring to the first instance */
+}
+
+loop: for (int z = 0; z &lt; y; ++ z) {
+  /* loop may be used from here, referring to the second instance */
+}
+</code></pre>
+<p>Both <code>for</code> loops are named by an identifier <code>loop</code>.</p>
+</blockquote>
+<p>Modify 6.8.7.2 "The <code>goto</code> statement", adding a new paragraph to "Constraints" after paragraph 1:</p>
+<blockquote>
+<p>There shall be exactly one label in the enclosing function with the same identifier named by
+a <code>goto</code> statement.</p>
+</blockquote>
+<p>Modify 6.8.7.3 "The <code>continue</code> statement", paragraph 4:</p>
+<blockquote>
+<p>If the <code>continue</code> statement has an identifier operand, the jump is to the loop-continuation of
+the <strong>innermost enclosing</strong> iteration statement named by the label with the corresponding identifier.
+<strong>If the <code>continue</code> statement has no operand</strong>, the jump is to the loop-continuation of the
+innermost enclosing iteration statement.</p>
+</blockquote>
+<p>Modify 6.8.7.4 "The <code>break</code> statement", paragraph 4:</p>
+<blockquote>
+<p>If the <code>break</code> statement has an identifier operand, the jump exits the <strong>innermost enclosing</strong>
+<code>switch</code> or iteration statement named by the label with the corresponding identifier.
+<strong>If the <code>break</code> statement has no operand</strong>, the jump exits the innermost enclosing
+<code>switch</code> or iteration statement.</p>
+</blockquote>
+<p>Optionally, editorially, the order of the above two sentences (in both 6.8.7.3 and 6.8.7.4)
+could be switched to put the no-identifier form first, if this improves readability.</p>
+<p>Modify Annex I, adding a bullet point to I.2:</p>
+<blockquote>
+<ul>
+<li>The same label identifier is used with a <code>goto</code> statement and a <code>break</code> or <code>continue</code>
+statement within a function body (6.8.7).</li>
+</ul>
+</blockquote>
+<p>(notwithstanding the possible future removal of Annex I entirely)</p>
+<div class="markdown-heading"><h2 class="heading-element">Questions for WG14</h2><a id="user-content-questions-for-wg14" class="anchor" aria-label="Permalink: Questions for WG14" href="#questions-for-wg14"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Does WG14 want to accept the proposed change to relax the scoping rules for labels,
+retaining the existing syntax for named loops?</p>
+<div class="markdown-heading"><h2 class="heading-element">Acknowledgements</h2><a id="user-content-acknowledgements" class="anchor" aria-label="Permalink: Acknowledgements" href="#acknowledgements"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Thanks to Jan Schulkte, Sarah Quiñones, and Herb Sutter for supporting this counter
+proposal; and to Javier Múgica and Jens Gustedt for feedback on the change.</p>
+<div class="markdown-heading"><h2 class="heading-element">References</h2><a id="user-content-references" class="anchor" aria-label="Permalink: References" href="#references"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p><a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3550.pdf" rel="nofollow">C2y public draft N3550</a><br>
+<a href="https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2025/p3568r0.html" rel="nofollow">P3568</a><br>
+<a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3355.htm" rel="nofollow">N3355</a><br>
+<a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n2859.pdf" rel="nofollow">N2859</a><br>
+<a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3377.pdf" rel="nofollow">N3377</a><br>
+<a href="https://gcc.gnu.org/onlinedocs/gcc/Local-Labels.html" rel="nofollow">Locally Declared Labels (GCC)</a><br>
+<a href="https://gcc.gnu.org/onlinedocs/gcc/Labels-as-Values.html" rel="nofollow">Labels as Values</a><br>
+<a href="https://doc.rust-lang.org/reference/names/scopes.html?highlight=label#loop-label-scopes" rel="nofollow">Named loops in Rust</a><br>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/label" rel="nofollow">Named loops in Javascript</a><br>
+<a href="https://ecma-international.org/wp-content/uploads/ECMA-262_14th_edition_june_2023.pdf" rel="nofollow">ECMAScript 2023</a><br>
+<a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/branch.html" rel="nofollow">Named loops in Java</a><br>
+<a href="https://docs.oracle.com/javase/specs/jls/se18/jls18.pdf" rel="nofollow">Java language specification</a><br>
+<a href="https://hsutter.github.io/cppfront/cpp2/functions/#loop-names-break-and-continue" rel="nofollow">Named loops in Cpp2</a><br>
+<a href="https://perldoc.perl.org/perlsyn#Loop-Control" rel="nofollow">Named loops in Perl</a><br>
+<a href="https://github.com/cplusplus/papers/issues/2212">WG21 votes on named loops</a><br>
+<a href="http://clhs.lisp.se/Body/f_gensym.htm" rel="nofollow">gensym (Common Lisp Hyper Spec)</a><br>
+<a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3457.htm" rel="nofollow">The <code>__COUNTER__</code> predefined macro</a></p>
+</article></body></html>

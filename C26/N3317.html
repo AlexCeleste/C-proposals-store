@@ -1,0 +1,1793 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>@font-face {
+  font-family: octicons-link;
+  src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM+8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB/aFGpk3jaTY6xa8JAGMW/O62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v+k/0an2i+itHDw3v2+9+DBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3/I7AtxEJLtzzuZfI+VVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy/Lt7Kc+0vWY/gAgIIEqAN9we0pwKXreiMasxvabDQMM4riO+qxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw+ymhce7vwM9jSqO8JyVd5RH9gyTt2+J/yUmYlIR0s04n6+7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv/ocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi+W2+MjCzMIDApSwvXzC97Z4Ig8N/BxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh/8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT+AEjAwuDFpBmA9KMDEwMCh9i/v8H8sH0/4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9/lqYwOGZxeUelN2U2R6+cArgtCJpauW7UQBqnFkUsjAY/kOU1cP+DAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl+vvmM/byA48e6tWrKArm4ZJlCbdsrxksL1AwWn/yBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO//sdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd/89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF+9JOS0nbaaYDCQfwCJ7Au3AHj+LO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm+EBXuAbHmIMSRMs+4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL+hD7C1xoaHeLJSEao0FEW14ckxC+TU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13/+lm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl+9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O/AdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB///AA8AAQAAAAAAAAAAAAAAAAABAAAAAA==) format('woff');
+}
+
+@media (prefers-color-scheme: dark) {
+  body,
+  [data-theme="dark"] {
+    /*dark*/
+    color-scheme: dark;
+    --color-prettylights-syntax-comment: #8b949e;
+    --color-prettylights-syntax-constant: #79c0ff;
+    --color-prettylights-syntax-entity: #d2a8ff;
+    --color-prettylights-syntax-storage-modifier-import: #c9d1d9;
+    --color-prettylights-syntax-entity-tag: #7ee787;
+    --color-prettylights-syntax-keyword: #ff7b72;
+    --color-prettylights-syntax-string: #a5d6ff;
+    --color-prettylights-syntax-variable: #ffa657;
+    --color-prettylights-syntax-brackethighlighter-unmatched: #f85149;
+    --color-prettylights-syntax-invalid-illegal-text: #f0f6fc;
+    --color-prettylights-syntax-invalid-illegal-bg: #8e1519;
+    --color-prettylights-syntax-carriage-return-text: #f0f6fc;
+    --color-prettylights-syntax-carriage-return-bg: #b62324;
+    --color-prettylights-syntax-string-regexp: #7ee787;
+    --color-prettylights-syntax-markup-list: #f2cc60;
+    --color-prettylights-syntax-markup-heading: #1f6feb;
+    --color-prettylights-syntax-markup-italic: #c9d1d9;
+    --color-prettylights-syntax-markup-bold: #c9d1d9;
+    --color-prettylights-syntax-markup-deleted-text: #ffdcd7;
+    --color-prettylights-syntax-markup-deleted-bg: #67060c;
+    --color-prettylights-syntax-markup-inserted-text: #aff5b4;
+    --color-prettylights-syntax-markup-inserted-bg: #033a16;
+    --color-prettylights-syntax-markup-changed-text: #ffdfb6;
+    --color-prettylights-syntax-markup-changed-bg: #5a1e02;
+    --color-prettylights-syntax-markup-ignored-text: #c9d1d9;
+    --color-prettylights-syntax-markup-ignored-bg: #1158c7;
+    --color-prettylights-syntax-meta-diff-range: #d2a8ff;
+    --color-prettylights-syntax-brackethighlighter-angle: #8b949e;
+    --color-prettylights-syntax-sublimelinter-gutter-mark: #484f58;
+    --color-prettylights-syntax-constant-other-reference-link: #a5d6ff;
+    --color-fg-default: #e6edf3;
+    --color-fg-muted: #848d97;
+    --color-fg-subtle: #6e7681;
+    --color-canvas-default: #0d1117;
+    --color-canvas-subtle: #161b22;
+    --color-border-default: #30363d;
+    --color-border-muted: #21262d;
+    --color-neutral-muted: rgba(110,118,129,0.4);
+    --color-accent-fg: #2f81f7;
+    --color-accent-emphasis: #1f6feb;
+    --color-success-fg: #3fb950;
+    --color-success-emphasis: #238636;
+    --color-attention-fg: #d29922;
+    --color-attention-emphasis: #9e6a03;
+    --color-attention-subtle: rgba(187,128,9,0.15);
+    --color-danger-fg: #f85149;
+    --color-danger-emphasis: #da3633;
+    --color-done-fg: #a371f7;
+    --color-done-emphasis: #8957e5;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body,
+  [data-theme="light"] {
+    /*light*/
+    color-scheme: light;
+    --color-prettylights-syntax-comment: #57606a;
+    --color-prettylights-syntax-constant: #0550ae;
+    --color-prettylights-syntax-entity: #6639ba;
+    --color-prettylights-syntax-storage-modifier-import: #24292f;
+    --color-prettylights-syntax-entity-tag: #116329;
+    --color-prettylights-syntax-keyword: #cf222e;
+    --color-prettylights-syntax-string: #0a3069;
+    --color-prettylights-syntax-variable: #953800;
+    --color-prettylights-syntax-brackethighlighter-unmatched: #82071e;
+    --color-prettylights-syntax-invalid-illegal-text: #f6f8fa;
+    --color-prettylights-syntax-invalid-illegal-bg: #82071e;
+    --color-prettylights-syntax-carriage-return-text: #f6f8fa;
+    --color-prettylights-syntax-carriage-return-bg: #cf222e;
+    --color-prettylights-syntax-string-regexp: #116329;
+    --color-prettylights-syntax-markup-list: #3b2300;
+    --color-prettylights-syntax-markup-heading: #0550ae;
+    --color-prettylights-syntax-markup-italic: #24292f;
+    --color-prettylights-syntax-markup-bold: #24292f;
+    --color-prettylights-syntax-markup-deleted-text: #82071e;
+    --color-prettylights-syntax-markup-deleted-bg: #ffebe9;
+    --color-prettylights-syntax-markup-inserted-text: #116329;
+    --color-prettylights-syntax-markup-inserted-bg: #dafbe1;
+    --color-prettylights-syntax-markup-changed-text: #953800;
+    --color-prettylights-syntax-markup-changed-bg: #ffd8b5;
+    --color-prettylights-syntax-markup-ignored-text: #eaeef2;
+    --color-prettylights-syntax-markup-ignored-bg: #0550ae;
+    --color-prettylights-syntax-meta-diff-range: #8250df;
+    --color-prettylights-syntax-brackethighlighter-angle: #57606a;
+    --color-prettylights-syntax-sublimelinter-gutter-mark: #8c959f;
+    --color-prettylights-syntax-constant-other-reference-link: #0a3069;
+    --color-fg-default: #1F2328;
+    --color-fg-muted: #656d76;
+    --color-fg-subtle: #6e7781;
+    --color-canvas-default: #ffffff;
+    --color-canvas-subtle: #f6f8fa;
+    --color-border-default: #d0d7de;
+    --color-border-muted: hsla(210,18%,87%,1);
+    --color-neutral-muted: rgba(175,184,193,0.2);
+    --color-accent-fg: #0969da;
+    --color-accent-emphasis: #0969da;
+    --color-success-fg: #1a7f37;
+    --color-success-emphasis: #1f883d;
+    --color-attention-fg: #9a6700;
+    --color-attention-emphasis: #9a6700;
+    --color-attention-subtle: #fff8c5;
+    --color-danger-fg: #d1242f;
+    --color-danger-emphasis: #cf222e;
+    --color-done-fg: #8250df;
+    --color-done-emphasis: #8250df;
+  }
+}
+
+body {
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: var(--color-canvas-default);
+}
+
+.markdown-body .octicon-link:before {
+  font: normal normal normal 16px/1 octicons-link;
+  display: inline-block;
+  text-decoration: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  content: '\f05c';
+  vertical-align: middle;
+}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  margin: 0;
+  color: var(--color-fg-default);
+  background-color: var(--color-canvas-default);
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body h1:hover .anchor .octicon-link:before,
+.markdown-body h2:hover .anchor .octicon-link:before,
+.markdown-body h3:hover .anchor .octicon-link:before,
+.markdown-body h4:hover .anchor .octicon-link:before,
+.markdown-body h5:hover .anchor .octicon-link:before,
+.markdown-body h6:hover .anchor .octicon-link:before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-color: currentColor;
+  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' aria-hidden='true'><path fill-rule='evenodd' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'></path></svg>");
+  mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' aria-hidden='true'><path fill-rule='evenodd' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'></path></svg>");
+}
+
+.markdown-body details,
+.markdown-body figcaption,
+.markdown-body figure {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body [hidden] {
+  display: none !important;
+}
+
+.markdown-body a {
+  background-color: transparent;
+  color: var(--color-accent-fg);
+  text-decoration: none;
+}
+
+.markdown-body abbr[title] {
+  border-bottom: none;
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: var(--base-text-weight-semibold, 600);
+}
+
+.markdown-body dfn {
+  font-style: italic;
+}
+
+.markdown-body h1 {
+  margin: .67em 0;
+  font-weight: var(--base-text-weight-semibold, 600);
+  padding-bottom: .3em;
+  font-size: 2em;
+  border-bottom: 1px solid var(--color-border-muted);
+}
+
+.markdown-body mark {
+  background-color: var(--color-attention-subtle);
+  color: var(--color-fg-default);
+}
+
+.markdown-body small {
+  font-size: 90%;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body sup {
+  top: -0.5em;
+}
+
+.markdown-body img {
+  border-style: none;
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: var(--color-canvas-default);
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace;
+  font-size: 1em;
+}
+
+.markdown-body figure {
+  margin: 1em 40px;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  overflow: hidden;
+  background: transparent;
+  border-bottom: 1px solid var(--color-border-muted);
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: var(--color-border-default);
+  border: 0;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+  overflow: visible;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body [type=button],
+.markdown-body [type=reset],
+.markdown-body [type=submit] {
+  -webkit-appearance: button;
+  appearance: button;
+}
+
+.markdown-body [type=checkbox],
+.markdown-body [type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body [type=number]::-webkit-inner-spin-button,
+.markdown-body [type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.markdown-body [type=search]::-webkit-search-cancel-button,
+.markdown-body [type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body ::-webkit-input-placeholder {
+  color: inherit;
+  opacity: .54;
+}
+
+.markdown-body ::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body ::placeholder {
+  color: var(--color-fg-subtle);
+  opacity: 1;
+}
+
+.markdown-body hr::before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  overflow: auto;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body details:not([open])>*:not(summary) {
+  display: none !important;
+}
+
+.markdown-body a:focus,
+.markdown-body [role=button]:focus,
+.markdown-body input[type=radio]:focus,
+.markdown-body input[type=checkbox]:focus {
+  outline: 2px solid var(--color-accent-fg);
+  outline-offset: -2px;
+  box-shadow: none;
+}
+
+.markdown-body a:focus:not(:focus-visible),
+.markdown-body [role=button]:focus:not(:focus-visible),
+.markdown-body input[type=radio]:focus:not(:focus-visible),
+.markdown-body input[type=checkbox]:focus:not(:focus-visible) {
+  outline: solid 1px transparent;
+}
+
+.markdown-body a:focus-visible,
+.markdown-body [role=button]:focus-visible,
+.markdown-body input[type=radio]:focus-visible,
+.markdown-body input[type=checkbox]:focus-visible {
+  outline: 2px solid var(--color-accent-fg);
+  outline-offset: -2px;
+  box-shadow: none;
+}
+
+.markdown-body a:not([class]):focus,
+.markdown-body a:not([class]):focus-visible,
+.markdown-body input[type=radio]:focus,
+.markdown-body input[type=radio]:focus-visible,
+.markdown-body input[type=checkbox]:focus,
+.markdown-body input[type=checkbox]:focus-visible {
+  outline-offset: 0;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  line-height: 10px;
+  color: var(--color-fg-default);
+  vertical-align: middle;
+  background-color: var(--color-canvas-subtle);
+  border: solid 1px var(--color-neutral-muted);
+  border-bottom-color: var(--color-neutral-muted);
+  border-radius: 6px;
+  box-shadow: inset 0 -1px 0 var(--color-neutral-muted);
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: var(--base-text-weight-semibold, 600);
+  line-height: 1.25;
+}
+
+.markdown-body h2 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  padding-bottom: .3em;
+  font-size: 1.5em;
+  border-bottom: 1px solid var(--color-border-muted);
+}
+
+.markdown-body h3 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  font-size: 1.25em;
+}
+
+.markdown-body h4 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  font-size: 1em;
+}
+
+.markdown-body h5 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  font-size: .875em;
+}
+
+.markdown-body h6 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  font-size: .85em;
+  color: var(--color-fg-muted);
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+  padding: 0 1em;
+  color: var(--color-fg-muted);
+  border-left: .25em solid var(--color-border-default);
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body tt,
+.markdown-body code,
+.markdown-body samp {
+  font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  font-size: 12px;
+  word-wrap: normal;
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-body input::-webkit-outer-spin-button,
+.markdown-body input::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body .mr-2 {
+  margin-right: var(--base-size-8, 8px) !important;
+}
+
+.markdown-body::before {
+  display: table;
+  content: "";
+}
+
+.markdown-body::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body .absent {
+  color: var(--color-danger-fg);
+}
+
+.markdown-body .anchor {
+  float: left;
+  padding-right: 4px;
+  margin-left: -20px;
+  line-height: 1;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body details {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: var(--color-fg-default);
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1 tt,
+.markdown-body h1 code,
+.markdown-body h2 tt,
+.markdown-body h2 code,
+.markdown-body h3 tt,
+.markdown-body h3 code,
+.markdown-body h4 tt,
+.markdown-body h4 code,
+.markdown-body h5 tt,
+.markdown-body h5 code,
+.markdown-body h6 tt,
+.markdown-body h6 code {
+  padding: 0 .2em;
+  font-size: inherit;
+}
+
+.markdown-body summary h1,
+.markdown-body summary h2,
+.markdown-body summary h3,
+.markdown-body summary h4,
+.markdown-body summary h5,
+.markdown-body summary h6 {
+  display: inline-block;
+}
+
+.markdown-body summary h1 .anchor,
+.markdown-body summary h2 .anchor,
+.markdown-body summary h3 .anchor,
+.markdown-body summary h4 .anchor,
+.markdown-body summary h5 .anchor,
+.markdown-body summary h6 .anchor {
+  margin-left: -40px;
+}
+
+.markdown-body summary h1,
+.markdown-body summary h2 {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.markdown-body ul.no-list,
+.markdown-body ol.no-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.markdown-body ol[type="a s"] {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body ol[type="A s"] {
+  list-style-type: upper-alpha;
+}
+
+.markdown-body ol[type="i s"] {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol[type="I s"] {
+  list-style-type: upper-roman;
+}
+
+.markdown-body ol[type="1"] {
+  list-style-type: decimal;
+}
+
+.markdown-body div>ol:not([type]) {
+  list-style-type: decimal;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: var(--base-text-weight-semibold, 600);
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body table th {
+  font-weight: var(--base-text-weight-semibold, 600);
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid var(--color-border-default);
+}
+
+.markdown-body table td>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table tr {
+  background-color: var(--color-canvas-default);
+  border-top: 1px solid var(--color-border-muted);
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: var(--color-canvas-subtle);
+}
+
+.markdown-body table img {
+  background-color: transparent;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body .emoji {
+  max-width: none;
+  vertical-align: text-top;
+  background-color: transparent;
+}
+
+.markdown-body span.frame {
+  display: block;
+  overflow: hidden;
+}
+
+.markdown-body span.frame>span {
+  display: block;
+  float: left;
+  width: auto;
+  padding: 7px;
+  margin: 13px 0 0;
+  overflow: hidden;
+  border: 1px solid var(--color-border-default);
+}
+
+.markdown-body span.frame span img {
+  display: block;
+  float: left;
+}
+
+.markdown-body span.frame span span {
+  display: block;
+  padding: 5px 0 0;
+  clear: both;
+  color: var(--color-fg-default);
+}
+
+.markdown-body span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+
+.markdown-body span.align-center>span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.markdown-body span.align-center span img {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.markdown-body span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+
+.markdown-body span.align-right>span {
+  display: block;
+  margin: 13px 0 0;
+  overflow: hidden;
+  text-align: right;
+}
+
+.markdown-body span.align-right span img {
+  margin: 0;
+  text-align: right;
+}
+
+.markdown-body span.float-left {
+  display: block;
+  float: left;
+  margin-right: 13px;
+  overflow: hidden;
+}
+
+.markdown-body span.float-left span {
+  margin: 13px 0 0;
+}
+
+.markdown-body span.float-right {
+  display: block;
+  float: right;
+  margin-left: 13px;
+  overflow: hidden;
+}
+
+.markdown-body span.float-right>span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: right;
+}
+
+.markdown-body code,
+.markdown-body tt {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  white-space: break-spaces;
+  background-color: var(--color-neutral-muted);
+  border-radius: 6px;
+}
+
+.markdown-body code br,
+.markdown-body tt br {
+  display: none;
+}
+
+.markdown-body del code {
+  text-decoration: inherit;
+}
+
+.markdown-body samp {
+  font-size: 85%;
+}
+
+.markdown-body pre code {
+  font-size: 100%;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  color: var(--color-fg-default);
+  background-color: var(--color-canvas-subtle);
+  border-radius: 6px;
+}
+
+.markdown-body pre code,
+.markdown-body pre tt {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body .csv-data td,
+.markdown-body .csv-data th {
+  padding: 5px;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 1;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.markdown-body .csv-data .blob-num {
+  padding: 10px 8px 9px;
+  text-align: right;
+  background: var(--color-canvas-default);
+  border: 0;
+}
+
+.markdown-body .csv-data tr {
+  border-top: 0;
+}
+
+.markdown-body .csv-data th {
+  font-weight: var(--base-text-weight-semibold, 600);
+  background: var(--color-canvas-subtle);
+  border-top: 0;
+}
+
+.markdown-body [data-footnote-ref]::before {
+  content: "[";
+}
+
+.markdown-body [data-footnote-ref]::after {
+  content: "]";
+}
+
+.markdown-body .footnotes {
+  font-size: 12px;
+  color: var(--color-fg-muted);
+  border-top: 1px solid var(--color-border-default);
+}
+
+.markdown-body .footnotes ol {
+  padding-left: 16px;
+}
+
+.markdown-body .footnotes ol ul {
+  display: inline-block;
+  padding-left: 16px;
+  margin-top: 16px;
+}
+
+.markdown-body .footnotes li {
+  position: relative;
+}
+
+.markdown-body .footnotes li:target::before {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -24px;
+  pointer-events: none;
+  content: "";
+  border: 2px solid var(--color-accent-emphasis);
+  border-radius: 6px;
+}
+
+.markdown-body .footnotes li:target {
+  color: var(--color-fg-default);
+}
+
+.markdown-body .footnotes .data-footnote-backref g-emoji {
+  font-family: monospace;
+}
+
+.markdown-body .pl-c {
+  color: var(--color-prettylights-syntax-comment);
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: var(--color-prettylights-syntax-constant);
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: var(--color-prettylights-syntax-entity);
+}
+
+.markdown-body .pl-smi,
+.markdown-body .pl-s .pl-s1 {
+  color: var(--color-prettylights-syntax-storage-modifier-import);
+}
+
+.markdown-body .pl-ent {
+  color: var(--color-prettylights-syntax-entity-tag);
+}
+
+.markdown-body .pl-k {
+  color: var(--color-prettylights-syntax-keyword);
+}
+
+.markdown-body .pl-s,
+.markdown-body .pl-pds,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sre,
+.markdown-body .pl-sr .pl-sra {
+  color: var(--color-prettylights-syntax-string);
+}
+
+.markdown-body .pl-v,
+.markdown-body .pl-smw {
+  color: var(--color-prettylights-syntax-variable);
+}
+
+.markdown-body .pl-bu {
+  color: var(--color-prettylights-syntax-brackethighlighter-unmatched);
+}
+
+.markdown-body .pl-ii {
+  color: var(--color-prettylights-syntax-invalid-illegal-text);
+  background-color: var(--color-prettylights-syntax-invalid-illegal-bg);
+}
+
+.markdown-body .pl-c2 {
+  color: var(--color-prettylights-syntax-carriage-return-text);
+  background-color: var(--color-prettylights-syntax-carriage-return-bg);
+}
+
+.markdown-body .pl-sr .pl-cce {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-string-regexp);
+}
+
+.markdown-body .pl-ml {
+  color: var(--color-prettylights-syntax-markup-list);
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-markup-heading);
+}
+
+.markdown-body .pl-mi {
+  font-style: italic;
+  color: var(--color-prettylights-syntax-markup-italic);
+}
+
+.markdown-body .pl-mb {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-markup-bold);
+}
+
+.markdown-body .pl-md {
+  color: var(--color-prettylights-syntax-markup-deleted-text);
+  background-color: var(--color-prettylights-syntax-markup-deleted-bg);
+}
+
+.markdown-body .pl-mi1 {
+  color: var(--color-prettylights-syntax-markup-inserted-text);
+  background-color: var(--color-prettylights-syntax-markup-inserted-bg);
+}
+
+.markdown-body .pl-mc {
+  color: var(--color-prettylights-syntax-markup-changed-text);
+  background-color: var(--color-prettylights-syntax-markup-changed-bg);
+}
+
+.markdown-body .pl-mi2 {
+  color: var(--color-prettylights-syntax-markup-ignored-text);
+  background-color: var(--color-prettylights-syntax-markup-ignored-bg);
+}
+
+.markdown-body .pl-mdr {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-meta-diff-range);
+}
+
+.markdown-body .pl-ba {
+  color: var(--color-prettylights-syntax-brackethighlighter-angle);
+}
+
+.markdown-body .pl-sg {
+  color: var(--color-prettylights-syntax-sublimelinter-gutter-mark);
+}
+
+.markdown-body .pl-corl {
+  text-decoration: underline;
+  color: var(--color-prettylights-syntax-constant-other-reference-link);
+}
+
+.markdown-body g-emoji {
+  display: inline-block;
+  min-width: 1ch;
+  font-family: "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 1em;
+  font-style: normal !important;
+  font-weight: var(--base-text-weight-normal, 400);
+  line-height: 1;
+  vertical-align: -0.075em;
+}
+
+.markdown-body g-emoji img {
+  width: 1em;
+  height: 1em;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item label {
+  font-weight: var(--base-text-weight-normal, 400);
+}
+
+.markdown-body .task-list-item.enabled label {
+  cursor: pointer;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 4px;
+}
+
+.markdown-body .task-list-item .handle {
+  display: none;
+}
+
+.markdown-body .task-list-item-checkbox {
+  margin: 0 .2em .25em -1.4em;
+  vertical-align: middle;
+}
+
+.markdown-body .contains-task-list:dir(rtl) .task-list-item-checkbox {
+  margin: 0 -1.6em .25em .2em;
+}
+
+.markdown-body .contains-task-list {
+  position: relative;
+}
+
+.markdown-body .contains-task-list:hover .task-list-item-convert-container,
+.markdown-body .contains-task-list:focus-within .task-list-item-convert-container {
+  display: block;
+  width: auto;
+  height: 24px;
+  overflow: visible;
+  clip: auto;
+}
+
+.markdown-body ::-webkit-calendar-picker-indicator {
+  filter: invert(50%);
+}
+
+.markdown-body .markdown-alert {
+  padding: var(--base-size-8, 8px) var(--base-size-16, 16px);
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid var(--color-border-default);
+}
+
+.markdown-body .markdown-alert>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body .markdown-alert>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body .markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: var(--base-text-weight-medium, 500);
+  align-items: center;
+  line-height: 1;
+}
+
+.markdown-body .markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-accent-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-accent-fg);
+}
+
+.markdown-body .markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-done-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-done-fg);
+}
+
+.markdown-body .markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-attention-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-attention-fg);
+}
+
+.markdown-body .markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-success-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-success-fg);
+}
+
+.markdown-body .markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-danger-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-danger-fg);
+}
+</style><title>void-which-joins</title></head><body><article class="markdown-body"><pre><code>Proposal for C2y
+WG14 3317
+
+Title:               Essential Effects for C
+Author, affiliation: Alex Celeste, Perforce
+Date:                2024-08-19
+Proposal category:   New feature, discussion
+Target audience:     Compiler implementers, users
+</code></pre>
+<div class="markdown-heading"><h2 class="heading-element">Abstract</h2><a id="user-content-abstract" class="anchor" aria-label="Permalink: Abstract" href="#abstract"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>In this discussion proposal we suggest that C would be improved by extending the
+core type system into a <em>type and effect</em> system, that forces functions and
+blocks to declare which classes of effects will result from their evaluation.
+We show how this can be used to improve composability in metaprogramming, and
+can be used to define MISRA-style restrictions more easily through signatures
+expressed in the core language. The extended notion of type allows us to model
+C's primitive language constructs as operators with a checkable signature.</p>
+<p>We only propose <em>effect tracking</em> and <em>effect checking</em>, and not to introduce
+dynamic <em>effect handling</em> at this time.</p>
+<hr>
+<div class="markdown-heading"><h1 class="heading-element">Essential Effects for C</h1><a id="user-content-essential-effects-for-c" class="anchor" aria-label="Permalink: Essential Effects for C" href="#essential-effects-for-c"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<pre><code>Reply-to:     Alex Celeste (aceleste@perforce.com)
+Document No:  N3317
+Revises:      N/A
+Date:         2024-08-19
+</code></pre>
+<div class="markdown-heading"><h2 class="heading-element">Summary of Changes</h2><a id="user-content-summary-of-changes" class="anchor" aria-label="Permalink: Summary of Changes" href="#summary-of-changes"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<div class="markdown-heading"><h3 class="heading-element">N3317</h3><a id="user-content-n3317" class="anchor" aria-label="Permalink: N3317" href="#n3317"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<ul>
+<li>original proposal to WG14, but a previous version of this document was submitted
+to the MISRA C WG's document log.</li>
+</ul>
+<div class="markdown-heading"><h2 class="heading-element">Introduction</h2><a id="user-content-introduction" class="anchor" aria-label="Permalink: Introduction" href="#introduction"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>A formalized <em>effect system</em> keeps track of the side effects of expressions and
+statements in a program at a finer level of granularity than usually expressible
+in C.</p>
+<p>An <em>effect system</em> is usually combined with a type system, so that the side effects
+potentially involved in the production of a value are tracked, alongside the type
+of the result value. Effect systems may be either fully static, or partially
+value-dependent.</p>
+<p>A conventional notation for the <em>type-and-effect</em> of a value-producing expression
+is:</p>
+<pre><code>expr: type ! { effect } region
+</code></pre>
+<p>where <code>expr</code> is the object or expression being typed, <code>type</code> is its in-language
+or dialect type (such as the C Standard language type or the MISRA essential type),
+<code>{ effect }</code> is a union of all effects triggered by the evaluation of <code>expr</code>, and
+<code>region</code> is the name of a category of objects or memory to which those effects
+may apply.</p>
+<p>By encoding the actions available to a function into the type system as effects,
+it is possible to statically ensure that specific effects do or do not occur in
+certain places, that callbacks or library functions are safe to use for sensitive
+tasks, and that effects that do occur are <em>handled</em> so that they do not escape
+to the wider calling context (which can even imply static verification of resource
+management).</p>
+<p>Effect systems generalize the C23 features of <code>[[reproducible]]</code> and <code>[[unsequenced]]</code>
+attributes for functions, which guarantee that the annotated functions are free
+of certain effect classes.</p>
+<div class="markdown-heading"><h2 class="heading-element">Proposed application</h2><a id="user-content-proposed-application" class="anchor" aria-label="Permalink: Proposed application" href="#proposed-application"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>The proposal is that every statement, expression, subexpression and complete
+function body in a TU has a <em>type-and-effect</em>. For the purposes of the
+combined <em>type-and-effect</em>, the type component of the <em>type-and-effect</em> of a
+non-expression statement is defined as <code>void</code>.</p>
+<p>The effect of an expression or statement is the (counted) union of the effects
+of <em>all</em> subexpressions syntactically included in the construct. Therefore, this
+proposal is for a complete static, non-value-dependent effect system that does
+not consider reachability or symmetric operations.</p>
+<p>Objects do not have an effect, only a type, though their initialization
+expression will have a (possibly-empty) effect.</p>
+<p>Some operations introduce a new explicit effect by themselves. For instance, the
+assignment operator <code>=</code> introduces a write effect.</p>
+<p>When the effects of an operation and its operands are combined, the result effect
+counts the number of sub-effects as well as their classes. For instance, a binary
+operation with a write effect in both the lhs and rhs operands contains <em>two</em>
+write effects in addition to any others that may be introduced.</p>
+<p>Explicit regions are not currently proposed. Instead, the model proposes that
+all effects have an implicitly global region. Finer granularity is achieved by
+splitting the effect classes themselves (i.e. separation of local and non-local
+writes into different effects).</p>
+<p>Note that an expression with no traced effects is a distinct concept from a
+constant expression, as it may still involve "pure" reads from non-constant
+objects, which are not recorded. This is captured by the <code>[[reproducible]]</code>
+attribute added to C23.</p>
+<div class="markdown-heading"><h3 class="heading-element">List of proposed effects</h3><a id="user-content-list-of-proposed-effects" class="anchor" aria-label="Permalink: List of proposed effects" href="#list-of-proposed-effects"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>The proposed "essential" effects are broken into three major groups:</p>
+<ul>
+<li>
+<p>Local:</p>
+<ul>
+<li>
+<code>mut</code>: local write or assignment, countable</li>
+<li>
+<code>vol</code>: volatile access (should this be persistent?), countable</li>
+</ul>
+</li>
+<li>
+<p>Persistent:</p>
+<ul>
+<li>
+<code>write</code>: non-local write or assignment, countable, implies <code>mut</code>
+</li>
+<li>
+<code>mem</code>: memory manipulation (allocation or free)</li>
+<li>
+<code>lock</code>: exclusive lock acquire or release</li>
+<li>
+<code>file</code>: external resource manipulation</li>
+<li>
+<code>errno</code>: sets <code>errno</code> (or other named out-of-band flags?), implies <code>write</code>
+</li>
+<li>
+<code>system</code>: hosted os state manipulation (? out of scope? usefully distinct from <code>file</code>?)</li>
+</ul>
+</li>
+<li>
+<p>Control:</p>
+<ul>
+<li>
+<code>jump</code>: non-local control transfer (signal, <code>noreturn</code> call, <code>longjmp</code>, panic)</li>
+</ul>
+</li>
+<li>
+<p>Any:</p>
+<ul>
+<li>the <code>wild</code> effect to explicitly indicate unknown / any action</li>
+<li>the <code>none</code> effect is a name for the empty set of effects</li>
+</ul>
+</li>
+</ul>
+<p>Regions <em>could</em> also be used to express parts of this hierarchy: for example,
+<code>mem</code> and <code>file</code> could be viewed as applications of a single <code>resource</code> effect
+over two regions indicating internal-to-program and external-to-program resources.
+Similarly, <code>mut</code> and <code>write</code> could be viewed as two separate applications of a
+single assignment effect to local and non-local object regions. However, it is
+proposed that splitting the effects as a whole is simpler than using explicit
+regions.</p>
+<p><strong>Question:</strong> which other explicit effect classes would be useful?
+e.g. thread creation?</p>
+<p><strong>Question:</strong> are there other useful major groups?</p>
+<p><strong>Question:</strong> are there any effect classes other than <code>write</code> for which we might
+prefer regions to allow combined counting? (in the current proposal we need
+these classes to be separate so that <code>mut</code> can be discarded, see below)</p>
+<p>Segfaults, floating point exceptions, non-volatile reads, etc. may have
+observable effects within the program but are not proposed as useful to track
+on this level.</p>
+<p>A concrete notation for annotating effects is not part of this proposal.
+A proposal for notation in attributes will follow if the core concept is adopted.
+Comment-based pseudocode is used in this document.</p>
+<div class="markdown-heading"><h3 class="heading-element">Propagation</h3><a id="user-content-propagation" class="anchor" aria-label="Permalink: Propagation" href="#propagation"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Within a scope block, <em>all</em> effects of subexpressions and nested statements
+<em>unconditionally</em> propagate to their containing expressions and statements.
+For example:</p>
+<pre><code>extern int x;
+void f1 (int k) { // TE: void ! write
+
+  if (0) {   // TE: void ! write
+    x = k;   // TE: int ! { mut | write }
+  }
+
+  volatile j = 0;
+  int y =      // TE: int ! { mut | vol }
+    (x == 1    // TE: int ! none
+    ? k = 1    // TE: int ! mut
+    : j &gt; 0);  // TE: int ! vol
+}
+</code></pre>
+<p>At the function boundary, effects in the Local group are discarded, as this group
+signifies effects that are primarily of interest w.r.t correct ordering.</p>
+<p>As shown above, some operations can introduce two effects at once: a write to a
+non-automatic <em>lvalue</em> introduces both the <code>mut</code> effect (to count assignments)
+and the <code>write</code> effect to the containing function. Similarly, a write to a
+<code>volatile</code>-qualified <em>lvalue</em> would introduce both the <code>mut</code> and <code>vol</code> effects
+to the result expression. A write to a non-local <code>volatile</code>-qualified <em>lvalue</em>
+would introduce all three in a single operation.</p>
+<p>When two effects are combined that contain the same class, if the effect class
+is "countable", the number of occurrences in each sub-effect are summed:</p>
+<pre><code>void f2 (int k, int j) {
+  int x = 0;   // TE: int ! none
+
+  x = k;       // TE: int ! mut
+
+  x = (        // TE: int ! mut(2)
+    j = k      // TE: int ! mut
+  );
+
+  x = (        // TE: int ! mut(2)
+    k = 1,     // TE: int ! mut
+    j = 2      // TE: int ! mut
+  );
+
+  x = (             // TE: int ! mut(2)
+    k == 1 ? j = 0  // TE: int ! mut
+           : j = 2  // TE: int ! mut
+  );
+
+  (x = 1) &amp;&amp; (j = 1);  // TE: int ! mut(2)
+  (x = 0) &amp;&amp; (j = 1);  // TE: int ! mut(2) // (unconditionally)
+
+  volatile a = 0;
+  x = false    // TE: int ! vol
+    ? a &gt; 1    // TE: int ! vol
+    : j &gt; 1;   // TE: int ! none
+
+  x = false    // TE: int ! vol(2) // (unconditionally)
+    ? a &gt; 1    // TE: int ! vol
+    : a &lt; 1;   // TE: int ! vol
+}
+</code></pre>
+<p>This illustrates some asymmetries between effect and type, for instance, we
+introduce a concept of <em>effect magnitude</em>, and the effect of a subexpression is
+<strong>not lost</strong> even when its value (and therefore its type) is discarded or converted
+in such a way that it does not contribute to the expression's result value.</p>
+<p>The summing is one-directional - this mechanism would not allow resource-class
+effects to "cancel out" (which is why they are not marked as countable above):</p>
+<pre><code>void f3 (int sz) {         // TE: void ! mem
+  void * p = malloc (sz);  // TE: void * ! mem
+  free (p);                // TE: void ! mem
+}
+</code></pre>
+<p>The above function is not "pure", and by not allowing effects to subtract, this
+is communicated. A memory operation happened, and then another memory operation
+happened - correct resource handling is a separate concern from immediate effect
+tracking, i.e. even though the function correctly disposed of the resource, the
+effect communicates that it relies on a working <code>malloc</code> implementation.</p>
+<p>The effect of an external function whose body is not visible, and whose effects
+are not otherwise specified to the system, is assumed to be a union of all effects
+listed in the Persistent and Control groups:</p>
+<pre><code>extern int action (int);
+void f4 (int k) {
+  int x = action (k);  // TE: int ! { write | mem | lock | file | errno | jump } AKA int ! wild
+}
+</code></pre>
+<p>The <code>wild</code> effect signifies that an action is a total unknown.</p>
+<p>Note: resource matching <em>could</em> be communicated by an effect system, but it would
+need to be both dependent and heavily region-annotated (as found in <a href="https://www.microsoft.com/en-us/research/video/deputy-dependent-types-for-safe-systems-software/" rel="nofollow">Deputy for C</a>).
+A simplified version that simply tried to "decrement <code>mem</code> on <code>free</code>" would
+not be able to statically prove that the right resources are released, only
+that <em>some</em> resource was released.</p>
+<p>Therefore this method of effect combination/propagation is completely flow-
+independent, including in the case of completely linear control flow.</p>
+<p>An effect with more classes or a higher count for a given class is <em>stronger</em>
+than an effect with fewer classes or a lower count. Analogous to qualification,
+every effect class within the effect must be stronger for the whole effect to
+be considered stronger. An effect can be implicitly converted to a strictly
+stronger effect (see below), so for instance <code>mut</code> can convert to <code>{ mut | vol }</code>;
+like with qualifiers, if the target effect is not <em>strictly</em> stronger the
+effect cannot be converted (<code>mut</code> cannot convert to <code>vol</code> in the same way that
+<code>T const *</code> cannot convert to <code>T volatile *</code> - implicitly adding the <code>vol</code> or
+<code>volatile</code> qualifier is fine, but losing the <code>mut</code> or <code>const</code> is not).</p>
+<div class="markdown-heading"><h3 class="heading-element">Effect signatures vs type signatures</h3><a id="user-content-effect-signatures-vs-type-signatures" class="anchor" aria-label="Permalink: Effect signatures vs type signatures" href="#effect-signatures-vs-type-signatures"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>An effect signature is similar in concept to a type signature but the resulting
+effect does not describe quite the same thing.</p>
+<p>Roughly, a function signature describes a mapping from <em>input types</em> to an
+<em>output type</em>:</p>
+<pre><code>add :: (num, num) -&gt; num
+</code></pre>
+<p>It can be polymorphic or dependent, in which case when applied the output is
+affected by the input:</p>
+<pre><code>map :: (('a -&gt; 'b) , ['a]) -&gt; ['b]
+alloca :: (int 'A) -&gt; int(*)['A]
+</code></pre>
+<p>Because effects describe <em>actions</em> rather than <em>values</em>, an effect signature for
+any given entity class is similar to the type signature for the entity class
+one level "down":</p>
+<ul>
+<li><code>void</code></li>
+<li>objects and values have a value type, and an effect of <code>none</code> because they
+don't "do" anything</li>
+<li>first-order functions have a type that maps an input value to an output
+value, and an atomic effect because they only have one "action" in the body;
+the arguments are <em>values</em>, and therefore don't contribute to the effect at all</li>
+<li>higher-order functions have a type that maps a function type to value types;
+if they run the function, its effects form part of the result effect, so
+these have an effect that resembles a signature</li>
+<li>built-in language constructs like the operators, <code>if</code>, etc. have an effect
+signature that resembles the type signature of a higher-order function,
+because they accept one or more <em>fragments</em>, with an effect, as their
+operands, and execute them somehow to produce a combined effect</li>
+</ul>
+<p>Therefore, the effect of most functions is "value-like" in the sense of being
+shaped like the <em>type</em> of an object:</p>
+<pre><code>extern int x;
+
+// foo :: (int) -&gt; int ! write
+int foo (int y) { return (x += y); }  // type is (int) -&gt; int
+                                      // effect is !write - NO arrow
+</code></pre>
+<p>If <code>foo</code> is called like:</p>
+<pre><code>foo (++x);      // TE: void ! write
+foo (--local);  // TE: void ! { write | mut }
+</code></pre>
+<p>the effects of the arguments don't contribute to the effect of <code>foo</code>. They
+instead contribute to the effect of the <code>()</code> operator, which is polymorphic.
+In the effect system, <code>foo</code> has a signature "like" a value and <code>()</code> and other
+operators have signatures "like" functions.</p>
+<p>All of this is important in two ways, one of which is that we need to distinguish
+two different kinds of effect annotations:</p>
+<ul>
+<li>descriptive signatures, which capture the entire polymorphic effect of an entity</li>
+<li>effect checks, which do not describe the <em>resulting</em> effect but instead place a
+constraint on the inputs and outputs</li>
+</ul>
+<div class="markdown-heading"><h3 class="heading-element">Effect checking</h3><a id="user-content-effect-checking" class="anchor" aria-label="Permalink: Effect checking" href="#effect-checking"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<blockquote>
+<p>If we want to restrict which effects can <em>appear in</em> the arguments to a function,
+or operands of an infix operator, this is a different annotation (at least in any
+readable format) from describing the full polymorphic signature of the operator;
+so we need a second kind of signature. In an <em>effect check</em> signature, the
+effects specified in the parameter and result positions designate a "maximum"
+effect rather than a concrete effect:</p>
+<pre><code>// op :&gt; (int ! mut(1), int ! mut(1)) -&gt; int ! mut(1)
+</code></pre>
+<p>This is the <em>effect check</em> signature for an operator that specifies that at most
+one <code>mut</code> effect may occur as a result of evaluation: the effect of the left
+operand will match <code>mut(1)</code> if it is <code>none</code>, because of the rule that an effect
+is implicitly convertible to a stronger effect. This also specifies <code>mut(1)</code>
+for the result check: this is also a maximum strength rather than a specification
+of what the result <em>will</em> be, that checks the actual result effect and specifies
+it <em>must be</em> no stronger than <code>mut(1)</code>, not that it actually is <code>mut(1)</code>. (It
+relies on the separate definition of the polymorphic effect of the operator as
+composing its left and right effects.)</p>
+</blockquote>
+<p>Therefore, an operand checks that its <em>type-and-effect</em> has <em>no</em> effects that are
+<em>not</em> specified for that operand, or if a magnitude is specified, not more than
+that magnitude. If an expression contains an effect class that is unspecified, or
+a specified effect class but with a magnitude higher than one explicitly-specified,
+a <em>constraint</em> is violated. (Generally we only care about a magnitude of 1, for
+<code>mut</code>/<code>vol</code>.)</p>
+<p>The result effect is the propagated effect of the operands plus any other effect
+the operation is specified as introducing in its descriptive signature.</p>
+<p>For instance, we might propose that arithmetic operations may only evaluate
+pure values and sequence-independent volatile accesses:</p>
+<pre><code>int a, b;
+volatile c, d;
+int e (int x, int y) { return x + y; }
+int f (void);
+
+// + :&gt; (int ! vol(1), int ! vol(1)) -&gt; int ! vol(1)
+
+a + b;        // OK, int ! none
+a + c;        // OK, int ! vol(1)
+c + d;        // Error: int ! vol(2)
+a + e(a, b);  // OK, int ! none
+a + e(c, b);  // OK, int ! vol(1)
+d + e(c, b);  // Error: int ! vol(2)
+a + f();      // Error: int ! Persistent
+</code></pre>
+<p>The effect annotation allows a <em>maximum</em> <code>vol</code> of 1 in either operand of <code>+</code>, but
+also allows a maximum <code>vol</code> of 1 for the entire expression, which means that
+at most one operand can have the <code>vol</code> effect at all. (It doesn't specify that
+the result <em>has</em> <code>vol(1)</code> if neither operand does.)</p>
+<p>(note: not actually proposing this restriction!)</p>
+<p>We could also provide specified effect checks for known functions, such
+as <code>malloc</code> - say we wanted to ensure that the size property was always pure
+(again, not proposing we do so), as well as refining the effect on the (system,
+opaque) <code>malloc</code> implementation to just <code>mem</code>:</p>
+<pre><code>// malloc :&gt; (int ! none) -&gt; mem
+
+void * p = NULL;
+p = malloc (6);                      // OK, parameter is int ! none
+p = malloc (d);                      // Error: parameter is int ! vol
+p = malloc (sizeof (int) * e(a, b)); // OK
+p = malloc (sizeof (int) * (a = b)); // Error: int ! mut
+p = malloc (f ());                   // Error: int ! Persistent
+</code></pre>
+<div class="markdown-heading"><h3 class="heading-element">Proposed recommended practice</h3><a id="user-content-proposed-recommended-practice" class="anchor" aria-label="Permalink: Proposed recommended practice" href="#proposed-recommended-practice"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>With the above, we can provide a table of recommended practices, analogous
+to the operator table for MISRA's <em>essential types</em>.</p>
+<p><strong>Question:</strong> what are the permitted effects for each category of operator?</p>
+<p>We can generalize effect rules across expression statements and controlling
+expressions so that we do not need special-case rules for where certain operations
+can appear.</p>
+<p>Proposal: every expression statement, operand, and controlling expression should
+be <em>recommended</em> to the effect magnitudes 1 for the <code>mut</code> and <code>vol</code> classes
+(i.e. the effect signature of every expression should either not include <code>mut</code>
+or <code>vol</code>, or only include them as <code>mut(1)</code> or <code>vol(1)</code> respectively). This
+removes the need to ensure that assignments, modifications and volatile
+accesses are fully-sequenced (even if we fix evaluation order), making them
+much easier to read and reason about.</p>
+<p>Proposal: initializers, function calls, and arithmetic operators should not
+include the <code>mut</code> effect class in the the <em>type-and-effect</em> of their operands,
+with a recommendation to diagnose:</p>
+<pre><code>// +, *, - etc. :&gt; (int ! vol(1)
+//                , int ! vol(1)) -&gt; int ! vol(1)
+</code></pre>
+<p>Or alternatively, to ensure readability and understand-ability without needing
+to rely on strict order of evaluation, allow only one <code>mut</code> so that its
+order is less important:</p>
+<pre><code>// +, *, - etc. :&gt; (int ! { mut(1), vol(1) }
+//                , int ! { mut(1), vol(1) }) -&gt; int ! { mut(1), vol(1) }
+</code></pre>
+<p>For control structures, specifying an effect check for the operand expressions
+is analogous to specifying a type for a function's parameters and would indicate
+a maximum recommended effect (not the same as the "operator signature" for the
+control structure itself, see below):</p>
+<pre><code>// for-clause-1 :&gt; T ! { Local | Persistent }
+// for-clause-2 :&gt; T ! vol(1)
+// for-clause-3 :&gt; T ! { Persistent | Local(1) }
+
+// alternatively
+// for :&gt; (!{ Local | Persistent }  // ignores type component
+         , !vol(1)
+         , !{ Persistent | Local(1) }
+         , !wild) // effect of the secondary-block is part of the signature!
+       -&gt; void ! wild
+</code></pre>
+<p>Recommendations like these incorporates some notions about readability. Other
+generalizations are possible.</p>
+<p>Specifying <em>type-and-effect</em> checks for various functions (library and
+standard) allows a finer grain on restricting permitted use patterns and may be
+useful to ensure arguments are consistent or results are not used improperly.</p>
+<div class="markdown-heading"><h3 class="heading-element">Polymorphic effect signatures</h3><a id="user-content-polymorphic-effect-signatures" class="anchor" aria-label="Permalink: Polymorphic effect signatures" href="#polymorphic-effect-signatures"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>In contrast to a check which imposes constraints on operands and result, a
+signature describes what the effect of an entity <em>is</em> directly. This is where
+a distinction creeps in between C functions, which will mostly have an atomic
+effect, and C operators, which are polymorphic because an operator is a higher
+order entity:</p>
+<pre><code>// add :: int ! none
+int add (int x, int y) { return x + y; }
+
+add ((ext = v), ++ errno); // add still has effect none
+                           // it's operator() which has to deal with the nonsense
+</code></pre>
+<p>In contrast to <code>add</code>, which is a function from two <em>values</em> to a result value,
+an operator like <code>+</code> takes two <em>expressions</em> to produce a combined <em>expression</em>
+i.e. it works on program fragments. This is therefore more analogous to a
+higher-order function:</p>
+<pre><code>(ext = v) + (++ errno);
+
+// is more like
+add2([]{ ext = v; }, []{ ++ errno; });
+
+// add2 :: (int ! 'a, int ! 'b) -&gt; int ! { 'a | 'b }
+// + :: (T ! 'lhs, T ! 'rhs) -&gt; T ! { 'lhs | 'rhs }
+</code></pre>
+<p>(This shows that a useful syntax for generalized operators needs to be able to
+express dependence on the effects of the operands through <em>effect variables</em>)</p>
+<p>Note that all binary operators in C have a very similar effect signature (the
+difference is <em>only</em> in the type part):</p>
+<pre><code>// &amp;&amp; :: (T ! { 'lhs }, T ! { 'rhs }) -&gt; int ! { 'lhs | 'rhs }
+</code></pre>
+<p>The effects of the right hand operand are part of the signature regardless of
+whether it is evaluated or short-circuited.</p>
+<p>The assignment and unary increment operators can be specified as introducing
+the <code>mut</code> effect class:</p>
+<pre><code>// =, +=, etc. :: (T ! 'lhs, T ! 'rhs) -&gt; T ! { 'lhs | 'rhs | mut }
+// ++, -- :: (int ! 'a) -&gt; int ! { 'a | mut }
+</code></pre>
+<p>Finally, this allows us to define type-and-effect signatures for the language's
+primitive control operators and model them as operators as well:</p>
+<pre><code>// if :: (int ! 'cond) -&gt; (void ! 'blk) -&gt; void ! { 'cond | 'blk }
+</code></pre>
+<p>Although not useful by itself, this then makes it easier to define control
+operators in terms of the existing operators with  more refined effect types:</p>
+<pre><code>// my_if :: (int ! Local) -&gt; (void ! Local) -&gt; void ! Local
+#define my_if(COND) if (COND) /* */
+</code></pre>
+<p>The above macro defines a new control structure <code>my_if</code> which is typed as only
+permitting local (<code>mut</code> and <code>vol</code>, uncounted) effects within its condition and
+its secondary-block. The signature defines the control structure a a curried
+operator, which takes a single expression argument and then the result of
+that operation is a second operator which takes a <em>secondary-block</em> as its
+operand:</p>
+<pre><code>my_if (a == b) { something (); }
+
+my_if (a == b)           // &lt;- application 1
+      { something (); }  // &lt;- application 2
+</code></pre>
+<p>This is distinct from the signature</p>
+<pre><code>// my_if2 :: (int ! Local, void ! Local) -&gt; void ! Local
+#define my_if2(COND, STMT) if (COND) { STMT }
+</code></pre>
+<p>which has different compositional properties; we can imagine a higher-order
+control structure that would accept the result of the first application of
+<code>my_if</code>:</p>
+<pre><code>// my_control :: ((void ! Local) -&gt; void ! Local  // &lt;- signature of `my_if(a == b)`
+//              , int ! None
+//              , int ! None) -&gt; void ! Local
+#define my_control(OP, X, Y) do { OP { work (X, Y); } } while (0)
+</code></pre>
+<p><code>my_control</code> treats <code>OP</code> as an operator and gives it the "operand" of <code>{ work (X, Y); }</code>.</p>
+<p>This allows us to make control fragments composable in (the beginnings of) a typed
+fashion, with many potentially useful applications.</p>
+<div class="markdown-heading"><h2 class="heading-element">Prior Art</h2><a id="user-content-prior-art" class="anchor" aria-label="Permalink: Prior Art" href="#prior-art"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Effect systems generalize a concept which is repeatedly reinvented, e.g. as
+"<a href="http://wg21.link/p3285" rel="nofollow">cone of evaluation</a>", or even <code>constexpr</code>, and which could benefit by being
+integrated into the type system of the base language instead of existing
+implicitly as an ad-hoc.</p>
+<p>Effect systems are deployed in a number of languages to great effect. The
+guarantee from a function's type that it will or will not behave in a certain
+way, as a binary flag, is well-attested in every language from Java (as checked
+exceptions) through to systems based on algebraic handlers like Koka.
+A number of projects have also added effect systems to C such as <a href="https://www.microsoft.com/en-us/research/video/deputy-dependent-types-for-safe-systems-software/" rel="nofollow">Deputy</a>,
+though these are generally far more complex than the proposal here.
+In languages with richer type systems like OCaml, it is possible to
+<a href="https://ocaml.org/manual/5.2/effects.html" rel="nofollow">encode effects and their handlers</a> using existing language features as a
+library feature, which is simpler overall that introducing a parallel type
+system; the language infrastructure to do this in C simply isn't there, though.
+An alternative approach would be to build towards having a type system rich
+enough to encode effects in a similar way.</p>
+<p>An effect system is implemented in QAC and is used in several analyses. The
+system we use is mostly additive, as for resource tracking we prefer to rely
+on full flow analysis; however, it is capable of the operations described
+above to both count and cancel-out, and thus <em>handle</em> effects "algebraically"
+as well.</p>
+<div class="markdown-heading"><h2 class="heading-element">Impact</h2><a id="user-content-impact" class="anchor" aria-label="Permalink: Impact" href="#impact"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>At the moment we propose that this feature should be provided through attributes,
+and therefore any implementation that does not wish to implement effect checking
+is free to simply not do so.</p>
+<p>Actually implementing effect tracking and checking is not onerous, but adding
+the attribute notation to the parser may represent a meaningful amount of
+effort for some tools.</p>
+<div class="markdown-heading"><h2 class="heading-element">Future directions</h2><a id="user-content-future-directions" class="anchor" aria-label="Permalink: Future directions" href="#future-directions"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>A concrete notation for effect annotation based on attributes can be specified
+either resembling the notation in the examples above, or with a different
+appearance.</p>
+<p>This proposal composes well with <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3316.html" rel="nofollow">N3316 The <code>void</code>-<em>which-binds</em></a>, in that
+the same annotation system used to indicate that functions are polymorphic
+over types can be reused to indicate polymorphism over effects. <a href="https://dl.acm.org/doi/pdf/10.1145/3656393" rel="nofollow">Effect polymorphism</a>
+is essential for giving higher-order functions useful effect signatures without
+blowing up the signature or having every complex operation fall back to <code>wild</code>.</p>
+<p>An advantage of using attributes to declare effect signatures is that if attribute
+syntax is integrated into the preprocessor, it will become possible to give macros
+effect signatures and, in particular, to give function-like macros effect signatures
+on each parameter:</p>
+<pre><code>// safe to repeat operands in the definition,
+// because they aren't allowed to be non-repeatable!
+#define MAX(X [[effect(none)]], Y [[effect(none)]]) ((X) &gt; (Y) ? (X) : (Y))
+
+// macro that accepts a statement operand
+// which operates on files but not on memory
+#define FILE_OP(STMT [[effect(file)]]) do { STMT } while (0)
+</code></pre>
+<p>We can later generalize this into a description of the C control structures as
+analogous to higher-order operators accepting <em>actions</em> as their operands,
+which has many useful properties for metaprogramming and program construction
+and allows us to define "types" for what are currently language fragments like
+<code>do</code> or <code>if</code>. This makes development of staged programming environments that
+embed C a much more consistent and attractive proposition and has many
+interesting future applications in offloading more advanced type checking to
+a first-stage metalanguage.</p>
+<p>Generalized <em>effect handlers</em> <a href="https://xavierleroy.org/CdF/2023-2024/5.pdf" rel="nofollow">as seen in Koka</a> are a powerful tool for
+encapsulating work, but for the time being we only propose tracking-and-checking
+as being more compatible with the aims and spirit of C, i.e. a C program should
+prefer to disallow effects from occurring in specified regions <em>at all</em> rather
+than encapsulating them and having to provide failure strategies. An effect
+handler in Koka, Ocaml, etc. is allowed to <em>not</em> invoke the continuation, which
+means that it needs to be able to compile as a jump-out; this would risk
+introducing more opportunities for poor structure and generally favours writing
+new code rather than annotating existing code.</p>
+<p>It may also be unnecessary if it becomes easier to use C as the embedded
+language in a staged programming system, in which case the handlers can be
+expressed as operators in the first-stage language and do not need to be included
+as first-class C features.</p>
+<div class="markdown-heading"><h2 class="heading-element">Proposed wording</h2><a id="user-content-proposed-wording" class="anchor" aria-label="Permalink: Proposed wording" href="#proposed-wording"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>No concrete wording is proposed at this time.</p>
+<div class="markdown-heading"><h2 class="heading-element">Questions for WG14</h2><a id="user-content-questions-for-wg14" class="anchor" aria-label="Permalink: Questions for WG14" href="#questions-for-wg14"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Would WG14 like to formalize an effect system for C2y along the lines of the system
+proposed by N3317?</p>
+<p>Would WG14 like to codify the effect system in the core language instead of in the
+attribute language?</p>
+<div class="markdown-heading"><h2 class="heading-element">References</h2><a id="user-content-references" class="anchor" aria-label="Permalink: References" href="#references"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p><a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3220.pdf" rel="nofollow">C2y latest public draft</a><br>
+<a href="https://en.wikipedia.org/wiki/Effect_system" rel="nofollow">Effect system</a><br>
+<a href="https://dl.acm.org/doi/pdf/10.1145/3656393" rel="nofollow">Associated effects</a><br>
+<a href="http://wg21.link/p3285" rel="nofollow">Contracts: Protecting The Protector</a><br>
+<a href="https://www.microsoft.com/en-us/research/video/deputy-dependent-types-for-safe-systems-software/" rel="nofollow">Deputy: Dependent Types for Safe Systems Software</a><br>
+<a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3316.html" rel="nofollow">The <code>void</code>-<em>which-binds</em></a><br>
+<a href="https://ocaml.org/manual/5.2/effects.html" rel="nofollow">Effect handlers in OCaml</a><br>
+<a href="https://xavierleroy.org/CdF/2023-2024/5.pdf" rel="nofollow">The practice of effects: from exceptions to effect handlers</a></p>
+</article></body></html>

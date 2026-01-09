@@ -1,0 +1,10 @@
+CD2 comments
+
+contiguous hex digits
+predefined macros count against translation limits
+semantic definitions of for and while and do
+trigraph comment
+UB of realloc
+same-type wording
+order of eval
+duplicated assert

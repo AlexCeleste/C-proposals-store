@@ -1,0 +1,1899 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>@font-face {
+  font-family: octicons-link;
+  src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM+8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB/aFGpk3jaTY6xa8JAGMW/O62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v+k/0an2i+itHDw3v2+9+DBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3/I7AtxEJLtzzuZfI+VVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy/Lt7Kc+0vWY/gAgIIEqAN9we0pwKXreiMasxvabDQMM4riO+qxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw+ymhce7vwM9jSqO8JyVd5RH9gyTt2+J/yUmYlIR0s04n6+7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv/ocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi+W2+MjCzMIDApSwvXzC97Z4Ig8N/BxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh/8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT+AEjAwuDFpBmA9KMDEwMCh9i/v8H8sH0/4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9/lqYwOGZxeUelN2U2R6+cArgtCJpauW7UQBqnFkUsjAY/kOU1cP+DAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl+vvmM/byA48e6tWrKArm4ZJlCbdsrxksL1AwWn/yBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO//sdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd/89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF+9JOS0nbaaYDCQfwCJ7Au3AHj+LO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm+EBXuAbHmIMSRMs+4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL+hD7C1xoaHeLJSEao0FEW14ckxC+TU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13/+lm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl+9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O/AdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB///AA8AAQAAAAAAAAAAAAAAAAABAAAAAA==) format('woff');
+}
+
+@media (prefers-color-scheme: dark) {
+  body,
+  [data-theme="dark"] {
+    /*dark*/
+    color-scheme: dark;
+    --color-prettylights-syntax-comment: #8b949e;
+    --color-prettylights-syntax-constant: #79c0ff;
+    --color-prettylights-syntax-entity: #d2a8ff;
+    --color-prettylights-syntax-storage-modifier-import: #c9d1d9;
+    --color-prettylights-syntax-entity-tag: #7ee787;
+    --color-prettylights-syntax-keyword: #ff7b72;
+    --color-prettylights-syntax-string: #a5d6ff;
+    --color-prettylights-syntax-variable: #ffa657;
+    --color-prettylights-syntax-brackethighlighter-unmatched: #f85149;
+    --color-prettylights-syntax-invalid-illegal-text: #f0f6fc;
+    --color-prettylights-syntax-invalid-illegal-bg: #8e1519;
+    --color-prettylights-syntax-carriage-return-text: #f0f6fc;
+    --color-prettylights-syntax-carriage-return-bg: #b62324;
+    --color-prettylights-syntax-string-regexp: #7ee787;
+    --color-prettylights-syntax-markup-list: #f2cc60;
+    --color-prettylights-syntax-markup-heading: #1f6feb;
+    --color-prettylights-syntax-markup-italic: #c9d1d9;
+    --color-prettylights-syntax-markup-bold: #c9d1d9;
+    --color-prettylights-syntax-markup-deleted-text: #ffdcd7;
+    --color-prettylights-syntax-markup-deleted-bg: #67060c;
+    --color-prettylights-syntax-markup-inserted-text: #aff5b4;
+    --color-prettylights-syntax-markup-inserted-bg: #033a16;
+    --color-prettylights-syntax-markup-changed-text: #ffdfb6;
+    --color-prettylights-syntax-markup-changed-bg: #5a1e02;
+    --color-prettylights-syntax-markup-ignored-text: #c9d1d9;
+    --color-prettylights-syntax-markup-ignored-bg: #1158c7;
+    --color-prettylights-syntax-meta-diff-range: #d2a8ff;
+    --color-prettylights-syntax-brackethighlighter-angle: #8b949e;
+    --color-prettylights-syntax-sublimelinter-gutter-mark: #484f58;
+    --color-prettylights-syntax-constant-other-reference-link: #a5d6ff;
+    --color-fg-default: #e6edf3;
+    --color-fg-muted: #848d97;
+    --color-fg-subtle: #6e7681;
+    --color-canvas-default: #0d1117;
+    --color-canvas-subtle: #161b22;
+    --color-border-default: #30363d;
+    --color-border-muted: #21262d;
+    --color-neutral-muted: rgba(110,118,129,0.4);
+    --color-accent-fg: #2f81f7;
+    --color-accent-emphasis: #1f6feb;
+    --color-success-fg: #3fb950;
+    --color-success-emphasis: #238636;
+    --color-attention-fg: #d29922;
+    --color-attention-emphasis: #9e6a03;
+    --color-attention-subtle: rgba(187,128,9,0.15);
+    --color-danger-fg: #f85149;
+    --color-danger-emphasis: #da3633;
+    --color-done-fg: #a371f7;
+    --color-done-emphasis: #8957e5;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body,
+  [data-theme="light"] {
+    /*light*/
+    color-scheme: light;
+    --color-prettylights-syntax-comment: #57606a;
+    --color-prettylights-syntax-constant: #0550ae;
+    --color-prettylights-syntax-entity: #6639ba;
+    --color-prettylights-syntax-storage-modifier-import: #24292f;
+    --color-prettylights-syntax-entity-tag: #116329;
+    --color-prettylights-syntax-keyword: #cf222e;
+    --color-prettylights-syntax-string: #0a3069;
+    --color-prettylights-syntax-variable: #953800;
+    --color-prettylights-syntax-brackethighlighter-unmatched: #82071e;
+    --color-prettylights-syntax-invalid-illegal-text: #f6f8fa;
+    --color-prettylights-syntax-invalid-illegal-bg: #82071e;
+    --color-prettylights-syntax-carriage-return-text: #f6f8fa;
+    --color-prettylights-syntax-carriage-return-bg: #cf222e;
+    --color-prettylights-syntax-string-regexp: #116329;
+    --color-prettylights-syntax-markup-list: #3b2300;
+    --color-prettylights-syntax-markup-heading: #0550ae;
+    --color-prettylights-syntax-markup-italic: #24292f;
+    --color-prettylights-syntax-markup-bold: #24292f;
+    --color-prettylights-syntax-markup-deleted-text: #82071e;
+    --color-prettylights-syntax-markup-deleted-bg: #ffebe9;
+    --color-prettylights-syntax-markup-inserted-text: #116329;
+    --color-prettylights-syntax-markup-inserted-bg: #dafbe1;
+    --color-prettylights-syntax-markup-changed-text: #953800;
+    --color-prettylights-syntax-markup-changed-bg: #ffd8b5;
+    --color-prettylights-syntax-markup-ignored-text: #eaeef2;
+    --color-prettylights-syntax-markup-ignored-bg: #0550ae;
+    --color-prettylights-syntax-meta-diff-range: #8250df;
+    --color-prettylights-syntax-brackethighlighter-angle: #57606a;
+    --color-prettylights-syntax-sublimelinter-gutter-mark: #8c959f;
+    --color-prettylights-syntax-constant-other-reference-link: #0a3069;
+    --color-fg-default: #1F2328;
+    --color-fg-muted: #656d76;
+    --color-fg-subtle: #6e7781;
+    --color-canvas-default: #ffffff;
+    --color-canvas-subtle: #f6f8fa;
+    --color-border-default: #d0d7de;
+    --color-border-muted: hsla(210,18%,87%,1);
+    --color-neutral-muted: rgba(175,184,193,0.2);
+    --color-accent-fg: #0969da;
+    --color-accent-emphasis: #0969da;
+    --color-success-fg: #1a7f37;
+    --color-success-emphasis: #1f883d;
+    --color-attention-fg: #9a6700;
+    --color-attention-emphasis: #9a6700;
+    --color-attention-subtle: #fff8c5;
+    --color-danger-fg: #d1242f;
+    --color-danger-emphasis: #cf222e;
+    --color-done-fg: #8250df;
+    --color-done-emphasis: #8250df;
+  }
+}
+
+body {
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: var(--color-canvas-default);
+}
+
+.markdown-body .octicon-link:before {
+  font: normal normal normal 16px/1 octicons-link;
+  display: inline-block;
+  text-decoration: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  content: '\f05c';
+  vertical-align: middle;
+}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  margin: 0;
+  color: var(--color-fg-default);
+  background-color: var(--color-canvas-default);
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body h1:hover .anchor .octicon-link:before,
+.markdown-body h2:hover .anchor .octicon-link:before,
+.markdown-body h3:hover .anchor .octicon-link:before,
+.markdown-body h4:hover .anchor .octicon-link:before,
+.markdown-body h5:hover .anchor .octicon-link:before,
+.markdown-body h6:hover .anchor .octicon-link:before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-color: currentColor;
+  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' aria-hidden='true'><path fill-rule='evenodd' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'></path></svg>");
+  mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' aria-hidden='true'><path fill-rule='evenodd' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'></path></svg>");
+}
+
+.markdown-body details,
+.markdown-body figcaption,
+.markdown-body figure {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body [hidden] {
+  display: none !important;
+}
+
+.markdown-body a {
+  background-color: transparent;
+  color: var(--color-accent-fg);
+  text-decoration: none;
+}
+
+.markdown-body abbr[title] {
+  border-bottom: none;
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: var(--base-text-weight-semibold, 600);
+}
+
+.markdown-body dfn {
+  font-style: italic;
+}
+
+.markdown-body h1 {
+  margin: .67em 0;
+  font-weight: var(--base-text-weight-semibold, 600);
+  padding-bottom: .3em;
+  font-size: 2em;
+  border-bottom: 1px solid var(--color-border-muted);
+}
+
+.markdown-body mark {
+  background-color: var(--color-attention-subtle);
+  color: var(--color-fg-default);
+}
+
+.markdown-body small {
+  font-size: 90%;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body sup {
+  top: -0.5em;
+}
+
+.markdown-body img {
+  border-style: none;
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: var(--color-canvas-default);
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace;
+  font-size: 1em;
+}
+
+.markdown-body figure {
+  margin: 1em 40px;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  overflow: hidden;
+  background: transparent;
+  border-bottom: 1px solid var(--color-border-muted);
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: var(--color-border-default);
+  border: 0;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+  overflow: visible;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body [type=button],
+.markdown-body [type=reset],
+.markdown-body [type=submit] {
+  -webkit-appearance: button;
+  appearance: button;
+}
+
+.markdown-body [type=checkbox],
+.markdown-body [type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body [type=number]::-webkit-inner-spin-button,
+.markdown-body [type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.markdown-body [type=search]::-webkit-search-cancel-button,
+.markdown-body [type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body ::-webkit-input-placeholder {
+  color: inherit;
+  opacity: .54;
+}
+
+.markdown-body ::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body ::placeholder {
+  color: var(--color-fg-subtle);
+  opacity: 1;
+}
+
+.markdown-body hr::before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  overflow: auto;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body details:not([open])>*:not(summary) {
+  display: none !important;
+}
+
+.markdown-body a:focus,
+.markdown-body [role=button]:focus,
+.markdown-body input[type=radio]:focus,
+.markdown-body input[type=checkbox]:focus {
+  outline: 2px solid var(--color-accent-fg);
+  outline-offset: -2px;
+  box-shadow: none;
+}
+
+.markdown-body a:focus:not(:focus-visible),
+.markdown-body [role=button]:focus:not(:focus-visible),
+.markdown-body input[type=radio]:focus:not(:focus-visible),
+.markdown-body input[type=checkbox]:focus:not(:focus-visible) {
+  outline: solid 1px transparent;
+}
+
+.markdown-body a:focus-visible,
+.markdown-body [role=button]:focus-visible,
+.markdown-body input[type=radio]:focus-visible,
+.markdown-body input[type=checkbox]:focus-visible {
+  outline: 2px solid var(--color-accent-fg);
+  outline-offset: -2px;
+  box-shadow: none;
+}
+
+.markdown-body a:not([class]):focus,
+.markdown-body a:not([class]):focus-visible,
+.markdown-body input[type=radio]:focus,
+.markdown-body input[type=radio]:focus-visible,
+.markdown-body input[type=checkbox]:focus,
+.markdown-body input[type=checkbox]:focus-visible {
+  outline-offset: 0;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  line-height: 10px;
+  color: var(--color-fg-default);
+  vertical-align: middle;
+  background-color: var(--color-canvas-subtle);
+  border: solid 1px var(--color-neutral-muted);
+  border-bottom-color: var(--color-neutral-muted);
+  border-radius: 6px;
+  box-shadow: inset 0 -1px 0 var(--color-neutral-muted);
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: var(--base-text-weight-semibold, 600);
+  line-height: 1.25;
+}
+
+.markdown-body h2 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  padding-bottom: .3em;
+  font-size: 1.5em;
+  border-bottom: 1px solid var(--color-border-muted);
+}
+
+.markdown-body h3 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  font-size: 1.25em;
+}
+
+.markdown-body h4 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  font-size: 1em;
+}
+
+.markdown-body h5 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  font-size: .875em;
+}
+
+.markdown-body h6 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  font-size: .85em;
+  color: var(--color-fg-muted);
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+  padding: 0 1em;
+  color: var(--color-fg-muted);
+  border-left: .25em solid var(--color-border-default);
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body tt,
+.markdown-body code,
+.markdown-body samp {
+  font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  font-size: 12px;
+  word-wrap: normal;
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-body input::-webkit-outer-spin-button,
+.markdown-body input::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body .mr-2 {
+  margin-right: var(--base-size-8, 8px) !important;
+}
+
+.markdown-body::before {
+  display: table;
+  content: "";
+}
+
+.markdown-body::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body .absent {
+  color: var(--color-danger-fg);
+}
+
+.markdown-body .anchor {
+  float: left;
+  padding-right: 4px;
+  margin-left: -20px;
+  line-height: 1;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body details {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: var(--color-fg-default);
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1 tt,
+.markdown-body h1 code,
+.markdown-body h2 tt,
+.markdown-body h2 code,
+.markdown-body h3 tt,
+.markdown-body h3 code,
+.markdown-body h4 tt,
+.markdown-body h4 code,
+.markdown-body h5 tt,
+.markdown-body h5 code,
+.markdown-body h6 tt,
+.markdown-body h6 code {
+  padding: 0 .2em;
+  font-size: inherit;
+}
+
+.markdown-body summary h1,
+.markdown-body summary h2,
+.markdown-body summary h3,
+.markdown-body summary h4,
+.markdown-body summary h5,
+.markdown-body summary h6 {
+  display: inline-block;
+}
+
+.markdown-body summary h1 .anchor,
+.markdown-body summary h2 .anchor,
+.markdown-body summary h3 .anchor,
+.markdown-body summary h4 .anchor,
+.markdown-body summary h5 .anchor,
+.markdown-body summary h6 .anchor {
+  margin-left: -40px;
+}
+
+.markdown-body summary h1,
+.markdown-body summary h2 {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.markdown-body ul.no-list,
+.markdown-body ol.no-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.markdown-body ol[type="a s"] {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body ol[type="A s"] {
+  list-style-type: upper-alpha;
+}
+
+.markdown-body ol[type="i s"] {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol[type="I s"] {
+  list-style-type: upper-roman;
+}
+
+.markdown-body ol[type="1"] {
+  list-style-type: decimal;
+}
+
+.markdown-body div>ol:not([type]) {
+  list-style-type: decimal;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: var(--base-text-weight-semibold, 600);
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body table th {
+  font-weight: var(--base-text-weight-semibold, 600);
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid var(--color-border-default);
+}
+
+.markdown-body table td>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table tr {
+  background-color: var(--color-canvas-default);
+  border-top: 1px solid var(--color-border-muted);
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: var(--color-canvas-subtle);
+}
+
+.markdown-body table img {
+  background-color: transparent;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body .emoji {
+  max-width: none;
+  vertical-align: text-top;
+  background-color: transparent;
+}
+
+.markdown-body span.frame {
+  display: block;
+  overflow: hidden;
+}
+
+.markdown-body span.frame>span {
+  display: block;
+  float: left;
+  width: auto;
+  padding: 7px;
+  margin: 13px 0 0;
+  overflow: hidden;
+  border: 1px solid var(--color-border-default);
+}
+
+.markdown-body span.frame span img {
+  display: block;
+  float: left;
+}
+
+.markdown-body span.frame span span {
+  display: block;
+  padding: 5px 0 0;
+  clear: both;
+  color: var(--color-fg-default);
+}
+
+.markdown-body span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+
+.markdown-body span.align-center>span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.markdown-body span.align-center span img {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.markdown-body span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+
+.markdown-body span.align-right>span {
+  display: block;
+  margin: 13px 0 0;
+  overflow: hidden;
+  text-align: right;
+}
+
+.markdown-body span.align-right span img {
+  margin: 0;
+  text-align: right;
+}
+
+.markdown-body span.float-left {
+  display: block;
+  float: left;
+  margin-right: 13px;
+  overflow: hidden;
+}
+
+.markdown-body span.float-left span {
+  margin: 13px 0 0;
+}
+
+.markdown-body span.float-right {
+  display: block;
+  float: right;
+  margin-left: 13px;
+  overflow: hidden;
+}
+
+.markdown-body span.float-right>span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: right;
+}
+
+.markdown-body code,
+.markdown-body tt {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  white-space: break-spaces;
+  background-color: var(--color-neutral-muted);
+  border-radius: 6px;
+}
+
+.markdown-body code br,
+.markdown-body tt br {
+  display: none;
+}
+
+.markdown-body del code {
+  text-decoration: inherit;
+}
+
+.markdown-body samp {
+  font-size: 85%;
+}
+
+.markdown-body pre code {
+  font-size: 100%;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  color: var(--color-fg-default);
+  background-color: var(--color-canvas-subtle);
+  border-radius: 6px;
+}
+
+.markdown-body pre code,
+.markdown-body pre tt {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body .csv-data td,
+.markdown-body .csv-data th {
+  padding: 5px;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 1;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.markdown-body .csv-data .blob-num {
+  padding: 10px 8px 9px;
+  text-align: right;
+  background: var(--color-canvas-default);
+  border: 0;
+}
+
+.markdown-body .csv-data tr {
+  border-top: 0;
+}
+
+.markdown-body .csv-data th {
+  font-weight: var(--base-text-weight-semibold, 600);
+  background: var(--color-canvas-subtle);
+  border-top: 0;
+}
+
+.markdown-body [data-footnote-ref]::before {
+  content: "[";
+}
+
+.markdown-body [data-footnote-ref]::after {
+  content: "]";
+}
+
+.markdown-body .footnotes {
+  font-size: 12px;
+  color: var(--color-fg-muted);
+  border-top: 1px solid var(--color-border-default);
+}
+
+.markdown-body .footnotes ol {
+  padding-left: 16px;
+}
+
+.markdown-body .footnotes ol ul {
+  display: inline-block;
+  padding-left: 16px;
+  margin-top: 16px;
+}
+
+.markdown-body .footnotes li {
+  position: relative;
+}
+
+.markdown-body .footnotes li:target::before {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -24px;
+  pointer-events: none;
+  content: "";
+  border: 2px solid var(--color-accent-emphasis);
+  border-radius: 6px;
+}
+
+.markdown-body .footnotes li:target {
+  color: var(--color-fg-default);
+}
+
+.markdown-body .footnotes .data-footnote-backref g-emoji {
+  font-family: monospace;
+}
+
+.markdown-body .pl-c {
+  color: var(--color-prettylights-syntax-comment);
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: var(--color-prettylights-syntax-constant);
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: var(--color-prettylights-syntax-entity);
+}
+
+.markdown-body .pl-smi,
+.markdown-body .pl-s .pl-s1 {
+  color: var(--color-prettylights-syntax-storage-modifier-import);
+}
+
+.markdown-body .pl-ent {
+  color: var(--color-prettylights-syntax-entity-tag);
+}
+
+.markdown-body .pl-k {
+  color: var(--color-prettylights-syntax-keyword);
+}
+
+.markdown-body .pl-s,
+.markdown-body .pl-pds,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sre,
+.markdown-body .pl-sr .pl-sra {
+  color: var(--color-prettylights-syntax-string);
+}
+
+.markdown-body .pl-v,
+.markdown-body .pl-smw {
+  color: var(--color-prettylights-syntax-variable);
+}
+
+.markdown-body .pl-bu {
+  color: var(--color-prettylights-syntax-brackethighlighter-unmatched);
+}
+
+.markdown-body .pl-ii {
+  color: var(--color-prettylights-syntax-invalid-illegal-text);
+  background-color: var(--color-prettylights-syntax-invalid-illegal-bg);
+}
+
+.markdown-body .pl-c2 {
+  color: var(--color-prettylights-syntax-carriage-return-text);
+  background-color: var(--color-prettylights-syntax-carriage-return-bg);
+}
+
+.markdown-body .pl-sr .pl-cce {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-string-regexp);
+}
+
+.markdown-body .pl-ml {
+  color: var(--color-prettylights-syntax-markup-list);
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-markup-heading);
+}
+
+.markdown-body .pl-mi {
+  font-style: italic;
+  color: var(--color-prettylights-syntax-markup-italic);
+}
+
+.markdown-body .pl-mb {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-markup-bold);
+}
+
+.markdown-body .pl-md {
+  color: var(--color-prettylights-syntax-markup-deleted-text);
+  background-color: var(--color-prettylights-syntax-markup-deleted-bg);
+}
+
+.markdown-body .pl-mi1 {
+  color: var(--color-prettylights-syntax-markup-inserted-text);
+  background-color: var(--color-prettylights-syntax-markup-inserted-bg);
+}
+
+.markdown-body .pl-mc {
+  color: var(--color-prettylights-syntax-markup-changed-text);
+  background-color: var(--color-prettylights-syntax-markup-changed-bg);
+}
+
+.markdown-body .pl-mi2 {
+  color: var(--color-prettylights-syntax-markup-ignored-text);
+  background-color: var(--color-prettylights-syntax-markup-ignored-bg);
+}
+
+.markdown-body .pl-mdr {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-meta-diff-range);
+}
+
+.markdown-body .pl-ba {
+  color: var(--color-prettylights-syntax-brackethighlighter-angle);
+}
+
+.markdown-body .pl-sg {
+  color: var(--color-prettylights-syntax-sublimelinter-gutter-mark);
+}
+
+.markdown-body .pl-corl {
+  text-decoration: underline;
+  color: var(--color-prettylights-syntax-constant-other-reference-link);
+}
+
+.markdown-body g-emoji {
+  display: inline-block;
+  min-width: 1ch;
+  font-family: "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 1em;
+  font-style: normal !important;
+  font-weight: var(--base-text-weight-normal, 400);
+  line-height: 1;
+  vertical-align: -0.075em;
+}
+
+.markdown-body g-emoji img {
+  width: 1em;
+  height: 1em;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item label {
+  font-weight: var(--base-text-weight-normal, 400);
+}
+
+.markdown-body .task-list-item.enabled label {
+  cursor: pointer;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 4px;
+}
+
+.markdown-body .task-list-item .handle {
+  display: none;
+}
+
+.markdown-body .task-list-item-checkbox {
+  margin: 0 .2em .25em -1.4em;
+  vertical-align: middle;
+}
+
+.markdown-body .contains-task-list:dir(rtl) .task-list-item-checkbox {
+  margin: 0 -1.6em .25em .2em;
+}
+
+.markdown-body .contains-task-list {
+  position: relative;
+}
+
+.markdown-body .contains-task-list:hover .task-list-item-convert-container,
+.markdown-body .contains-task-list:focus-within .task-list-item-convert-container {
+  display: block;
+  width: auto;
+  height: 24px;
+  overflow: visible;
+  clip: auto;
+}
+
+.markdown-body ::-webkit-calendar-picker-indicator {
+  filter: invert(50%);
+}
+
+.markdown-body .markdown-alert {
+  padding: var(--base-size-8, 8px) var(--base-size-16, 16px);
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid var(--color-border-default);
+}
+
+.markdown-body .markdown-alert>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body .markdown-alert>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body .markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: var(--base-text-weight-medium, 500);
+  align-items: center;
+  line-height: 1;
+}
+
+.markdown-body .markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-accent-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-accent-fg);
+}
+
+.markdown-body .markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-done-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-done-fg);
+}
+
+.markdown-body .markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-attention-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-attention-fg);
+}
+
+.markdown-body .markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-success-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-success-fg);
+}
+
+.markdown-body .markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-danger-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-danger-fg);
+}
+</style><title>2024-Jan-minutes</title></head><body><article class="markdown-body"><div class="markdown-heading"><h1 class="heading-element">Draft Minutes for 22–26 January, 2024</h1><a id="user-content-draft-minutes-for-2226-january-2024" class="anchor" aria-label="Permalink: Draft Minutes for 22–26 January, 2024" href="#draft-minutes-for-2226-january-2024"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>MEETING OF ISO/IEC JTC 1/SC 22/WG 14<br>
+WG14 / N3227</p>
+<p>Dates and Times:</p>
+<p>22 January, 2024 09:00 – 12:00 Lunch 13:30 – 16:30<br>
+23 January, 2024 09:00 – 12:00 Lunch 13:30 – 16:30<br>
+24 January, 2024 09:00 – 12:00 Lunch 13:30 – 16:30<br>
+25 January, 2024 09:00 – 12:00 Lunch 13:30 – 16:30</p>
+<p>(26 January scheduled but unused.)</p>
+<div class="markdown-heading"><h3 class="heading-element">Meeting Location</h3><a id="user-content-meeting-location" class="anchor" aria-label="Permalink: Meeting Location" href="#meeting-location"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Inria<br>
+Campus Hôpital Civil, Bâtiment Explora, 67000 Strasbourg<br>
+France</p>
+<p>Note: first face-to-face/hybrid meeting since 2019.</p>
+<hr>
+<div class="markdown-heading"><h2 class="heading-element">1 Opening Activities</h2><a id="user-content-1-opening-activities" class="anchor" aria-label="Permalink: 1 Opening Activities" href="#1-opening-activities"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<div class="markdown-heading"><h3 class="heading-element">1.1 Opening Comments</h3><a id="user-content-11-opening-comments" class="anchor" aria-label="Permalink: 1.1 Opening Comments" href="#11-opening-comments"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Seacord: Thanks to Jens for hosting. Welcome to the 69th meeting of WG14. <em>Nice.</em></p>
+<div class="markdown-heading"><h3 class="heading-element">1.2 Introduction of Participants/Roll Call</h3><a id="user-content-12-introduction-of-participantsroll-call" class="anchor" aria-label="Permalink: 1.2 Introduction of Participants/Roll Call" href="#12-introduction-of-participantsroll-call"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<pre><code>|------------------+--------------------------------------+-------------+-------------------------|
+| Aaron Bachmann   | Austrian Standards                   | Austria     | Austria NB              |
+| Aaron Ballman    | Intel                                | USA         |                         |
+| Alex Celeste     | Perforce Software                    | USA         | Scribe                  |
+| Chris Anley      | NCC Group                            | USA         |                         |
+| Chris Bazley     | ARM                                  | UK          |                         |
+| Clive Pygott     | LDRA Technology                      | USA         |                         |
+| Corentin Jabot   | Freelance                            | France      | Guest                   |
+| Dan Plakosh      | SEI/CERT/CMU                         | USA         |                         |
+| Dave Banham      | BlackBerry QNX                       | UK          | MISRA Liaison           |
+| David Svoboda    | SEI/CERT/CMU                         | USA         | Undef. Behav. SG Chair  |
+| Douglas Teeple   | Plum Hall                            | USA         |                         |
+| Elizabeth Andrews| Intel                                | USA         |                         |
+| Eskil Steenberg  | Quel Solaar                          | Sweden      | Sweden NB               |
+| Fred Tydeman     | Keaton Consulting                    | USA         | INCITS/C Vice Chair     |
+| Freek Wiedijk    | Plum Hall                            | USA         | Assistant editor        |
+| Henry Kleynhans  | Bloomberg                            | USA         |                         |
+| Jacob Navia      | Logiciels/informatique               | France      | Guest                   |
+| Jakub Lukasiewicz| Motorola Solutions Systems Polska    | Poland      | Poland NB               |
+| JeanHeyd Meneide | NEN                                  | Netherlands | Editor; C++ Comp. SG    |
+| Jens Gustedt     | INRIA/ICube                          | France      | France NB               |
+| Joseph Myers     | CodeSourcery / Siemens               | UK          | UK NB                   |
+| Joshua Crammer   | Intel                                | USA         |                         |
+| Marcus Johnson   | Self                                 | USA         | Guest                   |
+| Martin Uecker    | Graz University of Technology        | Austria     |                         |
+| Ori Bernstein    | PingThings                           | Canada      |                         |
+| Paul McKenney    | Meta/Facebook                        | USA         |                         |
+| Peter Sewell     | University of Cambridge              | UK          | Memory Model SG Chair   |
+| Philipp Krause   | Self                                 | Germany     | Germany NB              |
+| Rajan Bhakta     | IBM                                  | USA, Canada | INCITS/C Chair          |
+| Robert Seacord   | Woven Planet North America Inc       | USA         |                         |
+| Roberto Bagnara  | BUGSENG                              | Italy       | Italy NB, MISRA Liaison |
+| Robin Rowe       | Boost Foundation                     | USA         |                         |
+| Ted Johnson      | Hewlett Packard Enterprise           | USA         |                         |
+|------------------+--------------------------------------+-------------+-------------------------|
+</code></pre>
+<div class="markdown-heading"><h3 class="heading-element">1.3 Procedures for this Meeting</h3><a id="user-content-13-procedures-for-this-meeting" class="anchor" aria-label="Permalink: 1.3 Procedures for this Meeting" href="#13-procedures-for-this-meeting"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Seacord: This is a hybrid meeting, so the rules require that the whole meeting stops if the network
+connection stops. We will figure out more about how to handle this as we proceed.<br>
+A note was later made that future hybrid meetings should try to provide more than one microphone
+for the room.</p>
+<p>We take straw polls, not binding polls. Everyone in the room may vote as an individual.
+Result is based on consensus.</p>
+<p>Bhakta: can we establish what "consensus" is?</p>
+<p>Seacord: at this time we have no draft to vote against anyway so we don't need to worry too much.
+No changes voted for here are final.</p>
+<p>Bhakta: I have an algorithm expressed in C we can use.</p>
+<p>Note that this meeting is a WG14 meeting only and not a joint meeting with INCITS-C.</p>
+<div class="markdown-heading"><h3 class="heading-element">1.4 Required Reading</h3><a id="user-content-14-required-reading" class="anchor" aria-label="Permalink: 1.4 Required Reading" href="#14-required-reading"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<div class="markdown-heading"><h4 class="heading-element">1.4.1 ISO Code of Conduct</h4><a id="user-content-141-iso-code-of-conduct" class="anchor" aria-label="Permalink: 1.4.1 ISO Code of Conduct" href="#141-iso-code-of-conduct"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<div class="markdown-heading"><h4 class="heading-element">1.4.2 IEC Code of Conduct</h4><a id="user-content-142-iec-code-of-conduct" class="anchor" aria-label="Permalink: 1.4.2 IEC Code of Conduct" href="#142-iec-code-of-conduct"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<div class="markdown-heading"><h4 class="heading-element">1.4.3 JTC 1 Summary of Key Points [N 2613]</h4><a id="user-content-143-jtc-1-summary-of-key-points-n-2613" class="anchor" aria-label="Permalink: 1.4.3 JTC 1 Summary of Key Points [N 2613]" href="#143-jtc-1-summary-of-key-points-n-2613"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<div class="markdown-heading"><h4 class="heading-element">1.4.4 INCITS Code of Conduct</h4><a id="user-content-144-incits-code-of-conduct" class="anchor" aria-label="Permalink: 1.4.4 INCITS Code of Conduct" href="#144-incits-code-of-conduct"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Presented to the group. No discussion.</p>
+<div class="markdown-heading"><h3 class="heading-element">1.5 Approval of previous minutes</h3><a id="user-content-15-approval-of-previous-minutes" class="anchor" aria-label="Permalink: 1.5 Approval of previous minutes" href="#15-approval-of-previous-minutes"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>WG14 minutes <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3174.pdf" rel="nofollow">N3174</a><br>
+Celeste moves to approve. Lukasiewicz seconds. No objections.</p>
+<div class="markdown-heading"><h3 class="heading-element">1.6 Action Items and Resolutions</h3><a id="user-content-16-action-items-and-resolutions" class="anchor" aria-label="Permalink: 1.6 Action Items and Resolutions" href="#16-action-items-and-resolutions"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>SEACORD to submit TS18661-5 for ballot.<br>
+RESOLVED as NOT DONE/DEFERRED because the document is still being held back for review.</p>
+<div class="markdown-heading"><h3 class="heading-element">1.7 Approval of Agenda</h3><a id="user-content-17-approval-of-agenda" class="anchor" aria-label="Permalink: 1.7 Approval of Agenda" href="#17-approval-of-agenda"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>WG14 Agenda <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3202.pdf" rel="nofollow">N3202</a><br>
+Bhakta moves to approve, Plakosh seconds. No objections.</p>
+<p>Note: a live agenda document was maintained separately through the meeting.</p>
+<div class="markdown-heading"><h3 class="heading-element">1.8 Identify National Bodies Sending Experts</h3><a id="user-content-18-identify-national-bodies-sending-experts" class="anchor" aria-label="Permalink: 1.8 Identify National Bodies Sending Experts" href="#18-identify-national-bodies-sending-experts"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Austria, Canada, France, Netherlands, Poland, Sweden, United Kingdom, United States</p>
+<div class="markdown-heading"><h3 class="heading-element">1.9 Note where we are in the current C23 schedule [<a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3156.pdf" rel="nofollow">N3156</a>]</h3><a id="user-content-19-note-where-we-are-in-the-current-c23-schedule-n3156" class="anchor" aria-label="Permalink: 1.9 Note where we are in the current C23 schedule [N3156]" href="#19-note-where-we-are-in-the-current-c23-schedule-n3156"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Seacord: DIS comments are back since Dec 11th. We <em>must</em> process the comments - this is the only truly
+mandatory thing we have to do.</p>
+<p>Our options are: if we accept technical changes, to move to an FDIS step; if we accept editorial
+changes, there are no more steps but publication takes a little longer; or the project will cancel
+automatically on the 12th of July, which we will not allow to happen.</p>
+<p>We can look at papers for C2y <em>if</em> we finish the DIS review.</p>
+<div class="markdown-heading"><h2 class="heading-element">2 Reports on Liaison and Collaboration Activities</h2><a id="user-content-2-reports-on-liaison-and-collaboration-activities" class="anchor" aria-label="Permalink: 2 Reports on Liaison and Collaboration Activities" href="#2-reports-on-liaison-and-collaboration-activities"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<div class="markdown-heading"><h3 class="heading-element">2.1 ISO, IEC, JTC 1, SC 22</h3><a id="user-content-21-iso-iec-jtc-1-sc-22" class="anchor" aria-label="Permalink: 2.1 ISO, IEC, JTC 1, SC 22" href="#21-iso-iec-jtc-1-sc-22"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>No report</p>
+<div class="markdown-heading"><h3 class="heading-element">2.2 National bodies in WG 14</h3><a id="user-content-22-national-bodies-in-wg-14" class="anchor" aria-label="Permalink: 2.2 National bodies in WG 14" href="#22-national-bodies-in-wg-14"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>PL-C will be meeting with a ballot item on the 5th February.</p>
+<div class="markdown-heading"><h3 class="heading-element">2.3 WG 21</h3><a id="user-content-23-wg-21" class="anchor" aria-label="Permalink: 2.3 WG 21" href="#23-wg-21"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Seacord has attended; <code>typeof</code> was <em>voted down</em> to great surprise, which upset some WG14 members.<br>
+"We should do our jobs even if others don't." Changeable objectives of other committees are outside
+the control of WG14.</p>
+<p>C++ believe that <code>decltype</code> is the better solution and do not have consensus for <code>typeof</code>, although
+there are more votes for inclusion than against.</p>
+<p>The most critical concern remains header compatibility.</p>
+<p>The new co-chair is quite active. Ballman continues to attend but does not have time to lead.</p>
+<div class="markdown-heading"><h3 class="heading-element">2.4 WG 23</h3><a id="user-content-24-wg-23" class="anchor" aria-label="Permalink: 2.4 WG 23" href="#24-wg-23"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Pygott has resigned. Nobody else in the group attends.</p>
+<div class="markdown-heading"><h3 class="heading-element">2.5 MISRA C</h3><a id="user-content-25-misra-c" class="anchor" aria-label="Permalink: 2.5 MISRA C" href="#25-misra-c"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>After publication of MISRA C:2023 a new document is already underway working on integrating C23
+features (and possibly other things) and is expected next year.</p>
+<p>Request from WG14 to "please" refer to the C language revision as C23 rather than C24.</p>
+<div class="markdown-heading"><h3 class="heading-element">2.6 Austin Group</h3><a id="user-content-26-austin-group" class="anchor" aria-label="Permalink: 2.6 Austin Group" href="#26-austin-group"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>No report</p>
+<div class="markdown-heading"><h3 class="heading-element">2.7 Unicode Consortium</h3><a id="user-content-27-unicode-consortium" class="anchor" aria-label="Permalink: 2.7 Unicode Consortium" href="#27-unicode-consortium"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>No report</p>
+<div class="markdown-heading"><h3 class="heading-element">2.8 Other Liaison or Collaboration Activities</h3><a id="user-content-28-other-liaison-or-collaboration-activities" class="anchor" aria-label="Permalink: 2.8 Other Liaison or Collaboration Activities" href="#28-other-liaison-or-collaboration-activities"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>No other groups active.</p>
+<div class="markdown-heading"><h2 class="heading-element">3 Study Groups</h2><a id="user-content-3-study-groups" class="anchor" aria-label="Permalink: 3 Study Groups" href="#3-study-groups"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<div class="markdown-heading"><h3 class="heading-element">3.1 C Floating Point Study Group</h3><a id="user-content-31-c-floating-point-study-group" class="anchor" aria-label="Permalink: 3.1 C Floating Point Study Group" href="#31-c-floating-point-study-group"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>CFP continues work on TS parts 4 and 5, not much time left for these before project expiry.
+These will be submitted after this meeting unless advised not to by the group.</p>
+<p>Continue to welcome issue submissions and have new issues to discuss for C2y.</p>
+<div class="markdown-heading"><h3 class="heading-element">3.2 C Memory Object Model Study Group</h3><a id="user-content-32-c-memory-object-model-study-group" class="anchor" aria-label="Permalink: 3.2 C Memory Object Model Study Group" href="#32-c-memory-object-model-study-group"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Need to discuss whether to push TS 6010 forward or not.</p>
+<p>This was discussed immediately:</p>
+<p>ISO disapproved of Gustedt's changes, unsure of direction to take. Previously the decision was to
+rewrite per the ISO requirements but then we re-litigated the question of publishing the TS or
+integrating it immediately.</p>
+<p>Seacord, Bhakta and Ballman prefer a TS as this gives better time to implementers; Intel and IBM take
+a year in advance simply to schedule changes, let alone make them. It is a high risk to fold something
+unimplemented into the IS, and a very high effort to remove it again after integration if it
+is not implemented after that. This is the precedent set by CFP. Disagreement on whether a TS really
+makes a stronger implementation case than a basic N-document, but implementers are adamant that a
+formally published specification is necessary to commit to work. Acknowledgment that TS are not
+generally a good end-product <em>as a document</em> for shipping features.</p>
+<p>The document has not been updated and the group needs to provide guidance on whether effort to
+rebase the TS is warranted.<br>
+Non-optimizing compile modes should be conforming but it is not yet fully known how divergent
+optimizing implementations are.</p>
+<p><strong>Straw poll (opinion):</strong> Would WG14 like to continue with publication of TS 6010?<br>
+17 / 0 / 4 (approval)</p>
+<p><strong>Straw poll (opinion):</strong> Would WG14 like to vote a revision of
+<a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3057.pdf" rel="nofollow">N3057</a> with the TS 6010 content into C2y
+"at some point", subject to positive implementation experience?<br>
+20 / 0 / 3</p>
+<div class="markdown-heading"><h3 class="heading-element">3.3 C and C++ Compatibility Study Group</h3><a id="user-content-33-c-and-c-compatibility-study-group" class="anchor" aria-label="Permalink: 3.3 C and C++ Compatibility Study Group" href="#33-c-and-c-compatibility-study-group"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>No activity at the moment, resuming on the 1st to discuss provenance.</p>
+<p>C++ wants a similar model but is formulating it differently.</p>
+<div class="markdown-heading"><h3 class="heading-element">3.4 Undefined Behavior Study Group</h3><a id="user-content-34-undefined-behavior-study-group" class="anchor" aria-label="Permalink: 3.4 Undefined Behavior Study Group" href="#34-undefined-behavior-study-group"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>The UB examples document [<a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3155.pdf" rel="nofollow">N3155</a>] was
+published in October and the SG is still interested in any feedback. Meetings continue.</p>
+<div class="markdown-heading"><h3 class="heading-element">3.5 New Study Group</h3><a id="user-content-35-new-study-group" class="anchor" aria-label="Permalink: 3.5 New Study Group" href="#35-new-study-group"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>"CRFI" has not progressed yet, will report back when there is movement from within the Community.</p>
+<div class="markdown-heading"><h3 class="heading-element">3.6 Infrastructure Group</h3><a id="user-content-36-infrastructure-group" class="anchor" aria-label="Permalink: 3.6 Infrastructure Group" href="#36-infrastructure-group"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>This is organized as a study group to address various problems.</p>
+<p>The new document system is not finished because the editing work takes priority. Will complete
+after editing is done. This will speed filing issues up by avoiding the ISO process and allowing
+a simplified document submission system with a normal login and upload button.</p>
+<p>The entire system is a portable Git repository and can be moved between hosts. The primary host
+will be the WG14 GitLab on GWDG, with a public mirror at GitHub and possibly other public-visible
+places.</p>
+<div class="markdown-heading"><h2 class="heading-element">4 Future Meetings</h2><a id="user-content-4-future-meetings" class="anchor" aria-label="Permalink: 4 Future Meetings" href="#4-future-meetings"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>10 June - 14 June virtual meeting. This will be a half-session Zoom meeting the same as
+most recent meetings have been.</p>
+<p>30 September - 04 October in Minneapolis; options remain open for 2025, including
+Graz; London; somewhere in Spain; somewhere in Japan.</p>
+<div class="markdown-heading"><h2 class="heading-element">5 Document Review</h2><a id="user-content-5-document-review" class="anchor" aria-label="Permalink: 5 Document Review" href="#5-document-review"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<div class="markdown-heading"><h3 class="heading-element">
+<a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3191.pdf" rel="nofollow">N3191</a> DIS 9899 Ballot Comments</h3><a id="user-content-n3191-dis-9899-ballot-comments" class="anchor" aria-label="Permalink: N3191 DIS 9899 Ballot Comments" href="#n3191-dis-9899-ballot-comments"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Most changes in this section were applied by unanimous consent.<br>
+The majority of comments did not produce technical discussion and are not recorded separately.<br>
+Individual detailed resolutions are recorded in <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3216.pdf" rel="nofollow">N3216</a>.</p>
+<p>The editors had already integrated the majority of changes into the working document at the time
+of discussion, with only a few remaining to address.</p>
+<p>UC objected to for <strong>ISO comment 006</strong>:</p>
+<p><strong>Straw poll (opinion):</strong> Would WG14 like to accept <strong>ISO comment 006</strong>?<br>
+11 / 2 / 10 (accepted)</p>
+<p><strong>ISO comment 025</strong> appears to create a rules conflict. WG14 should have a standing exception.</p>
+<p><strong>ISO comment 027</strong> produced discussion of the relative usability impact on the document and on
+supporting vocabulary documents. Noted that although these are non-normative NOTEs, a NOTE cannot
+really be removed if it makes an entire entry meaningless.</p>
+<p><strong>Straw poll (decision):</strong> Does WG14 want to remove all outward references to other Clauses from Clause 3?<br>
+3 / 8 / 8 (no consensus)</p>
+<p>Interpreted as a qualified rejection: the comment was carefully considered.</p>
+<p>Wording for <strong>ISO comment 046</strong> was provided on the Reflector in message [24428].</p>
+<p>For <strong>ISO comment 069</strong> it was noted that stating the existence of a requirement elsewhere does not
+in itself constitute a requirement.</p>
+<p>For <strong>ISO comment 087</strong> it was noted that examples are intended to clarify the preceding normative text,
+so recommended changes should not result in them becoming actively misleading. <em>However</em> it should also
+ideally be possible to understand all requirements without reading the non-normative examples at all.
+Observed that the directives are being too blunt here.<br>
+Ballman and Bhakta join the editorial review group as a result of this discussion.</p>
+<p><strong>ISO comment 107</strong> explicitly rejected in order to avoid publication delays. Could be revisited if
+an FDIS is opened for other reasons.</p>
+<p><strong>ISO comment 129</strong> demonstrates the importance of adopting a stable tagging scheme like the one
+used in the C++ Standard. Also resolved that some section labels should not be moved even if the
+content around them changes, such as Annex J.</p>
+<p><strong>ISO comment 157</strong> produced more diverging opinions about the ways users interact with the document
+and which option would produce greater utility in the end product.</p>
+<p><strong>Straw poll (opinion):</strong> Would WG14 like to accept ISO comment 157, by removing paragraph 7 from the Introduction?<br>
+9 / 4 / 6 (editorial direction to remove)</p>
+<p><strong>ISO ocmment 178</strong> was also discussed in terms of readability and usability. Consensus settled on
+a more minimal change as a compromise.</p>
+<p><strong>Straw poll (decision):</strong> Does WG14 want to alphabetically flatten the list of entries in Clause 3?<br>
+(not polled)</p>
+<p><strong>Straw poll (decision):</strong> Does WG14 want to lift subclauses 3.20.2, 3.20.4, and 3.20.5, to the top level of Clause 3?<br>
+12 / 3 / 5 (approved)</p>
+<p><strong>ISO comment 182</strong> was observed to ignore an existing guideline. Noted that WG21 received and rejected
+the same comment. In order to maintain consistency in accordance with the ISO Directives, WG14 rejected
+this change too. It was also noted that US spellings are considered an acceptable regional variant by
+the ISO Directives via the inclusion of Webster's as a permitted reference.</p>
+<p><strong>ISO comment 188</strong> generated more discussion about usability. The change requested contradicts
+the spelling in the rest of the document and in the language described, as well as potentially
+harming clarity by breaking copy and paste for semantically significant values. It is region-specific.</p>
+<p><strong>Straw poll (decision):</strong> Does WG14 want to resolve ISO comment 188 by rejecting the comment?<br>
+16 / 1 / 3 (rejected)</p>
+<p><strong>ISO comment 190</strong> was extremely contentious and was interpreted by the group as breaking normative
+text, as well as violating many decades of precedent.</p>
+<p><strong>Straw poll (decision):</strong> Does WG14 want to accept all change dispositions to comments as specified in document
+<a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3216.pdf" rel="nofollow">N3216</a>?<br>
+19 / 1 / 0 (accepted)</p>
+<p>All DIS comments were resolved!</p>
+<p>Gustedt, Bhakta, Myers, Ballman, Kleynhans volunteer to form the editorial review group.</p>
+<div class="markdown-heading"><h3 class="heading-element">5.2 TS 18661 Parts 4 and 5</h3><a id="user-content-52-ts-18661-parts-4-and-5" class="anchor" aria-label="Permalink: 5.2 TS 18661 Parts 4 and 5" href="#52-ts-18661-parts-4-and-5"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<div class="markdown-heading"><h4 class="heading-element">Part 4 [<a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3180.pdf" rel="nofollow">N3180</a>]</h4><a id="user-content-part-4-n3180" class="anchor" aria-label="Permalink: Part 4 [N3180]" href="#part-4-n3180"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Augmented arithmetic has been moved; type generics have simply been removed following the guidance
+to avoid introducing identifiers. A software implementation is now available.</p>
+<p>Bazley: not convinced any library headers should add un-aliased tag types. <code>_t</code> types do not
+fit here and should be typedefs. The interface should be minimal and not require tags.
+Please seriously consider the precedent being set; do not like not having a style guide for the
+Standard interfaces.</p>
+<p>Bhakta: no preference but want to avoid flip-flopping. The tag is there only because we
+added one struct and it needed some name.</p>
+<p>Ballman: unspecified types are good for implementers as they allow exposing existing functionality.
+<code>_t</code> is notionally reserved for POSIX; no reply from Austin Group when consulted.</p>
+<p><strong>Straw poll (decision):</strong> Does WG14 want to submit TS-18661 part 4 for publication as-is?<br>
+12 / 3 / 5 (approved)</p>
+<div class="markdown-heading"><h4 class="heading-element">Part 5 [<a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3181.pdf" rel="nofollow">N3181</a>]</h4><a id="user-content-part-5-n3181" class="anchor" aria-label="Permalink: Part 5 [N3181]" href="#part-5-n3181"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Part 5 applied suggested changes and engages in some small invention by adding Constraints
+sections to the library. This sets a precedent we can follow elsewhere.</p>
+<p><strong>Straw poll (decision):</strong> Does WG14 want to submit TS-18661 part 5 for publication as-is?<br>
+13 / 0 / 6 (approved)</p>
+<div class="markdown-heading"><h3 class="heading-element">5.3 <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n2611.htm" rel="nofollow">N2611</a> C2Y Charter discussion</h3><a id="user-content-53-n2611-c2y-charter-discussion" class="anchor" aria-label="Permalink: 5.3 N2611 C2Y Charter discussion" href="#53-n2611-c2y-charter-discussion"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p><em>[note: this section attempts to preserve the original discussion as directly as possible]</em></p>
+<p><em>Nothing we say here has any impact.</em> There is no text in front of the Committee to approve
+for inclusion at this time.</p>
+<p>Steenberg: our job is harmonization, not design. Whether we change or keep the Charter is is
+meaningless right now. WG14 should not be a means to force new features through. We have already
+lost important projects like Linux that ignore the Standard and order vendors around directly.
+C is not chosen for safety or new features; we should improve the corner cases rather than add
+more. There is language drift, to the point of a fork; the old language still needs maintenance
+and users do not feel their needs are being addressed by the WG. Want a deprecation mechanism
+for the language; want a study group to document the dependable behaviors seen in reality.</p>
+<p>Gustedt: disagree with the core assumption. Some things needed adaptation, but things that do
+not exist do not get adopted; new things <em>do</em> exist in the field and are praxis. Dispute the
+claim about Community leadership.</p>
+<p>Wiedijk: agree with Steenberg on the study group. The threads library vs. adopting pthreads
+as-is is a good example of invention and the consequences of it.</p>
+<p>Celeste: should consider an "epoch" system to guarantee forward stability within set version
+timeframes.</p>
+<p>Bazley: the Charter says "go away" and creates a chilling effect. "Trust the programmer" has
+also been badly misunderstood and misused for too long.</p>
+<p>Meneide: the Committee fails to stick tot he existing practice rule which has become actively
+harmful. Too much never gets discussed; <code>typeof</code> took 20 years to reach discussion. Vendors
+have done the experiments and the feedback is not reaching the WG. Statement expressions were
+brought in 2002 but no progress was made. Implementers are left without clarity for their
+feature maintenance, dampening the will to develop anything. The Charter is ineffective at
+moving things forward. There is lots of practice at the moment to adopt, and needed by real
+code. We have a large pool of existing features to pull from.</p>
+<p>Bhakta: agree by disagreeing; implementations matter, for instance usage of <code>__auto_type</code> was
+minimal to the point of seeming inventive. The rule about not picking one version comes from
+ISO as our role is to build consensus and not crown an industry-winner. In practice "no
+invention" is ignored, and outside the WG nobody complains about it. Users like stability and
+restricted invention; do agree with choosing existing practice, but it needs someone to bring
+something forward. Users need to bring things they like forward.</p>
+<p>Myers: interoperability is not in the Charter, but should be. Need a space for non-observable
+behavior, for linking, for linking to other languages; C is important as a glue or communication
+language, and this should be a core feature, including the ABI level. We should not leave it to
+implementations, and should define it up-front. Risk associated with new features is contextual,
+building on well-understood features is safer than building on new things; depends on the
+complexity and the interactions. Not enough people are contributing detailed technical review
+of <em>other</em> submitters' papers and we have issues with accurate integration into the draft.
+Diffs against the working draft should be a required part of a proposal. We should consider
+what we need and what suits C's style - bit operations, packed structures, vectors, versioning;
+safety and security needs work to make it easier for users to do the right thing.</p>
+<p>Jabot: agree about value in interoperation and as a underlying language. Don't think it's fair
+to make vendors lead experimentation; it's no longer true and users expect portability, not
+extensions. The Committee must set an implementation direction.</p>
+<p>Ballman: no two of us agree on what "invention" is anyway. Extensions have rough edges; we learn
+and correct their mistakes. We do not want perverse incentives for vendors. We need room for
+corrections to vendor decisions.</p>
+<p>Seacord: we like C. It is not going away. The Charter is for the WG, not for the language; we
+are caretakers or stewards. We want to promote and champion our work. It's not controversial
+that C will never be safe; but we can improve it without "fixing" it.<br>
+Do we want C to evolve unguided or to have a roadmap? C11 had a plan and did not follow it.
+A volunteer organization can only do limited things. What gets done is what the volunteers
+want to work on.</p>
+<p>Bhakta: strongly support Myers's points. We need review, to put in things that are solid and
+not a broken basis. Vectors and SIMD and so on are good but we need volunteers. We had a TS
+and it died.<br>
+Interop should be between languages and also between C versions, forming a common link.</p>
+<p>Bachmann: Seemingly easy things are not easy. It took 22 years just to fix <code>bool</code>. Having more,
+smaller papers should make review simpler. Want a direction - C99 adds VLAs, C11 pulls them
+back; it is no good to reverse directions like this. Want a clear distinction between core and
+library the core has the higher burden. I would have liked <code>_BitInt</code> to be non-core.</p>
+<p>Steenberg: Linux is only just approving declaration-in-<code>for</code> - there is not much movement. We
+should consider having a reference implementation of the Standard Library. We don't break
+compatibility by changing code; prose is the long way. Agree that intention is needed to
+harmonize. Skittishness around large features results in paring-down, which results in them
+becoming useless. We should start a study group for vectors etc. in order to force a schedule.</p>
+<p>Uecker: Agree with Myers - interop should be in the Charter. New requirements do not allow us
+to stand still. Vendors should be involved and able to do the real invention in a better process.</p>
+<p>Wiedijk: "why not Rust" - I like C, it is simple. Adding to it makes it less attractive. Features
+are off-putting, prefer stability. Lack of type-safety is not true with better analysis.</p>
+<p>Bernstein: Don't standardize malpractice. Not obvious up-front what all features and dependencies
+are. We do need to invent, but also need to know we caught everything. Involve the vendors more
+actively, to get directional experience. Consider the Austral language: completely understanding
+a small set allows intuiting a large set; cannot intuit in C. We want the guard rails but cannot
+get a big language without them becoming disastrous.</p>
+<p>Meneide: It is not a given that vendors will play along. GCC already refuses to comply. Clang must
+see a Standard proposal before admitting any patches. There is no more room to do stuff. Vendors
+aren't actually interested in pre-Standard things. When Intel lost interest in Cilk, that killed
+it. There is a contrast between vendors in their willingness to experiment.</p>
+<p>Bazley: Agree that vendors do not care about this. It is a problem with the whole model. We have a
+chicken/egg problem where vendors defer to the Standard which defers to the implementations.</p>
+<p>Kleynhans: Agree that safety and trust require work on the public image. C++ did a <em>lot</em> of PR work
+a while back. We should copy it. Also want SIMD. Agree with Myers about review.</p>
+<p>Ballman: Clang can provide guidance on the extension process. It's both easy and hard. Users <em>love</em>
+some things, like <code>#embed</code>.<br>
+Nobody cares any more about C++ compatibility and it is no longer in our best interest. WG14 is
+given all the responsibility for it already.</p>
+<p><strong>No straw polls.</strong></p>
+<div class="markdown-heading"><h3 class="heading-element">5.4 <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n2948.pdf" rel="nofollow">N2948</a> Accessing the command line arguments outside of <code>main()</code>
+</h3><a id="user-content-54-n2948-accessing-the-command-line-arguments-outside-of-main" class="anchor" aria-label="Permalink: 5.4 N2948 Accessing the command line arguments outside of main()" href="#54-n2948-accessing-the-command-line-arguments-outside-of-main"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Introduction and justification of the feature; discussion of usability and the impact of teaching
+pointers to new users; the impact of qualification and correctness of the program design; whether
+a wholly original API would be a better addition; impact on freestanding and extended signatures;
+whether this is already implicitly required by the platform; naming scheme considerations; impact
+on shared libraries being forced to add wrapper APIs without this feature; discussion of the best
+signature for the APIs; what do other languages allow in their equivalent APIs?; how does this
+fit with multi-process DLLs in environments like Windows?</p>
+<p><strong>Straw poll (opinion):</strong> Would WG14 like to see something along the lines of N2948 added to C2y?<br>
+11 / 9 / 3</p>
+<div class="markdown-heading"><h3 class="heading-element">5.6 <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3183.pdf" rel="nofollow">N3183</a> Removing undesirable undefined behavior for <code>scanf()</code>
+</h3><a id="user-content-56-n3183-removing-undesirable-undefined-behavior-for-scanf" class="anchor" aria-label="Permalink: 5.6 N3183 Removing undesirable undefined behavior for scanf()" href="#56-n3183-removing-undesirable-undefined-behavior-for-scanf"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Core motivation to remove a UB that is out of user control; providing definitions even when the
+error condition is hit; testing against implementations; comparing impact of different strategies;
+discussion that removing the UB is possible without over-specifying; reuse existing wording as far
+as possible while respecting diverse floating representations; reduce reliance on <code>errno</code>; relation
+to the <code>strto*</code> family and sharing error handling; continuing to eliminate the existence of "trap"
+representations implicitly; consider that devs will not jump through hoops, making values unspecified
+invalidates existing code; regularity of the library is important; developers cannot be relied upon
+to use Valgrind or ASan because they do not <em>expect</em> UB; values should still be usable without special
+handlers to improve usability.</p>
+<p><strong>Straw poll (opinion):</strong> Would WG14 like to see changes along the lines of those proposed in N3183 in C2y, using the listed preferred answers to questions 2-6?<br>
+17 / 0 / 6</p>
+<p><strong>Not polled:</strong> preference for saturation-based approach.</p>
+<div class="markdown-heading"><h3 class="heading-element">5.6 [sic] <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3089.pdf" rel="nofollow">N3089</a> <code>_Optional</code>: a type qualifier to indicate pointer nullability</h3><a id="user-content-56-sic-n3089-_optional-a-type-qualifier-to-indicate-pointer-nullability" class="anchor" aria-label="Permalink: 5.6 [sic] N3089_Optional: a type qualifier to indicate pointer nullability" href="#56-sic-n3089-_optional-a-type-qualifier-to-indicate-pointer-nullability"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Slides presented were originally created for an internal ARM presentation. The slides were later
+made available as <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3222.pdf" rel="nofollow">N3222</a>.<br>
+Topic introduced via presentation of slides and N3089.</p>
+<p>Discussion: what about <code>void *</code> with the new <code>&amp;*</code> pseudo-operator; how teachable was this?, how
+checkable was this?, what did ARM think?; resistance from the same people who never adopted <code>const</code>;
+code with qualifiers is at least never <em>less</em> correct than without qualifiers; qualifiers are not
+forced to be used outside of using new APIs; should old APIs add this qualifier?; despite the
+superficial simplicity, <code>nonnull</code> is harder to implement usefully or migrate to; "pain" of migration
+is evidence that qualifiers do actually help (!), and anyway they can always be cast-off; more
+consistent with original declaration syntax than Clang's feature, can be <code>typedef</code>-ed etc; this
+behaves like a type system qualifier like the rest of the language, unlike <code>nonnull</code> which behaves
+differently; discussion of what a qualifier actually is, about accesses and not the value; <code>const</code>
+can also be stripped from an already-correct program; contrast <code>_Mandatory</code> would be less useful
+against common expectation of validity and doesn't work with implicit conversion; a new pseudo
+operator is a better solution than casts for communicating intent and automatically only stripping
+the qualifier; already deployed in ARM and checked by static analysis; easy to migrate using low
+impact starting solutions like an empty macro; Clang are not keen on this and chose <code>nonnull</code>
+because it believed value-conversion was more important.</p>
+<p>Several expressions of delight at the proposal within the room. Explicit thanks and encouragement
+to the author for bringing this and for the diligent preparation.</p>
+<p><strong>Straw poll (opinion):</strong> Would WG14 like to add something along the lines of <code>_Optional</code> as specified in N3089 to C2y?<br>
+15 / 0 / 6</p>
+<div class="markdown-heading"><h3 class="heading-element">5.6 <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3184.pdf" rel="nofollow">N3184</a> Format Specifiers for Floating-point Numbers</h3><a id="user-content-56-n3184-format-specifiers-for-floating-point-numbers" class="anchor" aria-label="Permalink: 5.6 N3184 Format Specifiers for Floating-point Numbers" href="#56-n3184-format-specifiers-for-floating-point-numbers"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Introduction and justification: normally scalars would have printing too; there is a problem with
+running out of characters; great variance of types means copying integers is not possible but can
+fix to just IEEE types; 4095 characters is often not enough; lack of distinction between language
+and library types made implementation in musl difficult; avoid overpowered <code>printf</code> if possible;
+need more feature test macros; should try to be consistent between printing and scanning; possible
+argument for tossing out format strings entirely (!); <code>to_string</code> is also an option; don't want to
+force support for dynamic big-ints or huge objects.</p>
+<p><strong>Straw poll (opinion):</strong> Would WG14 like to add something along the lines of N3184 to C2y?<br>
+12 / 0 / 9</p>
+<p><strong>Straw poll (opinion):</strong> Would WG14 like to raise the 4095-character limit on format-specified printable values in C2y?<br>
+9 / 2 / 10</p>
+<div class="markdown-heading"><h3 class="heading-element">5.8 <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3185.htm" rel="nofollow">N3185</a> Simple TU initialization and cleanup handling with dependencies</h3><a id="user-content-58-n3185-simple-tu-initialization-and-cleanup-handling-with-dependencies" class="anchor" aria-label="Permalink: 5.8 N3185 Simple TU initialization and cleanup handling with dependencies" href="#58-n3185-simple-tu-initialization-and-cleanup-handling-with-dependencies"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Discussion of how this is always possible but often tedious; <code>call_once</code> and similar are not great
+for solving dependency between TUs; GCC has a numbering scheme; this could work as a library-evolution
+feature but does rely on compiler magic for the ordering; god for optionally-used library components;
+is the library issue out of scope for the Standard? established that inter-dependency is an issue
+for static linkage as well; there is no magic across the static library boundary, just implementation
+name mangling.</p>
+<p><strong>Straw poll (opinion):</strong> Would WG14 like to add something along the lines of N3185 to C2y?<br>
+8 / 5 / 7 (no consensus)</p>
+<div class="markdown-heading"><h3 class="heading-element">5.9 <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3189.htm" rel="nofollow">N3189</a> Some constants are literally literals</h3><a id="user-content-59-n3189-some-constants-are-literally-literals" class="anchor" aria-label="Permalink: 5.9 N3189 Some constants are literally literals" href="#59-n3189-some-constants-are-literally-literals"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Discussion that the Standard needs to separate its terms better between syntax and semantics, and between
+processing phases; not proposing a normative change to the definition of multi-byte character constants;
+recurring question of the definition of "character", <em>inviting</em> a subsequent proposal to resolve it;
+confusion between "character" and "byte", "character" and UTF-8, etc; this work was already done for C++
+so no need to diverge.</p>
+<p><strong>Straw poll (opinion):</strong> Would WG14 like to adopt changes along the lines of those specified in N3189 in C2y?<br>
+24 / 0 / 0</p>
+<div class="markdown-heading"><h3 class="heading-element">5.9 <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3190.htm" rel="nofollow">N3190</a> Extensions to the preprocessor for C2Y</h3><a id="user-content-59-n3190-extensions-to-the-preprocessor-for-c2y" class="anchor" aria-label="Permalink: 5.9 N3190 Extensions to the preprocessor for C2Y" href="#59-n3190-extensions-to-the-preprocessor-for-c2y"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Introduction and justification as a request for direction, while also having the goal of factoring out
+preprocessing into a separate language-independent specification. Collecting more extensions is the
+start of this process, and direction is needed for how big the specification should become.</p>
+<p>Discussion: <code>__COUNTER__</code> makes evaluation order and caching observable, with divergent test cases
+between major vendors; many implementable features are just better as builtins anyway, especially
+when the preprocessor already knows how by definition; implementability is a non-issue; some original
+features but building on the same base; does C++ even care about the preprocessor any more? though
+ideas like <code>__VA_OPT__</code> did originate in C++; consistency remains paramount; not many likely users
+from other languages, although there is some existing practice; also aiming to reduce "cleverness"
+and the amount of boilerplate needed like for <code>NARGS</code>, simplifying Boost et al.; weigh the cost of
+moving effort between user and implementer; some resistance to the idea that the preprocessor should
+be allowed to become a programming language in its own right; strong support for letting the
+implementation just use builtins where it has to have the information anyway; there is demand for
+many of these in the Clang community but need feature-focus.</p>
+<p><strong>Not polled.</strong></p>
+<div class="markdown-heading"><h3 class="heading-element">5.9 <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3197.pdf" rel="nofollow">N3197</a> Accessing arrays of character type</h3><a id="user-content-59-n3197-accessing-arrays-of-character-type" class="anchor" aria-label="Permalink: 5.9 N3197 Accessing arrays of character type" href="#59-n3197-accessing-arrays-of-character-type"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>For context, this also referred back to <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n2014.htm" rel="nofollow">N2014</a>,
+reviewing user understanding of what they can do with buffers. Users believe that this is already allowed.
+Application developers already rely on this behavior. The Standard is free to move a UB that users rely
+on into being well-defined.</p>
+<p>Discussion: this also appears to be consistent with all praxis because compilers do not exploit this UB;
+would finally make implementing <code>malloc</code> possible; discussion of the impact on the Effective Type;
+comparison with C++ which provides <code>new</code> instead of allowing this; consider that not all architectures
+allow all types in all address spaces, including main memory on small targets or the GPU mapping;
+address spaces are not well-served by C anyway at the moment; allowance for embedded locks already
+causes huge problems; no intent to change any existing behavior; strong support from implementers in
+the room; noted that this does not imply octets or change the definition of bytes; do atomics need
+a special exception for implementability?; not substantially worse than <code>malloc</code>.</p>
+<p><strong>Straw poll (opinion):</strong> Would WG14 like to add something along the lines of N3197 to C2y?<br>
+18 / 2 / 2</p>
+<div class="markdown-heading"><h3 class="heading-element">5.9 <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3186.htm" rel="nofollow">N3186</a> Initialization, allocation and effective type</h3><a id="user-content-59-n3186-initialization-allocation-and-effective-type" class="anchor" aria-label="Permalink: 5.9 N3186 Initialization, allocation and effective type" href="#59-n3186-initialization-allocation-and-effective-type"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Introduced with justification of making effective types easier for users to control. This allows
+communicating new object identities to the compiler. Much like previous paper, this only aims to
+allow what is already accepted praxis.</p>
+<p>Discussion of the API design and UX ramifications; discussion of wanting to control optimization
+of calls and providing guarantees of state, not efficiency; which expectation is the common case?;
+avoiding surprises vs. consistency with current language design; discussion of correct intended
+usage, not fully understood by all members; discussion of the boundaries across address spaces;
+dependency on previous papers; discussion of the implementation that also provided in-language
+namespacing; strong support for the fact that the provided implementation <em>works</em> out of the box.</p>
+<p><strong>Straw poll (opinion):</strong> Would WG14 like to add something along the lines of N3186 to C2y?<br>
+1 / 7 / 14 (no consensus)</p>
+<div class="markdown-heading"><h3 class="heading-element">5.9 <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3187.htm" rel="nofollow">N3187</a> Clarify array length specifications and <code>sizeof</code> expressions</h3><a id="user-content-59-n3187-clarify-array-length-specifications-and-sizeof-expressions" class="anchor" aria-label="Permalink: 5.9 N3187 Clarify array length specifications and sizeof expressions" href="#59-n3187-clarify-array-length-specifications-and-sizeof-expressions"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Introduction and justification: attempt to simplify user understanding of when effects occur.
+Seemingly unrelated expressions depending on each other for evaluation creates dependencies that
+are hard to get right.</p>
+<p>Discussion of: consistency; that side effects are confusing in general, except when clearly intended;
+nesting complicated features is confusing in general, possibly this should be the jurisdiction of
+Guidelines documents; whether evaluation is forced is not consistent as-is; this may invalidate a lot
+of documents without fixing the underlying problem; the feature in general surprises users and maybe
+warrants a warning; we should at least aim to remove any UB.</p>
+<p><strong>Straw poll (opinion):</strong> Would WG14 like to add something along the lines of N3187 to C2y?<br>
+13 / 2 / 7</p>
+<div class="markdown-heading"><h3 class="heading-element">5.9 <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3188.htm" rel="nofollow">N3188</a> Identifying array length state</h3><a id="user-content-59-n3188-identifying-array-length-state" class="anchor" aria-label="Permalink: 5.9 N3188 Identifying array length state" href="#59-n3188-identifying-array-length-state"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Introduced with the justification that there are many use cases for adding sugar to the query for
+a previously-established state. If state exists, the user should be able to access it; the abstract
+machine state is reified in the case of VLAs.</p>
+<p>Discussion of syntax, whether the dot is good UX, whether the declaration needs to match; must not
+change the meaning of any existing code; should avoid conflicting with member namespace; the different
+use cases have varying importance and implications; should limit to the well-developed parts;
+discussion of how this is actually implementable for all proposed uses.</p>
+<p><strong>Straw poll (opinion):</strong> Would WG14 like to add something along the lines of N3188 to C2y?<br>
+10 / 3 / 5</p>
+<div class="markdown-heading"><h3 class="heading-element">5.7 <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3207.pdf" rel="nofollow">N3207</a> Forward Declaration of Parameters v3</h3><a id="user-content-57-n3207-forward-declaration-of-parameters-v3" class="anchor" aria-label="Permalink: 5.7 N3207 Forward Declaration of Parameters v3" href="#57-n3207-forward-declaration-of-parameters-v3"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>This was discussed thoroughly before. Forward declarations are justified as being less convenient
+but having the most unambiguous semantics.</p>
+<p>Discussion: additional use cases for arbitrary objects?; C++ compatibility is irrelevant here;
+should there be more error conditions or constraints?; comparison to attribute approach in Clang
+with a <em>delayed parsing</em> approach; concerns about usability and mis-usability; reminder that the
+appearance is existing practice; noted that forward declaration is a core C principle; noted that
+this is a solution to a problem <em>that WG14 created</em> and then solicited solutions for.</p>
+<p><strong>Straw poll (opinion):</strong> Would WG14 like to add something along the lines of N3207 to C2y?<br>
+10 / 3 / 6</p>
+<p><strong>Straw poll (opinion):</strong> Does WG14 want to allow forward declarations for names other than parameter objects?<br>
+7 / 6 / 5 (not consensus, but directional)</p>
+<div class="markdown-heading"><h3 class="heading-element">5.10 <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3192.pdf" rel="nofollow">N3192</a> Sequential Hexdigits</h3><a id="user-content-510-n3192-sequential-hexdigits" class="anchor" aria-label="Permalink: 5.10 N3192 Sequential Hexdigits" href="#510-n3192-sequential-hexdigits"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Observed that there are no known conflicts with this proposal. Only encoding identified is from
+the 1960s USSR and never saw widespread adoption. Noted that we cannot fix the character set above
+<code>'h'</code>.</p>
+<p>Polling for deferred-immediate addition to C2y.</p>
+<p><strong>Straw poll (opinion):</strong> Would WG14 like to add N3192 to a Standing Document for addition to the draft of C2y when it becomes available?<br>
+19 / 0 / 1</p>
+<p><strong>ACTION:</strong> SEACORD to add N3192 to a Standing Document for addition to the working draft of C2y.</p>
+<div class="markdown-heading"><h3 class="heading-element">5.10 <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3193.htm" rel="nofollow">N3193</a> Obsolete implicitly octal literals</h3><a id="user-content-510-n3193-obsolete-implicitly-octal-literals" class="anchor" aria-label="Permalink: 5.10 N3193 Obsolete implicitly octal literals" href="#510-n3193-obsolete-implicitly-octal-literals"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Discussion that this may conflict with file permissions convention; that <code>printf</code> and the preprocessor
+are not completely consistent with the base language; that escape sequences should prefer delimiters
+as seen in C++; that this is a common pitfall but we also cannot change the meaning of existing code;
+deprecation does not have to imply removal or a change in existing meaning; that an alternative is
+needed for the current valid usages; that this is a good use case for obsolescence because it forces
+warnings to be emitted early.</p>
+<p><strong>Straw poll (opinion):</strong> Would WG14 like to add something along the lines of N3193 to C2y?<br>
+18 / 1 / 1</p>
+<p><strong>Straw poll (opinion):</strong> Would WG14 prefer to immediately obsolesce the original octal literal syntax?<br>
+11 / 4 / 4</p>
+<div class="markdown-heading"><h3 class="heading-element">5.10 <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3195.htm" rel="nofollow">N3195</a> Named loops</h3><a id="user-content-510-n3195-named-loops" class="anchor" aria-label="Permalink: 5.10 N3195 Named loops" href="#510-n3195-named-loops"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Discussion over the merits of named control structures vs. simply using <code>goto</code>, with a division of
+opinion with some strong support for only allowing <code>goto</code>; location of the label is potentially
+confusing, but convention is already firmly established out-of-language; comparison with conventions
+of other languages; consider that this could allow arbitrary breakout and whether we intend that.</p>
+<p><strong>Straw poll (opinion):</strong> Would WG14 like to add something along the lines of N3195 in C2y?<br>
+12 / 6 / 3</p>
+<div class="markdown-heading"><h3 class="heading-element">5.10 <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3194.htm" rel="nofollow">N3194</a> Case range expressions</h3><a id="user-content-510-n3194-case-range-expressions" class="anchor" aria-label="Permalink: 5.10 N3194 Case range expressions" href="#510-n3194-case-range-expressions"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Discussion about the precise use of punctuation and the impact on downstream languages; that using
+<code>::</code> as an operator causes major problems for C++, and namespaces if they are added in future; that
+GCC's syntax does actually work in the field; that using unbalanced bracketing is a non-starter;
+whether we need the right-open range at all.</p>
+<p><strong>Straw poll (opinion):</strong> Would WG14 like to add something along the lines of N3194 in C2y?<br>
+19 / 1 / 2</p>
+<p><strong>Straw poll (opinion):</strong> Would WG14 like to add something along the lines of the right-open range operator suggested in N3194 to C2y?<br>
+6 / 8 / 8 (no consensus to add this)</p>
+<div class="markdown-heading"><h3 class="heading-element">5.10 <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3196.htm" rel="nofollow">N3196</a> <code>if</code> declarations</h3><a id="user-content-510-n3196-if-declarations" class="anchor" aria-label="Permalink: 5.10 N3196if declarations" href="#510-n3196-if-declarations"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Strong positive reception from the room; questions about scope of the declaration and noted that it
+should match exactly the scope in the equivalent C++ construct; currently no user experience but
+noted that implementation is trivial; noted that the syntax definition in the grammar is highly
+confusing, which is an artifact of trying to copy C++ too exactly; noted that this has nothing to
+do with "assignment in <code>if</code>", which is just an expression; assignment is common and this would
+reduce that vulnerability; we can extend to allow multiple-declarations if really wanted; multi
+declarator syntax already works.</p>
+<p><strong>Straw poll (opinion):</strong> Would WG14 like to add something along the lines of N3196 to C2y?<br>
+15 / 0 / 7</p>
+<div class="markdown-heading"><h3 class="heading-element">5.10 <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3203.htm" rel="nofollow">N3203</a> Strict order of expression evaluation</h3><a id="user-content-510-n3203-strict-order-of-expression-evaluation" class="anchor" aria-label="Permalink: 5.10 N3203 Strict order of expression evaluation" href="#510-n3203-strict-order-of-expression-evaluation"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Discussion of how other languages do or don't specify this; impact on <code>for</code> loops and side effects
+against the same object becoming well-defined; noted that <em>no portable code breaks</em> because of this;
+argument that UB in some of the existing examples is a good thing because it makes diagnostics easier
+without relying on secondary rules; counterarguments that dropping UB is good, actually; questions
+of how useful the existing behavior really is; noted that semantic ordering may be better than strict
+left-to-right in some cases; noted that applying the change to initializers may have significant
+optimization impact as currently specified; requests for more data; noted that C++ originally
+proposed the complete change but pulled back only at the last moment, without contradictory
+data. Argument that we should avoid repeating the mistakes of C++.</p>
+<p>Positive reception to the direction but concerns over how intrusive the implementation would be.</p>
+<p><strong>Straw poll (opinion):</strong> Would WG14 like to add something along the lines of N3203 in C2y?<br>
+15 / 4 / 2</p>
+<div class="markdown-heading"><h3 class="heading-element">5.10 <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3204.htm" rel="nofollow">N3204</a> Semantic basis for overloading</h3><a id="user-content-510-n3204-semantic-basis-for-overloading" class="anchor" aria-label="Permalink: 5.10 N3204 Semantic basis for overloading" href="#510-n3204-semantic-basis-for-overloading"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Discussion points: those who don't want overloads at all think this is a better approach than the
+C++ mechanism; that while constrained this approach would be more verbose and potentially messy to
+read; that the division between approaches can be drawn in many places; implementer experience with
+both approaches notes that implicit conversion can make reasoning difficult; that we have an
+opportunity to define where conversions and promotions happen; that this composes better with
+generics; that a solution for "best match" is needed less in C than in C++ but still needed;
+experience from LCC that implicit conversions were not difficult to allow; experience from Clang
+(and QAC) <code>[[overloadable]]</code> that resolution is possible; Clang finds <code>[[overloadable]]</code> is widely
+used in practice and a strongly supported feature.</p>
+<p><strong>Not polled.</strong></p>
+<div class="markdown-heading"><h3 class="heading-element">5.10 <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3205.pdf" rel="nofollow">N3205</a> TS proposal: C - Extensions to support pure functions, v2</h3><a id="user-content-510-n3205-ts-proposal-c---extensions-to-support-pure-functions-v2" class="anchor" aria-label="Permalink: 5.10 N3205 TS proposal: C - Extensions to support pure functions, v2" href="#510-n3205-ts-proposal-c---extensions-to-support-pure-functions-v2"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>No new content discussed, only procedural updates. The TS had not yet been assigned a number and the
+title is not the agreed one.</p>
+<p>Brief discussion of future directions; the two features do not compose and this needs resolution.
+Also needs to consider the following feature.</p>
+<p><strong>Not polled.</strong></p>
+<div class="markdown-heading"><h3 class="heading-element">5.11 <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3199.htm" rel="nofollow">N3199</a> Improved <code>__attribute__((cleanup))</code> Through <code>defer</code>
+</h3><a id="user-content-511-n3199-improved-__attribute__cleanup-through-defer" class="anchor" aria-label="Permalink: 5.11 N3199 Improved __attribute__((cleanup)) Through defer" href="#511-n3199-improved-__attribute__cleanup-through-defer"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Noted that this was previously voted to proceed to a TS.</p>
+<p>Improvements and changes introduced: now substantially more concrete, resolved conflicts with lambdas
+and other proposed new features; significant review of praxis especially in the Linux kernel; completely
+removed all runtime aspects, fixing mistakes introduced by Go; noted that current version does not imply
+storage or exception awareness or require unwinding to work; discussion of usability in comparison to
+other approaches; discussion of feature implications in comparison to different features like <code>try</code>/<code>finally</code>
+in other languages; noted that the proposal <em>exactly</em> corresponds to C++ destructor semantics; debate
+over the relative UX merits of <code>defer</code> vs destructors and <code>__finally</code> and where they place operations;
+argument made that <code>defer</code> is specifically a better solution <em>for C</em> and <em>for C code</em> compared to other
+solutions suiting other languages; noted that this is a blocker for tail-calls; noted that this doesn't
+include a <code>panic</code>/<code>recover</code> scoped-error mechanism, which was in the first version of the feature;
+concerns about the validity of the examples but strong positive reception from users (ARM stated support
+for the record); most concerns about implementation appear to have been resolved; discussion about the
+best UX for conditional-cleanup and whether this enables that vs. approaches that hide state.</p>
+<p>Noted that the TS was originally proposed and approved for a <em>much</em> more complicated version of the
+feature and that this proposal may no longer warrant it. However, given a TS, implementers are
+still more inclined to ship this before C2y, probably not without one. A TS can still be ready by
+end-of-year.</p>
+<p><strong>Straw poll (opinion):</strong> Would WG14 like to develop something along the lines of N3199 as a TS?<br>
+14 / 2 / 5</p>
+<p><strong>Straw poll (opinion):</strong> Would WG14 like to add something along the lines of N3199 in C2y?<br>
+11 / 5 / 5</p>
+<p>National Bodies voting to support and review a TS:<br>
+United States, United Kingdom, Canada, Netherlands, Poland, France</p>
+<p><strong>ACTION:</strong> SEACORD to submit a NWIP to SC22 for the <code>defer</code> TS.</p>
+<div class="markdown-heading"><h3 class="heading-element">5.11 <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3198.htm" rel="nofollow">N3198</a> Conditionally Supported Unwinding</h3><a id="user-content-511-n3198-conditionally-supported-unwinding" class="anchor" aria-label="Permalink: 5.11 N3198 Conditionally Supported Unwinding" href="#511-n3198-conditionally-supported-unwinding"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Justification that <em>if</em> <code>defer</code> is introduced, users probably expect it to unwind. Some experience
+from C++ destructors; less supported by existing <code>longjmp</code> mechanism. This proposes to define the
+specific amount of unwinding that does or does not occur, in a way compatible with C++ mechanisms.
+A new section would be added if <code>defer</code> is added.</p>
+<p>Noted that signals introduce many more scenarios, async etc., needing additional qordings for the
+equivalent states the program can be in; concerns that this may make <code>defer</code> less attractive to
+implementers by raising the complexity burden; noted that the real issue is divergent practice and
+that this needs to clarify, not add - this is not a part of the <code>defer</code> feature; concerns that this
+is an inherently flawed approach because the unwind may originate in a non-C translation unit;
+noted that by adding this as a toplevel TS clause, vendors would be free to discard it; concern
+about various levels of conditional recoverability that need specification; noted that the original
+Committee deeply regretted adding <code>signal</code> and <code>raise</code> in the first place, not portably useful;
+question over which part of the implementation is responsible for this, does the compiler <em>make</em> it
+work or <em>let</em> it work; preference expressed for non-unwinding specification; noted that unwinding
+can result in cascading error conditions.</p>
+<p><strong>Straw poll (opinion):</strong> Would WG14 like to add something along the lines of N3198 to the defer TS?<br>
+2 / 13 / 5 (no consensus)</p>
+<p>(note: this does not <em>prevent</em> the authors adding a separate Clause, but the Committee is not
+asking them to spend any more time on this)</p>
+<div class="markdown-heading"><h3 class="heading-element">5.11 <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3200.htm" rel="nofollow">N3200</a> Transparent Aliases, r3</h3><a id="user-content-511-n3200-transparent-aliases-r3" class="anchor" aria-label="Permalink: 5.11 N3200 Transparent Aliases, r3" href="#511-n3200-transparent-aliases-r3"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Introduced as "<code>typedef</code> but for functions". Some background on comparison with existing asm-label
+approaches and how this enables seamless ABI changes.</p>
+<p>Questions about how this necessarily solves the underlying problem, vs using a macro; noted that
+this doesn't support <code>dlopen</code>; apart from the <code>&amp;</code> operator, <code>auto constexpr</code> already provides 95%
+of the proposal; removing the "suppression rule" would break large amounts of code; ABI breakage
+is more often about types, and <em>not</em> internal to single libraries but requires passthrough across
+translation units, so cannot be fixed just in one place or purely inside the language.</p>
+<p><strong>Straw poll (opinion):</strong> Would WG14 like to add something along the lines of N3200 to C2y?<br>
+7 / 5 / 9 (not clear consensus)</p>
+<div class="markdown-heading"><h3 class="heading-element">5.13 <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3206.htm" rel="nofollow">N3206</a> The future of imaginary types</h3><a id="user-content-513-n3206-the-future-of-imaginary-types" class="anchor" aria-label="Permalink: 5.13 N3206 The future of imaginary types" href="#513-n3206-the-future-of-imaginary-types"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Introduced with valuable additional context from CFP. The imaginary operations change domain differently
+and have slightly different results, but these are also unsupported in practice. One known implementation
+(HP) that does not appear to be maintained or up-to-date.</p>
+<p>Discussion around the UX of the proposed suffix; whether users/customers actually want or ask for this;
+comparison to Chapel language, where the feature is being newly added, and Fortran, where it can have
+mixed-precision; noted that users complain about the feature macro because they <em>don't</em> use the feature;
+note that this requires collusion between compiler and library implementers, who may be different;
+discussion over the practical utility of the type in general.</p>
+<p><strong>Straw poll (opinion):</strong> Would WG14 like to remove imaginary types from the C standard for C2y?<br>
+11 / 2 / 10 (consensus to remove)</p>
+<div class="markdown-heading"><h2 class="heading-element">Clarification Requests</h2><a id="user-content-clarification-requests" class="anchor" aria-label="Permalink: Clarification Requests" href="#clarification-requests"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>The previous queue of clarification requests has been processed.</p>
+<div class="markdown-heading"><h2 class="heading-element">7 Other business</h2><a id="user-content-7-other-business" class="anchor" aria-label="Permalink: 7 Other business" href="#7-other-business"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<div class="markdown-heading"><h3 class="heading-element">
+<a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3051.pdf" rel="nofollow">N3051</a> Operator Overloading in C</h3><a id="user-content-n3051-operator-overloading-in-c" class="anchor" aria-label="Permalink: N3051 Operator Overloading in C" href="#n3051-operator-overloading-in-c"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Introduced with the justification that the best option is to give users the tools to express themselves
+within the language, rather than relying on builtins. Use case examples including new number and vector
+types, fat pointers, and others.</p>
+<p>Discussion of the dependencies - does this imply hidden allocation? (no); what other language features
+does this pull in, e.g. C++ references, RAII for allocations; some user-side use cases may <em>want</em>
+unconstrained allocation, there are potential solutions to this, including user-side GC; objections
+raised to searchability, readability, and general UX of operators; noted that the proposal allows
+overloads of many more operators than the basic set; concerns over complexity of call resolution;
+concerns from members who <em>do</em> want operator overloading that it should not follow these lookup rules;
+agreement that C cannot be made "small" by just moving everything interesting to Annexes; operators
+do allow more work to be done by library developers; <code>_BitInt</code> is an example of limitations of baking
+the feature into the compiler resulting in non-portability; concerns about the proposal focus on
+free functions instead of type relations to existing operators; concerns about the role of implicit
+conversions; concerned that this has not been designed <em>to suit C</em> even though the resolution rules
+are simplified from C++.</p>
+<p><strong>Straw poll (opinion):</strong> Would WG14 like to pursue operator overloading for C2y, in any form?
+5 / 11 / 7 (not consensus to proceed)</p>
+<p>(note 1: the Committee will not prevent future proposals being submitted on this topic)</p>
+<p>(note 2: <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3201.pdf" rel="nofollow">N3201</a> was not discussed because
+the author was not available, but it was acknowledged that the timing of the vote was potentially unfair
+and they will not be prevented from resubmitting)</p>
+<div class="markdown-heading"><h2 class="heading-element">8 Recommendations and Decisions Reached</h2><a id="user-content-8-recommendations-and-decisions-reached" class="anchor" aria-label="Permalink: 8 Recommendations and Decisions Reached" href="#8-recommendations-and-decisions-reached"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<div class="markdown-heading"><h3 class="heading-element">8.1 Review of Decisions</h3><a id="user-content-81-review-of-decisions" class="anchor" aria-label="Permalink: 8.1 Review of Decisions" href="#81-review-of-decisions"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Does WG14 want to remove all outward references to other Clauses from Clause 3?<br>
+3 / 8 / 8 (no consensus)</p>
+<p>Does WG14 want to lift subclauses 3.20.2, 3.20.4, and 3.20.5, to the top level of Clause 3?<br>
+12 / 3 / 5</p>
+<p>Does WG14 want to resolve ISO comment 188 by rejecting the comment?<br>
+16 / 1 / 3</p>
+<p>Does WG14 want to accept all change dispositions to comments as specified in document N3216?<br>
+19 / 1 / 0</p>
+<p>Does WG14 want to submit TS-18661 part 4 for publication as-is?<br>
+12 / 3 / 5</p>
+<p>Does WG14 want to submit TS-18661 part 5 for publication as-is?<br>
+13 / 0 / 6</p>
+<div class="markdown-heading"><h3 class="heading-element">8.2 Review of Action Items</h3><a id="user-content-82-review-of-action-items" class="anchor" aria-label="Permalink: 8.2 Review of Action Items" href="#82-review-of-action-items"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p><strong>SEACORD</strong> to submit the drafts of TS-18661 part 4 and part 5 to SC22.</p>
+<p><strong>SEACORD</strong> to add <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3192.pdf" rel="nofollow">N3192</a> to a Standing Document for addition to the working draft of C2y.</p>
+<p><strong>SEACORD</strong> to submit a NWIP to SC22 for the <code>defer</code> TS.</p>
+<div class="markdown-heading"><h2 class="heading-element">9 Thanks to host</h2><a id="user-content-9-thanks-to-host" class="anchor" aria-label="Permalink: 9 Thanks to host" href="#9-thanks-to-host"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<div class="markdown-heading"><h2 class="heading-element">Adjournment</h2><a id="user-content-adjournment" class="anchor" aria-label="Permalink: Adjournment" href="#adjournment"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>WG14 motion: Bhakta moves to adjourn. Wiedijk seconds. No objections.</p>
+<p><strong>Adjourned.</strong></p>
+</article></body></html>

@@ -1,0 +1,1452 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>@font-face {
+  font-family: octicons-link;
+  src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM+8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB/aFGpk3jaTY6xa8JAGMW/O62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v+k/0an2i+itHDw3v2+9+DBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3/I7AtxEJLtzzuZfI+VVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy/Lt7Kc+0vWY/gAgIIEqAN9we0pwKXreiMasxvabDQMM4riO+qxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw+ymhce7vwM9jSqO8JyVd5RH9gyTt2+J/yUmYlIR0s04n6+7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv/ocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi+W2+MjCzMIDApSwvXzC97Z4Ig8N/BxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh/8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT+AEjAwuDFpBmA9KMDEwMCh9i/v8H8sH0/4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9/lqYwOGZxeUelN2U2R6+cArgtCJpauW7UQBqnFkUsjAY/kOU1cP+DAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl+vvmM/byA48e6tWrKArm4ZJlCbdsrxksL1AwWn/yBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO//sdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd/89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF+9JOS0nbaaYDCQfwCJ7Au3AHj+LO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm+EBXuAbHmIMSRMs+4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL+hD7C1xoaHeLJSEao0FEW14ckxC+TU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13/+lm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl+9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O/AdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB///AA8AAQAAAAAAAAAAAAAAAAABAAAAAA==) format('woff');
+}
+
+body {
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+    color:#333;
+    background:#fff;
+}
+
+body .markdown-body {
+    padding: 45px;
+    word-wrap: break-word;
+}
+
+.markdown-body .octicon-link:before {
+  font: normal normal normal 16px/1 octicons-link;
+  display: inline-block;
+  text-decoration: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  content: '\f05c';
+  vertical-align: middle;
+}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #1b1f23;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #24292e;
+  line-height: 1.5;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .pl-c {
+  color: #6a737d;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #005cc5;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #6f42c1;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #24292e;
+}
+
+.markdown-body .pl-ent {
+  color: #22863a;
+}
+
+.markdown-body .pl-k {
+  color: #d73a49;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #032f62;
+}
+
+.markdown-body .pl-smw,
+.markdown-body .pl-v {
+  color: #e36209;
+}
+
+.markdown-body .pl-bu {
+  color: #b31d28;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b31d28;
+  color: #fafbfc;
+}
+
+.markdown-body .pl-c2 {
+  background-color: #d73a49;
+  color: #fafbfc;
+}
+
+.markdown-body .pl-c2:before {
+  content: "^M";
+}
+
+.markdown-body .pl-sr .pl-cce {
+  color: #22863a;
+  font-weight: 700;
+}
+
+.markdown-body .pl-ml {
+  color: #735c0f;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  color: #005cc5;
+  font-weight: 700;
+}
+
+.markdown-body .pl-mi {
+  color: #24292e;
+  font-style: italic;
+}
+
+.markdown-body .pl-mb {
+  color: #24292e;
+  font-weight: 700;
+}
+
+.markdown-body .pl-md {
+  background-color: #ffeef0;
+  color: #b31d28;
+}
+
+.markdown-body .pl-mi1 {
+  background-color: #f0fff4;
+  color: #22863a;
+}
+
+.markdown-body .pl-mc {
+  background-color: #ffebda;
+  color: #e36209;
+}
+
+.markdown-body .pl-mi2 {
+  background-color: #005cc5;
+  color: #f6f8fa;
+}
+
+.markdown-body .pl-mdr {
+  color: #6f42c1;
+  font-weight: 700;
+}
+
+.markdown-body .pl-ba {
+  color: #586069;
+}
+
+.markdown-body .pl-sg {
+  color: #959da5;
+}
+
+.markdown-body .pl-corl {
+  color: #032f62;
+  text-decoration: underline;
+}
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #dfe2e5;
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+.markdown-body hr:before {
+  content: "";
+  display: table;
+}
+
+.markdown-body hr:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.markdown-body .border {
+  border: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .border-0 {
+  border: 0!important;
+}
+
+.markdown-body .border-bottom {
+  border-bottom: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .rounded-1 {
+  border-radius: 3px!important;
+}
+
+.markdown-body .bg-white {
+  background-color: #fff!important;
+}
+
+.markdown-body .bg-gray-light {
+  background-color: #fafbfc!important;
+}
+
+.markdown-body .text-gray-light {
+  color: #6a737d!important;
+}
+
+.markdown-body .mb-0 {
+  margin-bottom: 0!important;
+}
+
+.markdown-body .my-2 {
+  margin-bottom: 8px!important;
+  margin-top: 8px!important;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .py-0 {
+  padding-bottom: 0!important;
+  padding-top: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .py-2 {
+  padding-bottom: 8px!important;
+  padding-top: 8px!important;
+}
+
+.markdown-body .pl-3,
+.markdown-body .px-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .px-3 {
+  padding-right: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .f6 {
+  font-size: 12px!important;
+}
+
+.markdown-body .lh-condensed {
+  line-height: 1.25!important;
+}
+
+.markdown-body .text-bold {
+  font-weight: 600!important;
+}
+
+.markdown-body:before {
+  content: "";
+  display: table;
+}
+
+.markdown-body:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+
+.markdown-body hr {
+  background-color: #e1e4e8;
+  border: 0;
+  height: .25em;
+  margin: 24px 0;
+  padding: 0;
+}
+
+.markdown-body blockquote {
+  border-left: .25em solid #dfe2e5;
+  color: #6a737d;
+  padding: 0 1em;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #fafbfc;
+  border: 1px solid #c6cbd1;
+  border-bottom-color: #959da5;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #959da5;
+  color: #444d56;
+  display: inline-block;
+  font-size: 11px;
+  line-height: 10px;
+  padding: 3px 5px;
+  vertical-align: middle;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 16px;
+  margin-top: 24px;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: .3em;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+}
+
+.markdown-body h6 {
+  color: #6a737d;
+  font-size: .85em;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+  margin-top: 16px;
+  padding: 0;
+}
+
+.markdown-body dl dd {
+  margin-bottom: 16px;
+  padding: 0 16px;
+}
+
+.markdown-body table {
+  display: block;
+  overflow: auto;
+  width: 100%;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  border: 1px solid #dfe2e5;
+  padding: 6px 13px;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+.markdown-body img {
+  background-color: #fff;
+  box-sizing: content-box;
+  max-width: 100%;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  background-color: rgba(27,31,35,.05);
+  border-radius: 3px;
+  font-size: 85%;
+  margin: 0;
+  padding: .2em .4em;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  background: transparent;
+  border: 0;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  word-break: normal;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  background-color: #f6f8fa;
+  border-radius: 3px;
+  font-size: 85%;
+  line-height: 1.45;
+  overflow: auto;
+  padding: 16px;
+}
+
+.markdown-body pre code {
+  background-color: transparent;
+  border: 0;
+  display: inline;
+  line-height: inherit;
+  margin: 0;
+  max-width: auto;
+  overflow: visible;
+  padding: 0;
+  word-wrap: normal;
+}
+
+.markdown-body .commit-tease-sha {
+  color: #444d56;
+  display: inline-block;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 90%;
+}
+
+.markdown-body .blob-wrapper {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.markdown-body .blob-wrapper-embedded {
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.markdown-body .blob-num {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  color: rgba(27,31,35,.3);
+  cursor: pointer;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+  line-height: 20px;
+  min-width: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: right;
+  user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 1%;
+}
+
+.markdown-body .blob-num:hover {
+  color: rgba(27,31,35,.6);
+}
+
+.markdown-body .blob-num:before {
+  content: attr(data-line-number);
+}
+
+.markdown-body .blob-code {
+  line-height: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  vertical-align: top;
+}
+
+.markdown-body .blob-code-inner {
+  color: #24292e;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+  overflow: visible;
+  white-space: pre;
+  word-wrap: normal;
+}
+
+.markdown-body .pl-token.active,
+.markdown-body .pl-token:hover {
+  background: #ffea7f;
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-bottom-color: #c6cbd1;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #c6cbd1;
+  color: #444d56;
+  display: inline-block;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  line-height: 10px;
+  padding: 3px 5px;
+  vertical-align: middle;
+}
+
+.markdown-body :checked+.radio-label {
+  border-color: #0366d6;
+  position: relative;
+  z-index: 1;
+}
+
+.markdown-body .tab-size[data-tab-size="1"] {
+  -moz-tab-size: 1;
+  tab-size: 1;
+}
+
+.markdown-body .tab-size[data-tab-size="2"] {
+  -moz-tab-size: 2;
+  tab-size: 2;
+}
+
+.markdown-body .tab-size[data-tab-size="3"] {
+  -moz-tab-size: 3;
+  tab-size: 3;
+}
+
+.markdown-body .tab-size[data-tab-size="4"] {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+.markdown-body .tab-size[data-tab-size="5"] {
+  -moz-tab-size: 5;
+  tab-size: 5;
+}
+
+.markdown-body .tab-size[data-tab-size="6"] {
+  -moz-tab-size: 6;
+  tab-size: 6;
+}
+
+.markdown-body .tab-size[data-tab-size="7"] {
+  -moz-tab-size: 7;
+  tab-size: 7;
+}
+
+.markdown-body .tab-size[data-tab-size="8"] {
+  -moz-tab-size: 8;
+  tab-size: 8;
+}
+
+.markdown-body .tab-size[data-tab-size="9"] {
+  -moz-tab-size: 9;
+  tab-size: 9;
+}
+
+.markdown-body .tab-size[data-tab-size="10"] {
+  -moz-tab-size: 10;
+  tab-size: 10;
+}
+
+.markdown-body .tab-size[data-tab-size="11"] {
+  -moz-tab-size: 11;
+  tab-size: 11;
+}
+
+.markdown-body .tab-size[data-tab-size="12"] {
+  -moz-tab-size: 12;
+  tab-size: 12;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+
+.markdown-body hr {
+  border-bottom-color: #eee;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .pl-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .pl-7 {
+  padding-left: 48px!important;
+}
+
+.markdown-body .pl-8 {
+  padding-left: 64px!important;
+}
+
+.markdown-body .pl-9 {
+  padding-left: 80px!important;
+}
+
+.markdown-body .pl-10 {
+  padding-left: 96px!important;
+}
+
+.markdown-body .pl-11 {
+  padding-left: 112px!important;
+}
+
+.markdown-body .pl-12 {
+  padding-left: 128px!important;
+}
+</style><title>explicit-order</title></head><body><article class="markdown-body"><pre><code>Proposal for C2y
+WG14 3203
+
+Title:               Strict order of expression evaluation
+Author, affiliation: Alex Celeste, Perforce
+Date:                2023-12-14
+Proposal category:   Clarification/simplification
+Target audience:     All
+</code></pre>
+<h2><a id="user-content-abstract" class="anchor" aria-hidden="true" tabindex="-1" href="#abstract"><span aria-hidden="true" class="octicon octicon-link"></span></a>Abstract</h2>
+<p>Only certain operators and whole statements describe a sequence point in C; for
+historical reasons, within an expression, the order of evaluation of operands
+is assumed to be unspecified unless stated otherwise by the Standard.
+We suggest that between language, hardware, and compiler advancements since the
+original development of the language, this allowance is no longer needed and
+expression evaluation should be sequenced by default.</p>
+<hr>
+<h1><a id="user-content-strict-order-of-expression-evaluation" class="anchor" aria-hidden="true" tabindex="-1" href="#strict-order-of-expression-evaluation"><span aria-hidden="true" class="octicon octicon-link"></span></a>Strict order of expression evaluation</h1>
+<pre><code>Reply-to:     Alex Celeste (aceleste@perforce.com)
+Document No:  N3203
+Revises:      (n/a)
+Date:         2023-12-14
+</code></pre>
+<h2><a id="user-content-summary-of-changes" class="anchor" aria-hidden="true" tabindex="-1" href="#summary-of-changes"><span aria-hidden="true" class="octicon octicon-link"></span></a>Summary of Changes</h2>
+<h3><a id="user-content-n3203" class="anchor" aria-hidden="true" tabindex="-1" href="#n3203"><span aria-hidden="true" class="octicon octicon-link"></span></a>N3203</h3>
+<ul>
+<li>original proposal</li>
+</ul>
+<h2><a id="user-content-introduction" class="anchor" aria-hidden="true" tabindex="-1" href="#introduction"><span aria-hidden="true" class="octicon octicon-link"></span></a>Introduction</h2>
+<p>As of C23, the order of evaluation of expression operands is unnsequenced by
+default, and sequence points only apply at the statement or declaration break
+or on a small number of specifically called-out operators. In particular, the
+presence of a side effect <em>does not</em> imply a sequence point. Therefore, in the
+following example:</p>
+<pre><code>int f1 (void) { printf ("f1\n"); return 1; }
+int f2 (void) { printf ("f2\n"); return 2; }
+
+int z = f1 () + f2 ();
+</code></pre>
+<p>although the final value of <code>z</code> is always 3, the side effects to reach that
+state can occur in either order: the program can print either "f1", "f2" or
+"f2", "f1"; and both are conforming.</p>
+<p>In the following classic:</p>
+<pre><code>int x = 1;
+int y = ++ x + ++ x;
+</code></pre>
+<p>...the value of <code>y</code> is a trick question, as the behaviour is undefined.
+We posit that this fact serves nobody except smug 101-level professors.</p>
+<p>Although only one of these constructs is undefined, MISRA and related
+Guidelines (such as <a href="https://wiki.sei.cmu.edu/confluence/display/c/EXP30-C.+Do+not+depend+on+the+order+of+evaluation+for+side+effects" rel="nofollow">CERT</a>) forbid both, because the unspecified behaviour
+is almost as bad for actual users. Therefore, real-world code that cares at all
+about side effects will always split an expression into multiple separate
+expression statements assigning temporary values, unless it really is trivially
+obvious that there is no overlap at all in the <em>domain</em> of side effects of
+separate operands.</p>
+<p>To fix this, we propose that <em>every</em> operator in the expression language should
+be defined to introduce a sequence point, not just <code>&amp;&amp;</code> and friends.</p>
+<h3><a id="user-content-background" class="anchor" aria-hidden="true" tabindex="-1" href="#background"><span aria-hidden="true" class="octicon octicon-link"></span></a>Background</h3>
+<p>The order of expression evaluation has been unspecified since K&amp;R C
+(7 "Expressions": "Otherwise the order of evaluation of expresisons is
+undefined ... The order in which side effects take place is unspecified";
+7.1 "Primary expressions": "take note that the various compilers differ").
+The historically accepted reason for this is that since C was designed with
+some concessions to portability, different calling and evaluation conventions
+on the various target systems required operands or arguments to be pushed to
+stackk positions in forward or reverse order, and since the language always
+aimed to allow for efficient output code, it could not require some arbitrary
+subset of targets to perform "redundant" copies just to be able to push all
+arguments in the platform correct order, wasting both space and operations.</p>
+<p>We believe that this is an irrelevant concern as of 2023.</p>
+<p>Firstly, the main case for reordering concerns expressions where the operands
+are calls to functions that are not being used for side effects:</p>
+<pre><code>int gen1 (int x, int y) { return x + y; }
+int gen2 (int x, int y) { return x - y; }
+
+z = gen1 (x, y) * gen2 (x, y);
+</code></pre>
+<p>In the above example, the ordering of the calls is unspecified and the compiler
+can emit them in either order. But in this case, there is no side effect anyway
+and any reordering doesn't matter. If the function definitions are visible, a
+modern optimizing compiler can apply the as-if rule and call <code>gen2</code> first <em>even
+if the Standard says</em> that <code>gen1</code> is always ordered first, as there is no way
+for the user to observe this fact.</p>
+<p>If the definitions are not visible, as of C23 we are equipped with <code>[[unsequenced]]</code>
+and can now annotate the function declarations:</p>
+<pre><code>[[unsequenced]] int gen1 (int x, int y);
+[[unsequenced]] int gen2 (int x, int y);
+
+z = gen1 (x, y) * gen2 (x, y);
+</code></pre>
+<p>The compiler is still free to apply the as-if rule and the order of the calls
+in the translated code still doesn't matter.</p>
+<p>On the other hand, say the functions are defined elsewhere and the attribute
+is not used to tell the compiler that their order doesn't matter:</p>
+<pre><code>int gen1 (int x, int y);
+int gen2 (int x, int y);
+
+z = gen1 (x, y) * gen2 (x, y);
+</code></pre>
+<p>We do not believe it is actually correct in this case for the compiler to take
+the liberty of assuming these calls can be emitted in either possible order.
+If the compiler doesn't have enough information to <em>know</em> whether there are any
+observable side effects that would be affected by evaluating <code>gen2</code> first, it
+also does not have enough information to validly say that reordering the calls
+is a genuine optimization (either logically correct, or a local improvement).
+The few cycles potentially gained locally are outweighed by an unknown number
+on the other side of the call boundary; this "optimization" is likely
+irrelevant.</p>
+<p>For function calls, the following was a concern for the compilers and machines
+of the 1970s and 1980s:</p>
+<pre><code>int foo (int x, int y, int z);
+
+int f1 (void);
+int f2 (void);
+int f3 (void);
+
+foo (f1 (), f2 (), f3 ());
+</code></pre>
+<p>The target machine might not have many resources for storing temporary results
+(this part is still true depending on the target), and the compiling machine
+had very limited resources available to rewrite an expression to assign to
+storage according to register discipline, so stack discipline was used.</p>
+<p>This is an implementation performance concern that has evaporated with the
+passage of time - if a user cares <em>at all</em> about the performance of the resulting
+code, they are <em>not using</em> a compiler that is not able to rewrite a whole call
+expression in one go. If they are using a compiler so simple it can only handle
+one subexpression at a time without knowledge of the rest of the expression, they
+realistically do not care about the resulting performance. The permissiveness
+that once allowed compilers to do the best job they can is simply no longer
+relevant as any compiler advanced <em>enough</em> to use for a performance case is now
+so advanced it doesn't need this permission in order to emit the best possible
+machine instructions.</p>
+<h2><a id="user-content-impact" class="anchor" aria-hidden="true" tabindex="-1" href="#impact"><span aria-hidden="true" class="octicon octicon-link"></span></a>Impact</h2>
+<p>Words are cheap. What about timings?</p>
+<h3><a id="user-content-measurements" class="anchor" aria-hidden="true" tabindex="-1" href="#measurements"><span aria-hidden="true" class="octicon octicon-link"></span></a>Measurements</h3>
+<p>Dos Reis/Sutter/Caves have kindly done this work already as part of a proposal
+for C++17, which was partially adopted, in <a href="https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0145r3.pdf" rel="nofollow">p0145r3</a>. The problem is worse
+in C++ because of operator overloading and member call syntax, which can appear
+to give guarantees or implications of order that do not exist.</p>
+<p>In Section 7, the authors describe an implementation experiment where Visual C++
+was modified to create a worst-case combination:</p>
+<ul>
+<li>
+<p>the compiler was forced to respect strict evaluation order for functions</p>
+</li>
+<li>
+<p>the optimizer was <em>not allowed</em> to exploit this new guarantee</p>
+</li>
+</ul>
+<blockquote>
+<p>We successfully built, installed, and booted the NT kernel. Then we built a
+large application code base, and ran “build, validation, test suites.” That
+uncovered sources of potential bugs due to non-portability assumptions: one
+real-world-code test failed, out of 26. Then, we compiled and ran Spec benchmarks.
+We found that some entries in the benchmark suite ran slower, others ran
+faster compared to the scenario where the evaluation of the argument list is
+left unspecified. <strong>The variation is between -4% and +4%.</strong> It is worth noting
+that these results are for the worst case scenario where the optimizers have
+not yet been updated to be aware of, and take advantage of the new evaluation
+rules and they are blindly forced to evaluate function calls from left to right.</p>
+</blockquote>
+<p>(emphasis mine, differs from original)</p>
+<p>Dos Reis <em>et al</em> bring the receipts for the impact being essentially noise as
+large changes balance out across the whole of a very large, very complex system.
+Although the optimization characteristics change, they also balance out; and
+if the compiler was allowed to use complete information there is a reasonable
+case that it might actually do better here.</p>
+<h3><a id="user-content-semantics" class="anchor" aria-hidden="true" tabindex="-1" href="#semantics"><span aria-hidden="true" class="octicon octicon-link"></span></a>Semantics</h3>
+<p>For all that, we do not consider the impact on performance to be instrumental.
+As noted above, for C code, the considerations are different and in practice,
+code that would be affected by evaluation order is generally required by
+Guidelines to be rewritten so that it is not, e.g. <a href="https://wiki.sei.cmu.edu/confluence/display/c/EXP30-C.+Do+not+depend+on+the+order+of+evaluation+for+side+effects" rel="nofollow">CERT EXP30-C</a>.</p>
+<p>Therefore we consider the value of this proposed change to rest on the removal
+of some undefined and unspecified behaviours. More code becomes conforming and
+more expressions have clear effects. Where the effects don't matter, we have
+new tools to take advantage of that explicitly.</p>
+<p>The most important consideration is:</p>
+<ul>
+<li>
+<p>no observable behaviour of a portable, strictly conforming program is affected
+by this proposal.</p>
+<ul>
+<li>a strictly conforming program in C89 through C23 <em>remains</em> conforming if this
+new rule is enforced.</li>
+</ul>
+</li>
+<li>
+<p>any program whose behaviour is affected is quietly relying on either undefined
+or unspecified behaviour.</p>
+<ul>
+<li>because Guidelines and educators have spent so long telling users not to do
+this, most programs are designed not to rely on implicit ordering already.</li>
+</ul>
+</li>
+<li>
+<p>when the behaviour is unspecified, the compiler's freedom to "optimize" by
+reording doesn't need to be protected. When the reording is valid, the new
+stricter specification will not prevent it because of the as-if rule.</p>
+<ul>
+<li>the majority of expressions will therefore optimize in exactly the same
+way, regardless of the abstract machine semantics.</li>
+</ul>
+</li>
+</ul>
+<h3><a id="user-content-future-directions" class="anchor" aria-hidden="true" tabindex="-1" href="#future-directions"><span aria-hidden="true" class="octicon octicon-link"></span></a>Future directions</h3>
+<p>A major motivating case for this change is the likely future standardization of
+<a href="https://gcc.gnu.org/onlinedocs/gcc/Statement-Exprs.html" rel="nofollow">statement expressions</a>, which has been discussed and requested since ANSI C:</p>
+<pre><code>int z = ({
+  int x = 1;
+  int y = 2;
+  x + y;
+});
+</code></pre>
+<p>These have the same problem that already manifests with function calls by
+providing another way to inline side effects directly into an expression:</p>
+<pre><code>int z = ({
+  int x = ++ *p1;
+  x;
+}) + ({
+  int y = ++ *p2;
+  y;
+});
+</code></pre>
+<p>The above behaviour isn't undefined, because there are sequence points <em>inside</em>
+each statement expression (as they contain statement separators), so even if
+<code>p1</code> and <code>p2</code> do point at the same object, there is no overlap in the effect
+itself (exactly like how the body of a function is "guarded" by sequence points
+even if entry into two different functions is not sequenced). But as with the
+function case, we also do not know which part of the expression is evaluated
+first.</p>
+<p>Statement expressions can make this worse:</p>
+<pre><code>({
+  here: // (this is not usually allowed)
+  x;
+}) + ({
+  goto there; // sudden break out
+  y;
+});
+
+goto here;
+...
+there:
+...
+</code></pre>
+<p>It is possible to bail out of the middle of an expression evaluation, and in
+some implementations, also potentially possible to dive <em>into</em> the middle of
+one (though we hope this ends up becoming a constraint violation).</p>
+<p>It would be good to know which side effects are triggered by providing a clear
+sequence of events. It would also make the expression as a whole much more
+consistent to have sequence points throughout, rather than... some sequenced
+operations and some not.</p>
+<p>Exactly the same considerations apply to the evaluations within function calls
+(which can of course even bail out using <code>longjmp</code>), but statement expressions
+inherit the same problem and make it more obvious.</p>
+<p>We also believe strict evaluation would resolve some outstanding issues with
+the evaluation of designated initializers:</p>
+<pre><code>struct S {
+  int x;
+  int y;
+  int z;
+};
+
+struct S s = {
+  .x = f1 (),
+  .y = f3 (),
+  .x = f2 (),
+};
+</code></pre>
+<p>Per C23 6.7.10 paragraph 20, the call to <code>f2</code> "overrides" the call to <code>f1</code>, but
+it is unspecified whether <code>f1</code> is called first and the value overwritten, or if
+<code>f1</code> is never called at all. Per paragraph 24, it is unspecified whether <code>f3</code> is
+called before or after <code>f2</code> (both of which are at least definitely called), and
+where <code>f1</code> is called relative to either <em>if</em> it is called.</p>
+<p>Effectively this makes side effects unusable within initializer lists. This also
+cuts off an interesting folk usage of designators to provide "default" values
+if the default value expression involves a side effect:</p>
+<pre><code>#define MakeS(...) {   \
+  .x = getDefaultX (), \
+  .y = getDefaultY (), \
+  .z = getDefaultZ (), \
+  __VA_ARGS__          \
+}
+
+struct S s = MakeS (
+    .x = nonDefaultX ()
+  , .z = 6
+);
+</code></pre>
+<p>In the above example, it is well-defined for <code>.x</code> and <code>.z</code> to appear twice, and
+the values <code>nonDefaultX ()</code> and <code>6</code> <em>will</em> definitely be used, but it is not known
+whether the default initializers will run and if so, when.</p>
+<p>This significantly complicates some potential future extensions to array designators
+to admit range expressions (<a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3194.htm" rel="nofollow">N3194</a>), where the repetition of effects in the
+case of "empty" ranges or overlapping ranges has unclear consequences.</p>
+<p>We again believe that the permissive specification here is not necessary: if the
+user doesn't mean for a side effect in a comma-separated list of expressions to
+run, they will probably not write that effect. If they do, they probably want it.
+The "optimization" significantly changes the meaning of the program.</p>
+<p>Some possible proposed future extensions also involve initializer expressions
+being able to make reference to previusly-initialized members by designator;
+this allows member arrays to make use of other members to define a variably
+modified type, or simply to establish temporary names. For this to work as expected,
+the initializers must emit their effects and stores to member objects in the
+syntactically-specified order and without deleting intermediate initializer
+expressions.</p>
+<h2><a id="user-content-proposed-wording" class="anchor" aria-hidden="true" tabindex="-1" href="#proposed-wording"><span aria-hidden="true" class="octicon octicon-link"></span></a>Proposed wording</h2>
+<p>The proposed changes are based on the latest public draft of C23, which is
+<a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3096.pdf" rel="nofollow">N3096</a>. Bolded text is new text when inlined into an existing sentence.</p>
+<p>This change set is incomplete and we expect a revised document to be needed.</p>
+<p><strong>Delete</strong> paragraph 16 from 5.1.2.3 "Program execution" (EXAMPLE 7).</p>
+<p>Leave 6.5 "Expressions", paragraph 2 in place, for the time being, in case some
+other way to have unsequenced effects remains uncaught. This leaves the core
+UB in place right now.</p>
+<p>Modify paragraph 3:</p>
+<blockquote>
+<p>The grouping of operators and operands is indicated by the syntax.96)
+Except as specified later, side effects and value computations of subexpressions
+are <strong>sequenced from left to right footnote)</strong>.</p>
+<p><strong>footnote) therefore in a binary expression such as <code>E1 + E2 * E3</code>, evaluation</strong>
+<strong>of <code>E1</code>, including side effects, is sequenced before <code>E2</code>, and <code>E2</code> is similarly</strong>
+<strong>sequenced before <code>E3</code>. The same is true in <code>(E1 + E2) * E3</code> because order does</strong>
+<strong>not depend on precedence or binding.</strong></p>
+</blockquote>
+<p>(This change provides the bulk of the intent.)</p>
+<p><strong>Delete</strong> current footnote 97.</p>
+<p>Add a new paragraph after 6.5.1 "Primary expressions", paragraph 7:</p>
+<blockquote>
+<p>A primary expression does not introduce a sequence point.</p>
+</blockquote>
+<p>Modify the second sentence of 6.5.2.1 "Array subscripting", paragraph 2:</p>
+<blockquote>
+<p>The definition of the subscript operator <code>[]</code> is that <code>E1[E2]</code> is identical
+to <code>(*((E1)+(E2)))</code> <strong>(including in the sequence of subexpression evaluation)</strong>.</p>
+</blockquote>
+<p>Replace 6.5.2.2 "Function calls", paragraph 8:</p>
+<blockquote>
+<p>Evaluation of the function designator is sequenced before evaluation of any
+function arguments. Evaluation of each argument is fully sequenced before the
+evaluation of the subsequent argument in left-to-right order. All operations
+within the execution of the body of the called function are sequenced after
+evaluation of the designator and arguments, and sequenced before the value
+of the called function is returned to the calling expression. 106)</p>
+</blockquote>
+<p>Modify footnote 106 to delete "in other words":</p>
+<blockquote>
+<ol start="106">
+<li>Function executions do not interleave with each other.</li>
+</ol>
+</blockquote>
+<p>Modify 6.5.2.4 "Postfix increment and decrement operators", paragraph 2:</p>
+<blockquote>
+<p>The result of the postfix <code>++</code> operator is the value of the operand. As a side
+effect, the value of the operand object is incremented (that is, the value 1
+of the appropriate type is added to it). See the discussions of additive
+operators and compound assignment for information on constraints, types, and
+conversions and the effects of operations on pointers. The value computation
+of the result is sequenced before the side effect of updating the stored value
+of the operand <strong>, which is sequenced before any further evaluations or use</strong>
+<strong>of the result value in the enclosing expression.</strong>. With respect to an
+indeterminately sequenced function call, the operation of postfix <code>++</code> is a
+single evaluation. Postfix <code>++</code> on an object with atomic type is a
+read-modify-write operation with <code>memory_order_seq_cst</code> memory order semantics.110)</p>
+</blockquote>
+<p><strong>Delete</strong> the first sentence of 6.5.13 "Logical AND operator", paragraph 4.</p>
+<p><strong>Delete</strong> the first sentence of 6.5.14 "Logical OR operator", paragraph 4.</p>
+<p><strong>Delete</strong> the last sentence of 6.5.16 "Assignment operators", paragraph 3.</p>
+<p>Add a new paragraph here after paragraph 3:</p>
+<blockquote>
+<p>Evaluation of the right operand is sequenced before evaluation of the left
+operand.</p>
+</blockquote>
+<p>(this is the major exception to the left-to-right ordering and matches C++)</p>
+<p>6.5.17 "Comma operator" does not strictly need to change, although the wording
+becomes redundant.</p>
+<p>Modify 6.7.10 "Initialization", paragraph 20:</p>
+<blockquote>
+<p>The initialization shall occur in initializer list order, each initializer
+provided for a particular subobject overriding any previously listed
+initializer for the same subobject by <strong>overwriting the previously-initialized</strong>
+<strong>value of that subobject</strong>; all subobjects that are not initialized explicitly
+are subject to default initialization.</p>
+</blockquote>
+<p><strong>Delete</strong> footnote 184.</p>
+<p>Modify paragraph 24:</p>
+<blockquote>
+<p>The evaluations of the initialization list expressions are <strong>sequenced in the</strong>
+<strong>order they are specified in the list. The effect of assigning the result value</strong>
+<strong>to the <em>current object</em> is sequenced before evaluation of the next initialization</strong>
+<strong>expression in the initializer list. If two expressions initialize the same</strong>
+<strong>subobject, they are both evaluated in the specified sequence and the initialized</strong>
+<strong>value of the subobject is updated with the second value.</strong></p>
+</blockquote>
+<p><strong>Delete</strong> footnote 185.</p>
+<p>(The change in initialized value is not usually observable unless the object is
+<code>volatile</code>, but this should be left implicit and may change if "designator expressions"
+are edded later that would make previously-initialized members accesisble as values.)</p>
+<p>Modify 6.8 "Statements and blocks", paragraph 4, <strong>deleting</strong> the second half of the
+second sentence ("; within that full expression...").</p>
+<p>In 7.1.4 "Use of library functions", paragraph 1, <strong>delete</strong> footnote 237.</p>
+<p>(is paragraph 3 ever necessary?)</p>
+<p>DO NOT modify 7.17.3 "Order and consistency" or 7.17.4 "Fences".</p>
+<p><strong>NOTE</strong> Is 7.24.5 "Searching and sorting utilities", paragraph 5 redundant?</p>
+<p>(Leave 7.31.2 "Formatted wide character input/output functions" paragraph 1 as-is?)</p>
+<p>Modify Annex C "Sequence points":</p>
+<blockquote>
+<p>The following are the sequence points described in 5.1.2.3:</p>
+<ul>
+<li>
+<p><strong>Between the evaluation of the postfix and index expressions in a subscript</strong>
+<strong>expression (regardless of their types). (6.5.2.1).</strong></p>
+</li>
+<li>
+<p><strong>Between the evaluation of the function designator in a function call, and the</strong>
+<strong>evaluation of any arguments. (6.5.2.2).</strong></p>
+</li>
+<li>
+<p><strong>Between the evaluation of an argument to a function call, and the evaluation</strong>
+<strong>of any subsequent arguments. (6.5.2.2).</strong></p>
+</li>
+<li>
+<p>Between the evaluations of the function designator and actual arguments in a
+function call and the actual call. (6.5.2.2).</p>
+</li>
+<li>
+<p><strong>Between the evaluations of the left and right operands of all binary operators</strong>
+<strong>except for the assignment operators. (6.5.5; 6.5.6; 6.5.7; 6.5.8; 6.5.9; 6.5.10;</strong>
+<strong>6.5.11; 6.5.12; 6.5.13; 6.5.14; 6.5.17).</strong></p>
+</li>
+<li>
+<p>Between the evaluations of the first operand of the conditional <code>?:</code> operator
+and whichever of the second and third operands is evaluated (6.5.15).</p>
+</li>
+<li>
+<p><strong>Between the evaluations of the right and left operands of all assignment</strong>
+<strong>operators (the right operator is sequenced before the left). (6.5.16).</strong></p>
+</li>
+<li>
+<p>Between the evaluation of a full expression and the next full expression to be
+evaluated. The following are full expressions: a full declarator for a variably
+modified type; an initializer that is not part of a compound literal (6.7.10);
+the expression in an expression statement (6.8.3); the controlling expression
+of a selection statement (if or switch) (6.8.4); the controlling expression
+of a while or do statement (6.8.5); each of the (optional) expressions of a
+<code>for</code> statement (6.8.5.3); the (optional) expression in a <code>return</code> statement (6.8.6.4).</p>
+</li>
+<li>
+<p><strong>(deleted: before a library function returns?)</strong></p>
+</li>
+<li>
+<p>After the actions associated with each formatted input/output function
+conversion specifier (7.23.6, 7.31.2).</p>
+</li>
+<li>
+<p>Immediately before and immediately after each call to a comparison function,
+and also between any call to a comparison function and any movement of the
+objects passed as arguments to that call (7.24.5).</p>
+</li>
+</ul>
+</blockquote>
+<h2><a id="user-content-questions-for-wg14" class="anchor" aria-hidden="true" tabindex="-1" href="#questions-for-wg14"><span aria-hidden="true" class="octicon octicon-link"></span></a>Questions for WG14</h2>
+<p>Would WG14 like to see something along the lines of this proposal to enforce
+strict evaluation order in expressions?</p>
+<p>Would WG14 like to enforce strict evaluation order for initializers?</p>
+<p>Would WG14 like to enforce strict evaluation for all subexpressions rather than
+just those changed in C++17?</p>
+<h2><a id="user-content-references" class="anchor" aria-hidden="true" tabindex="-1" href="#references"><span aria-hidden="true" class="octicon octicon-link"></span></a>References</h2>
+<p><a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3096.pdf" rel="nofollow">C23 public draft</a><br>
+<a href="https://en.wikipedia.org/wiki/The_C_Programming_Language" rel="nofollow">Kernighan and Ritchie</a><br>
+<a href="https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0145r3.pdf" rel="nofollow">Refining Expression Evaluation Order for Idiomatic C++</a><br>
+<a href="https://wiki.sei.cmu.edu/confluence/display/c/EXP30-C.+Do+not+depend+on+the+order+of+evaluation+for+side+effects" rel="nofollow">CERT EXP30-C: Do not depend on the order of evaluation for side effects</a><br>
+<a href="https://gcc.gnu.org/onlinedocs/gcc/Statement-Exprs.html" rel="nofollow">GNU C Statement expressions</a><br>
+<a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3194.htm" rel="nofollow">N3194 range expressions</a></p>
+</article></body></html>

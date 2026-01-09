@@ -1,0 +1,1975 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>@font-face {
+  font-family: octicons-link;
+  src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM+8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB/aFGpk3jaTY6xa8JAGMW/O62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v+k/0an2i+itHDw3v2+9+DBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3/I7AtxEJLtzzuZfI+VVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy/Lt7Kc+0vWY/gAgIIEqAN9we0pwKXreiMasxvabDQMM4riO+qxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw+ymhce7vwM9jSqO8JyVd5RH9gyTt2+J/yUmYlIR0s04n6+7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv/ocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi+W2+MjCzMIDApSwvXzC97Z4Ig8N/BxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh/8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT+AEjAwuDFpBmA9KMDEwMCh9i/v8H8sH0/4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9/lqYwOGZxeUelN2U2R6+cArgtCJpauW7UQBqnFkUsjAY/kOU1cP+DAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl+vvmM/byA48e6tWrKArm4ZJlCbdsrxksL1AwWn/yBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO//sdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd/89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF+9JOS0nbaaYDCQfwCJ7Au3AHj+LO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm+EBXuAbHmIMSRMs+4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL+hD7C1xoaHeLJSEao0FEW14ckxC+TU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13/+lm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl+9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O/AdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB///AA8AAQAAAAAAAAAAAAAAAAABAAAAAA==) format('woff');
+}
+
+@media (prefers-color-scheme: dark) {
+  body,
+  [data-theme="dark"] {
+    /*dark*/
+    color-scheme: dark;
+    --color-prettylights-syntax-comment: #8b949e;
+    --color-prettylights-syntax-constant: #79c0ff;
+    --color-prettylights-syntax-entity: #d2a8ff;
+    --color-prettylights-syntax-storage-modifier-import: #c9d1d9;
+    --color-prettylights-syntax-entity-tag: #7ee787;
+    --color-prettylights-syntax-keyword: #ff7b72;
+    --color-prettylights-syntax-string: #a5d6ff;
+    --color-prettylights-syntax-variable: #ffa657;
+    --color-prettylights-syntax-brackethighlighter-unmatched: #f85149;
+    --color-prettylights-syntax-invalid-illegal-text: #f0f6fc;
+    --color-prettylights-syntax-invalid-illegal-bg: #8e1519;
+    --color-prettylights-syntax-carriage-return-text: #f0f6fc;
+    --color-prettylights-syntax-carriage-return-bg: #b62324;
+    --color-prettylights-syntax-string-regexp: #7ee787;
+    --color-prettylights-syntax-markup-list: #f2cc60;
+    --color-prettylights-syntax-markup-heading: #1f6feb;
+    --color-prettylights-syntax-markup-italic: #c9d1d9;
+    --color-prettylights-syntax-markup-bold: #c9d1d9;
+    --color-prettylights-syntax-markup-deleted-text: #ffdcd7;
+    --color-prettylights-syntax-markup-deleted-bg: #67060c;
+    --color-prettylights-syntax-markup-inserted-text: #aff5b4;
+    --color-prettylights-syntax-markup-inserted-bg: #033a16;
+    --color-prettylights-syntax-markup-changed-text: #ffdfb6;
+    --color-prettylights-syntax-markup-changed-bg: #5a1e02;
+    --color-prettylights-syntax-markup-ignored-text: #c9d1d9;
+    --color-prettylights-syntax-markup-ignored-bg: #1158c7;
+    --color-prettylights-syntax-meta-diff-range: #d2a8ff;
+    --color-prettylights-syntax-brackethighlighter-angle: #8b949e;
+    --color-prettylights-syntax-sublimelinter-gutter-mark: #484f58;
+    --color-prettylights-syntax-constant-other-reference-link: #a5d6ff;
+    --color-fg-default: #e6edf3;
+    --color-fg-muted: #848d97;
+    --color-fg-subtle: #6e7681;
+    --color-canvas-default: #0d1117;
+    --color-canvas-subtle: #161b22;
+    --color-border-default: #30363d;
+    --color-border-muted: #21262d;
+    --color-neutral-muted: rgba(110,118,129,0.4);
+    --color-accent-fg: #2f81f7;
+    --color-accent-emphasis: #1f6feb;
+    --color-success-fg: #3fb950;
+    --color-success-emphasis: #238636;
+    --color-attention-fg: #d29922;
+    --color-attention-emphasis: #9e6a03;
+    --color-attention-subtle: rgba(187,128,9,0.15);
+    --color-danger-fg: #f85149;
+    --color-danger-emphasis: #da3633;
+    --color-done-fg: #a371f7;
+    --color-done-emphasis: #8957e5;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body,
+  [data-theme="light"] {
+    /*light*/
+    color-scheme: light;
+    --color-prettylights-syntax-comment: #57606a;
+    --color-prettylights-syntax-constant: #0550ae;
+    --color-prettylights-syntax-entity: #6639ba;
+    --color-prettylights-syntax-storage-modifier-import: #24292f;
+    --color-prettylights-syntax-entity-tag: #116329;
+    --color-prettylights-syntax-keyword: #cf222e;
+    --color-prettylights-syntax-string: #0a3069;
+    --color-prettylights-syntax-variable: #953800;
+    --color-prettylights-syntax-brackethighlighter-unmatched: #82071e;
+    --color-prettylights-syntax-invalid-illegal-text: #f6f8fa;
+    --color-prettylights-syntax-invalid-illegal-bg: #82071e;
+    --color-prettylights-syntax-carriage-return-text: #f6f8fa;
+    --color-prettylights-syntax-carriage-return-bg: #cf222e;
+    --color-prettylights-syntax-string-regexp: #116329;
+    --color-prettylights-syntax-markup-list: #3b2300;
+    --color-prettylights-syntax-markup-heading: #0550ae;
+    --color-prettylights-syntax-markup-italic: #24292f;
+    --color-prettylights-syntax-markup-bold: #24292f;
+    --color-prettylights-syntax-markup-deleted-text: #82071e;
+    --color-prettylights-syntax-markup-deleted-bg: #ffebe9;
+    --color-prettylights-syntax-markup-inserted-text: #116329;
+    --color-prettylights-syntax-markup-inserted-bg: #dafbe1;
+    --color-prettylights-syntax-markup-changed-text: #953800;
+    --color-prettylights-syntax-markup-changed-bg: #ffd8b5;
+    --color-prettylights-syntax-markup-ignored-text: #eaeef2;
+    --color-prettylights-syntax-markup-ignored-bg: #0550ae;
+    --color-prettylights-syntax-meta-diff-range: #8250df;
+    --color-prettylights-syntax-brackethighlighter-angle: #57606a;
+    --color-prettylights-syntax-sublimelinter-gutter-mark: #8c959f;
+    --color-prettylights-syntax-constant-other-reference-link: #0a3069;
+    --color-fg-default: #1F2328;
+    --color-fg-muted: #656d76;
+    --color-fg-subtle: #6e7781;
+    --color-canvas-default: #ffffff;
+    --color-canvas-subtle: #f6f8fa;
+    --color-border-default: #d0d7de;
+    --color-border-muted: hsla(210,18%,87%,1);
+    --color-neutral-muted: rgba(175,184,193,0.2);
+    --color-accent-fg: #0969da;
+    --color-accent-emphasis: #0969da;
+    --color-success-fg: #1a7f37;
+    --color-success-emphasis: #1f883d;
+    --color-attention-fg: #9a6700;
+    --color-attention-emphasis: #9a6700;
+    --color-attention-subtle: #fff8c5;
+    --color-danger-fg: #d1242f;
+    --color-danger-emphasis: #cf222e;
+    --color-done-fg: #8250df;
+    --color-done-emphasis: #8250df;
+  }
+}
+
+body {
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: var(--color-canvas-default);
+}
+
+.markdown-body .octicon-link:before {
+  font: normal normal normal 16px/1 octicons-link;
+  display: inline-block;
+  text-decoration: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  content: '\f05c';
+  vertical-align: middle;
+}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  margin: 0;
+  color: var(--color-fg-default);
+  background-color: var(--color-canvas-default);
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body h1:hover .anchor .octicon-link:before,
+.markdown-body h2:hover .anchor .octicon-link:before,
+.markdown-body h3:hover .anchor .octicon-link:before,
+.markdown-body h4:hover .anchor .octicon-link:before,
+.markdown-body h5:hover .anchor .octicon-link:before,
+.markdown-body h6:hover .anchor .octicon-link:before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-color: currentColor;
+  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' aria-hidden='true'><path fill-rule='evenodd' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'></path></svg>");
+  mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' aria-hidden='true'><path fill-rule='evenodd' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'></path></svg>");
+}
+
+.markdown-body details,
+.markdown-body figcaption,
+.markdown-body figure {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body [hidden] {
+  display: none !important;
+}
+
+.markdown-body a {
+  background-color: transparent;
+  color: var(--color-accent-fg);
+  text-decoration: none;
+}
+
+.markdown-body abbr[title] {
+  border-bottom: none;
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: var(--base-text-weight-semibold, 600);
+}
+
+.markdown-body dfn {
+  font-style: italic;
+}
+
+.markdown-body h1 {
+  margin: .67em 0;
+  font-weight: var(--base-text-weight-semibold, 600);
+  padding-bottom: .3em;
+  font-size: 2em;
+  border-bottom: 1px solid var(--color-border-muted);
+}
+
+.markdown-body mark {
+  background-color: var(--color-attention-subtle);
+  color: var(--color-fg-default);
+}
+
+.markdown-body small {
+  font-size: 90%;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body sup {
+  top: -0.5em;
+}
+
+.markdown-body img {
+  border-style: none;
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: var(--color-canvas-default);
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace;
+  font-size: 1em;
+}
+
+.markdown-body figure {
+  margin: 1em 40px;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  overflow: hidden;
+  background: transparent;
+  border-bottom: 1px solid var(--color-border-muted);
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: var(--color-border-default);
+  border: 0;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+  overflow: visible;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body [type=button],
+.markdown-body [type=reset],
+.markdown-body [type=submit] {
+  -webkit-appearance: button;
+  appearance: button;
+}
+
+.markdown-body [type=checkbox],
+.markdown-body [type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body [type=number]::-webkit-inner-spin-button,
+.markdown-body [type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.markdown-body [type=search]::-webkit-search-cancel-button,
+.markdown-body [type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body ::-webkit-input-placeholder {
+  color: inherit;
+  opacity: .54;
+}
+
+.markdown-body ::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body ::placeholder {
+  color: var(--color-fg-subtle);
+  opacity: 1;
+}
+
+.markdown-body hr::before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  overflow: auto;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body details:not([open])>*:not(summary) {
+  display: none !important;
+}
+
+.markdown-body a:focus,
+.markdown-body [role=button]:focus,
+.markdown-body input[type=radio]:focus,
+.markdown-body input[type=checkbox]:focus {
+  outline: 2px solid var(--color-accent-fg);
+  outline-offset: -2px;
+  box-shadow: none;
+}
+
+.markdown-body a:focus:not(:focus-visible),
+.markdown-body [role=button]:focus:not(:focus-visible),
+.markdown-body input[type=radio]:focus:not(:focus-visible),
+.markdown-body input[type=checkbox]:focus:not(:focus-visible) {
+  outline: solid 1px transparent;
+}
+
+.markdown-body a:focus-visible,
+.markdown-body [role=button]:focus-visible,
+.markdown-body input[type=radio]:focus-visible,
+.markdown-body input[type=checkbox]:focus-visible {
+  outline: 2px solid var(--color-accent-fg);
+  outline-offset: -2px;
+  box-shadow: none;
+}
+
+.markdown-body a:not([class]):focus,
+.markdown-body a:not([class]):focus-visible,
+.markdown-body input[type=radio]:focus,
+.markdown-body input[type=radio]:focus-visible,
+.markdown-body input[type=checkbox]:focus,
+.markdown-body input[type=checkbox]:focus-visible {
+  outline-offset: 0;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  line-height: 10px;
+  color: var(--color-fg-default);
+  vertical-align: middle;
+  background-color: var(--color-canvas-subtle);
+  border: solid 1px var(--color-neutral-muted);
+  border-bottom-color: var(--color-neutral-muted);
+  border-radius: 6px;
+  box-shadow: inset 0 -1px 0 var(--color-neutral-muted);
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: var(--base-text-weight-semibold, 600);
+  line-height: 1.25;
+}
+
+.markdown-body h2 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  padding-bottom: .3em;
+  font-size: 1.5em;
+  border-bottom: 1px solid var(--color-border-muted);
+}
+
+.markdown-body h3 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  font-size: 1.25em;
+}
+
+.markdown-body h4 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  font-size: 1em;
+}
+
+.markdown-body h5 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  font-size: .875em;
+}
+
+.markdown-body h6 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  font-size: .85em;
+  color: var(--color-fg-muted);
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+  padding: 0 1em;
+  color: var(--color-fg-muted);
+  border-left: .25em solid var(--color-border-default);
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body tt,
+.markdown-body code,
+.markdown-body samp {
+  font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  font-size: 12px;
+  word-wrap: normal;
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-body input::-webkit-outer-spin-button,
+.markdown-body input::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body .mr-2 {
+  margin-right: var(--base-size-8, 8px) !important;
+}
+
+.markdown-body::before {
+  display: table;
+  content: "";
+}
+
+.markdown-body::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body .absent {
+  color: var(--color-danger-fg);
+}
+
+.markdown-body .anchor {
+  float: left;
+  padding-right: 4px;
+  margin-left: -20px;
+  line-height: 1;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body details {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: var(--color-fg-default);
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1 tt,
+.markdown-body h1 code,
+.markdown-body h2 tt,
+.markdown-body h2 code,
+.markdown-body h3 tt,
+.markdown-body h3 code,
+.markdown-body h4 tt,
+.markdown-body h4 code,
+.markdown-body h5 tt,
+.markdown-body h5 code,
+.markdown-body h6 tt,
+.markdown-body h6 code {
+  padding: 0 .2em;
+  font-size: inherit;
+}
+
+.markdown-body summary h1,
+.markdown-body summary h2,
+.markdown-body summary h3,
+.markdown-body summary h4,
+.markdown-body summary h5,
+.markdown-body summary h6 {
+  display: inline-block;
+}
+
+.markdown-body summary h1 .anchor,
+.markdown-body summary h2 .anchor,
+.markdown-body summary h3 .anchor,
+.markdown-body summary h4 .anchor,
+.markdown-body summary h5 .anchor,
+.markdown-body summary h6 .anchor {
+  margin-left: -40px;
+}
+
+.markdown-body summary h1,
+.markdown-body summary h2 {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.markdown-body ul.no-list,
+.markdown-body ol.no-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.markdown-body ol[type="a s"] {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body ol[type="A s"] {
+  list-style-type: upper-alpha;
+}
+
+.markdown-body ol[type="i s"] {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol[type="I s"] {
+  list-style-type: upper-roman;
+}
+
+.markdown-body ol[type="1"] {
+  list-style-type: decimal;
+}
+
+.markdown-body div>ol:not([type]) {
+  list-style-type: decimal;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: var(--base-text-weight-semibold, 600);
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body table th {
+  font-weight: var(--base-text-weight-semibold, 600);
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid var(--color-border-default);
+}
+
+.markdown-body table td>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table tr {
+  background-color: var(--color-canvas-default);
+  border-top: 1px solid var(--color-border-muted);
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: var(--color-canvas-subtle);
+}
+
+.markdown-body table img {
+  background-color: transparent;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body .emoji {
+  max-width: none;
+  vertical-align: text-top;
+  background-color: transparent;
+}
+
+.markdown-body span.frame {
+  display: block;
+  overflow: hidden;
+}
+
+.markdown-body span.frame>span {
+  display: block;
+  float: left;
+  width: auto;
+  padding: 7px;
+  margin: 13px 0 0;
+  overflow: hidden;
+  border: 1px solid var(--color-border-default);
+}
+
+.markdown-body span.frame span img {
+  display: block;
+  float: left;
+}
+
+.markdown-body span.frame span span {
+  display: block;
+  padding: 5px 0 0;
+  clear: both;
+  color: var(--color-fg-default);
+}
+
+.markdown-body span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+
+.markdown-body span.align-center>span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.markdown-body span.align-center span img {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.markdown-body span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+
+.markdown-body span.align-right>span {
+  display: block;
+  margin: 13px 0 0;
+  overflow: hidden;
+  text-align: right;
+}
+
+.markdown-body span.align-right span img {
+  margin: 0;
+  text-align: right;
+}
+
+.markdown-body span.float-left {
+  display: block;
+  float: left;
+  margin-right: 13px;
+  overflow: hidden;
+}
+
+.markdown-body span.float-left span {
+  margin: 13px 0 0;
+}
+
+.markdown-body span.float-right {
+  display: block;
+  float: right;
+  margin-left: 13px;
+  overflow: hidden;
+}
+
+.markdown-body span.float-right>span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: right;
+}
+
+.markdown-body code,
+.markdown-body tt {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  white-space: break-spaces;
+  background-color: var(--color-neutral-muted);
+  border-radius: 6px;
+}
+
+.markdown-body code br,
+.markdown-body tt br {
+  display: none;
+}
+
+.markdown-body del code {
+  text-decoration: inherit;
+}
+
+.markdown-body samp {
+  font-size: 85%;
+}
+
+.markdown-body pre code {
+  font-size: 100%;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  color: var(--color-fg-default);
+  background-color: var(--color-canvas-subtle);
+  border-radius: 6px;
+}
+
+.markdown-body pre code,
+.markdown-body pre tt {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body .csv-data td,
+.markdown-body .csv-data th {
+  padding: 5px;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 1;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.markdown-body .csv-data .blob-num {
+  padding: 10px 8px 9px;
+  text-align: right;
+  background: var(--color-canvas-default);
+  border: 0;
+}
+
+.markdown-body .csv-data tr {
+  border-top: 0;
+}
+
+.markdown-body .csv-data th {
+  font-weight: var(--base-text-weight-semibold, 600);
+  background: var(--color-canvas-subtle);
+  border-top: 0;
+}
+
+.markdown-body [data-footnote-ref]::before {
+  content: "[";
+}
+
+.markdown-body [data-footnote-ref]::after {
+  content: "]";
+}
+
+.markdown-body .footnotes {
+  font-size: 12px;
+  color: var(--color-fg-muted);
+  border-top: 1px solid var(--color-border-default);
+}
+
+.markdown-body .footnotes ol {
+  padding-left: 16px;
+}
+
+.markdown-body .footnotes ol ul {
+  display: inline-block;
+  padding-left: 16px;
+  margin-top: 16px;
+}
+
+.markdown-body .footnotes li {
+  position: relative;
+}
+
+.markdown-body .footnotes li:target::before {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -24px;
+  pointer-events: none;
+  content: "";
+  border: 2px solid var(--color-accent-emphasis);
+  border-radius: 6px;
+}
+
+.markdown-body .footnotes li:target {
+  color: var(--color-fg-default);
+}
+
+.markdown-body .footnotes .data-footnote-backref g-emoji {
+  font-family: monospace;
+}
+
+.markdown-body .pl-c {
+  color: var(--color-prettylights-syntax-comment);
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: var(--color-prettylights-syntax-constant);
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: var(--color-prettylights-syntax-entity);
+}
+
+.markdown-body .pl-smi,
+.markdown-body .pl-s .pl-s1 {
+  color: var(--color-prettylights-syntax-storage-modifier-import);
+}
+
+.markdown-body .pl-ent {
+  color: var(--color-prettylights-syntax-entity-tag);
+}
+
+.markdown-body .pl-k {
+  color: var(--color-prettylights-syntax-keyword);
+}
+
+.markdown-body .pl-s,
+.markdown-body .pl-pds,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sre,
+.markdown-body .pl-sr .pl-sra {
+  color: var(--color-prettylights-syntax-string);
+}
+
+.markdown-body .pl-v,
+.markdown-body .pl-smw {
+  color: var(--color-prettylights-syntax-variable);
+}
+
+.markdown-body .pl-bu {
+  color: var(--color-prettylights-syntax-brackethighlighter-unmatched);
+}
+
+.markdown-body .pl-ii {
+  color: var(--color-prettylights-syntax-invalid-illegal-text);
+  background-color: var(--color-prettylights-syntax-invalid-illegal-bg);
+}
+
+.markdown-body .pl-c2 {
+  color: var(--color-prettylights-syntax-carriage-return-text);
+  background-color: var(--color-prettylights-syntax-carriage-return-bg);
+}
+
+.markdown-body .pl-sr .pl-cce {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-string-regexp);
+}
+
+.markdown-body .pl-ml {
+  color: var(--color-prettylights-syntax-markup-list);
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-markup-heading);
+}
+
+.markdown-body .pl-mi {
+  font-style: italic;
+  color: var(--color-prettylights-syntax-markup-italic);
+}
+
+.markdown-body .pl-mb {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-markup-bold);
+}
+
+.markdown-body .pl-md {
+  color: var(--color-prettylights-syntax-markup-deleted-text);
+  background-color: var(--color-prettylights-syntax-markup-deleted-bg);
+}
+
+.markdown-body .pl-mi1 {
+  color: var(--color-prettylights-syntax-markup-inserted-text);
+  background-color: var(--color-prettylights-syntax-markup-inserted-bg);
+}
+
+.markdown-body .pl-mc {
+  color: var(--color-prettylights-syntax-markup-changed-text);
+  background-color: var(--color-prettylights-syntax-markup-changed-bg);
+}
+
+.markdown-body .pl-mi2 {
+  color: var(--color-prettylights-syntax-markup-ignored-text);
+  background-color: var(--color-prettylights-syntax-markup-ignored-bg);
+}
+
+.markdown-body .pl-mdr {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-meta-diff-range);
+}
+
+.markdown-body .pl-ba {
+  color: var(--color-prettylights-syntax-brackethighlighter-angle);
+}
+
+.markdown-body .pl-sg {
+  color: var(--color-prettylights-syntax-sublimelinter-gutter-mark);
+}
+
+.markdown-body .pl-corl {
+  text-decoration: underline;
+  color: var(--color-prettylights-syntax-constant-other-reference-link);
+}
+
+.markdown-body g-emoji {
+  display: inline-block;
+  min-width: 1ch;
+  font-family: "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 1em;
+  font-style: normal !important;
+  font-weight: var(--base-text-weight-normal, 400);
+  line-height: 1;
+  vertical-align: -0.075em;
+}
+
+.markdown-body g-emoji img {
+  width: 1em;
+  height: 1em;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item label {
+  font-weight: var(--base-text-weight-normal, 400);
+}
+
+.markdown-body .task-list-item.enabled label {
+  cursor: pointer;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 4px;
+}
+
+.markdown-body .task-list-item .handle {
+  display: none;
+}
+
+.markdown-body .task-list-item-checkbox {
+  margin: 0 .2em .25em -1.4em;
+  vertical-align: middle;
+}
+
+.markdown-body .contains-task-list:dir(rtl) .task-list-item-checkbox {
+  margin: 0 -1.6em .25em .2em;
+}
+
+.markdown-body .contains-task-list {
+  position: relative;
+}
+
+.markdown-body .contains-task-list:hover .task-list-item-convert-container,
+.markdown-body .contains-task-list:focus-within .task-list-item-convert-container {
+  display: block;
+  width: auto;
+  height: 24px;
+  overflow: visible;
+  clip: auto;
+}
+
+.markdown-body ::-webkit-calendar-picker-indicator {
+  filter: invert(50%);
+}
+
+.markdown-body .markdown-alert {
+  padding: var(--base-size-8, 8px) var(--base-size-16, 16px);
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid var(--color-border-default);
+}
+
+.markdown-body .markdown-alert>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body .markdown-alert>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body .markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: var(--base-text-weight-medium, 500);
+  align-items: center;
+  line-height: 1;
+}
+
+.markdown-body .markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-accent-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-accent-fg);
+}
+
+.markdown-body .markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-done-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-done-fg);
+}
+
+.markdown-body .markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-attention-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-attention-fg);
+}
+
+.markdown-body .markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-success-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-success-fg);
+}
+
+.markdown-body .markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-danger-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-danger-fg);
+}
+</style><title>dependent-types</title></head><body><article class="markdown-body"><pre><code>Proposal for C2y
+WG14 3318
+
+Title:               Statically-dependent array types
+Author, affiliation: Alex Celeste, Perforce
+Date:                2024-08-19
+Proposal category:   Feature enhancement
+Target audience:     Compiler implementers
+</code></pre>
+<div class="markdown-heading"><h2 class="heading-element">Abstract</h2><a id="user-content-abstract" class="anchor" aria-label="Permalink: Abstract" href="#abstract"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>The C type system includes the notion of a <em>variably-modified type</em>, but does
+not incorporate it as a first-class citizen. Variably-modified types cannot be
+type-checked by the type system as described in C23, and are largely left up to
+analysis tools and secondary passes to either verify with dataflow analysis or,
+more commonly, simply ignore and trust that the code the user wrote was valid,
+because variably-modified type errors are left in the realm of undefined
+behaviour rather than constraints.</p>
+<p>We propose a refinement of the type system that would allow a large class of
+variably-modified types to be checked at compile-time as proper citizens of
+C's type system. The range of valid conversions is reduced by this change,
+which aims to restrict them to "intentionally correct" operations.</p>
+<hr>
+<div class="markdown-heading"><h1 class="heading-element">Statically-dependent array types</h1><a id="user-content-statically-dependent-array-types" class="anchor" aria-label="Permalink: Statically-dependent array types" href="#statically-dependent-array-types"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<pre><code>Reply-to:     Alex Celeste (aceleste@perforce.com)
+Document No:  N3318
+Revises:      N/A
+Date:         2024-08-19
+</code></pre>
+<div class="markdown-heading"><h2 class="heading-element">Summary of Changes</h2><a id="user-content-summary-of-changes" class="anchor" aria-label="Permalink: Summary of Changes" href="#summary-of-changes"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<div class="markdown-heading"><h3 class="heading-element">N3318</h3><a id="user-content-n3318" class="anchor" aria-label="Permalink: N3318" href="#n3318"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<ul>
+<li>original proposal</li>
+</ul>
+<div class="markdown-heading"><h2 class="heading-element">Introduction</h2><a id="user-content-introduction" class="anchor" aria-label="Permalink: Introduction" href="#introduction"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>The core of the issue is described succinctly in 6.7.7.3 "Array declarators",
+paragraph 6:</p>
+<blockquote>
+<p>For two array types to be compatible, both shall have compatible element types,
+and if both size specifiers are present, and are integer constant expressions,
+then both size specifiers shall have the same constant value. If the two array
+types are used in a context which requires them to be compatible,
+<strong>it is undefined behavior if the two size specifiers evaluate to unequal values</strong>.</p>
+</blockquote>
+<p>C is clear that the size of an array derivation doesn't have to be a constant
+expression, in places where a non-constant is expressible. However, it doesn't do
+anything with this information in the otherwise-static type system. The language
+is slightly ambivalent about whether such array types even <em>are</em> distinct types -
+they cannot be matched by <code>_Generic</code> for obvious reasons (<code>_Generic</code> must select at
+translation-time), but in other contexts the language is happy to just assume that
+they are compatible with ...whatever the user wants them to be compatible with.
+<code>sizeof</code> is able to produce some value, mostly as an artifact of this information
+needing to exist "somewhere" for array indexing to function, but the value is not
+bound in any traceable way to the type it describes.</p>
+<p>Within prototypes the size is even explicitly discarded if the user has provided it
+(paragraph 5). Compatibility is left <em>entirely</em> within the realm of runtime UB.</p>
+<p>Effectively, in C99 C added the <em>concept</em> of <a href="https://okmij.org/ftp/Computation/lightweight-static-guarantees.html#deptype" rel="nofollow">dependent types</a> to the type system,
+without adding any definitions to the type system to enable them to be checked,
+outside of simply leaving this entire responsibility to UB-sanitization. Dependent
+types at their most general are not necessarily decidable, so this is arguably the
+only way to incorporate them into the language without restricting the values in
+some way. C99 VLAs are a "bare minimum" solution that makes the feature work, but
+only if it is already being used correctly and only for a specific use case.</p>
+<p>New features proposed for C2y, such as <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3212.pdf" rel="nofollow">N3212 Polymorphic types</a>, exacerbate the
+problem by adding new kinds of dependent types; the <code>_Var</code> derivation and the <code>_Type</code>
+specifier proposed by N3212 are equivalent to a variably-modified array type and a
+non-constant expression respectively, creating another way to potentially introduce
+inconsistencies as there is no way to enforce that two <code>_Var(T)</code> are the same.
+Fixing the definition of array types will enable new features like N3212 to be built
+on a more solid type system foundation and defined in "as-if" terms that will inherit
+a stronger typing model.</p>
+<p>Other features like the forward declarations proposed in <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3207.pdf" rel="nofollow">N3207</a> remain toothless
+as long as the type system simply discards the size information rather than attempt
+to check it for consistency. The ability to express a wider range of dependent types
+in interfaces would be significantly more useful if the language also required those
+types to mean anything.</p>
+<p>Unfortunately full dependent type checking is not decidable and any approach that
+relies on the advanced folding capabilities of optimizing compilers is not adequate
+as a reliable solution; and relying on UB sanitization to catch egregious mistakes
+after they happen is not an acceptable approach as it fails to guarantee <em>any</em> class
+of mistake is not made and compiled.</p>
+<p>We believe that adding some restrictions on the expressions that can be used to
+derive an array type can have a significant effect on analyzability without necessarily
+becoming onerous for correctly-written code. For instance:</p>
+<pre><code>void foo (size_t len, int (*buf)[len]);
+
+void use (size_t x, size_t y) {
+    int array[y];
+    foo (x, &amp;array);
+}
+</code></pre>
+<p>Whether this program is correct or not depends entirely on the runtime values of <code>x</code> and
+<code>y</code> and cannot be decided in general. At the moment, C provides no means at all to say
+that there is <em>any connection</em> between an array type and an expression: our proposal
+is to provide a means of connecting array derivations and a subset runtime expressions
+that are known to be "the same", so that the above program can be statically rejected
+and its equivalent (passing <code>y</code> as the first argument to <code>foo</code>) can be statically
+accepted, without relying on undecidable flow analyses or checks that do not integrate
+into the core language's understanding of types and constants.</p>
+<p>It isn't dependent types, but it is a "<a href="https://okmij.org/ftp/Computation/lightweight-static-guarantees.html#deptype" rel="nofollow">paper money</a>" promise of something with a
+similar effect to dependent types.</p>
+<div class="markdown-heading"><h2 class="heading-element">Proposal</h2><a id="user-content-proposal" class="anchor" aria-label="Permalink: Proposal" href="#proposal"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>We propose achieving this by changing the definition, but <em>not the user-facing syntax</em>,
+of the array type derivation, to add a secondary expression part to the derivation, the
+"expression tag". The tag is:</p>
+<ul>
+<li>
+<p>implicit (never represented in the language syntax);</p>
+</li>
+<li>
+<p>always derived from the array length expression;</p>
+</li>
+<li>
+<p>always a constant expression, regardless of the value of the length expression;</p>
+</li>
+<li>
+<p>not always the same for the same length expression value.</p>
+</li>
+</ul>
+<p>This allows array type derivations to always be treated as distinct when they are not
+statically known to be the same.</p>
+<p>To accompany this, we need a way to unify the types of two arrays that are only determined
+to be the same at runtime (including cases where the program logic allows them to either
+be compatible or incompatible). We therefore introduce a way for array tags to be attached
+to other expressions by a restricted number of syntax constructs, enabling code like:</p>
+<pre><code>void foo (size_t s1, size_t s2, int (*l)[s1], int (*r)[s2]) {
+    if (s1 == s2) {
+        l = r;  // correct within the extent of the `if`
+    }
+    
+    l = r; // rejected by type checking
+}
+</code></pre>
+<p>This corresponds to a very restricted and limited form of <a href="https://en.wikipedia.org/wiki/Typestate_analysis" rel="nofollow">typestate analysis</a>.</p>
+<div class="markdown-heading"><h3 class="heading-element">Array expression tags</h3><a id="user-content-array-expression-tags" class="anchor" aria-label="Permalink: Array expression tags" href="#array-expression-tags"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>An array derivation becomes a three-part rather than two-part derived type. In
+"virtual syntax", the derivation might look like:</p>
+<pre><code>element [size ; tag]
+</code></pre>
+<p>However this syntax is not exposed - there is no use case for the user being able
+to control the <code>tag</code> (if they could, the problem would reset).</p>
+<p>The first part, the element type, is not changed.</p>
+<p>The second and third parts, the size and the tag, are both derived from the length
+expression. For two array types to be compatible, they must have the same size
+<em>and</em> the same tag components.</p>
+<p>For an array with a constant length expression, the derivation is almost exactly
+the same as it is in C23:</p>
+<pre><code>T[ice]  -&gt;  T[ice ; *]
+</code></pre>
+<p>The size component is the constant length and the tag is a nil value. Therefore,
+arrays with constant extents function identically to their definition in C23 and
+the tag can be ignored when only manipulating these types.</p>
+<p>For an array with a variable length expression, the derivation is almost the reverse:</p>
+<pre><code>T[var]  -&gt;  T[* ; $(var)]
+</code></pre>
+<p>where the size is a nil value and the tag is some constant produced by a syntactic
+hash over the length expression. This type is no longer compatible <em>by default</em> with
+any constant-sized array type. The use of a syntactic hash also means that the type
+is not compatible with any other variably-modified type, even if the <em>value</em> of the
+size is the same - arrays will not be assumed to be compatible and instead need to
+have an equivalent length expression.</p>
+<p>The starting point for compatibility therefore becomes that variably-modified arrays
+are <em>non</em>-compatible by default, which is a stronger position: runtime values that
+happen to produce the same result without clearly being related expressions, are no
+longer considered compatible.</p>
+<p>Arrays may also acquire the same tag through secondary means, explored below,
+making it possible for array types with equivalent runtime values to be identified
+as compatible dynamically.</p>
+<div class="markdown-heading"><h3 class="heading-element">Syntactic length hash</h3><a id="user-content-syntactic-length-hash" class="anchor" aria-label="Permalink: Syntactic length hash" href="#syntactic-length-hash"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Variably-modified array types are derived based on the <em>form</em> of the expression.</p>
+<p>The syntactic hash is produced according to a rule that should allow some flexibility
+in permitting slightly different expressions, while also ruling out expressions that
+are not definitely the same in a way that is simple for all implementers and users to
+understand (simplicity is more important than generality overall). The rule is:</p>
+<ul>
+<li>
+<p>an expression is first rewritten to expand all constant subexpressions to their
+abstract value
+(e.g. <code>v + (1 + 2)</code> unconditionally becomes <code>v + 3</code>;
+<code>3U</code>, <code>3L</code>, <code>3.0f</code> are all treated as the same value)</p>
+</li>
+<li>
+<p>statically-unused subexpression branches are discarded (e.g. the inapplicable
+branches of a <code>_Generic</code> selection, or the other branch of a constant <code>?:</code>)</p>
+</li>
+<li>
+<p>each variable identifier is converted to a unique identifier referring to the
+scoped variable entity (i.e. two expressions referring to variables with the same
+name in different scopes, do not produce compatible tags), by some implementation
+internal means</p>
+</li>
+<li>
+<p>each expression containing a (non-eliminated) modification operator (<code>++</code> etc.)
+unconditionally produces a unique tag</p>
+</li>
+<li>
+<p>each expression containing a (non-eliminated) reference to a global variable that
+is not <code>const</code> (or is <code>volatile</code>) unconditionally produces a unique tag</p>
+</li>
+<li>
+<p>each expression containing an object pointer dereference, or a call to a function
+not declared <code>[[unsequenced]]</code>, unconditionally produces a unique tag</p>
+</li>
+</ul>
+<p>These last two conditions mean that to produce two variably-modified array types
+that depend on non-local state and are compatible, a local temporary should be used.</p>
+<p>Additionally, the unique identifier for any variable entity with block scope is
+incremented by some implementation-internal means after every expression that
+modifies the named object (i.e. <code>=</code>, <code>++</code>, etc. as well as taking the non-constant
+address). Sequencing of subexpressions is implementation-defined. Therefore,</p>
+<pre><code>int x = ...
+int arr1[x];  // int[*; $(x@0)]
+++ x;         // x internal id bump
+int arr2[x];  // int[*; $(x@1)]
+-- x;         // x internal id bump
+int arr3[x];  // int[*; $(x@2)] (NOT compatible with first type)
+</code></pre>
+<p>This does not depend on whether the intervening modification was evaluated.</p>
+<p>If a variable modification is jumped over by a backwards jump, the location
+of the jump <em>target</em> also acts as an identifier increment point for the affected
+variable(s):</p>
+<pre><code>int x = ...
+int arr4[x];           // int[*; $(x@0)]
+do {                   // jump target, bump x id
+    int arr5[x];       // NOT compatible, int[*; $(x@1)]
+} while (++x &lt; K)      // bump x id as well
+;                      // jump from here
+
+int arr6[x];           // int[*; $(x@2)] - not compatible with arr4
+do {                   // no bump because no modification
+    int arr7[x];       // int[*; $(x@2)] - compatible with arr6
+} while (not_using_x); // no bump
+
+
+for (int x = 0; x &lt; K; ++ x) {
+    int arr8[x]; // unrelated x, int[*; $(x@BLK1@0)]
+}
+</code></pre>
+<p>Finally, for any expression that has not reduced to a constant or been defined as
+producing a completely unique tag, an implementation-defined hash is applied to
+the form of the converted expression, treating commutative operations as the same
+and ignoring redundant parenthesization, casts, or identity expressions:</p>
+<pre><code>int x = ...
+
+int arr7[x + 2];    // all of these arrays have compatible type:
+int arr8[2L + x];        // commutative
+int arr9[(long)x + (2)]; // value preserving cast, equivalent constant
+int arrA[(x + 0U) + 2];  // identity op, redundant parentheses
+</code></pre>
+<p>In practice, this should mean the majority of "correct" uses of variably-modified
+types should still work as expected. Array types mostly become incompatible when
+they rely on expressions that are not locally equivalent.</p>
+<p>(We could demand that expressions are also normalized for logical equivalence,
+(e.g. <code>!(a &gt;= b)</code> to <code>a &lt; b</code>) but this over-complicates the ruleset and doesn't
+really capture the idea of consistency in user intent.)</p>
+<div class="markdown-heading"><h3 class="heading-element">Value expression tag overrides</h3><a id="user-content-value-expression-tag-overrides" class="anchor" aria-label="Permalink: Value expression tag overrides" href="#value-expression-tag-overrides"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>However, a large number of uses of variably-modified types <em>do</em> depend on either
+non-local values or expressions that are not trivially the same:</p>
+<pre><code>extern size_t outsize;
+
+void f (size_t x, size_t y) {
+    int arr1[outsize]; // these three types are
+    int arr2[x];       // unconditionally incompatible ...
+    int arr3[y];
+    
+    if (x == y) {
+        // (completely valid work that needs arr2 and arr3 to be the same)
+    }
+    if (sizeof (arr1) == sizeof (arr2)) {
+        // (completely valid work that needs arr1 and arr2 to be the same)
+    }
+}
+</code></pre>
+<p>Therefore, we add two rules that enable <em>local</em> compatibility between types that
+are not generally compatible (which introduces a weak notion of <a href="https://en.wikipedia.org/wiki/Typestate_analysis" rel="nofollow">typestate</a>):</p>
+<ul>
+<li>
+<p>the result of a non-constant <code>sizeof</code> expression produces a tag that is <em>always</em>
+compatible with the tag for the operand type. Therefore it is <em>always</em> possible
+to create a variably-modified array type <code>A2</code> compatible with an existing array
+type <code>A1</code> by using <code>T[sizeof(A1)]</code>. The tag result of <code>sizeof</code> is just whatever
+the tag result of the operand type was (so for constant sizeof, the tag is zero).</p>
+</li>
+<li>
+<p>the <code>if</code> statement and <code>?:</code> expression each introduce a special scope for
+variably-modified types, when their controlling expression is a <code>==</code> expression.
+So long as the operands to the <code>==</code> operator are not defined to produce
+unconditionally unique tags, within the <em>guarded extent</em> of the controlling
+expression, the left and right operand expressions are defined to produce the
+<em>same</em> tag, including when used as a subexpression within a larger length
+expression.</p>
+</li>
+</ul>
+<p>Therefore:</p>
+<pre><code>void f (size_t x, size_t y) {
+    int a1[x];
+    int a2[y];    // not compatible with a1, $(x) != $(y)
+    
+    if (x == y) {
+        // $(x) is overridden by $(@if0)
+        // $(y) is overridden by $(@if0)
+        
+        // types of a1 and a2 are compatible here
+        typeof (a1) a3;  // type is int[*; $(@if0)]
+        
+        int a5[x + 1]; // compatible with a6:
+        int a6[1 + x]; // types are both int[*; $(@if0 + 1)]
+    }
+}
+</code></pre>
+<p>This property does not backpropagate, so checking <code>sizeof (L) == sizeof (R)</code>
+<em>does not</em> make arrays declared with the original length expression of <code>L</code>
+compatible with the type of <code>R</code>; but checking the expressions directly (<code>L == R</code>)
+would do so.</p>
+<p>(i.e. in the example above the compiler is not required to link <code>x == y</code> to
+<code>sizeof (a1) == sizeof (a2)</code> as these are not consistent expression spellings)</p>
+<p>The <em>guarded extent</em> of the <code>if</code> statement extends from the start of the
+<em>secondary-block</em> associated with the <code>if</code>, until either the end of the
+<em>secondary-block</em> or the first identifier bump affecting either operand expression
+to the <code>==</code>. The <em>guarded extent</em> of the <code>?:</code> operator is its second operand,
+unless the second operand contains any identifier bumping operation affecting
+either operand to the <code>==</code>.</p>
+<pre><code>int g (size_t x, size_t y) {
+    int a1[x];
+    int a2[y];    // not compatible with a1, $(x) != $(y)
+    
+    if (x == y) {
+        // $(x) is overridden by $(@if0)
+        // $(y) is overridden by $(@if0)
+        
+        // types of a1 and a2 are compatible here
+        
+        x += 1; // end of guarded extent, @if0 falls out of scope
+        
+        // types of a1 and a2 are not compatible here
+    }
+    
+    return x == y
+         ? expr1   // types of a1 and a2 are compatible
+         : expr2;  // types of a1 and a2 are not compatible
+         
+    return x == y
+         ? (expr3, ++ x)  // types of a1 and a2 are not compatible in expr3
+         : expr4;         // because there is NO guarded extent
+}
+</code></pre>
+<p>If one of the operands to the <code>==</code> is a constant expression, within the <em>guarded</em>
+<em>extent</em>, the other operand is replaced by the constant value when evaluating
+array types. If this results in the whole array length expression becoming an
+integer constant expression, the resulting type is a VMT compatible with the
+equivalent non-variably-modified array type:</p>
+<pre><code>void fc (size_t x) {
+    int a1[x];
+    int a2[10]; // not compatible with a1, $(x) != *
+    
+    if (x == 10) {
+        // $(x) is overridden by $(10)
+        
+        // types of a1 and a2 are compatible here
+        typeof (a1) a3;  // type is a VMT compatible with int[10; *]
+                         // (still flagged as VMT for syntax purposes)
+    }
+}
+</code></pre>
+<p>Although the type is compatible with a static array type, keeping it flagged as
+a VMT internally lowers the implementation burden and makes it consistently
+impossible to use in places like generic selections.</p>
+<div class="markdown-heading"><h3 class="heading-element">Tag inference</h3><a id="user-content-tag-inference" class="anchor" aria-label="Permalink: Tag inference" href="#tag-inference"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>In order to use variably modified types as the arguments to functions, the type
+in the caller needs to be translated into a type for the callee:</p>
+<pre><code>void user (size_t sz, int (*p1)[sz], int (*p2)[sz]) {
+    // types of p1 and p2 are compatible
+}
+
+void caller (size_t x, size_t y) {
+    int a1[x];
+    int a2[y];
+    
+    // we want this to be a type error:
+    user (x, &amp;a1, &amp;a2);
+    
+    // and for these to be OK:
+    user (x, &amp;a1, &amp;a1);
+    user (y, &amp;a2, &amp;a2);
+    
+    // this is also OK
+    if (x == y) {
+        user (x, &amp;a1, &amp;a2);
+    }
+}
+</code></pre>
+<p>A similar tag-override mechanism is used at the point of application, with an
+<em>extent</em> that applies only within the application of argument list, to the argument
+subexpressions themselves:</p>
+<pre><code>void user (size_t sz   // variable the types of p1 and p2 depend on
+    , int (*p1)[sz]    // type becomes int(*)[*; @user0]
+    , int (*p2)[sz]);  // type becomes int(*)[*; @user0]
+
+// @user0 is available within the function call argument list:
+user (x      // x is overridden to have the tag @user0
+    , &amp;a1    // the type int[*; x] is compatible with int[*; @user0]
+    , &amp;a2);  // the type int[*; y] is not compatible, error here
+</code></pre>
+<p><code>sz</code> is identified independently of the caller context as being a dependency of the
+types of <code>p1</code> and <code>p2</code>, so we can generate an override for the expression passed to
+<code>sz</code> and then directly check that the types of the dependent arguments have tags
+compatible with the tags of their corresponding parameters.</p>
+<p>This check examines the declaration visible at the point of call and does not imply
+a runtime check against the parameter declarations in the definition, if it exists
+in a different TU.</p>
+<p>We also propose that the composite type rules are altered so that function declarations
+are checked for compatibility in the same way as for argument application, rather than
+allowing variably-modified types to form a composite type that discards inconsistent
+size information.</p>
+<p>When the size in the callee is unspecified (<code>[*]</code>) or is an expression with an
+unconditionally-unique tag according to the rules above, the type of the argument
+cannot effectively be checked against the type of the parameter because the
+information is not available. The only thing we can propose here is that use of
+the unspecified-length syntax in parameter lists should always cause a warning
+to be emitted, and that the use of expressions producing unconditionally-unique
+tags for array length expressions in function parameter lists should be deprecated,
+also causing a warning to be emitted. Of these two, the former feature is probably
+more disruptive.</p>
+<div class="markdown-heading"><h2 class="heading-element">Related work</h2><a id="user-content-related-work" class="anchor" aria-label="Permalink: Related work" href="#related-work"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Much more advanced work, including the ability to properly typecheck calls to
+functions like <code>printf</code>, has <a href="https://okmij.org/ftp/typed-formatting/index.html#dep-type" rel="nofollow">been explored by Kiselyov</a>; a number of
+strategies that take advantage of the tools already provided in more powerful
+typesystems than C's can be used to fake dependent types at a local level,
+closely bound enough to what the user is trying to do that their non-general
+nature doesn't matter.</p>
+<p>This approach is significantly more primitive but aims to capture the same
+most fundamental idea, that true dependent types aren't really needed for most
+code that most users write. As a result, <a href="https://okmij.org/ftp/Computation/lightweight-static-guarantees.html#deptype" rel="nofollow">a "fiat" approach</a> to type checking
+can be practical for most programs and still provides a huge improvement over
+the status quo of simply not checking variably-modified types at all.</p>
+<p>Another approach is to use staged-programming (or staged-metaprogramming) in
+order to take advantage of a richer type system in a host language to prove that
+an output program in a lower-level language is correct. This is demonstrated by
+<a href="https://dl.acm.org/doi/pdf/10.1145/3110261" rel="nofollow">Low∗</a>, which embeds a C subset into F∗. However, the resulting C programs
+are stripped of the dependent type information after it has been checked by the
+F∗ type system (<a href="https://xavierleroy.org/publi/Clight.pdf" rel="nofollow">Clight does not export VMTs at all</a>, instead converting them
+to element pointers), so this is of limited help to users who want to write in C
+directly. However, staged programming with C as a second stage is a generally
+interesting avenue and the Committee should aim to support this as a first-class
+application of the language, as offloading correctness checking onto richer
+tools is always helpful.</p>
+<p>A simpler proposal also being considered for C2Y would reuse the <code>[*]</code> syntax
+in block-scoped declarations, where it would deduce an array size. We think
+this feature would compose very well with the proposed typechecking rules and
+the deduced array size could easily simply inherit the tag information from
+the initializing expression, after that working exactly like a VMT declared
+with existing syntax.</p>
+<div class="markdown-heading"><h2 class="heading-element">Impact</h2><a id="user-content-impact" class="anchor" aria-label="Permalink: Impact" href="#impact"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>The goal of this proposal is to produce a compromise position between full type
+checking for runtime-dependent types (practically impossible given the nature of
+the surrounding C language, and undecidable at best) that is at least decidable
+and implementable. The change would have some impact on implementations, but less
+than a more complete solution.</p>
+<p>As always, a smaller implementation can choose to be more permissive with type
+checking and leave most of this up to more advanced tools, so long as it admits
+correct programs. Since no change is proposed except for <em>checking</em>, no new
+functionality is actually introduced here over what is provided in C23.</p>
+<p>The actual type compatibility checks within a compiler would not be affected by
+this change, as it takes effect at the point of establishing a type for a
+declared object or function, and of determining the type of an identifier used
+in an expression. Once these types have been generated they would feed into an
+existing implementation of type compatibility in the same way as any other
+complete type.</p>
+<p>Generating the expression types has a little complexity because the type of
+any expression within the <em>extent</em> of an override would need to regenerate
+its syntactic-hash to produce a new tag that took overrides into account.
+At the implementation level this means that the same expression might have
+distinct type identities depending on context, but this fact wouldn't be
+observable to the end user.
+This is not overwhelming to implement, however.</p>
+<p>Arguably the ability to check compatibility of variably-modified types would
+introduce the ability to list such types as generic associations, but we do not
+propose adding that feature specifically because it would mandate stronger
+implementation support. One possible option that may be useful is for the
+Standard to allow smaller implementations to define that they will not check
+dependent types at all, in which case they should be required to warn against
+all assigning-uses of such types when in conforming mode. This may be
+practical for implementations where the core underlying feature of variable
+length array objects is not supported, especially if dynamic memory is also
+in short supply and actual VMTs are unlikely to see much use.</p>
+<div class="markdown-heading"><h2 class="heading-element">Future directions</h2><a id="user-content-future-directions" class="anchor" aria-label="Permalink: Future directions" href="#future-directions"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>As above, some changes required for this to complete coverage over array types
+where the information is outright missing would generate warnings on their
+use. In practice this would work to deprecate such types.</p>
+<p>As a result, in future we propose that unspecified array sizes in function
+prototypes should be made obsolescent; and that variably-modified types in
+function parameters that make use of global or indirect references, assignment,
+or calls to non-`[[unsequenced]]`` functions in their length expression,
+should also be made obsolescent (and deprecated if a distinction exists).</p>
+<div class="markdown-heading"><h2 class="heading-element">Proposed wording</h2><a id="user-content-proposed-wording" class="anchor" aria-label="Permalink: Proposed wording" href="#proposed-wording"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>This proposal is an early draft that is still likely to significantly change
+before potential adoption. Therefore wording here is at most illustrative.
+We <strong>do not bother</strong> with all necessary changes at this time as the proposal
+would result in a significant number of knock-on edits that are better left
+until rough consensus on the semantics is achieved.</p>
+<p>The proposed changes are based on the latest public draft of C2y, which is
+<a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3220.pdf" rel="nofollow">N3220</a>. Bolded text is new text when inlined into an existing sentence.</p>
+<p>Add a new subclause in 6.2.5 "Types", after all current paragraphs:</p>
+<blockquote>
+<div class="markdown-heading"><h3 class="heading-element">6.2.5.1 Variably modified types</h3><a id="user-content-6251-variably-modified-types" class="anchor" aria-label="Permalink: 6.2.5.1 Variably modified types" href="#6251-variably-modified-types"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>When the number of elements specified for an array type is a constant
+expression, it is a fixed-length array type. Every specifier that derives
+an array type with the same element type and the same constant number of
+elements describes the same type.</p>
+<p>When the number of elements specified for an array type is not a constant
+expression, the array type is a <em>variable length array</em> type. A variable
+length array is a <em>variably modified type</em>, and any type derived from a
+<em>variably modified type</em> is also a <em>variably modified type</em>.</p>
+<p>A specifier for a variable length array type names a specific type that
+does not directly depend on the concrete value of the length expression.
+Instead, a key is generated from the syntactic structure of the length
+expression<sup>footnote1)</sup>, and two array specifiers that result
+in the same key describe the same type:</p>
+<ul>
+<li>
+<p>First, any constant subexpressions are evaluated and replaced by their
+value, and any generic selections are replaced by their matching
+association expression.</p>
+</li>
+<li>
+<p>Then, any additive or multiplicative expressions that perform an identity
+operation (adding or subtracting zero, multiplying or dividing by one)
+are replaced by their non-constant operand.</p>
+</li>
+<li>
+<p>Then, any statically-unevaluated subexpressions are replaced by a constant
+value equivalent to a default-initialized value of the same type.</p>
+</li>
+</ul>
+<p>If the remaining expression contains any of:</p>
+<ul>
+<li>
+<p>an increment, decrement, or assignment operator;</p>
+</li>
+<li>
+<p>a reference to a volatile object, or non-constant object with non-automatic
+storage duration, except as part of an address constant;</p>
+</li>
+<li>
+<p>a dereference of a pointer to object;</p>
+</li>
+<li>
+<p>a call to a function that was not declared with the <code>[[unsequenced]]</code>
+attribute;</p>
+</li>
+</ul>
+<p>a new unique key is generated for this array specifier<sup>footnote2)</sup>.</p>
+<p>An expression not containing such operands is a <em>stable key expression</em>.</p>
+<p>Otherwise, each identifier within the remaining expression is converted to
+a unique representation distinguishing it from any other identifiers
+designating objects in other scopes. Additionally, this unique representation
+is updated after<sup>footnote3</sup> every occurrence of a <em>modifying-operator</em>
+applied to the identifier in the source, regardless of whether it is evaluated;
+and after any occurrence of a backward jump in the source that jumps over one or
+more occrrences of a <em>modifying operator</em> applied to the designated object.
+Each such update shall produce a new unique representation.</p>
+<p>A <em>modifying operator</em> is any of: an increment or decrement operator; an
+assignment operator; or the unary <code>&amp;</code> operator, unless its operand has
+<code>const</code>-qualified type or the resulting pointer is immediately converted to a
+pointer to <code>const</code>-qualified type.</p>
+<p>An implementation-defined hash function is applied to the syntactic
+form of the resulting expression, as-if by proceeding over the remaining tokens
+(with discarded subexpressions replaced by generated tokens for their generated
+values) from left to right; except that redundant parentheses (that do not
+affect order of operations) and casts that do not alter their operand's
+arithmetic value are not considered, and commutative operators do not depend
+on order of operands; and only the arithmetic value and not the spelling of
+constant subexpressions is considered.</p>
+<p>An occurrence of the <code>sizeof</code> operator with a variable length array type used
+as the length expression for an array specifier will always cause the resulting
+specifier to designate the same type as the operand of <code>sizeof</code>, even if it
+previously specified a unique type.</p>
+<p>An <code>if</code> statement whose <em>expression</em> is an <em>equality-expression</em> using the <code>==</code>
+operator to compare two <em>stable key expressions</em>, introduces a <em>guarded extent</em>,
+which begins at the start of the <code>if</code> statement's first associated secondary block
+and terminates at either the end of the secondary block or at the first occurrence
+of any <em>modifying operator</em> that would affect a key generated for either
+<em>stable key</em> operand to the <code>==</code> operator. Within the <em>guarded extent</em>, both
+<em>stable key</em> operands are shall produce the same key (or key part) when they
+appear within the length expression of an array specifier. This is a <em>key override</em>.</p>
+<p><strong>NOTE</strong> this implies that an implementation may need to re-evaluate the key
+for an array type specified outside a <em>guarded extent</em> if the type is used within
+that extent.</p>
+<p>A <em>conditional expression</em> whose first operand is an <em>equality-expression</em> using
+the <code>==</code> operator to compare two <em>stable key expressions</em>, introduces a
+<em>guarded extent</em> which covers the second operand, so long as there are no
+occurrences of any <em>modifying operator</em> within the second operand.</p>
+<p>Within the arguments of a call to a function with variably modified parameter types,
+a <em>key override</em> also occurs if the variably modified parameter types depend on
+the value of another parameter. In a subexpression that calls such a function,
+the <em>stable key</em> associated with the parameters with non-variably-modified type
+replaces any <em>stable key</em> that would be generated for the argument expression
+applied to that parameter, during the evaluation of the types for any subsequent
+argument expressions.</p>
+<p><strong>Recommended Practice:</strong> in the event that a parameter has a variably modified
+type that does not depend on the value of another parameter, an implementation
+is encouraged to emit a diagnostic that the argument applied cannot be type-checked.</p>
+<p>EXAMPLE 1  The following declarations all specify the same type:</p>
+<pre><code>int x = ... // block scope
+
+int arr7[x + 2];    
+int arr8[2L + x];        // commutative, spelling of literal
+int arr9[(long)x + (2)]; // value preserving cast, equivalent constant
+int arrA[(x + 0U) + 2];  // identity op, redundant parentheses
+</code></pre>
+<p>Example 2  Modification of an identifier means it will produce a different key,
+and therefore the containing specifier will designate a different type:</p>
+<pre><code>int x = ... // block scope
+
+int arr1[x];  // UID of x, state 0
+++ x;         // modifying operation
+int arr2[x];  // UID of x, state 1
+-- x;         // modifying operation
+int arr3[x];  // UID of x, state 2
+</code></pre>
+<p>Each of the declared arrays has a distinct type.</p>
+<p>EXAMPLE 3  If a <em>modifying operator</em> is jumped over by a backwards jump,
+the location of the jump target also acts to update the unique representation
+of the identifier that was the operand of the jumped-over operator:</p>
+<pre><code>int x = ... // block scope
+
+int arr4[x];           // UID of x, state 0
+do {                   // jump target, updates unique representation
+    int arr5[x];       // UID of x, state 1
+} while (++x &lt; K)      // ++ updates unique representation too
+;                      // jump from here
+
+int arr6[x];           // UID of x, state 2
+do {                   // no update because no modification
+    int arr7[x];       // UID of x, state 2 - same type as arr6
+} while (not_using_x);
+</code></pre>
+<p>EXAMPLE 4  The <code>sizeof</code> guarantees the resulting type specified will be the
+same as its operand, if it is used as the length expression:</p>
+<pre><code>extern int f (void);
+
+int arr8[f ()]; // always specifies a unique type
+
+int arr9[sizeof arr8]; // specifies the same type as arr8, whatever it is
+</code></pre>
+<p>EXAMPLE 5  A guarded extent establishes a scope where two incompatible array
+types can temporarily become compatible after meeting a runtime condition:</p>
+<pre><code>void f (size_t x, size_t y) {
+    int a1[x];
+    int a2[y];    // not compatible with a1, $UID(x) != $UID(y)
+    
+    if (x == y) {
+        // $UID(x) is overridden by $UID(@if0)
+        // $UID(y) is overridden by $UID(@if0)
+        
+        // types of a1 and a2 are compatible here
+        typeof (a1) * p3 = &amp;a1;  // type uses $UID(@if0)
+        p3 = &amp;a2;  // OK - type of a2 also uses $UID(@if0) within
+                   // the extent, not $(y) within the extent
+        
+        x += 1; // end of guarded extent, @if0 falls out of scope
+    }
+}
+</code></pre>
+<p>EXAMPLE 6  Within a call, the subexpression for an argument to a parameter that
+other parameters are <em>dependent</em> upon, has its stable key locally overridden
+with an extent limited to the argument applications:</p>
+<pre><code>void user (size_t sz, int (*p1)[sz], int (*p2)[sz]) {
+    // types of p1 and p2 are compatible
+}
+
+void caller (size_t x, size_t y) {
+    int a1[x];
+    int a2[y];
+    
+    // error: a1 and a2 have unrelated types
+    user (x, &amp;a1, &amp;a2);
+    
+    // OK
+    user (x, &amp;a1, &amp;a1);
+    user (y, &amp;a2, &amp;a2);
+    
+    // this is OK because of the guarded extent
+    if (x == y) {
+        user (x, &amp;a1, &amp;a2);
+    }
+    
+    // within the argument application subexpressions only:
+    user (x     // stable key subexpression x defined to produce the sz key
+        , &amp;a1   // therefore this has a type dependent on $(sz)
+        , &amp;a1); // and these variably modified arguments type-check
+}
+</code></pre>
+<p>Like example 5, the implementation may need to temporarily change the type of
+an expression within an extent; however, this is never observable from the code.</p>
+<p>EXAMPLE 7  Implementations are encouraged to emit a diagnostic when an argument
+is applied to a parameter with a variably modified type that cannot be checked:</p>
+<pre><code>void user (size_t, int (*)[*]); // variably modified type that doesn't
+                                // seem to depend on anything specific
+
+void caller (size_t x) {
+    int arr[x];
+    user (x, &amp;arr);  // diagnostic here: the type of the second parameter
+}                    // cannot be checked, don't know what is expected
+</code></pre>
+<p><strong>footnote1)</strong> this key is internal to the implementation and never
+exposed into the program source. The corresponding "hash function" is also
+not observable or directly invocable.</p>
+<p><strong>footnote2)</strong> therefore, every array specifier whose expression contains
+one of these features in an evaluated subexpression designates a distinct array
+type, regardless of whether the lengths evaluate to the same value.</p>
+<p><strong>footnote3)</strong> the order of evaluations within an expression is
+implementation-defined.</p>
+<p><strong>Forward references:</strong> compatible type, generic selection, multiplicative
+operators, additive operators, constant expressions, array declarators,
+initialization</p>
+</blockquote>
+<div class="markdown-heading"><h3 class="heading-element">Additional work</h3><a id="user-content-additional-work" class="anchor" aria-label="Permalink: Additional work" href="#additional-work"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>In 6.2.7 "Compatible type and composite type", additional work is still
+needed to clarify what "the same" means for types, and this section should
+probably be reworked before changing the relevant composite type rules, in
+terms of derivations producing specific types.</p>
+<p>The undefined behaviour associated with composite types for unevaluated
+variably modified types is a problem for the key evaluation rule and needs
+to be addressed.</p>
+<p>Additional work is needed in 6.6 "Constant expressions" to clarify when a
+subexpression is statically unevaluated, which is not currently a term of art.</p>
+<p>Additional work is needed in 6.7.7.3 "Array declarators", which is currently
+responsible for defining <em>variable length array</em> and <em>variably modified type</em>
+in terms of declarators. We think the core of these definitions should be
+extracted to the new clause given above, or at least a subclause in 6.2.5, and
+instead the definition of declarators should refer to what type derivations
+they describe.</p>
+<p>Adopting <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3203.htm" rel="nofollow">consistent left-to-right evaluation</a> within expressions would
+significantly simplify the definition of <em>guarded extent</em> and what "after" means
+for a <em>modifying operator</em>.</p>
+<div class="markdown-heading"><h2 class="heading-element">Questions for WG14</h2><a id="user-content-questions-for-wg14" class="anchor" aria-label="Permalink: Questions for WG14" href="#questions-for-wg14"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Would WG14 like to add a mechanism for statically checking dependent (variably
+modified) types to C2y, along the lines of the proposal in N3318?</p>
+<p>Would WG14 like to allow implementations to define that they either check
+dependent types, <em>or</em> warn against all assigning-uses of dependent types?</p>
+<div class="markdown-heading"><h2 class="heading-element">References</h2><a id="user-content-references" class="anchor" aria-label="Permalink: References" href="#references"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p><a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3220.pdf" rel="nofollow">C2y latest public draft</a><br>
+<a href="https://en.wikipedia.org/wiki/Dependent_type" rel="nofollow">Dependent type</a><br>
+<a href="https://okmij.org/ftp/Computation/lightweight-static-guarantees.html#deptype" rel="nofollow">Lightweight guarantees and dependent types</a><br>
+<a href="https://okmij.org/ftp/typed-formatting/index.html#dep-type" rel="nofollow">Genuine dependent types and faking them</a><br>
+<a href="https://dl.acm.org/doi/pdf/10.1145/3110261" rel="nofollow">Verified Low-Level Programming Embedded in F∗</a><br>
+<a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3212.pdf" rel="nofollow">N3212 Polymorphic types</a><br>
+<a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3207.pdf" rel="nofollow">N3207 Forward Declaration of Parameters v3</a><br>
+<a href="https://en.wikipedia.org/wiki/Typestate_analysis" rel="nofollow">Typestate analysis</a><br>
+<a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3295.pdf" rel="nofollow">Unspecified Sizes in Definitions of Arrays</a><br>
+<a href="https://xavierleroy.org/publi/Clight.pdf" rel="nofollow">Mechanized semantics for the Clight subset of the C language</a><br>
+<a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3203.htm" rel="nofollow">Strict order of expression evaluation</a></p>
+</article></body></html>

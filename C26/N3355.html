@@ -1,0 +1,1754 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>@font-face {
+  font-family: octicons-link;
+  src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM+8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB/aFGpk3jaTY6xa8JAGMW/O62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v+k/0an2i+itHDw3v2+9+DBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3/I7AtxEJLtzzuZfI+VVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy/Lt7Kc+0vWY/gAgIIEqAN9we0pwKXreiMasxvabDQMM4riO+qxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw+ymhce7vwM9jSqO8JyVd5RH9gyTt2+J/yUmYlIR0s04n6+7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv/ocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi+W2+MjCzMIDApSwvXzC97Z4Ig8N/BxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh/8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT+AEjAwuDFpBmA9KMDEwMCh9i/v8H8sH0/4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9/lqYwOGZxeUelN2U2R6+cArgtCJpauW7UQBqnFkUsjAY/kOU1cP+DAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl+vvmM/byA48e6tWrKArm4ZJlCbdsrxksL1AwWn/yBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO//sdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd/89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF+9JOS0nbaaYDCQfwCJ7Au3AHj+LO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm+EBXuAbHmIMSRMs+4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL+hD7C1xoaHeLJSEao0FEW14ckxC+TU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13/+lm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl+9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O/AdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB///AA8AAQAAAAAAAAAAAAAAAAABAAAAAA==) format('woff');
+}
+
+@media (prefers-color-scheme: dark) {
+  body,
+  [data-theme="dark"] {
+    /*dark*/
+    color-scheme: dark;
+    --color-prettylights-syntax-comment: #8b949e;
+    --color-prettylights-syntax-constant: #79c0ff;
+    --color-prettylights-syntax-entity: #d2a8ff;
+    --color-prettylights-syntax-storage-modifier-import: #c9d1d9;
+    --color-prettylights-syntax-entity-tag: #7ee787;
+    --color-prettylights-syntax-keyword: #ff7b72;
+    --color-prettylights-syntax-string: #a5d6ff;
+    --color-prettylights-syntax-variable: #ffa657;
+    --color-prettylights-syntax-brackethighlighter-unmatched: #f85149;
+    --color-prettylights-syntax-invalid-illegal-text: #f0f6fc;
+    --color-prettylights-syntax-invalid-illegal-bg: #8e1519;
+    --color-prettylights-syntax-carriage-return-text: #f0f6fc;
+    --color-prettylights-syntax-carriage-return-bg: #b62324;
+    --color-prettylights-syntax-string-regexp: #7ee787;
+    --color-prettylights-syntax-markup-list: #f2cc60;
+    --color-prettylights-syntax-markup-heading: #1f6feb;
+    --color-prettylights-syntax-markup-italic: #c9d1d9;
+    --color-prettylights-syntax-markup-bold: #c9d1d9;
+    --color-prettylights-syntax-markup-deleted-text: #ffdcd7;
+    --color-prettylights-syntax-markup-deleted-bg: #67060c;
+    --color-prettylights-syntax-markup-inserted-text: #aff5b4;
+    --color-prettylights-syntax-markup-inserted-bg: #033a16;
+    --color-prettylights-syntax-markup-changed-text: #ffdfb6;
+    --color-prettylights-syntax-markup-changed-bg: #5a1e02;
+    --color-prettylights-syntax-markup-ignored-text: #c9d1d9;
+    --color-prettylights-syntax-markup-ignored-bg: #1158c7;
+    --color-prettylights-syntax-meta-diff-range: #d2a8ff;
+    --color-prettylights-syntax-brackethighlighter-angle: #8b949e;
+    --color-prettylights-syntax-sublimelinter-gutter-mark: #484f58;
+    --color-prettylights-syntax-constant-other-reference-link: #a5d6ff;
+    --color-fg-default: #e6edf3;
+    --color-fg-muted: #848d97;
+    --color-fg-subtle: #6e7681;
+    --color-canvas-default: #0d1117;
+    --color-canvas-subtle: #161b22;
+    --color-border-default: #30363d;
+    --color-border-muted: #21262d;
+    --color-neutral-muted: rgba(110,118,129,0.4);
+    --color-accent-fg: #2f81f7;
+    --color-accent-emphasis: #1f6feb;
+    --color-success-fg: #3fb950;
+    --color-success-emphasis: #238636;
+    --color-attention-fg: #d29922;
+    --color-attention-emphasis: #9e6a03;
+    --color-attention-subtle: rgba(187,128,9,0.15);
+    --color-danger-fg: #f85149;
+    --color-danger-emphasis: #da3633;
+    --color-done-fg: #a371f7;
+    --color-done-emphasis: #8957e5;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body,
+  [data-theme="light"] {
+    /*light*/
+    color-scheme: light;
+    --color-prettylights-syntax-comment: #57606a;
+    --color-prettylights-syntax-constant: #0550ae;
+    --color-prettylights-syntax-entity: #6639ba;
+    --color-prettylights-syntax-storage-modifier-import: #24292f;
+    --color-prettylights-syntax-entity-tag: #116329;
+    --color-prettylights-syntax-keyword: #cf222e;
+    --color-prettylights-syntax-string: #0a3069;
+    --color-prettylights-syntax-variable: #953800;
+    --color-prettylights-syntax-brackethighlighter-unmatched: #82071e;
+    --color-prettylights-syntax-invalid-illegal-text: #f6f8fa;
+    --color-prettylights-syntax-invalid-illegal-bg: #82071e;
+    --color-prettylights-syntax-carriage-return-text: #f6f8fa;
+    --color-prettylights-syntax-carriage-return-bg: #cf222e;
+    --color-prettylights-syntax-string-regexp: #116329;
+    --color-prettylights-syntax-markup-list: #3b2300;
+    --color-prettylights-syntax-markup-heading: #0550ae;
+    --color-prettylights-syntax-markup-italic: #24292f;
+    --color-prettylights-syntax-markup-bold: #24292f;
+    --color-prettylights-syntax-markup-deleted-text: #82071e;
+    --color-prettylights-syntax-markup-deleted-bg: #ffebe9;
+    --color-prettylights-syntax-markup-inserted-text: #116329;
+    --color-prettylights-syntax-markup-inserted-bg: #dafbe1;
+    --color-prettylights-syntax-markup-changed-text: #953800;
+    --color-prettylights-syntax-markup-changed-bg: #ffd8b5;
+    --color-prettylights-syntax-markup-ignored-text: #eaeef2;
+    --color-prettylights-syntax-markup-ignored-bg: #0550ae;
+    --color-prettylights-syntax-meta-diff-range: #8250df;
+    --color-prettylights-syntax-brackethighlighter-angle: #57606a;
+    --color-prettylights-syntax-sublimelinter-gutter-mark: #8c959f;
+    --color-prettylights-syntax-constant-other-reference-link: #0a3069;
+    --color-fg-default: #1F2328;
+    --color-fg-muted: #656d76;
+    --color-fg-subtle: #6e7781;
+    --color-canvas-default: #ffffff;
+    --color-canvas-subtle: #f6f8fa;
+    --color-border-default: #d0d7de;
+    --color-border-muted: hsla(210,18%,87%,1);
+    --color-neutral-muted: rgba(175,184,193,0.2);
+    --color-accent-fg: #0969da;
+    --color-accent-emphasis: #0969da;
+    --color-success-fg: #1a7f37;
+    --color-success-emphasis: #1f883d;
+    --color-attention-fg: #9a6700;
+    --color-attention-emphasis: #9a6700;
+    --color-attention-subtle: #fff8c5;
+    --color-danger-fg: #d1242f;
+    --color-danger-emphasis: #cf222e;
+    --color-done-fg: #8250df;
+    --color-done-emphasis: #8250df;
+  }
+}
+
+body {
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: var(--color-canvas-default);
+}
+
+.markdown-body .octicon-link:before {
+  font: normal normal normal 16px/1 octicons-link;
+  display: inline-block;
+  text-decoration: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  content: '\f05c';
+  vertical-align: middle;
+}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  margin: 0;
+  color: var(--color-fg-default);
+  background-color: var(--color-canvas-default);
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body h1:hover .anchor .octicon-link:before,
+.markdown-body h2:hover .anchor .octicon-link:before,
+.markdown-body h3:hover .anchor .octicon-link:before,
+.markdown-body h4:hover .anchor .octicon-link:before,
+.markdown-body h5:hover .anchor .octicon-link:before,
+.markdown-body h6:hover .anchor .octicon-link:before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-color: currentColor;
+  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' aria-hidden='true'><path fill-rule='evenodd' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'></path></svg>");
+  mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' aria-hidden='true'><path fill-rule='evenodd' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'></path></svg>");
+}
+
+.markdown-body details,
+.markdown-body figcaption,
+.markdown-body figure {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body [hidden] {
+  display: none !important;
+}
+
+.markdown-body a {
+  background-color: transparent;
+  color: var(--color-accent-fg);
+  text-decoration: none;
+}
+
+.markdown-body abbr[title] {
+  border-bottom: none;
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: var(--base-text-weight-semibold, 600);
+}
+
+.markdown-body dfn {
+  font-style: italic;
+}
+
+.markdown-body h1 {
+  margin: .67em 0;
+  font-weight: var(--base-text-weight-semibold, 600);
+  padding-bottom: .3em;
+  font-size: 2em;
+  border-bottom: 1px solid var(--color-border-muted);
+}
+
+.markdown-body mark {
+  background-color: var(--color-attention-subtle);
+  color: var(--color-fg-default);
+}
+
+.markdown-body small {
+  font-size: 90%;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body sup {
+  top: -0.5em;
+}
+
+.markdown-body img {
+  border-style: none;
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: var(--color-canvas-default);
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace;
+  font-size: 1em;
+}
+
+.markdown-body figure {
+  margin: 1em 40px;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  overflow: hidden;
+  background: transparent;
+  border-bottom: 1px solid var(--color-border-muted);
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: var(--color-border-default);
+  border: 0;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+  overflow: visible;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body [type=button],
+.markdown-body [type=reset],
+.markdown-body [type=submit] {
+  -webkit-appearance: button;
+  appearance: button;
+}
+
+.markdown-body [type=checkbox],
+.markdown-body [type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body [type=number]::-webkit-inner-spin-button,
+.markdown-body [type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.markdown-body [type=search]::-webkit-search-cancel-button,
+.markdown-body [type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body ::-webkit-input-placeholder {
+  color: inherit;
+  opacity: .54;
+}
+
+.markdown-body ::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body ::placeholder {
+  color: var(--color-fg-subtle);
+  opacity: 1;
+}
+
+.markdown-body hr::before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  overflow: auto;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body details:not([open])>*:not(summary) {
+  display: none !important;
+}
+
+.markdown-body a:focus,
+.markdown-body [role=button]:focus,
+.markdown-body input[type=radio]:focus,
+.markdown-body input[type=checkbox]:focus {
+  outline: 2px solid var(--color-accent-fg);
+  outline-offset: -2px;
+  box-shadow: none;
+}
+
+.markdown-body a:focus:not(:focus-visible),
+.markdown-body [role=button]:focus:not(:focus-visible),
+.markdown-body input[type=radio]:focus:not(:focus-visible),
+.markdown-body input[type=checkbox]:focus:not(:focus-visible) {
+  outline: solid 1px transparent;
+}
+
+.markdown-body a:focus-visible,
+.markdown-body [role=button]:focus-visible,
+.markdown-body input[type=radio]:focus-visible,
+.markdown-body input[type=checkbox]:focus-visible {
+  outline: 2px solid var(--color-accent-fg);
+  outline-offset: -2px;
+  box-shadow: none;
+}
+
+.markdown-body a:not([class]):focus,
+.markdown-body a:not([class]):focus-visible,
+.markdown-body input[type=radio]:focus,
+.markdown-body input[type=radio]:focus-visible,
+.markdown-body input[type=checkbox]:focus,
+.markdown-body input[type=checkbox]:focus-visible {
+  outline-offset: 0;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  line-height: 10px;
+  color: var(--color-fg-default);
+  vertical-align: middle;
+  background-color: var(--color-canvas-subtle);
+  border: solid 1px var(--color-neutral-muted);
+  border-bottom-color: var(--color-neutral-muted);
+  border-radius: 6px;
+  box-shadow: inset 0 -1px 0 var(--color-neutral-muted);
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: var(--base-text-weight-semibold, 600);
+  line-height: 1.25;
+}
+
+.markdown-body h2 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  padding-bottom: .3em;
+  font-size: 1.5em;
+  border-bottom: 1px solid var(--color-border-muted);
+}
+
+.markdown-body h3 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  font-size: 1.25em;
+}
+
+.markdown-body h4 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  font-size: 1em;
+}
+
+.markdown-body h5 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  font-size: .875em;
+}
+
+.markdown-body h6 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  font-size: .85em;
+  color: var(--color-fg-muted);
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+  padding: 0 1em;
+  color: var(--color-fg-muted);
+  border-left: .25em solid var(--color-border-default);
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body tt,
+.markdown-body code,
+.markdown-body samp {
+  font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  font-size: 12px;
+  word-wrap: normal;
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-body input::-webkit-outer-spin-button,
+.markdown-body input::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body .mr-2 {
+  margin-right: var(--base-size-8, 8px) !important;
+}
+
+.markdown-body::before {
+  display: table;
+  content: "";
+}
+
+.markdown-body::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body .absent {
+  color: var(--color-danger-fg);
+}
+
+.markdown-body .anchor {
+  float: left;
+  padding-right: 4px;
+  margin-left: -20px;
+  line-height: 1;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body details {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: var(--color-fg-default);
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1 tt,
+.markdown-body h1 code,
+.markdown-body h2 tt,
+.markdown-body h2 code,
+.markdown-body h3 tt,
+.markdown-body h3 code,
+.markdown-body h4 tt,
+.markdown-body h4 code,
+.markdown-body h5 tt,
+.markdown-body h5 code,
+.markdown-body h6 tt,
+.markdown-body h6 code {
+  padding: 0 .2em;
+  font-size: inherit;
+}
+
+.markdown-body summary h1,
+.markdown-body summary h2,
+.markdown-body summary h3,
+.markdown-body summary h4,
+.markdown-body summary h5,
+.markdown-body summary h6 {
+  display: inline-block;
+}
+
+.markdown-body summary h1 .anchor,
+.markdown-body summary h2 .anchor,
+.markdown-body summary h3 .anchor,
+.markdown-body summary h4 .anchor,
+.markdown-body summary h5 .anchor,
+.markdown-body summary h6 .anchor {
+  margin-left: -40px;
+}
+
+.markdown-body summary h1,
+.markdown-body summary h2 {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.markdown-body ul.no-list,
+.markdown-body ol.no-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.markdown-body ol[type="a s"] {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body ol[type="A s"] {
+  list-style-type: upper-alpha;
+}
+
+.markdown-body ol[type="i s"] {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol[type="I s"] {
+  list-style-type: upper-roman;
+}
+
+.markdown-body ol[type="1"] {
+  list-style-type: decimal;
+}
+
+.markdown-body div>ol:not([type]) {
+  list-style-type: decimal;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: var(--base-text-weight-semibold, 600);
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body table th {
+  font-weight: var(--base-text-weight-semibold, 600);
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid var(--color-border-default);
+}
+
+.markdown-body table td>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table tr {
+  background-color: var(--color-canvas-default);
+  border-top: 1px solid var(--color-border-muted);
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: var(--color-canvas-subtle);
+}
+
+.markdown-body table img {
+  background-color: transparent;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body .emoji {
+  max-width: none;
+  vertical-align: text-top;
+  background-color: transparent;
+}
+
+.markdown-body span.frame {
+  display: block;
+  overflow: hidden;
+}
+
+.markdown-body span.frame>span {
+  display: block;
+  float: left;
+  width: auto;
+  padding: 7px;
+  margin: 13px 0 0;
+  overflow: hidden;
+  border: 1px solid var(--color-border-default);
+}
+
+.markdown-body span.frame span img {
+  display: block;
+  float: left;
+}
+
+.markdown-body span.frame span span {
+  display: block;
+  padding: 5px 0 0;
+  clear: both;
+  color: var(--color-fg-default);
+}
+
+.markdown-body span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+
+.markdown-body span.align-center>span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.markdown-body span.align-center span img {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.markdown-body span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+
+.markdown-body span.align-right>span {
+  display: block;
+  margin: 13px 0 0;
+  overflow: hidden;
+  text-align: right;
+}
+
+.markdown-body span.align-right span img {
+  margin: 0;
+  text-align: right;
+}
+
+.markdown-body span.float-left {
+  display: block;
+  float: left;
+  margin-right: 13px;
+  overflow: hidden;
+}
+
+.markdown-body span.float-left span {
+  margin: 13px 0 0;
+}
+
+.markdown-body span.float-right {
+  display: block;
+  float: right;
+  margin-left: 13px;
+  overflow: hidden;
+}
+
+.markdown-body span.float-right>span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: right;
+}
+
+.markdown-body code,
+.markdown-body tt {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  white-space: break-spaces;
+  background-color: var(--color-neutral-muted);
+  border-radius: 6px;
+}
+
+.markdown-body code br,
+.markdown-body tt br {
+  display: none;
+}
+
+.markdown-body del code {
+  text-decoration: inherit;
+}
+
+.markdown-body samp {
+  font-size: 85%;
+}
+
+.markdown-body pre code {
+  font-size: 100%;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  color: var(--color-fg-default);
+  background-color: var(--color-canvas-subtle);
+  border-radius: 6px;
+}
+
+.markdown-body pre code,
+.markdown-body pre tt {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body .csv-data td,
+.markdown-body .csv-data th {
+  padding: 5px;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 1;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.markdown-body .csv-data .blob-num {
+  padding: 10px 8px 9px;
+  text-align: right;
+  background: var(--color-canvas-default);
+  border: 0;
+}
+
+.markdown-body .csv-data tr {
+  border-top: 0;
+}
+
+.markdown-body .csv-data th {
+  font-weight: var(--base-text-weight-semibold, 600);
+  background: var(--color-canvas-subtle);
+  border-top: 0;
+}
+
+.markdown-body [data-footnote-ref]::before {
+  content: "[";
+}
+
+.markdown-body [data-footnote-ref]::after {
+  content: "]";
+}
+
+.markdown-body .footnotes {
+  font-size: 12px;
+  color: var(--color-fg-muted);
+  border-top: 1px solid var(--color-border-default);
+}
+
+.markdown-body .footnotes ol {
+  padding-left: 16px;
+}
+
+.markdown-body .footnotes ol ul {
+  display: inline-block;
+  padding-left: 16px;
+  margin-top: 16px;
+}
+
+.markdown-body .footnotes li {
+  position: relative;
+}
+
+.markdown-body .footnotes li:target::before {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -24px;
+  pointer-events: none;
+  content: "";
+  border: 2px solid var(--color-accent-emphasis);
+  border-radius: 6px;
+}
+
+.markdown-body .footnotes li:target {
+  color: var(--color-fg-default);
+}
+
+.markdown-body .footnotes .data-footnote-backref g-emoji {
+  font-family: monospace;
+}
+
+.markdown-body .pl-c {
+  color: var(--color-prettylights-syntax-comment);
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: var(--color-prettylights-syntax-constant);
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: var(--color-prettylights-syntax-entity);
+}
+
+.markdown-body .pl-smi,
+.markdown-body .pl-s .pl-s1 {
+  color: var(--color-prettylights-syntax-storage-modifier-import);
+}
+
+.markdown-body .pl-ent {
+  color: var(--color-prettylights-syntax-entity-tag);
+}
+
+.markdown-body .pl-k {
+  color: var(--color-prettylights-syntax-keyword);
+}
+
+.markdown-body .pl-s,
+.markdown-body .pl-pds,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sre,
+.markdown-body .pl-sr .pl-sra {
+  color: var(--color-prettylights-syntax-string);
+}
+
+.markdown-body .pl-v,
+.markdown-body .pl-smw {
+  color: var(--color-prettylights-syntax-variable);
+}
+
+.markdown-body .pl-bu {
+  color: var(--color-prettylights-syntax-brackethighlighter-unmatched);
+}
+
+.markdown-body .pl-ii {
+  color: var(--color-prettylights-syntax-invalid-illegal-text);
+  background-color: var(--color-prettylights-syntax-invalid-illegal-bg);
+}
+
+.markdown-body .pl-c2 {
+  color: var(--color-prettylights-syntax-carriage-return-text);
+  background-color: var(--color-prettylights-syntax-carriage-return-bg);
+}
+
+.markdown-body .pl-sr .pl-cce {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-string-regexp);
+}
+
+.markdown-body .pl-ml {
+  color: var(--color-prettylights-syntax-markup-list);
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-markup-heading);
+}
+
+.markdown-body .pl-mi {
+  font-style: italic;
+  color: var(--color-prettylights-syntax-markup-italic);
+}
+
+.markdown-body .pl-mb {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-markup-bold);
+}
+
+.markdown-body .pl-md {
+  color: var(--color-prettylights-syntax-markup-deleted-text);
+  background-color: var(--color-prettylights-syntax-markup-deleted-bg);
+}
+
+.markdown-body .pl-mi1 {
+  color: var(--color-prettylights-syntax-markup-inserted-text);
+  background-color: var(--color-prettylights-syntax-markup-inserted-bg);
+}
+
+.markdown-body .pl-mc {
+  color: var(--color-prettylights-syntax-markup-changed-text);
+  background-color: var(--color-prettylights-syntax-markup-changed-bg);
+}
+
+.markdown-body .pl-mi2 {
+  color: var(--color-prettylights-syntax-markup-ignored-text);
+  background-color: var(--color-prettylights-syntax-markup-ignored-bg);
+}
+
+.markdown-body .pl-mdr {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-meta-diff-range);
+}
+
+.markdown-body .pl-ba {
+  color: var(--color-prettylights-syntax-brackethighlighter-angle);
+}
+
+.markdown-body .pl-sg {
+  color: var(--color-prettylights-syntax-sublimelinter-gutter-mark);
+}
+
+.markdown-body .pl-corl {
+  text-decoration: underline;
+  color: var(--color-prettylights-syntax-constant-other-reference-link);
+}
+
+.markdown-body g-emoji {
+  display: inline-block;
+  min-width: 1ch;
+  font-family: "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 1em;
+  font-style: normal !important;
+  font-weight: var(--base-text-weight-normal, 400);
+  line-height: 1;
+  vertical-align: -0.075em;
+}
+
+.markdown-body g-emoji img {
+  width: 1em;
+  height: 1em;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item label {
+  font-weight: var(--base-text-weight-normal, 400);
+}
+
+.markdown-body .task-list-item.enabled label {
+  cursor: pointer;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 4px;
+}
+
+.markdown-body .task-list-item .handle {
+  display: none;
+}
+
+.markdown-body .task-list-item-checkbox {
+  margin: 0 .2em .25em -1.4em;
+  vertical-align: middle;
+}
+
+.markdown-body .contains-task-list:dir(rtl) .task-list-item-checkbox {
+  margin: 0 -1.6em .25em .2em;
+}
+
+.markdown-body .contains-task-list {
+  position: relative;
+}
+
+.markdown-body .contains-task-list:hover .task-list-item-convert-container,
+.markdown-body .contains-task-list:focus-within .task-list-item-convert-container {
+  display: block;
+  width: auto;
+  height: 24px;
+  overflow: visible;
+  clip: auto;
+}
+
+.markdown-body ::-webkit-calendar-picker-indicator {
+  filter: invert(50%);
+}
+
+.markdown-body .markdown-alert {
+  padding: var(--base-size-8, 8px) var(--base-size-16, 16px);
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid var(--color-border-default);
+}
+
+.markdown-body .markdown-alert>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body .markdown-alert>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body .markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: var(--base-text-weight-medium, 500);
+  align-items: center;
+  line-height: 1;
+}
+
+.markdown-body .markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-accent-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-accent-fg);
+}
+
+.markdown-body .markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-done-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-done-fg);
+}
+
+.markdown-body .markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-attention-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-attention-fg);
+}
+
+.markdown-body .markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-success-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-success-fg);
+}
+
+.markdown-body .markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-danger-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-danger-fg);
+}
+</style><title>named-loops</title></head><body><article class="markdown-body"><pre><code>Proposal for C2y
+WG14 3355
+
+Title:               Named loops, v3
+Author, affiliation: Alex Celeste, Perforce
+Date:                2024-09-18
+Proposal category:   New feature
+Target audience:     Compiler implementers, users
+</code></pre>
+<div class="markdown-heading"><h2 class="heading-element">Abstract</h2><a id="user-content-abstract" class="anchor" aria-label="Permalink: Abstract" href="#abstract"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>The loop exit keywords <code>break</code> and <code>continue</code> in C only work with the most
+immediate enclosing loop or <code>switch</code> structure. This proposal introduces a
+named loop syntax consistent with other languages which allows breaking out
+of control structures outside of the immediately enclosing one, by passing the
+target loop of the jump by name.</p>
+<hr>
+<div class="markdown-heading"><h1 class="heading-element">Named loops, v3</h1><a id="user-content-named-loops-v3" class="anchor" aria-label="Permalink: Named loops, v3" href="#named-loops-v3"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<pre><code>Reply-to:     Alex Celeste (aceleste@perforce.com)
+Document No:  N3355
+Revises:      N3268
+Date:         2024-09-18
+</code></pre>
+<div class="markdown-heading"><h2 class="heading-element">Summary of Changes</h2><a id="user-content-summary-of-changes" class="anchor" aria-label="Permalink: Summary of Changes" href="#summary-of-changes"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<div class="markdown-heading"><h3 class="heading-element">3355</h3><a id="user-content-3355" class="anchor" aria-label="Permalink: 3355" href="#3355"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<ul>
+<li>rebase against N3301</li>
+<li>address some Reflector commentary</li>
+</ul>
+<div class="markdown-heading"><h3 class="heading-element">N3268</h3><a id="user-content-n3268" class="anchor" aria-label="Permalink: N3268" href="#n3268"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<ul>
+<li>rebase wording on C2y draft</li>
+<li>remove ambiguity that appeared to allow <code>break</code> from within <code>if</code>
+</li>
+<li>discuss the choice for label position</li>
+</ul>
+<div class="markdown-heading"><h3 class="heading-element">N3195</h3><a id="user-content-n3195" class="anchor" aria-label="Permalink: N3195" href="#n3195"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<ul>
+<li>original proposal, but refer back to <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n2859.pdf" rel="nofollow">N2859</a>
+</li>
+</ul>
+<div class="markdown-heading"><h2 class="heading-element">Introduction</h2><a id="user-content-introduction" class="anchor" aria-label="Permalink: Introduction" href="#introduction"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>A facility for breaking out of outer loops that enclose an immediately-nested
+one is a frequently-requested feature for C. This feature is found in other
+languages and is a handy way to make clear where the intended result of a loop
+exiting jump is actually intended to be.</p>
+<p>Much of the rationale for the feature itself, the ability to break out of more
+than one nested control structure while sticking to descriptive, structured jump
+statements rather than falling back to <code>goto</code>, was already discussed in N2859
+by Steenberg. It is widely accepted that the need to be able to <em>do</em> this is
+widely needed - any example with two nested loops can easily be constructed -
+but is not necessarily easy to express in a way that is pleasing to the C user
+(wither reader or writer), and most of the options significantly reduce the
+readability of the loop over simply</p>
+<pre><code>for (int i = 0; i &lt; IK; ++ i) {
+  for (int j = 0; j &lt; JK; ++ j) {
+    
+    if (cond)
+      just_give_up; // &lt;- this is difficult to make elegant
+    
+  }
+}
+</code></pre>
+<p>Steenberg proposed <code>break break</code>, which was rejected by the Committee on
+multiple different grounds (it has no precedent; it is context-dependent; it is
+subjectively ugly to most of the reviewers; it is harder to read; etc.). In the
+past, previous proposals have also suggested passing a constant numeric
+parameter to <code>break</code> or <code>continue</code>, which suffers from essentially all of the
+same problems - it has no precedent, and is completely context-dependent, which
+means it cannot reliably be used in combination with macros because intervening
+lines of code can arbitrarily change the jump target.</p>
+<div class="markdown-heading"><h3 class="heading-element">The problem with a depth operand</h3><a id="user-content-the-problem-with-a-depth-operand" class="anchor" aria-label="Permalink: The problem with a depth operand" href="#the-problem-with-a-depth-operand"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p><code>break break;</code> is essentially the same proposal as <code>break N;</code>, but encoded in
+the repetition of the <code>break</code> keyword rather than as an expression operand. The
+core problem of the two proposals is therefore identical:</p>
+<pre><code>for (int i = 0; i &lt; IK; ++ i) {
+  for (int j = 0; j &lt; JK; ++ j) {
+    
+    if (cond)
+      break 2; // clear enough for now
+      
+    // (several pages of in and out)
+    if (cond)
+      break 3; // ...how much do you trust the indent level?
+    // (several pages of in and out)
+    
+  }
+}
+</code></pre>
+<p>The first problem is simply that because it doesn't <em>name</em> the target, there is
+immediate loss of clarity when the loop to be existed goes more than a couple of
+lines away. The compiler has no clear way to bind the <code>break</code> to the loop or
+<code>switch</code>, and will not be able to warn if the levels start to mismatch, which
+may not be found for some time if on a less-common path (this is likely error
+handling). The human reader will have a hard time working it out if a lot of
+mouse-wheeling up and down is needed, and it relies on clear formatting to be
+readable.</p>
+<p>More insidiously, say we have a macro that abstracts block control (using the
+Claire's Device for illustration, may also be used for e.g. <code>nogc</code> or <code>with</code>
+or any number of other inventive schemes):</p>
+<pre><code>#if CONFIG_1
+#define NEVER if (0)
+#else
+#define NEVER while (0)
+#endif
+
+for (int i = 0; i &lt; IK; ++ i) {
+  for (int j = 0; j &lt; JK; ++ j) {
+    
+    // NEVER is equally correct either way...
+    NEVER funclet: {
+      some_work ();
+      break 2;  // ...but this isn't!
+    }
+      
+    if (cond)
+      goto funclet;
+    else
+      goto junklet; // ...
+    
+  }
+}
+</code></pre>
+<p>That <code>break 2</code> depends entirely on exactly one definition of the funclet.</p>
+<p>More commonly control structure macros build on something like a <code>BEFORE_AFTER</code>
+block, which can be implemented with <code>for</code> loops:</p>
+<pre><code>// one?
+#define M_BEFORE_AFTER(BEFORE, AFTER)  \
+  for(int _b = (BEFORE, 1); _b; (AFTER, _b = 0))
+  
+// or two? (if BEFORE needs to admit a decl)
+#define M_BEFORE_AFTER(BEFORE, AFTER)  \
+  for (_Bool M_ONCEFOR_enter = 1; M_ONCEFOR_enter ; AFTER )  \
+    for (BEFORE ; M_ONCEFOR_enter ; M_ONCEFOR_enter = 0)
+      /* { body } */
+</code></pre>
+<p>The number of loops hidden here <em>shouldn't</em> matter to the user, because they
+aren't serving as loops, they are the assembly language opcodes for control
+structure metaprogramming and the effect here does not involve anything that
+the user interacts with <em>as</em> a loop. Ideally the user shouldn't have to either
+think to jump out of this block - which is probably being used as the basis
+for, say, an autorelease pool, or a monadic <code>optional</code> handler. They certainly
+don't want to need to know how many and which "opcodes" it uses to build its
+braced structure.</p>
+<p>Even in "normal" code that doesn't use such macros, using an explicit or
+implicit depth argument still harms readability because of <code>switch</code>, which
+binds to a <code>break</code> but <em>not</em> to a <code>continue</code>, creating an inconsistency even
+when all levels of the control structures are controlled by builtin keywords.
+This is potentially confusing (and is an existing flaw in the language where
+every <code>break</code> or <code>continue</code> has an implicit <code>1</code>).</p>
+<p>Therefore a <code>break 2</code> or <code>break break</code> <em>breaks</em> in combination with this
+technique.</p>
+<div class="markdown-heading"><h3 class="heading-element">Named operand</h3><a id="user-content-named-operand" class="anchor" aria-label="Permalink: Named operand" href="#named-operand"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>In contrast, if loops can have names:</p>
+<pre><code>outer_ij:
+for (int i = 0; i &lt; IK; ++ i) {
+  for (int j = 0; j &lt; JK; ++ j) {
+    
+    if (cond)
+      break outer_ij; // this is fine
+    
+    NEVER funclet: {
+      some_work ();
+      break outer_ij; // this is also fine
+    }
+      
+    autorelease_pool {
+      break outer_ij; // this is fine too
+    }
+    
+  }
+}
+</code></pre>
+<p>All jumps clearly mark which loop they want to terminate (or potentially to
+<code>continue</code>, which has almost exactly the same concerns).</p>
+<p>The existing asymmetry between loops and <code>switch</code> is also improved:</p>
+<pre><code>selector:
+switch (n) {
+  
+  for (int i = 0; i &lt; IK; ++ i) {
+    break selector; // break the switch from a loop!
+  }
+  
+}
+
+loop:
+for (int j = 0; j &lt; JK; ++ j) {
+  switch (n) {
+   
+    break loop; // break the loop from a switch!
+    continue loop; // this was valid anyway, 
+                   // but now it's symmetrical
+  } 
+}
+</code></pre>
+<div class="markdown-heading"><h2 class="heading-element">Alternatives</h2><a id="user-content-alternatives" class="anchor" aria-label="Permalink: Alternatives" href="#alternatives"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>There are three obvious alternatives using existing control structures:
+repetition, <code>return</code>, and <code>goto</code>.</p>
+<div class="markdown-heading"><h3 class="heading-element">Repetition</h3><a id="user-content-repetition" class="anchor" aria-label="Permalink: Repetition" href="#repetition"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>This example was given by Steenberg:</p>
+<pre><code>for (int i = 0; i &lt; n; ++ i) {
+  for (int j = 0; j &lt; n; ++ j) {
+    if (something (i, j))
+      break;
+  }
+  
+  if(j &lt; n)
+    break;
+}
+</code></pre>
+<p>The compiler can handle this well enough, but this makes the human reader do a
+lot of work to understand the intent - jumping out of one loop and then checking
+again is not what this code <em>actually means</em>. It simply adds cognitive and
+maintenance load because the user wanted to avoid the next option:</p>
+<div class="markdown-heading"><h3 class="heading-element"><code>goto</code></h3><a id="user-content-goto" class="anchor" aria-label="Permalink: goto" href="#goto"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<pre><code>for (int i = 0; i &lt; n; ++ i) {
+  for (int j = 0; j &lt; n; ++ j) {
+    if (something (i, j))
+      goto end;
+  }
+}
+end:
+</code></pre>
+<p>This code is clear enough, but the <code>goto</code> is socially problematic. The social
+complaint is partially valid - although this <em>use</em> of <code>goto</code> is structured,
+nothing forces the user to put it at the end of the loop in this way. This is
+an unstructured jump that relies entirely on user discipline, whereas naming
+the loop target binds tightly to the control structures themselves and works
+to encourage clearer usage directly.</p>
+<p>This pattern probably also has a high "surprise factor" when used to emulate
+<code>continue</code>.</p>
+<div class="markdown-heading"><h3 class="heading-element"><code>return</code></h3><a id="user-content-return" class="anchor" aria-label="Permalink: return" href="#return"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>There isn't much to say here except that <code>return</code> can obviously be used as a
+jump across any number of loops and other structures (though it cannot really
+imitate <code>continue</code> easily), which is a common enough pattern in C++:</p>
+<pre><code>auto const loop = [&amp;] {
+  for (int i = 0; i &lt; n; ++ i) {
+    for (int j = 0; j &lt; n; ++ j) {
+      
+      if (cond)
+        return;
+        
+    }
+  }
+};
+
+loop ();
+</code></pre>
+<p>This is just about usable in a language with lambdas, but does not provide the
+full functionality. Rewriting C this way with fully-separated function bodies
+is probably the least readable option much of the time.</p>
+<div class="markdown-heading"><h3 class="heading-element">Putting the label somewhere else</h3><a id="user-content-putting-the-label-somewhere-else" class="anchor" aria-label="Permalink: Putting the label somewhere else" href="#putting-the-label-somewhere-else"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>This feature was discussed by WG14 at the January 2024 meeting and met with
+directional consensus to continue. However, a common piece of feedback was that
+the proposed position of the label was unclear:</p>
+<pre><code>loop1:
+for (int i = 0; i &lt; n; ++ i) {
+  if (cond)
+    continue loop1; // &lt;-- this may _look like_ it jumps back to
+}                   //     all the way back to iteration 0 ??
+
+loop2:
+for (int i = 0; i &lt; n; ++ i) {
+  loop3:
+  for (int j = 0; j &lt; n; ++ j) {
+    
+    if (cond)
+      continue loop3; // &lt;-- possibly visually misleading
+  }
+}
+</code></pre>
+<p>Several members opined preference for a different syntax that places the label
+between the header and the brace:</p>
+<pre><code>for (int i = 0; i &lt; n; ++ i) loop4: {
+  ...
+}
+</code></pre>
+<p>We agree that this is more visually elegant, but it faces the problem of conflicting
+with <em>all</em> existing Prior Art - every other major language with braced syntax seems
+to place the label before the statement header. If C chooses the more "beautiful"
+syntax, it introduces uncertainty by arbitrarily meaning something different from
+the control flow in Java, JS, <em>et al.</em></p>
+<p>In edge cases this can even change the meaning:</p>
+<pre><code>loop5:
+for (int i = 0; i &lt; n; ++ i) // no brace
+  loop6:
+  for (int j = 0; j &lt; n; ++ j) {
+    if (cond)
+      continue loop6; // &lt;-- this would DO SOMETHING DIFFERENT
+  }                   //     in C vs Java et al.
+</code></pre>
+<p>We consider that this break with precedent would be too confusing and believe
+that existing languages have effectively chosen the aesthetic for us at this stage.
+While C is not bound to be compatible with any other language, an <em>arbitrary</em>
+break with praxis is not user-friendly.</p>
+<p>The difference between a skip-iteration and a retry is ultimately still communicated
+by which keyword is implementing the jump: <code>goto label</code> is a full retry, and
+<code>continue</code> is never a full retry. We think users are familiar enough with the
+existing meaning of <code>continue</code> (and <code>break</code>) not to be confused by this in practice.</p>
+<div class="markdown-heading"><h2 class="heading-element">Prior Art</h2><a id="user-content-prior-art" class="anchor" aria-label="Permalink: Prior Art" href="#prior-art"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Named loops also have a distinct advantage of having <em>substantial</em> prior art
+across multiple other programming languages. C is not bound by any other language
+but to have a control feature behave in exactly the same way as precedent set by
+the wider Community is extremely good for readability and lowers the surprise
+factor. The idiom has been proven to work well in practice, and there is no good
+reason for C to diverge from a model the rest of the programming language
+meta-community seems to have found clearest.</p>
+<p>For instance, in <a href="https://doc.rust-lang.org/rust-by-example/flow_control/loop/nested.html" rel="nofollow">Rust</a>:</p>
+<pre><code>#![allow(unreachable_code, unused_labels)]
+
+fn main() {
+    'outer: loop {
+        println!("Entered the outer loop");
+
+        'inner: loop {
+            println!("Entered the inner loop");
+
+            // This would break only the inner loop
+            //break;
+
+            // This breaks the outer loop
+            break 'outer;
+        }
+
+        println!("This point will never be reached");
+    }
+
+    println!("Exited the outer loop");
+}
+</code></pre>
+<p>In <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/label" rel="nofollow">Javascript</a> (see also <a href="https://ecma-international.org/wp-content/uploads/ECMA-262_14th_edition_june_2023.pdf" rel="nofollow">ECMA-262</a> 14.8, 14.9, 14.13):</p>
+<pre><code>let str = '';
+
+loop1: for (let i = 0; i &lt; 5; i++) {
+  if (i === 1) {
+    continue loop1;
+  }
+  str = str + i;
+}
+</code></pre>
+<p>In <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/branch.html" rel="nofollow">Java</a> (see also <a href="https://docs.oracle.com/javase/specs/jls/se18/jls18.pdf" rel="nofollow">JLS</a> 14.7, 14.15, 14.16):</p>
+<pre><code>search:
+for (i = 0; i &lt; arrayOfInts.length; i++) {
+    for (j = 0; j &lt; arrayOfInts[i].length;
+         j++) {
+        if (arrayOfInts[i][j] == searchfor) {
+            foundIt = true;
+            break search;
+        }
+    }
+}
+</code></pre>
+<p>The proposed syntax matches all three of these languages exactly (modulo Rust's
+slightly different syntax for the label name itself). This is therefore almost
+certainly the least confusing and most user-friendly option to imitate.</p>
+<div class="markdown-heading"><h3 class="heading-element">Teachability</h3><a id="user-content-teachability" class="anchor" aria-label="Permalink: Teachability" href="#teachability"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>(i.e. consistency with the Prior Art of C itself)</p>
+<p>The advantage of the existing structured jump operators is that the user does not
+need to think about where the jump <em>to</em>, whereas with <code>goto</code>, knowing where the
+target label is, is core to understanding what the jump itself will do.</p>
+<p>We consider that the same principle continues to hold with the named jump variants:</p>
+<ul>
+<li>a <code>break</code> statement always jumps <em>forwards and outwards</em>, regardless of what it
+may or may not name;</li>
+<li>a <code>continue</code> statement always jumps <em>to the end</em> of a containing block (some users
+think of it as jumping "back" to the start, but this isn't quite true and is it
+specified as a forward jump)</li>
+</ul>
+<p>Even with names changing <em>which</em> block the jump targets the end of, the direction of
+the jump and its local effect on execution of the currently-enclosing block is
+completely consistent, no matter what containing control structure is targeted.
+Therefore, statement-local reasoning doesn't change at all, and zooming slightly
+outwards, the reasoning is consistent (<em>more</em> consistent when considering the ability
+to eliminate the asymmetric behaviour of unlabeled jumps w.r.t <code>switch</code>).</p>
+<p>Therefore we believe this feature addition generally helps both teachability and also
+localized reasoning about program behaviour. It also helps communicate intent more
+effectively that using the equivalent <code>goto</code> (which can <em>implement</em> the same jump,
+but does not tell the reader that "I want a forward-and-outward, block-ending jump" in
+the same way that <code>break</code> does).</p>
+<div class="markdown-heading"><h2 class="heading-element">Proposed wording</h2><a id="user-content-proposed-wording" class="anchor" aria-label="Permalink: Proposed wording" href="#proposed-wording"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>The proposed changes are based on the latest public draft of C2y, which is
+<a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3301.pdf" rel="nofollow">N3301</a>. Bolded text is new text when inlined into an existing sentence.</p>
+<div class="markdown-heading"><h3 class="heading-element">Labels</h3><a id="user-content-labels" class="anchor" aria-label="Permalink: Labels" href="#labels"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Add two new paragraphs to 6.8.2 "Labeled statements" in Semantics, after
+paragraph 4:</p>
+<blockquote>
+<p>If <em>statement</em> is an iteration or <code>switch</code> statement, that statement is <em>named</em>
+by the label <em>label</em>. If <em>statement</em> is a <em>labeled-statement</em>, the statement
+<em>named</em> by this label is the same statement <em>named</em> within the nested
+<em>labeled-statement</em>, if any. <sup>footnote</sup></p>
+<p>footnote) a statement may therefore be <em>named</em> by more than one label.</p>
+<p><strong>EXAMPLE</strong>  Only an iteration or <code>switch</code> statement may be <em>named</em> by a
+label, by appearing as its immediate syntactic operand:</p>
+<pre><code>loop:
+for (int i = 0; i &lt; IK; ++ i) { // this for is named by loop:
+  ...
+}
+
+braces:
+{        // no statement is named by braces:
+  for (int i = 0; i &lt; IK; ++ i) {
+    ...
+  }
+}
+</code></pre>
+</blockquote>
+<p>(We do not list the kinds of iteration or selection statements here. If for some
+reason the list would change, this should change implicitly and automatically.)</p>
+<p>Add forward references to <code>break</code> and <code>continue</code>:</p>
+<blockquote>
+<p><strong>Forward references:</strong> the <code>goto</code> statement (6.8.7.2), <strong>the <code>continue</code> statement</strong>
+<strong>(6.8.7.3), the <code>break</code> statement (6.8.7.4),</strong> the <code>switch</code> statement (6.8.5.3).</p>
+</blockquote>
+<p>Modify the last sentence of 6.8.3 "Compound statement", paragraph 2:</p>
+<blockquote>
+<p>A label <strong>that is not followed by another label or an <em>unlabeled-statement</em></strong>
+shall be translated as if it were followed by a null statement.</p>
+</blockquote>
+<p>Add a new paragraph after paragraph 2:</p>
+<blockquote>
+<p>A statement that follows one or more labels without any other intervening
+<em>block-items</em> is <em>named</em> by those labels, if it would be eligible to be <em>named</em>
+by the labels of a <em>labeled-statement</em>.</p>
+</blockquote>
+<div class="markdown-heading"><h3 class="heading-element">Jumps</h3><a id="user-content-jumps" class="anchor" aria-label="Permalink: Jumps" href="#jumps"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Modify 6.8.7 "Jump statements", Syntax, paragraph 1:</p>
+<blockquote>
+<p><em>jump-statement:</em><br>
+<code>goto</code> <em>identifier</em> ;<br>
+<code>continue</code> <strong><em>identifier</em><sub>opt</sub></strong> ;<br>
+<code>break</code> <strong><em>identifier</em><sub>opt</sub></strong> ;<br>
+<code>return</code> <em>expression</em><sub>opt</sub> ;</p>
+</blockquote>
+<div class="markdown-heading"><h3 class="heading-element"><code>continue</code></h3><a id="user-content-continue" class="anchor" aria-label="Permalink: continue" href="#continue"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Add a new paragraph to 6.8.7.3 "The <code>continue</code> statement" in Constraints, after
+paragraph 1:</p>
+<blockquote>
+<p>A <code>continue</code> statement with an identifier operand shall appear within an iteration
+statement <em>named</em> by the label with the corresponding identifier.</p>
+</blockquote>
+<p>Modify the first sentence of paragraph 2, removing the reference to "innermost":</p>
+<blockquote>
+<p>A <code>continue</code> statement causes a jump to the loop-continuation portion of <strong>an</strong>
+enclosing iteration statement; that is, to the end of the loop body.</p>
+</blockquote>
+<p>Add a new paragraph after paragraph 2:</p>
+<blockquote>
+<p>If the <code>continue</code> statement has an identifier operand, the jump is to the
+loop-continuation of the iteration statement named by the label with the
+corresponding identifier. Otherwise, the jump is to the loop-continuation
+of the innermost enclosing iteration statement.</p>
+</blockquote>
+<p>Add an example:</p>
+<blockquote>
+<p><strong>EXAMPLE</strong> In the following code, <code>continue</code> only jumps to the loop-continuation
+of the inner nested loop, whereas <code>continue outer</code> jumps to the loop-continuation
+of the outermost loop:</p>
+<pre><code>outer:
+for (int i = 0; i &lt; IK; ++ i) {
+  for (int j = 0; j &lt; JK; ++ j) {
+    
+    continue;       // jumps to CONT1
+    
+    continue outer; // jumps to CONT2
+    
+    // CONT1
+  }
+  // CONT2
+}
+</code></pre>
+</blockquote>
+<div class="markdown-heading"><h3 class="heading-element"><code>break</code></h3><a id="user-content-break" class="anchor" aria-label="Permalink: break" href="#break"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Add a new paragraph to 6.8.7.4 "The <code>break</code> statement" in Constraints, after
+paragraph 1:</p>
+<blockquote>
+<p>A <code>break</code> statement with an identifier operand shall appear within a <code>switch</code>
+or iteration statement <em>named</em> by the label with the corresponding identifier.</p>
+</blockquote>
+<p>Modify paragraph 2, removing the reference to "innermost" and actually explaining
+<em>how</em> the loop is broken out from (!):</p>
+<blockquote>
+<p>A <code>break</code> statement terminates execution of <strong>a</strong> <code>switch</code> or iteration statement**,**
+<strong>as if by jumping to a label immediately following it in the surrounding scope</strong>
+<strong>using <code>goto</code>.</strong></p>
+</blockquote>
+<p>Add a following paragraph:</p>
+<blockquote>
+<p>Therefore, the following statements are equivalent:</p>
+<pre><code>while (/* ... */) {            while (/* ... */) {
+  break;                         goto there;
+}                              }
+// break jumps here            there:
+</code></pre>
+</blockquote>
+<p>Add a following paragraph:</p>
+<blockquote>
+<p>If the <code>break</code> statement has an identifier operand, the jump exits the
+<code>switch</code> or iteration statement <em>named</em> by the label with the corresponding
+identifier. Otherwise, the jump exits the innermost enclosing <code>switch</code> or
+iteration statement.</p>
+</blockquote>
+<p>Add an example:</p>
+<blockquote>
+<p><strong>EXAMPLE</strong> In the following code, <code>break</code> only exits
+the switch, whereas <code>break outer</code> exits the enclosing loop as well:</p>
+<pre><code>outer:
+for (int i = 0; i &lt; IK; ++ i) {
+  switch (i) {
+    case 1:
+      break;       // jumps to CONT1
+    case 2:
+      break outer; // jumps to CONT2
+  }
+  // CONT1
+}
+// CONT2
+</code></pre>
+</blockquote>
+<div class="markdown-heading"><h2 class="heading-element">Questions for WG14</h2><a id="user-content-questions-for-wg14" class="anchor" aria-label="Permalink: Questions for WG14" href="#questions-for-wg14"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Does WG14 want to add named loops to C using the proposed syntax and wording?</p>
+<div class="markdown-heading"><h2 class="heading-element">Acknowledgements</h2><a id="user-content-acknowledgements" class="anchor" aria-label="Permalink: Acknowledgements" href="#acknowledgements"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Huge thanks to Joseph Myers for detailed and thorough review of previous versions.</p>
+<div class="markdown-heading"><h2 class="heading-element">References</h2><a id="user-content-references" class="anchor" aria-label="Permalink: References" href="#references"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p><a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3301.pdf" rel="nofollow">C2y public draft</a><br>
+<a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n2859.pdf" rel="nofollow">N2859</a><br>
+<a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/branch.html" rel="nofollow">Named loops in Java</a><br>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/label" rel="nofollow">Named loops in Javascript</a><br>
+<a href="https://doc.rust-lang.org/rust-by-example/flow_control/loop/nested.html" rel="nofollow">Named loops in Rust</a><br>
+<a href="https://web.archive.org/web/20210203022142/http://www.clifford.at/cfun/cliffdev/" rel="nofollow">Claire's Device</a><br>
+<a href="https://github.com/C-Requests-for-Implementation/crfi-examples/blob/main/crfi-4-example.c#L48C1-L51C21">M_BEFORE_AFTER in CRFI-4</a><br>
+<a href="https://docs.oracle.com/javase/specs/jls/se18/jls18.pdf" rel="nofollow">Java language specification</a><br>
+<a href="https://ecma-international.org/wp-content/uploads/ECMA-262_14th_edition_june_2023.pdf" rel="nofollow">ECMAScript 2023</a></p>
+</article></body></html>

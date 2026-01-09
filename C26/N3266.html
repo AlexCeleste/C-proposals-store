@@ -1,0 +1,3019 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>@font-face {
+  font-family: octicons-link;
+  src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM+8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB/aFGpk3jaTY6xa8JAGMW/O62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v+k/0an2i+itHDw3v2+9+DBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3/I7AtxEJLtzzuZfI+VVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy/Lt7Kc+0vWY/gAgIIEqAN9we0pwKXreiMasxvabDQMM4riO+qxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw+ymhce7vwM9jSqO8JyVd5RH9gyTt2+J/yUmYlIR0s04n6+7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv/ocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi+W2+MjCzMIDApSwvXzC97Z4Ig8N/BxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh/8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT+AEjAwuDFpBmA9KMDEwMCh9i/v8H8sH0/4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9/lqYwOGZxeUelN2U2R6+cArgtCJpauW7UQBqnFkUsjAY/kOU1cP+DAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl+vvmM/byA48e6tWrKArm4ZJlCbdsrxksL1AwWn/yBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO//sdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd/89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF+9JOS0nbaaYDCQfwCJ7Au3AHj+LO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm+EBXuAbHmIMSRMs+4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL+hD7C1xoaHeLJSEao0FEW14ckxC+TU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13/+lm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl+9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O/AdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB///AA8AAQAAAAAAAAAAAAAAAAABAAAAAA==) format('woff');
+}
+
+@media (prefers-color-scheme: dark) {
+  body,
+  [data-theme="dark"] {
+    /*dark*/
+    color-scheme: dark;
+    --color-prettylights-syntax-comment: #8b949e;
+    --color-prettylights-syntax-constant: #79c0ff;
+    --color-prettylights-syntax-entity: #d2a8ff;
+    --color-prettylights-syntax-storage-modifier-import: #c9d1d9;
+    --color-prettylights-syntax-entity-tag: #7ee787;
+    --color-prettylights-syntax-keyword: #ff7b72;
+    --color-prettylights-syntax-string: #a5d6ff;
+    --color-prettylights-syntax-variable: #ffa657;
+    --color-prettylights-syntax-brackethighlighter-unmatched: #f85149;
+    --color-prettylights-syntax-invalid-illegal-text: #f0f6fc;
+    --color-prettylights-syntax-invalid-illegal-bg: #8e1519;
+    --color-prettylights-syntax-carriage-return-text: #f0f6fc;
+    --color-prettylights-syntax-carriage-return-bg: #b62324;
+    --color-prettylights-syntax-string-regexp: #7ee787;
+    --color-prettylights-syntax-markup-list: #f2cc60;
+    --color-prettylights-syntax-markup-heading: #1f6feb;
+    --color-prettylights-syntax-markup-italic: #c9d1d9;
+    --color-prettylights-syntax-markup-bold: #c9d1d9;
+    --color-prettylights-syntax-markup-deleted-text: #ffdcd7;
+    --color-prettylights-syntax-markup-deleted-bg: #67060c;
+    --color-prettylights-syntax-markup-inserted-text: #aff5b4;
+    --color-prettylights-syntax-markup-inserted-bg: #033a16;
+    --color-prettylights-syntax-markup-changed-text: #ffdfb6;
+    --color-prettylights-syntax-markup-changed-bg: #5a1e02;
+    --color-prettylights-syntax-markup-ignored-text: #c9d1d9;
+    --color-prettylights-syntax-markup-ignored-bg: #1158c7;
+    --color-prettylights-syntax-meta-diff-range: #d2a8ff;
+    --color-prettylights-syntax-brackethighlighter-angle: #8b949e;
+    --color-prettylights-syntax-sublimelinter-gutter-mark: #484f58;
+    --color-prettylights-syntax-constant-other-reference-link: #a5d6ff;
+    --color-fg-default: #e6edf3;
+    --color-fg-muted: #848d97;
+    --color-fg-subtle: #6e7681;
+    --color-canvas-default: #0d1117;
+    --color-canvas-subtle: #161b22;
+    --color-border-default: #30363d;
+    --color-border-muted: #21262d;
+    --color-neutral-muted: rgba(110,118,129,0.4);
+    --color-accent-fg: #2f81f7;
+    --color-accent-emphasis: #1f6feb;
+    --color-success-fg: #3fb950;
+    --color-success-emphasis: #238636;
+    --color-attention-fg: #d29922;
+    --color-attention-emphasis: #9e6a03;
+    --color-attention-subtle: rgba(187,128,9,0.15);
+    --color-danger-fg: #f85149;
+    --color-danger-emphasis: #da3633;
+    --color-done-fg: #a371f7;
+    --color-done-emphasis: #8957e5;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body,
+  [data-theme="light"] {
+    /*light*/
+    color-scheme: light;
+    --color-prettylights-syntax-comment: #57606a;
+    --color-prettylights-syntax-constant: #0550ae;
+    --color-prettylights-syntax-entity: #6639ba;
+    --color-prettylights-syntax-storage-modifier-import: #24292f;
+    --color-prettylights-syntax-entity-tag: #116329;
+    --color-prettylights-syntax-keyword: #cf222e;
+    --color-prettylights-syntax-string: #0a3069;
+    --color-prettylights-syntax-variable: #953800;
+    --color-prettylights-syntax-brackethighlighter-unmatched: #82071e;
+    --color-prettylights-syntax-invalid-illegal-text: #f6f8fa;
+    --color-prettylights-syntax-invalid-illegal-bg: #82071e;
+    --color-prettylights-syntax-carriage-return-text: #f6f8fa;
+    --color-prettylights-syntax-carriage-return-bg: #cf222e;
+    --color-prettylights-syntax-string-regexp: #116329;
+    --color-prettylights-syntax-markup-list: #3b2300;
+    --color-prettylights-syntax-markup-heading: #0550ae;
+    --color-prettylights-syntax-markup-italic: #24292f;
+    --color-prettylights-syntax-markup-bold: #24292f;
+    --color-prettylights-syntax-markup-deleted-text: #82071e;
+    --color-prettylights-syntax-markup-deleted-bg: #ffebe9;
+    --color-prettylights-syntax-markup-inserted-text: #116329;
+    --color-prettylights-syntax-markup-inserted-bg: #dafbe1;
+    --color-prettylights-syntax-markup-changed-text: #953800;
+    --color-prettylights-syntax-markup-changed-bg: #ffd8b5;
+    --color-prettylights-syntax-markup-ignored-text: #eaeef2;
+    --color-prettylights-syntax-markup-ignored-bg: #0550ae;
+    --color-prettylights-syntax-meta-diff-range: #8250df;
+    --color-prettylights-syntax-brackethighlighter-angle: #57606a;
+    --color-prettylights-syntax-sublimelinter-gutter-mark: #8c959f;
+    --color-prettylights-syntax-constant-other-reference-link: #0a3069;
+    --color-fg-default: #1F2328;
+    --color-fg-muted: #656d76;
+    --color-fg-subtle: #6e7781;
+    --color-canvas-default: #ffffff;
+    --color-canvas-subtle: #f6f8fa;
+    --color-border-default: #d0d7de;
+    --color-border-muted: hsla(210,18%,87%,1);
+    --color-neutral-muted: rgba(175,184,193,0.2);
+    --color-accent-fg: #0969da;
+    --color-accent-emphasis: #0969da;
+    --color-success-fg: #1a7f37;
+    --color-success-emphasis: #1f883d;
+    --color-attention-fg: #9a6700;
+    --color-attention-emphasis: #9a6700;
+    --color-attention-subtle: #fff8c5;
+    --color-danger-fg: #d1242f;
+    --color-danger-emphasis: #cf222e;
+    --color-done-fg: #8250df;
+    --color-done-emphasis: #8250df;
+  }
+}
+
+body {
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: var(--color-canvas-default);
+}
+
+.markdown-body .octicon-link:before {
+  font: normal normal normal 16px/1 octicons-link;
+  display: inline-block;
+  text-decoration: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  content: '\f05c';
+  vertical-align: middle;
+}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  margin: 0;
+  color: var(--color-fg-default);
+  background-color: var(--color-canvas-default);
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body h1:hover .anchor .octicon-link:before,
+.markdown-body h2:hover .anchor .octicon-link:before,
+.markdown-body h3:hover .anchor .octicon-link:before,
+.markdown-body h4:hover .anchor .octicon-link:before,
+.markdown-body h5:hover .anchor .octicon-link:before,
+.markdown-body h6:hover .anchor .octicon-link:before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-color: currentColor;
+  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' aria-hidden='true'><path fill-rule='evenodd' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'></path></svg>");
+  mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' aria-hidden='true'><path fill-rule='evenodd' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'></path></svg>");
+}
+
+.markdown-body details,
+.markdown-body figcaption,
+.markdown-body figure {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body [hidden] {
+  display: none !important;
+}
+
+.markdown-body a {
+  background-color: transparent;
+  color: var(--color-accent-fg);
+  text-decoration: none;
+}
+
+.markdown-body abbr[title] {
+  border-bottom: none;
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: var(--base-text-weight-semibold, 600);
+}
+
+.markdown-body dfn {
+  font-style: italic;
+}
+
+.markdown-body h1 {
+  margin: .67em 0;
+  font-weight: var(--base-text-weight-semibold, 600);
+  padding-bottom: .3em;
+  font-size: 2em;
+  border-bottom: 1px solid var(--color-border-muted);
+}
+
+.markdown-body mark {
+  background-color: var(--color-attention-subtle);
+  color: var(--color-fg-default);
+}
+
+.markdown-body small {
+  font-size: 90%;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body sup {
+  top: -0.5em;
+}
+
+.markdown-body img {
+  border-style: none;
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: var(--color-canvas-default);
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace;
+  font-size: 1em;
+}
+
+.markdown-body figure {
+  margin: 1em 40px;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  overflow: hidden;
+  background: transparent;
+  border-bottom: 1px solid var(--color-border-muted);
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: var(--color-border-default);
+  border: 0;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+  overflow: visible;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body [type=button],
+.markdown-body [type=reset],
+.markdown-body [type=submit] {
+  -webkit-appearance: button;
+  appearance: button;
+}
+
+.markdown-body [type=checkbox],
+.markdown-body [type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body [type=number]::-webkit-inner-spin-button,
+.markdown-body [type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.markdown-body [type=search]::-webkit-search-cancel-button,
+.markdown-body [type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body ::-webkit-input-placeholder {
+  color: inherit;
+  opacity: .54;
+}
+
+.markdown-body ::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body ::placeholder {
+  color: var(--color-fg-subtle);
+  opacity: 1;
+}
+
+.markdown-body hr::before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  overflow: auto;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body details:not([open])>*:not(summary) {
+  display: none !important;
+}
+
+.markdown-body a:focus,
+.markdown-body [role=button]:focus,
+.markdown-body input[type=radio]:focus,
+.markdown-body input[type=checkbox]:focus {
+  outline: 2px solid var(--color-accent-fg);
+  outline-offset: -2px;
+  box-shadow: none;
+}
+
+.markdown-body a:focus:not(:focus-visible),
+.markdown-body [role=button]:focus:not(:focus-visible),
+.markdown-body input[type=radio]:focus:not(:focus-visible),
+.markdown-body input[type=checkbox]:focus:not(:focus-visible) {
+  outline: solid 1px transparent;
+}
+
+.markdown-body a:focus-visible,
+.markdown-body [role=button]:focus-visible,
+.markdown-body input[type=radio]:focus-visible,
+.markdown-body input[type=checkbox]:focus-visible {
+  outline: 2px solid var(--color-accent-fg);
+  outline-offset: -2px;
+  box-shadow: none;
+}
+
+.markdown-body a:not([class]):focus,
+.markdown-body a:not([class]):focus-visible,
+.markdown-body input[type=radio]:focus,
+.markdown-body input[type=radio]:focus-visible,
+.markdown-body input[type=checkbox]:focus,
+.markdown-body input[type=checkbox]:focus-visible {
+  outline-offset: 0;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  line-height: 10px;
+  color: var(--color-fg-default);
+  vertical-align: middle;
+  background-color: var(--color-canvas-subtle);
+  border: solid 1px var(--color-neutral-muted);
+  border-bottom-color: var(--color-neutral-muted);
+  border-radius: 6px;
+  box-shadow: inset 0 -1px 0 var(--color-neutral-muted);
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: var(--base-text-weight-semibold, 600);
+  line-height: 1.25;
+}
+
+.markdown-body h2 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  padding-bottom: .3em;
+  font-size: 1.5em;
+  border-bottom: 1px solid var(--color-border-muted);
+}
+
+.markdown-body h3 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  font-size: 1.25em;
+}
+
+.markdown-body h4 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  font-size: 1em;
+}
+
+.markdown-body h5 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  font-size: .875em;
+}
+
+.markdown-body h6 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  font-size: .85em;
+  color: var(--color-fg-muted);
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+  padding: 0 1em;
+  color: var(--color-fg-muted);
+  border-left: .25em solid var(--color-border-default);
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body tt,
+.markdown-body code,
+.markdown-body samp {
+  font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  font-size: 12px;
+  word-wrap: normal;
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-body input::-webkit-outer-spin-button,
+.markdown-body input::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body .mr-2 {
+  margin-right: var(--base-size-8, 8px) !important;
+}
+
+.markdown-body::before {
+  display: table;
+  content: "";
+}
+
+.markdown-body::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body .absent {
+  color: var(--color-danger-fg);
+}
+
+.markdown-body .anchor {
+  float: left;
+  padding-right: 4px;
+  margin-left: -20px;
+  line-height: 1;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body details {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: var(--color-fg-default);
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1 tt,
+.markdown-body h1 code,
+.markdown-body h2 tt,
+.markdown-body h2 code,
+.markdown-body h3 tt,
+.markdown-body h3 code,
+.markdown-body h4 tt,
+.markdown-body h4 code,
+.markdown-body h5 tt,
+.markdown-body h5 code,
+.markdown-body h6 tt,
+.markdown-body h6 code {
+  padding: 0 .2em;
+  font-size: inherit;
+}
+
+.markdown-body summary h1,
+.markdown-body summary h2,
+.markdown-body summary h3,
+.markdown-body summary h4,
+.markdown-body summary h5,
+.markdown-body summary h6 {
+  display: inline-block;
+}
+
+.markdown-body summary h1 .anchor,
+.markdown-body summary h2 .anchor,
+.markdown-body summary h3 .anchor,
+.markdown-body summary h4 .anchor,
+.markdown-body summary h5 .anchor,
+.markdown-body summary h6 .anchor {
+  margin-left: -40px;
+}
+
+.markdown-body summary h1,
+.markdown-body summary h2 {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.markdown-body ul.no-list,
+.markdown-body ol.no-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.markdown-body ol[type="a s"] {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body ol[type="A s"] {
+  list-style-type: upper-alpha;
+}
+
+.markdown-body ol[type="i s"] {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol[type="I s"] {
+  list-style-type: upper-roman;
+}
+
+.markdown-body ol[type="1"] {
+  list-style-type: decimal;
+}
+
+.markdown-body div>ol:not([type]) {
+  list-style-type: decimal;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: var(--base-text-weight-semibold, 600);
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body table th {
+  font-weight: var(--base-text-weight-semibold, 600);
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid var(--color-border-default);
+}
+
+.markdown-body table td>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table tr {
+  background-color: var(--color-canvas-default);
+  border-top: 1px solid var(--color-border-muted);
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: var(--color-canvas-subtle);
+}
+
+.markdown-body table img {
+  background-color: transparent;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body .emoji {
+  max-width: none;
+  vertical-align: text-top;
+  background-color: transparent;
+}
+
+.markdown-body span.frame {
+  display: block;
+  overflow: hidden;
+}
+
+.markdown-body span.frame>span {
+  display: block;
+  float: left;
+  width: auto;
+  padding: 7px;
+  margin: 13px 0 0;
+  overflow: hidden;
+  border: 1px solid var(--color-border-default);
+}
+
+.markdown-body span.frame span img {
+  display: block;
+  float: left;
+}
+
+.markdown-body span.frame span span {
+  display: block;
+  padding: 5px 0 0;
+  clear: both;
+  color: var(--color-fg-default);
+}
+
+.markdown-body span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+
+.markdown-body span.align-center>span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.markdown-body span.align-center span img {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.markdown-body span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+
+.markdown-body span.align-right>span {
+  display: block;
+  margin: 13px 0 0;
+  overflow: hidden;
+  text-align: right;
+}
+
+.markdown-body span.align-right span img {
+  margin: 0;
+  text-align: right;
+}
+
+.markdown-body span.float-left {
+  display: block;
+  float: left;
+  margin-right: 13px;
+  overflow: hidden;
+}
+
+.markdown-body span.float-left span {
+  margin: 13px 0 0;
+}
+
+.markdown-body span.float-right {
+  display: block;
+  float: right;
+  margin-left: 13px;
+  overflow: hidden;
+}
+
+.markdown-body span.float-right>span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: right;
+}
+
+.markdown-body code,
+.markdown-body tt {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  white-space: break-spaces;
+  background-color: var(--color-neutral-muted);
+  border-radius: 6px;
+}
+
+.markdown-body code br,
+.markdown-body tt br {
+  display: none;
+}
+
+.markdown-body del code {
+  text-decoration: inherit;
+}
+
+.markdown-body samp {
+  font-size: 85%;
+}
+
+.markdown-body pre code {
+  font-size: 100%;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  color: var(--color-fg-default);
+  background-color: var(--color-canvas-subtle);
+  border-radius: 6px;
+}
+
+.markdown-body pre code,
+.markdown-body pre tt {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body .csv-data td,
+.markdown-body .csv-data th {
+  padding: 5px;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 1;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.markdown-body .csv-data .blob-num {
+  padding: 10px 8px 9px;
+  text-align: right;
+  background: var(--color-canvas-default);
+  border: 0;
+}
+
+.markdown-body .csv-data tr {
+  border-top: 0;
+}
+
+.markdown-body .csv-data th {
+  font-weight: var(--base-text-weight-semibold, 600);
+  background: var(--color-canvas-subtle);
+  border-top: 0;
+}
+
+.markdown-body [data-footnote-ref]::before {
+  content: "[";
+}
+
+.markdown-body [data-footnote-ref]::after {
+  content: "]";
+}
+
+.markdown-body .footnotes {
+  font-size: 12px;
+  color: var(--color-fg-muted);
+  border-top: 1px solid var(--color-border-default);
+}
+
+.markdown-body .footnotes ol {
+  padding-left: 16px;
+}
+
+.markdown-body .footnotes ol ul {
+  display: inline-block;
+  padding-left: 16px;
+  margin-top: 16px;
+}
+
+.markdown-body .footnotes li {
+  position: relative;
+}
+
+.markdown-body .footnotes li:target::before {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -24px;
+  pointer-events: none;
+  content: "";
+  border: 2px solid var(--color-accent-emphasis);
+  border-radius: 6px;
+}
+
+.markdown-body .footnotes li:target {
+  color: var(--color-fg-default);
+}
+
+.markdown-body .footnotes .data-footnote-backref g-emoji {
+  font-family: monospace;
+}
+
+.markdown-body .pl-c {
+  color: var(--color-prettylights-syntax-comment);
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: var(--color-prettylights-syntax-constant);
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: var(--color-prettylights-syntax-entity);
+}
+
+.markdown-body .pl-smi,
+.markdown-body .pl-s .pl-s1 {
+  color: var(--color-prettylights-syntax-storage-modifier-import);
+}
+
+.markdown-body .pl-ent {
+  color: var(--color-prettylights-syntax-entity-tag);
+}
+
+.markdown-body .pl-k {
+  color: var(--color-prettylights-syntax-keyword);
+}
+
+.markdown-body .pl-s,
+.markdown-body .pl-pds,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sre,
+.markdown-body .pl-sr .pl-sra {
+  color: var(--color-prettylights-syntax-string);
+}
+
+.markdown-body .pl-v,
+.markdown-body .pl-smw {
+  color: var(--color-prettylights-syntax-variable);
+}
+
+.markdown-body .pl-bu {
+  color: var(--color-prettylights-syntax-brackethighlighter-unmatched);
+}
+
+.markdown-body .pl-ii {
+  color: var(--color-prettylights-syntax-invalid-illegal-text);
+  background-color: var(--color-prettylights-syntax-invalid-illegal-bg);
+}
+
+.markdown-body .pl-c2 {
+  color: var(--color-prettylights-syntax-carriage-return-text);
+  background-color: var(--color-prettylights-syntax-carriage-return-bg);
+}
+
+.markdown-body .pl-sr .pl-cce {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-string-regexp);
+}
+
+.markdown-body .pl-ml {
+  color: var(--color-prettylights-syntax-markup-list);
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-markup-heading);
+}
+
+.markdown-body .pl-mi {
+  font-style: italic;
+  color: var(--color-prettylights-syntax-markup-italic);
+}
+
+.markdown-body .pl-mb {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-markup-bold);
+}
+
+.markdown-body .pl-md {
+  color: var(--color-prettylights-syntax-markup-deleted-text);
+  background-color: var(--color-prettylights-syntax-markup-deleted-bg);
+}
+
+.markdown-body .pl-mi1 {
+  color: var(--color-prettylights-syntax-markup-inserted-text);
+  background-color: var(--color-prettylights-syntax-markup-inserted-bg);
+}
+
+.markdown-body .pl-mc {
+  color: var(--color-prettylights-syntax-markup-changed-text);
+  background-color: var(--color-prettylights-syntax-markup-changed-bg);
+}
+
+.markdown-body .pl-mi2 {
+  color: var(--color-prettylights-syntax-markup-ignored-text);
+  background-color: var(--color-prettylights-syntax-markup-ignored-bg);
+}
+
+.markdown-body .pl-mdr {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-meta-diff-range);
+}
+
+.markdown-body .pl-ba {
+  color: var(--color-prettylights-syntax-brackethighlighter-angle);
+}
+
+.markdown-body .pl-sg {
+  color: var(--color-prettylights-syntax-sublimelinter-gutter-mark);
+}
+
+.markdown-body .pl-corl {
+  text-decoration: underline;
+  color: var(--color-prettylights-syntax-constant-other-reference-link);
+}
+
+.markdown-body g-emoji {
+  display: inline-block;
+  min-width: 1ch;
+  font-family: "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 1em;
+  font-style: normal !important;
+  font-weight: var(--base-text-weight-normal, 400);
+  line-height: 1;
+  vertical-align: -0.075em;
+}
+
+.markdown-body g-emoji img {
+  width: 1em;
+  height: 1em;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item label {
+  font-weight: var(--base-text-weight-normal, 400);
+}
+
+.markdown-body .task-list-item.enabled label {
+  cursor: pointer;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 4px;
+}
+
+.markdown-body .task-list-item .handle {
+  display: none;
+}
+
+.markdown-body .task-list-item-checkbox {
+  margin: 0 .2em .25em -1.4em;
+  vertical-align: middle;
+}
+
+.markdown-body .contains-task-list:dir(rtl) .task-list-item-checkbox {
+  margin: 0 -1.6em .25em .2em;
+}
+
+.markdown-body .contains-task-list {
+  position: relative;
+}
+
+.markdown-body .contains-task-list:hover .task-list-item-convert-container,
+.markdown-body .contains-task-list:focus-within .task-list-item-convert-container {
+  display: block;
+  width: auto;
+  height: 24px;
+  overflow: visible;
+  clip: auto;
+}
+
+.markdown-body ::-webkit-calendar-picker-indicator {
+  filter: invert(50%);
+}
+
+.markdown-body .markdown-alert {
+  padding: var(--base-size-8, 8px) var(--base-size-16, 16px);
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid var(--color-border-default);
+}
+
+.markdown-body .markdown-alert>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body .markdown-alert>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body .markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: var(--base-text-weight-medium, 500);
+  align-items: center;
+  line-height: 1;
+}
+
+.markdown-body .markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-accent-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-accent-fg);
+}
+
+.markdown-body .markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-done-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-done-fg);
+}
+
+.markdown-body .markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-attention-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-attention-fg);
+}
+
+.markdown-body .markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-success-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-success-fg);
+}
+
+.markdown-body .markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-danger-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-danger-fg);
+}
+</style><title>constexpr-tce-ts</title></head><body><article class="markdown-body"><pre><code>TS Draft 
+WG14 3266  
+
+Title:               TS draft: C Extensions to support generalized function calls  
+Author, affiliation: Alex Celeste, Perforce  
+Date:                2024-05-20  
+Proposal category:   Technical Specification  
+Target audience:     Compiler/tooling developers
+</code></pre>
+<div class="markdown-heading"><h2 class="heading-element">Abstract</h2><a id="user-content-abstract" class="anchor" aria-label="Permalink: Abstract" href="#abstract"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>This Technical Specification aims to lay out common practice guidelines for features related to
+extended function call support.</p>
+<p>Two main feature areas are covered: extended constant expressions, and proper tail calls. These
+extension features are of interest to application developers who want to take advantage of
+language-level abstractions beyond the usual restrictions of translation and execution phases. In
+both cases the concept of a function call is generalized to allow users to write readable code that
+uses C features in an intuitive way, in places where it would not be accessible in the core language.</p>
+<p>The first feature area is of relevance to the interop between C and C++, as it proposes to expand
+the overlap between these two languages and thus improve header compatibility and the usefulness of
+header definitions. This feature area is largely based on C feature proposal document N2917, which
+builds upon the features described in N3018 that were accepted for standardization in C23.</p>
+<p>The second feature area is also of special relevance to the wider language community, by aiming to
+improve interop between C and other languages already having a more generalized concept of function
+calls that allows for in-place replacement. This feature area is largely based on C feature proposal
+document N2920.</p>
+<p>In both cases the intent is to codify common and unified practice.</p>
+<hr>
+<div class="markdown-heading"><h1 class="heading-element">C Extensions to Support Generalized Function Calls</h1><a id="user-content-c-extensions-to-support-generalized-function-calls" class="anchor" aria-label="Permalink: C Extensions to Support Generalized Function Calls" href="#c-extensions-to-support-generalized-function-calls"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<pre><code>Reply-to:     Alex Celeste (aceleste@perforce.com)
+Document No:  N3266
+Revises:      N3205
+Date:         2024-05-20
+</code></pre>
+<div class="markdown-heading"><h2 class="heading-element">Summary of Changes</h2><a id="user-content-summary-of-changes" class="anchor" aria-label="Permalink: Summary of Changes" href="#summary-of-changes"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<div class="markdown-heading"><h3 class="heading-element">N3266</h3><a id="user-content-n3266" class="anchor" aria-label="Permalink: N3266" href="#n3266"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<ul>
+<li>extended the semantics of <code>return goto</code> to allow for possible interaction with <code>constexpr</code>, which
+was accidentally prohibited by N2976; disallow interaction with <code>defer</code>; improve normative wording;
+add non-normative semantic description</li>
+<li>discard the concept of the return expression in a constexpr function as some kind of special class
+of constant expression; use a simpler specification that just says the result is constant</li>
+<li>constant expressions may not have UB</li>
+<li>add new top-level clause for "C++ 14-like" <code>constexpr</code>, separately from core support</li>
+<li>add clause with illustrative-only features</li>
+</ul>
+<div class="markdown-heading"><h3 class="heading-element">N3205</h3><a id="user-content-n3205" class="anchor" aria-label="Permalink: N3205" href="#n3205"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<ul>
+<li>minor tweaks to rebase on the latest C23 draft</li>
+</ul>
+<div class="markdown-heading"><h3 class="heading-element">N2976</h3><a id="user-content-n2976" class="anchor" aria-label="Permalink: N2976" href="#n2976"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<ul>
+<li>original TS draft</li>
+</ul>
+<div class="markdown-heading"><h2 class="heading-element">1. Scope</h2><a id="user-content-1-scope" class="anchor" aria-label="Permalink: 1. Scope" href="#1-scope"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>This Technical Specification specifies a series of extensions of the programming language C,
+specified by the international standard ISO/IEC 9899:2024.</p>
+<p>Each clause in this Technical Specification deals with a specific topic. The first sub-clauses of
+clauses 4 through 7 contain a technical description of the features of the topic. These sub-clauses
+provide an overview but do not contain all the fine details. The last sub-clause of each clause
+contains the editorial changes to the standard necessary to fully specify the topic in the standard,
+and thereby provides a complete definition.</p>
+<p>Additional explanation and rationale are provided in the Annexes.</p>
+<div class="markdown-heading"><h2 class="heading-element">2. References</h2><a id="user-content-2-references" class="anchor" aria-label="Permalink: 2. References" href="#2-references"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>The following referenced documents are indispensable for the application of this document. For dated
+references, only the edition cited applies. For undated references, the latest edition of the
+referenced document (including any amendments) applies.</p>
+<ul>
+<li><a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3220.pdf" rel="nofollow">ISO/IEC 9899:2024 – Programming languages – C (draft N3220)</a></li>
+<li><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3337.pdf" rel="nofollow">C++11 (draft n3337)</a></li>
+<li><a href="https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3797.pdf" rel="nofollow">C++14 (draft n3797)</a></li>
+<li><a href="https://open-std.org/jtc1/sc22/wg21/docs/papers/2020/n4868.pdf" rel="nofollow">C++20 (draft n4868)</a></li>
+<li><a href="https://small.r7rs.org/attachment/r7rs.pdf" rel="nofollow">R7RS Scheme</a></li>
+<li><a href="https://www-labs.iro.umontreal.ca/~feeley/papers/FeeleyMillerRozasWilsonDIRO1078.pdf" rel="nofollow">Compiling Higher-Order Languages into Full Tail-Recursive Portable C</a></li>
+<li><a href="https://doc.rust-lang.org/reference/expressions/struct-expr.html" rel="nofollow">Struct expressions (Rust)</a></li>
+<li><a href="https://clang.llvm.org/docs/AttributeReference.html#musttail" rel="nofollow">Attributes in Clang: <code>musttail</code></a></li>
+</ul>
+<div class="markdown-heading"><h3 class="heading-element">WG-Internal references</h3><a id="user-content-wg-internal-references" class="anchor" aria-label="Permalink: WG-Internal references" href="#wg-internal-references"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<ul>
+<li><a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n2892.pdf" rel="nofollow">n2892 Basic lambdas for C</a></li>
+<li><a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n2917.pdf" rel="nofollow">n2917 The <code>constexpr</code> specifier, v2</a></li>
+<li><a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n2920.pdf" rel="nofollow">n2920 Tail-call elimination, v2</a></li>
+<li><a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3018.htm" rel="nofollow">n3018 The <code>constexpr</code> specifier for object definitions, v7</a></li>
+<li><a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3199.htm" rel="nofollow">n3199 Improved <strong>attribute</strong>((cleanup(…))) through defer</a></li>
+</ul>
+<div class="markdown-heading"><h2 class="heading-element">3. Conformance</h2><a id="user-content-3-conformance" class="anchor" aria-label="Permalink: 3. Conformance" href="#3-conformance"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>This Technical Specification presents in separate clauses specifications for two, in principle
+independent, sets of functionality, which are primarily described by Clause 5: Tail-call elimination;
+and Clause 6: Extended Constant Expressions.</p>
+<p>These are supported by explanatory functionality in Clause 4, which defines a small number of utility
+features only so that the concepts can be used by the descriptions in the subsequent clauses; and
+additional extended functionality in Clause 7, which separates out some features related to Clause
+6 in order to simplify conformance decisions by implementers.</p>
+<p>The features defined by Clause 4 are intended to be explanatory and they do not need to be integrated
+or adopted in order to implement subsequent clauses. The features defined by Clause 7 build upon the
+features defined by Clause 6 and do not need to be adopted in order to implement Clause 6 alone.</p>
+<p>As this is a Technical Specification, there are no conformance requirements, and implementers are
+free to select those specifications that they need. However, if functionality is implemented from
+one of the feature clauses, implementers are strongly encouraged to implement that clause in full,
+and not just a part of it. The purpose of this Specification being to codify common practice,
+implementers are strongly encouraged to document any deviations or omissions in order to establish
+which practices are of more and less interest to the target audience.</p>
+<p>If, at a later stage, a decision is taken to incorporate some or all of the text of this Technical
+Specification into the C standard, then at that moment the conformance issues with respect to (parts
+of) this text need to be addressed (conformance with respect to freestanding implementations etc.).</p>
+<hr>
+<div class="markdown-heading"><h2 class="heading-element">4. Explanatory Functionality</h2><a id="user-content-4-explanatory-functionality" class="anchor" aria-label="Permalink: 4. Explanatory Functionality" href="#4-explanatory-functionality"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>This clause describes four sub-features that are not required to be implemented in order to provide
+the main functionality in clauses 5 through 7, but which simplify the non-normative descriptions
+therein substantially by being available to use in the semantic descriptions.</p>
+<p>Implementers are neither encouraged to provide nor discouraged from providing these features as
+functionality in their own right; they are not the focus of this Technical Specification and are not
+necessarily completely described.</p>
+<p>Full normative text is not provided for these features. <em>(DRAFT NOTE though we can if folks want)</em></p>
+<div class="markdown-heading"><h3 class="heading-element">4.1 Calling convention specifier</h3><a id="user-content-41-calling-convention-specifier" class="anchor" aria-label="Permalink: 4.1 Calling convention specifier" href="#41-calling-convention-specifier"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>On many target platforms, functions with the same Standard type may have more than one incompatible
+ABI. The calling convention is a property of a function implementation which is completely outside
+the scope of the Standard, because it refers to the exact details of where and how arguments and
+other things needed for a call are passed around on the concrete machine.</p>
+<p>Two functions with different calling conventions can have the same Standard type, but absolutely
+must not be treated as having compatible types by the implementation, as trying to call one through
+a pointer expecting the other would end up doing something along the lines of putting values in
+the wrong registers for the subsequent instructions.</p>
+<p>For the purpose of describing functions that have different types despite having the same Standard
+type, we add a new parameterized "function qualifier" <code>_Call_as</code>.</p>
+<p>Unlike the "object qualifiers" <code>const</code>, <code>volatile</code>, <code>restrict</code> and <code>atomic</code>, the <code>_Call_as</code>
+qualifier modifies a function type. The qualifier accepts an integer constant expression as a single
+mandatory argument. When <code>_Call_as</code> syntactically qualifies a function return type, it is adjusted
+to qualify the nearest syntactically enclosing function type.</p>
+<pre><code>_Call_as (1) void f1 (void);    // f1 is qualified by adjustment
+void (_Call_as (1) f1) (void);  // compatible declaration, directly qualifying the identifier
+
+typeof (void (void)) _Call_as (2) * f2 (void);  // the qualifier modifies the pointed-to type
+                                                // and is not adjusted, so f2 is not qualified
+                                                // but its return value is
+
+typeof (_Call_as (2) void (void)) * f2 (void);  // compatible declaration with the above
+                                                // the return type of the typename is modified
+                                                // so the surrounding function type is adjusted
+                                                
+typedef void Func (void);
+Func _Call_as (3) * fp;    // qualifying a function type
+</code></pre>
+<p>The combination of <code>_Call_as</code> with an integer constant <em>value</em> is called a <em>convention qualifier</em>.
+Two different constant values produce different convention qualifiers.</p>
+<p>Following existing qualifier rules, two types qualified with different convention qualifiers are
+not compatible. An unqualified function type is compatible with exactly one implementation-defined
+convention qualifier. Consequently there is no implicit conversion from an unqualified to any
+convention-qualified function type except the sole implementation-defined compatible qualifier.</p>
+<p>It is assumed that an implementation will provide predefined constants to represent the calling
+conventions it supports. An implementation should reject convention qualifiers it does not support.</p>
+<pre><code>// constexpr auto SYSV_ABI = 1;
+// constexpr auto MS_ABI = 2;
+
+typedef void Func (void);
+
+typedef Func _Call_as (MS_ABI) MSFunc;
+typedef Func _Call_as (SYSV_ABI) SVFunc;
+
+MSFunc * f1 = some_function;
+SVFunc * f2 = f1; // ERROR: types are not compatible
+
+typedef void VarFunc (...);
+VarFunc * f3 = f2; // ERROR obviously, (void) and (...) are different Standard types
+</code></pre>
+<p>There is no particular implication that two distinct function types qualified with the same convention
+qualifier actually use a similar calling convention at the assembly level.</p>
+<p>Convention qualifiers are a special case of user-defined qualifiers. It does not make sense for a
+convention qualifier to be implicitly convertible on-or-off, or to have multiple qualifiers at once.</p>
+<div class="markdown-heading"><h3 class="heading-element">4.2 Functional update expression</h3><a id="user-content-42-functional-update-expression" class="anchor" aria-label="Permalink: 4.2 Functional update expression" href="#42-functional-update-expression"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Functional update is a useful feature predominantly found in functional languages that creates a
+value of a given type with the same contents as an existing value, with some explicit changes.</p>
+<p>This is useful for structures because it allows setting only members of interest without needing to
+know about all other members that exist. Code that explicitly initializes all members can become out
+of date in the event of a modification of the structure definition, and is also much more verbose.</p>
+<p>Functional update syntax <a href="https://doc.rust-lang.org/reference/expressions/struct-expr.html#functional-update-syntax" rel="nofollow">exists in Rust</a>.
+It can be adopted for C by modifying the initializer syntax slightly to allow for a leading
+"default object" initializer, before the individual member initializers:</p>
+<pre><code>struct Point3D {
+    float x, y, z;
+};
+
+struct Point3D p1 = { .x = 1, .y = 2, .z = 3 };
+
+// move a second point in y only
+struct Point3D p2 = { p1; .y = 6 };
+auto p3 = (struct Point3D){ p1; .y = 6 }; // same result
+</code></pre>
+<p>The semicolon is not otherwise used in <em>initializer-list</em> syntax and is more C-like than the range
+operator preferred by Rust.</p>
+<p>This is resilient against changes to the definition of a type, or even generic to a type entirely:</p>
+<pre><code>#define TransY(val, by) (typeof(val)){ val; .y = (val).y + by }
+
+struct Point2D ...
+struct Point3D ... // all have a y
+struct Point4D ... // don't need to know about x, z or w
+</code></pre>
+<p>The expression in the "default object" position is not value-converted; if it designates an array,
+the elements of the array are used to pre-initialize the object.</p>
+<p>If the initializer list has exactly one element, array element designators within the <em>designator-list</em>
+may use non-constant expressions to designate an element. The expression shall evaluate to a
+non-negative value less than the length of the array object or sub-object.</p>
+<p>The type produced by the <code>typeof_unqual</code> operator applied to the type of the "default object"
+expression shall be compatible with the type produced by <code>typeof_unqual</code> applied to the type of the
+object being initialized.</p>
+<div class="markdown-heading"><h3 class="heading-element">4.3 Function literal</h3><a id="user-content-43-function-literal" class="anchor" aria-label="Permalink: 4.3 Function literal" href="#43-function-literal"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>A function literal is an expression that evaluates to the value of a function defined inline in the
+same expression where it is used. The function has no user-observable name, and the definition is
+provided immediately at the single point of usage. Since the expression will decay to a function
+pointer because of value conversion, it can be assigned to a named function pointer or called in
+place, allowing it to be used in an expression exactly like any named function's identifier.</p>
+<p>The syntax for a function literal is similar to a function definition, but instead of the return
+type and identifier of a function declarator, the expression begins with <code>[]</code>, followed by the
+parameter list as usual and then the function body. The parameter list is optional and is implicitly
+empty if not provided.</p>
+<pre><code>void foo (int x) {
+    return x + [] (int y) {
+        return y + 5;
+    } (6);
+}
+
+// is exactly equivalent to
+
+static int @foo__unnamed1 (int y) { // the name cannot be expressed in user code
+    return y + 5;
+}
+
+void foo (int x) {
+    return x + @foo__unnamed1 (6);
+}
+</code></pre>
+<p>The function definition's body forms a block scope, but it does not have access to objects with
+automatic storage duration in the surrounding block scope. Type definitions and objects with static
+or thread-local storage duration in the surrounding block scope <em>are</em> visible within the function
+literal, as though they had been defined at file scope with a unique identifier:</p>
+<pre><code>int bar (int x) {
+    typedef int Int;
+    struct Local { Int z; };
+    
+    return [] (Int y) {
+        struct Local l = { .z = y + 1 };
+        return l;
+    } (x).z;
+}
+
+// is exactly equivalent to
+
+typedef int @bar__Int;
+struct @bar__Local {
+    @bar__Int z;
+};
+
+static @bar__Int @bar__unnamed1 (@bar__Int y) {
+    struct @bar__Local l = { .z = y + 1 };
+    return l;
+}
+
+int bar (int x) {
+    return @bar__unnamed1 (x).z;
+}
+</code></pre>
+<p>Variably-modified types in the surrounding block scope are not visible in the function literal.
+Names in the surrounding block scope that shadow declarations at file scope prevent those file scope
+declarations from being visible to the function literal even if it cannot make use of them.</p>
+<p>The return type of the function literal is deduced from any <code>return</code> or <code>return goto</code> statements
+inside its definition. If there are no such statements, the return type is <code>void</code>. Otherwise, the
+return type is the type after value conversion of the operand expression to the first return
+statement appearing in lexical order in the function body. If the return statement has no expression,
+the return type is <code>void</code>. The type of the expression of any subsequent return statements shall be
+compatible with the deduced type.</p>
+<p>Any function literal can be trivially rewritten out-of-line as a normal C function at file scope,
+though the types and objects it references may need to move to file scope as well.</p>
+<p>A function literal implicitly has internal linkage and is implicitly an inline function. A function
+literal that meets the constraints for the <code>constexpr</code> specifier is implicitly a constexpr function.</p>
+<p>Function literals are a special simplified case of what are called "lambdas" in other languages.
+For the purposes of illustrating constexpr functions, only the inline definition and static scope
+features are useful.</p>
+<div class="markdown-heading"><h3 class="heading-element">4.4 <code>_Self</code> pointer</h3><a id="user-content-44-_self-pointer" class="anchor" aria-label="Permalink: 4.4 _Self pointer" href="#44-_self-pointer"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p><code>_Self</code> is a predefined identifier that behaves like any function designator, except that it
+implicitly refers to the definition of the function containing the expression in which it appears.</p>
+<p>This is useful for expressing recursion without knowing the name of the function being invoked
+recursively, which may be because the function has no user-accessible name (see 4.3), or because
+the recursion is some generic algorithm-building operation invoked from a macro intended for reuse.</p>
+<p>The type of <code>_Self</code> is the same as the type of the corresponding function designator expression.</p>
+<pre><code>int bar (int);
+
+int foo (int x) {
+    // assert that bar is compatible with foo
+    typeof (_Self) pbar = bar;
+    return pbar (x);
+}
+
+int fib (int n) {
+    // anonymously define a recursive function
+    auto aux = [] (int i, int a, int b) {
+        if (i == 0)
+            return a;
+        return _Self (i - 1, b, a + b); // (type must be known before use)
+    };
+    return aux (n, 0, 1);
+}
+</code></pre>
+<div class="markdown-heading"><h2 class="heading-element">5. Tail-Call Elimination</h2><a id="user-content-5-tail-call-elimination" class="anchor" aria-label="Permalink: 5. Tail-Call Elimination" href="#5-tail-call-elimination"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<div class="markdown-heading"><h3 class="heading-element">Introduction</h3><a id="user-content-introduction" class="anchor" aria-label="Permalink: Introduction" href="#introduction"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>C's function activation records implicitly form a stack, regardless of the underlying implementation
+of function calls or the depth of calls which the platform can support.</p>
+<p>Keeping all activation records suspended but alive until their callees have returned prevents
+programs from transferring control directly when a function's work is already done. This is not a
+huge obstacle for hand-written C code, but is a major barrier for languages that compile to C (which
+cannot then generally represent their function calls as native C function calls,
+<a href="https://www-labs.iro.umontreal.ca/~feeley/papers/FeeleyMillerRozasWilsonDIRO1078.pdf" rel="nofollow">instead resorting to complicated non-native function representations</a>), or for interop with languages that do support this feature.</p>
+<p>This Specification adds the ability to explicitly, directly transfer control to another function
+without returning, as an alternative to nested function calls.</p>
+<p>This feature was previously discussed during the January 2022 meeting of WG14, and the meeting
+established some starting directions for the feature set:</p>
+<ul>
+<li>there was not consensus to add the feature to C23;</li>
+<li>there was direction to continue gathering implementation experience;</li>
+<li>there was direction to establish what impact (if any) the feature has on existing ABIs.</li>
+</ul>
+<p>Since the principal implementation obstacles are in ABI and calling convention, both of which are
+currently out of scope for the Standard and are not defined by C23, the preference of the Committee
+was that a tool should be able to reject a tail call for any implementation-defined reason. This also
+allows a tool to simply not support tail calls at all, so long as it emits a diagnostic and does not
+silently compile the <code>return goto</code> statement as though it was a simple <code>return</code> statement.</p>
+<p>The rationale and prior art for <em>tail-call</em> elimination on return statements is explained and discussed
+in WG14 document <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n2920.pdf" rel="nofollow">n2920</a>.</p>
+<p>A deeper understanding of <em>tail-call</em> elimination in general can be obtained from
+<a href="https://small.r7rs.org/attachment/r7rs.pdf" rel="nofollow">the specification of the Scheme programming language</a>,
+which mandates its support.</p>
+<p>The feature specified here is fundamentally similar to
+<a href="https://clang.llvm.org/docs/AttributeReference.html#musttail" rel="nofollow">the Clang <code>musttail</code> feature</a>, with
+appropriate modifications to fit into the Standard language and alongside the other core feature in
+this Specification.</p>
+<div class="markdown-heading"><h3 class="heading-element">5.1 Overview of <em>tail-call</em> elimination in C</h3><a id="user-content-51-overview-of-tail-call-elimination-in-c" class="anchor" aria-label="Permalink: 5.1 Overview of tail-call elimination in C" href="#51-overview-of-tail-call-elimination-in-c"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>For the purpose of this Specification, a <em>tail-call</em> is a call to a function that consists of the
+entire value operand to a <code>return goto</code> statement (or one of the related forms below).</p>
+<p>Although most of the research on tail calling in C functions has been into identifying implicit
+<em>tail-calls</em> for the purposes of optimization, this Specification is only concerned with explicit
+<em>tail-calls</em> requested by means of the <code>return goto</code> statement. <em>Tail-calls</em> eliminated explicitly
+in this way are not an optimization, and directly affect the program semantics in potentially
+observable ways. For this reason a new statement kind, the <code>return goto</code> sub-type of the <code>return</code>
+statement, is needed, as an attribute cannot impose the required change in behavior of a normal
+<code>return</code> statement.</p>
+<p>Entry to a <em>tail-call</em> ends the lifetime of the calling function’s activation record, and must free
+any resources created by that function call. This moves the end of lifetime of automatic objects
+with block scope defined within the caller to immediately before entry to the function being called
+in tail position. This does not introduce any new undefined behaviors directly, but does mean that
+pointers to objects in the calling activation record become invalid before the <em>tail-call</em> itself.</p>
+<p>The expression in tail position must not require any additional work to be done after the function
+returns within the body of the caller, because the caller will not be re-entered. This means that as
+well as being a syntactic function call, the operand to <code>return goto</code> must have a type exactly matching
+the return type of the calling function, without needing to undergo any implicit conversions. Any
+implicit conversion, even if it would compile as a no-op, renders the operand an invalid <em>tail-call</em>.</p>
+<p>In order to fully enforce this, the function called in tail position must have identical type to the
+callee. This ensures both that the return value does not require any conversion, and also that
+argument passing space is available and calling convention (if relevant) is maintained.</p>
+<p>The implication of the requirement that all resources allocated by the immediate caller are freed
+right before entry to the callee is that any sequence of <em>tail-calls</em> will never overflow the
+implementation’s stack or otherwise cause resource exhaustion because of the calls themselves. An
+infinite sequence of <em>tail-calls</em> is analogous to an infinite loop – although it may do other work
+that uses resources, it does not use resources itself by iterating.</p>
+<div class="markdown-heading"><h3 class="heading-element">5.3 Calling conventions and ABI</h3><a id="user-content-53-calling-conventions-and-abi" class="anchor" aria-label="Permalink: 5.3 Calling conventions and ABI" href="#53-calling-conventions-and-abi"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>No new ABI is introduced by this feature. Although the function called from tail-position replaces
+its syntactic caller, entry re-uses the same argument and return space that was set up for that
+caller. Therefore, whether a function ends in a tail call is not generally observable from “outside”.
+Because the called function must match the caller’s setup exactly, it must by definition have the
+same ABI and is also callable from any non-tail position, making its potential status as a
+<em>tail-call</em> completely private to the call context and not observable from its definition or
+declaration at all. The caller and the callee may require a different static size for their
+activation records, but there does not appear to be a target (where the stack discipline is actually
+implemented in a re-entrant way) where this would be problematic (on targets with re-entrant stack
+disciplines, the top of the frame is always necessarily set within the function body because it is
+not exposed by the type anyway; on those with non-contiguous stacks a different object is used; etc.).</p>
+<p>Any function which can be invoked by a <em>tail-call</em> may also be invoked by a function call in non-tail
+position. Any function which terminates in a <em>tail-call</em> may also terminate in a conventional <code>return</code>
+statement along a different conditional branch.</p>
+<p>During the January 2022 WG14 meeting it was pointed out that some targets use different calling
+conventions for the same function depending on whether the call is a “near call” (within the same
+TU) or a “far call” (callee is in another TU). If a function ends with a <em>tail-call</em> to a “far”
+target, all calls to the calling function themselves must become “far calls” so that it can be
+perfectly replaced in-place. This means that a TU making <em>tail-calls</em> to other functions in other
+TUs would need to be recompiled to ensure it contains no “near calls” to callers.</p>
+<p>Since all local calls would be recompiled when the function was rewritten to use <code>return goto</code>, it
+was not clear whether this would present an issue in practice. An implementation is encouraged to
+tag such functions during compilation to force them to always use a single calling convention. This
+way, so long as the internal call also always uses the same convention, the <em>tail-call</em> is preserved
+and the detail about how the function terminates remains semantically private.</p>
+<p>The principal ABI impact is on functions that currently use workarounds such as trampolining in order
+to emulate proper <em>tail-calls</em>. These functions incorporate the emulation into their ABI at present
+(using signatures that allow for “return to next” by some means). It is assumed that users of such
+functions will mostly <em>actively want</em> their ABI to change and become seamless, once that becomes
+possible. However, explicit trampolining will continue to work unchanged and will not be impacted by
+the addition of this feature unless it is intentionally picked up by the user.</p>
+<p>It is not generally possible to perform a <em>tail-call</em> between functions that have different calling
+conventions. Although this is outside the scope of the Standard, by placing constraints on the type
+of the callee function as a whole (rather than expressing separate constraints against its return
+type and arguments), calling conventions <strong>should</strong> implicitly be constrained as well, because an
+implementation already has to treat them as having distinct types, in order to emit correct code
+(i.e. pointers to two functions with different conventions should not be stored in the same pointer
+variable, a high-quality compiler should make a type-based distinction). Because of this, specifics
+of the calling convention (“caller cleanup” vs “callee cleanup”, and so on) are not considered; so
+long as the constraint that the complete type of the function called in tail position matches
+<strong>exactly</strong> is respected, these are expected to be respected by the callee. In the description below
+(non-normative) calling convention is treated as part of the function type.</p>
+<p>In general the feedback from the Committee was that implementations should be allowed to reject a
+requested tail call for any implementation-defined reason, including that the implementation is not
+able to emit tail calls in general. So long as the implementation <strong>rejects</strong> the program rather
+than accepting it with conventional return semantics (which would result in different resource usage
+and likely overflow), this is a safe implementation-defined behavior to add, and handily covers all
+cases where the call would be difficult to translate.</p>
+<div class="markdown-heading"><h3 class="heading-element">5.3 Informative semantic description</h3><a id="user-content-53-informative-semantic-description" class="anchor" aria-label="Permalink: 5.3 Informative semantic description" href="#53-informative-semantic-description"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>This clause introduces one new statement, with no new internal syntax but with some Constraints;
+adjusts the lifetime/duration rules for objects around the semantics of the new statement; and adds
+one new permissible use for <code>void</code>-typed expressions.</p>
+<p>The new statement added is the <code>return goto</code> statement, which is closely related to the <code>return</code>
+statement in that it marks the end of execution of the current function. However, while the <code>return</code>
+statement evaluates its operand (or, has no operand) within the current execution function's active
+context, the <code>return goto</code> statement terminates execution of the current function <em>before</em> fully
+completing evaluation of its operand expression.</p>
+<p>A <code>return goto</code> statement can accept three main kinds of expression:</p>
+<ul>
+<li>a syntactic atom (literal, constant, identifier); note that "constant" here refers to syntactic
+constants (informally also commonly called "literals", though the Standard does not), and not to
+<em>constant-expressions</em>;</li>
+<li>a function call expression, upon which there are additional constraints;</li>
+<li>a conditional ("ternary") expression, selecting between either of the above, or a nested ternary
+with the same restriction.</li>
+</ul>
+<p>The atom/ternary kinds are not expected to be the common case and are really only provided for
+compatibility with the unrelated <code>constexpr</code>-function feature in Clause 6 (without allowing these,
+it would be impossible to use <code>return goto</code> to define a recursive constexpr function because the
+recursion would be impossible to terminate; "normal" non-constexpr functions are able to just use
+an <code>if</code> statement).</p>
+<p>The following examples are therefore valid:</p>
+<pre><code>int a (int, int);
+
+int b (int x, int y) {
+    return goto a (y, x); // OK - function call to an identical signature
+}
+int c (int x, int y) {
+    return goto x &amp;&amp; y    // OK - conditional, selecting between...
+         ? a (y, x)       // ... function call to an identical signature
+         : x;             // ... syntactic atom
+}
+int d (int x, int y) {
+    // OK - conditional, selecting between...
+    return goto x ? (a (y, x)) // ...function call and another conditional
+              : y ? (b (y, x)) // ...function call and a syntactic atom
+              :     (y);
+}
+int e (void) {
+    return goto 6.5f;  // useless, but OK - syntactic atom
+}                      // (the implicit conversion here doesn't matter)
+</code></pre>
+<p>while the following are not:</p>
+<pre><code>int a (int);
+
+int b (int x, int y) {
+    return goto a (y) + x; // not a function call (+ happens afterwards)
+}
+int c (int x, int y) {
+    return goto x &amp;&amp; y    
+         ? a (y)           // this branch is OK...
+         : x + y;          // ...but this doesn't obey the Constraints
+}
+int d (int x, int y) {
+    return goto x == 0
+              ? a (y)      // this branch is OK...
+              : a (y) + x; // but this wouldn't tail-call
+}
+int e (int x) {
+    return goto (long)a(x); // even a NOP-cast is still an operation
+}
+</code></pre>
+<p>The function-call operand is the primary use case and has additional constraints and semantics:</p>
+<ul>
+<li>the called function must have a compatible signature with the containing/"caller" function;</li>
+<li>the called function must not be variadic;</li>
+<li>the called function must not have any implementation-defined features that would prevent its use
+as the target of a <em>tail call</em>.</li>
+</ul>
+<p>As a consequence of this last point, implementations are granted broad freedom to reject a
+<code>return goto</code> statement for "any other reason", which does arguably mean that there is no strict
+requirement to support the statement's semantics at all. Implementations are <em>not</em> allowed to
+implement the statement as a simple <code>return</code> statement, as this would have incorrect semantics.
+As a quality-of-implementation matter, they should ideally explain <em>why</em> any given statement is
+rejected.</p>
+<p>The following examples are therefore valid:</p>
+<pre><code>float a (float x, float y);
+_Call_as(CDECL) int b (int x, int y);
+
+float f (long i, long j) {
+    return goto a (i + j, j + 2.0f); // OK - identical signature, args OK
+}
+
+typeof (int (int, int)) _Call_as(CDECL) * getFunc (void);
+
+_Call_as(CDECL) int g (int x, int y) {
+    return goto getFunc () (y, x);   // OK - identical signature including ABI
+}
+</code></pre>
+<p>while the following are not:</p>
+<pre><code>int h (int i, int j) {
+    return goto a (i + j, j + 2.0f); // implicit conversion caused by
+}                                    // invalid signature
+
+_Call_as (STDCALL) int k (int x, int y) {
+    return goto getFunc () (y, x);   // signature is not identical in
+}                                    // non-Standard elements
+
+// implementation ABI that doesn't support direct jumps
+_Call_as(GPU) float c (float r, float g, float b);
+
+_Call_as(GPU) float grey (float r, float g, float b) {
+    return goto c (r * 0.3f    // implementation rejects this
+                 , g * 0.59f   // for "other reasons"
+                 , b * 0.11f); 
+}
+</code></pre>
+<p>The order of operations for the <code>return goto</code> statement when its operand is a function call is as
+follows:</p>
+<ol>
+<li>the operands to the function-call expression (the <em>postfix-expression</em> evaluating to a function
+pointer to the target of the call, and the argument values) are evaluated and value-converted,
+in the appropriate sequence (i.e. no different from the usual sequencing rules).
+These subexpressions can be any valid operands to a normal function call expression, and are not
+themselves subject to any of the Constraints associated with <code>return goto</code> - the
+<em>postfix-expression</em> can be a simple identifier directly designating a function, or any
+arbitrarily complex expression producing a function pointer; and the argument subexpressions can
+make free use of any object with block lifetime <em>while they are being evaluated</em>, for instance
+passing the address of a local to a nested function call within the argument.</li>
+<li>execution of the caller is terminated and the lifetime of all objects with block scope ends.
+Consequently any references to objects with block scope in the caller's activation frame are
+now invalid.</li>
+<li>the argument values, which exist in abstract-machine "value space" after evaluation in step 1 and
+are not themselves objects with lifetime, are copied to the implementation-defined storage for
+parameter objects. This storage is generally expected to reuse the parameter storage provided to
+the caller (although a valid implementation might e.g. also have some kind of ring-buffer
+structure to the activation records, so no guarantee is made about the addresses of parameters).</li>
+<li>execution uses a <em>direct jump</em> of some implementation-defined kind to go to the start of the
+function designated in the call expression. Whatever the nature of this jump, it <strong>replaces</strong> the
+caller in the implicit execution stack, and <strong>does not</strong> form a stack on top of it.</li>
+<li>execution of the callee proceeds (which might involve additional "nested" tail calls).</li>
+<li>the callee's return value is passed directly to the receiver expecting the <em>caller's</em> return value.</li>
+</ol>
+<p>No amount of "nesting" in step 5 will ever use more than just the one stack frame.</p>
+<p>The following examples are therefore valid:</p>
+<pre><code>int f (int x, int * prev) {
+    static int y = 6;
+    if (x &gt; 10) {
+        return goto f (y, &amp;y); // OK - lifetime of y is the whole program
+    }
+    return goto f (x + y, prev); // OK - (x + y) is value-converted and not lost
+}
+
+int h (int, int *);
+
+int g (int x, int * y) {
+    return goto h (h (*y, &amp;x)  // OK - call nested in argument
+                 , y);         // can rely on usual lifetimes
+}
+</code></pre>
+<p>while the following is not:</p>
+<pre><code>int h (int, int *);
+
+int g2 (int x, int * y) {
+    return goto h (*y, &amp;x);  // &amp;x is a dangling pointer
+}
+</code></pre>
+<p>There is no guarantee that the stack frame for each function is the same size, and the direct jump
+may also need to adjust the "top of the stack" register if such a thing exists in the calling
+convention (this commonly happens inside the callee, after the jump/call, which is convenient).</p>
+<p>In other words, a <em>tail call</em> is different from a normal function call in that:</p>
+<ul>
+<li>a normal function call says "pause me, get the result of this, continue".</li>
+<li>a <em>tail call</em> says "<strong>replace me</strong> to produce the result of this as my result".</li>
+</ul>
+<p>This consequentially creates the adjusted lifetime rules: if the execution of the caller <em>terminates</em>
+instead of suspends, the callee cannot make use by pointer of any object with block scope in the
+caller, because its storage is assumed to have been completely reused to make space for the callee.
+By changing the end of lifetime to "right before" entering the callee instead of "right after"
+fully evaluating the <code>return</code> expression, such references are made invalid before the callee is
+entered.</p>
+<p>(In Scheme and other languages, <em>all</em> objects have dynamic lifetime semantics and the existence of
+a GC is assumed; this is completely alien to the way objects are allocated in C so this property
+is not preserved.)</p>
+<p>(An implementation doesn't have to reuse the space <em>immediately</em>, so long as the persistence of
+old stack frames doesn't cause resource exhaustion; a hardened/debug implementation might keep one
+or two frames alive for longer in order to detect invalid accesses, for instance. It is up to the
+implementation to determine whether this is useful for reasons outside of the semantics.)</p>
+<p>Another consequence of the adjusted lifetime rule is that <em>absolutely nothing</em> may happen in the
+caller context after the callee has been entered. This means that the <code>defer</code> statement, or
+<code>__attribute__((cleanup))</code>, or anything like that, cannot be used to schedule any actions on the
+exit from a function via <code>return goto</code>, because there is nowhere and no-when for the action to run.
+Scheduling these actions <em>before</em> entry to the callee would be so counter-intuitive it is safer to
+just require the user not to combine these features in such a broken way.</p>
+<p>If the implementation needs to add additional instructions to de-allocate a VLA at the end of its
+lifetime, this should ideally happen right before entry to the callee (there is no observable side
+effect of this action, so it can be scheduled. If this is impossible for the implementation to
+generate code for, then it would become an "implementation-defined reason" to reject the statement.</p>
+<p>The <code>return goto</code> statement is also slightly relaxed in one respect from the <code>return</code> statement,
+which is that the overall operand expression may be <code>void</code>-typed, if and only if the containing
+function (and the callee) have a <code>void</code> return type. In this case no value is returned to the outer
+context but it is still possible to replace the caller directly to do some work involving side
+effects.</p>
+<p>(This is not relevant to constexpr functions, so no special relaxation needs to be applied to the
+ternary operator or to identifiers in order to make advanced use of <code>void</code> values.)</p>
+<div class="markdown-heading"><h3 class="heading-element">5.4 Detailed changes to ISO/IEC 9899:2024</h3><a id="user-content-54-detailed-changes-to-isoiec-98992024" class="anchor" aria-label="Permalink: 5.4 Detailed changes to ISO/IEC 9899:2024" href="#54-detailed-changes-to-isoiec-98992024"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Changes are relative to <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3220.pdf" rel="nofollow">Working Draft n3220</a>,
+the last public draft of C23 before release.</p>
+<p>The modifications are ordered according to the clauses of ISO/IEC 9899:2024 to which they refer. If
+a clause of ISO/IEC 9899:2024 is not mentioned, no changes to that clause are needed. New clauses
+are indicated with (NEW CLAUSE), however resulting changes in the existing numbering are not
+indicated; the clause number <em>mm.nn</em><em><strong>a</strong></em> of a new clause indicates that this clause follows
+immediately clause <em>mm.nn</em> at the same level. Bolded text within an existing clause is new text.</p>
+<p>Add a new section to the glossary in the appropriate position:</p>
+<blockquote>
+<div class="markdown-heading"><h3 class="heading-element">3.21a</h3><a id="user-content-321a" class="anchor" aria-label="Permalink: 3.21a" href="#321a"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p><strong>tail call</strong></p>
+<p>function call executed as a direct jump from one function to a new function with an identical
+signature, ending the lifetime of the caller before the called function is entered and whose
+ultimate return value, if any, will be used as the return value of the caller</p>
+<p>Note 1 to entry: a tail call may be a recursive call to the containing function, which
+is guaranteed to have the right signature.</p>
+<p>Note 2 to entry: tail calls may invoke other tail calls, with the ultimate return value
+being produced by a deeply-nested invocation.</p>
+</blockquote>
+<p>Modify 6.2.4 "Storage durations of objects", paragraph 6, to clarify that some function calls do
+terminate execution:</p>
+<blockquote>
+<p>For such an object that does not have a variable length array type, its lifetime extends from entry
+into the block with which it is associated until execution of that block ends in any way. (Entering
+an enclosed block or calling a function suspends, but does not end, execution of the current block
+<strong>, unless entry to the call explicitly terminates execution of the current block with <code>return goto</code></strong>.)</p>
+</blockquote>
+<p>Modify the first sentence of 6.3.2.2 <code>void</code>:</p>
+<blockquote>
+<p>The (nonexistent) value of a void expression (an expression that has type void) shall not be used
+in any way, <strong>except as the operand of a <code>return goto</code> statement within a function with</strong>
+<strong><code>void</code> return type,</strong> and implicit or explicit conversions (except to void) shall not be applied
+to such an expression.</p>
+</blockquote>
+<p><em>(DRAFT Committee note: consider generalizing this to all return statements?)</em></p>
+<p>Add a forward reference to (new section) 6.8.6.4.1 in 6.2.4:</p>
+<blockquote>
+<p>Forward references: array declarators (6.7.6.2), compound literals (6.5.2.5), declarators (6.7.6),
+function calls (6.5.2.2), <strong>tail calls (6.8.6.4.1),</strong> initialization (6.7.9), statements (6.8),
+effective type (6.5).</p>
+</blockquote>
+<p>Add a new footnote to 6.5.3.3 "Function calls" paragraph 8, immediately after 92:</p>
+<blockquote>
+<p>with respect to the execution of the called function. <sup>92)</sup> <sup><strong>footnote)</strong></sup></p>
+<p>footnote: if the called function is assuming direct control with the <code>return goto</code> statement,
+then no further operations in the caller will be evaluated after it is entered.</p>
+</blockquote>
+<p>Modify 6.8.7.1 paragraph 1:</p>
+<blockquote>
+<p><em>jump-statement:</em><br>
+<code>goto</code> <em>identifier</em> ;<br>
+<code>continue</code> ;<br>
+<code>break</code> ;<br>
+<code>return</code> <em>expression</em> <sub>opt</sub> ;<br>
+<strong><code>return goto</code> <em>expression</em> ;</strong></p>
+</blockquote>
+<p>Add a new paragraph to 6.8.7.1 after paragraph 1:</p>
+<blockquote>
+<p>The <code>return</code> and <code>return goto</code> statements are collectively called the <em>return statements</em>.</p>
+</blockquote>
+<p>(Non-detailed) Change all instances of "<code>return</code> statement" to "return statement" (remove monospace)
+except where they specifically refer to the non-<code>goto</code> form.</p>
+<p>(NEW CLAUSE) Add a new section, 6.8.6.4.1 "The <code>return goto</code> statement":</p>
+<blockquote>
+<div class="markdown-heading"><h4 class="heading-element">6.8.7.5.1 The <code>return goto</code> statement</h4><a id="user-content-68751-the-return-goto-statement" class="anchor" aria-label="Permalink: 6.8.7.5.1 The return goto statement" href="#68751-the-return-goto-statement"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p><strong>Constraints</strong></p>
+<p>The expression shall be, ignoring any parenthesization and after generic selection, one of:</p>
+<ul>
+<li>a function call expression, henceforth <em>FC</em>, where the postfix-expression designating the
+function to call has a type compatible with the type of a pointer to the containing function; or</li>
+<li>a constant, literal, or identifier, henceforth <em>LX</em>; or</li>
+<li>a conditional expression, henceforth <em>CX</em>, where the first operand may be any expression and the
+second and third operands are recursively subject to these constraints.</li>
+</ul>
+<p>Neither the function called in the postfix-expression of <em>FC</em> nor the containing function shall
+have a parameter list that terminates with an ellipsis.</p>
+<p><em>(DRAFT NOTE does this need to be specified here, below, or at all?)</em><br>
+If the containing function is defined as returning <code>void</code>, the expression shall be a <em>void expression</em>.</p>
+<p><em>(if the <code>defer</code> statement has been implemented)</em> The containing function shall not register any
+deferred operations to be executed on exit from any scope enclosing the <code>return goto</code> statement.</p>
+<p>A conforming implementation may reject a <code>return goto</code> statement for additional implementation-defined
+reasons <sup>footnote)</sup>. An implementation that rejects a <code>return goto</code> statement shall not
+translate it as though it had been written as a simple <code>return</code> statement.</p>
+<p>footnote) such as an incompatible calling convention that is not represented in the standard
+type, or even because the implementation does not support such direct jumps at all.</p>
+<p><strong>Semantics</strong></p>
+<p>A <code>return goto</code> statement is a special case of the <code>return</code> statement which terminates execution of
+the current function and then either passes direct control to the function specified in a function
+call sub-expression <em>FC</em> that evaluates its <em>operand value</em>, or returns the value of a primary
+sub-expression <em>LX</em>.</p>
+<p>When the operand to a <code>return goto</code> statement is a conditional expression that is a valid instance
+of <code>_CX_</code>, the conditional expression is evaluated normally and the <em>operand value</em> of the statement
+becomes the selected result operand, recursively subject to these semantics.</p>
+<p>When the operand is a constant, literal, or identifier, it is an instance of <em>LX</em> and the behavior
+is identical to that of a simple <code>return</code> statement.</p>
+<p>Otherwise the operand is a function call that is a valid instance of <em>FC</em>.</p>
+<p>The value of <em>FC</em> will be returned to the caller’s context as if by a simple <code>return</code> statement.
+The <code>return goto</code> statement differs from the <code>return</code> statement in that it terminates execution
+of the current function immediately after evaluating all operands to the function call expression
+<sup>footnote)</sup>, and before entering the called function itself. The called function will
+therefore return directly to the current function's caller (unless it too forwards control to a
+function using <code>return goto</code>, or does not return at all). This is called a <em>tail call</em>.</p>
+<p>footnote) and the implicit copy of any argument values to their associated parameter storage.</p>
+<p>Because the execution of the current function is terminated, the lifetime of all objects local to
+the function with automatic storage duration ends immediately before the called function is entered.
+The statement shall not terminate the lifetime of any object with automatic storage duration for
+which the implementation would need to execute additional cleanup instructions <sup>footnote)</sup>.</p>
+<p>footnote) any such instructions are an implementation detail that does not exist in the
+abstract machine.</p>
+<p>A function that has been terminated by the <code>return goto</code> statement does not continue to use resources.</p>
+<p><strong>NOTE:</strong> a <code>return goto</code> statement may appear anywhere a return statement with an expression may appear.</p>
+<p><strong>NOTE:</strong> if the address of a local object with automatic storage duration is passed to the called
+function, its lifetime will have ended before the called function begins executing and the resulting
+pointer cannot be used.</p>
+<p><strong>EXAMPLE 1</strong> This example violates the constraint that the expression must be a direct call to a
+function returning the exact same type as the caller:</p>
+<pre><code>int foo (int, int);
+
+int bar (int a, int b) {
+  return goto foo (b, a) + 1; // WRONG: the +1 must be evaluated
+}                             // after the result of foo()
+
+float baz (int a, int b) {
+  return goto foo (b, a); // WRONG: the result of foo() is followed 
+}                         // by an implicit conversion
+</code></pre>
+<p><strong>EXAMPLE 2</strong> In this example the address of a local object with automatic storage duration is
+passed to a called function:</p>
+<pre><code>int foo (int * p); // uses p
+
+int bar (int a) {
+  return foo (&amp;a); // OK, lifetime of a continues until foo() completes
+}
+
+int baz (int b) {
+  return goto (&amp;b); // WRONG: using the address of an object whose lifetime has ended
+}
+
+int * boo (int c) {
+  return &amp;c; // roughly analogous to the above
+}
+</code></pre>
+<p><strong>EXAMPLE 3</strong> In this example, a function recurses endlessly but harmlessly because the recursive
+call consumes no additional resources:</p>
+<pre><code>int foo (int a, int b) {   // need space for locals...
+  return goto foo (b, a);  // ...but that ends here
+}
+</code></pre>
+<p>This class of function cannot overflow the program stack by itself.</p>
+<p><strong>EXAMPLE 4</strong> In this example only one of the two calls to <code>foo()</code> is in the tail position:</p>
+<pre><code>int foo (int a, int b);
+
+int bar (int a, int b) {
+  return goto foo ( // will be evaluated after this caller's lifetime ends
+      foo (a, b),   // will be evaluated within this caller's lifetime
+      a + b
+  );
+}
+</code></pre>
+<p>The first nested call takes place before termination of the calling function and therefore must
+consider that its resources have not yet been released, exactly as for any other function call
+that is not in tail position.</p>
+<p><strong>EXAMPLE 5</strong> In this example, the expression is a conditional expression:</p>
+<pre><code>int foo (int a, int b);
+int qux (int a, int b);
+int toto (int a, int b, int c);
+
+int bar (int a, int b) {
+  // this expression is a CX conditional,
+  // whose second operand is a call expression,
+  // and whose third operand is another conditional,
+  // with a function call and an identifier as its own second and third operands
+  // the structure of the first conditional operand doesn't matter
+  return goto toto (a + b, a, b) ? foo (a, b)    // valid FC
+            : toto (b, a + a, b) ? (qux (b, a))  // valid FC
+            :                      a;            // valid LX
+}
+
+int baz (int a, int b) {
+  // this expression is not a valid CX,
+  // because the second operand is not a valid FC
+  return goto foo (a + b, a) ? toto (a + a, b, a)  // mismatched function type
+            : foo (b, a + a) ? (qux (b, a))        // (valid FC)
+            :                  ((0));              // (valid LX)
+}
+</code></pre>
+<p>The conditional expression is a valid instance of <em>CX</em> only if both its second and third operands
+recursively consist of valid <em>operand values</em>.</p>
+</blockquote>
+<p>No modifications are made to the Standard Library.</p>
+<div class="markdown-heading"><h2 class="heading-element">6. Extended Constant Expressions</h2><a id="user-content-6-extended-constant-expressions" class="anchor" aria-label="Permalink: 6. Extended Constant Expressions" href="#6-extended-constant-expressions"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<div class="markdown-heading"><h3 class="heading-element">Introduction</h3><a id="user-content-introduction-1" class="anchor" aria-label="Permalink: Introduction" href="#introduction-1"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>C requires that objects with static storage duration are only initialized with constant expressions.
+The rules for which kinds of expression may appear as constant expressions are quite restrictive and
+mostly limit users to using macro names for abstraction of values or operations. Users are also
+limited to testing their assertions about value behavior at runtime because <code>static_assert</code> is
+similarly limited in the kinds of expressions it can evaluate at compile-time.</p>
+<p>This Specification adds a new function specifier to C, <code>constexpr</code>, as introduced to C++ in C++11,
+and introduced to C in C23 as a storage-class specifier for objects. This specifier is here added to
+functions separately from its role as a storage class for objects, and intentionally keeps the
+functionality minimal to avoid undue burden on lightweight implementations.</p>
+<p>This feature was first discussed during the January 2022 meeting of WG14, and the meeting established
+some starting directions for the feature set:</p>
+<ul>
+<li>WG14 would like the <code>constexpr</code> specifier to be added to C23, for objects only;</li>
+<li>WG14 would like UB to be prohibited from constant expressions in general;</li>
+<li>there was not consensus to add any additional operators (element access) to the set that can be
+used for constant expressions, for C23;</li>
+<li>there was not consensus to add the <code>constexpr</code> specifier for functions, to C23;</li>
+<li>there was strong consensus to add the full <code>constexpr</code> feature for objects, extended operators
+(element access), and function definitions, in some future version of C after C23.</li>
+</ul>
+<p>At the July 2022 meeting of WG14, the <code>constexpr</code> keyword was adopted as a storage-class specifier
+for objects, which introduced the feature to C23. The specifier as it appears in the final published
+version of C23 does not allow for subscript access to the values in array objects, but does allow
+for members (and whole values) of structure and union objects to be used in constant expressions.</p>
+<p>The rationale for, and impact of, the inclusion of <em>constexpr functions</em> as well as <em>constexpr objects</em>
+was explained and discussed in WG14 document <a href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n2917.pdf" rel="nofollow">n2917</a>.</p>
+<div class="markdown-heading"><h3 class="heading-element">6.1 Overview of extended constant expressions and definitions</h3><a id="user-content-61-overview-of-extended-constant-expressions-and-definitions" class="anchor" aria-label="Permalink: 6.1 Overview of extended constant expressions and definitions" href="#61-overview-of-extended-constant-expressions-and-definitions"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>For the purpose of this Specification, a <em>constexpr object</em> is any object defined with the <code>constexpr</code>
+specifier as part of its declaration specifiers. The value of a constexpr object may be accessed as
+part of any kind of C constant expression (which does not include preprocessor expressions),
+assuming it has appropriate type. constexpr objects are a standardized feature of C23 and are
+described in <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3220.pdf" rel="nofollow">ISO/IEC 9899:2024</a>.</p>
+<p>For the purpose of this Specification, a <em>constexpr function</em> is any function defined with the
+<code>constexpr</code> function specifier. The keyword for the <code>constexpr</code> storage class is reused, and given a
+second role as a function specifier. A constexpr function definition is subject to stricter
+constraints than other function definitions, but is <em>not</em> subject to the constraint that forbids them
+from being called from within constant expressions.</p>
+<p>The parameters of a constexpr function are treated as though they do not have the "modifiable"
+property even though they are objects with block scope, automatic storage duration, and may be
+declared without qualification. This means there is no local modification of state. This has useful
+properties for simplifying the evaluator.</p>
+<p>For the purpose of this Specification, a constant expression is one of: a named constant; an integer
+constant expression; an arithmetic constant expression; an address constant expression; a structure
+or union constant expression; a null pointer constant; or any other form of constant expression
+accepted by the implementation. Constant expressions are described in Section 6.6 “Constant
+expressions” of C23.</p>
+<p>A constant expression does not contain any diagnosable undefined behavior. An expression containing
+undefined behavior in an evaluated branch is not a constant expression for any purposes.</p>
+<p>This Specification therefore generalizes C constant expressions of all kinds, to also include element
+access to array objects defined with the <code>constexpr</code> storage class, and to include calls to functions
+defined with the <code>constexpr</code> function specifier.</p>
+<div class="markdown-heading"><h4 class="heading-element">6.1.1 <code>constexpr</code> array element access</h4><a id="user-content-611-constexpr-array-element-access" class="anchor" aria-label="Permalink: 6.1.1 constexpr array element access" href="#611-constexpr-array-element-access"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>C23 allows objects of any type to be constexpr objects, but does not change the expression rules to
+necessarily make these useful outside of initialization contexts (which can use the <code>[]</code> and <code>-&gt;</code>
+operators in combination with &amp; to create an address constant, but not to read a value). This
+specification adds the ability to make use of the element values of array objects, which can be
+declared in C23 (and their values can even be copied as a group by assignment if they are members of
+a containing structure), but cannot be accessed within constant expressions.</p>
+<p>For the purpose of this specification, all kinds of constant expression may also make use of the
+subscript operator <code>[]</code>. Constant expressions may not make use of the <code>*</code> or <code>-&gt;</code> operators to access
+the value of an object, because the identity and therefore storage class of the object designated by
+such an expression is not necessarily traceable.</p>
+<p>The <code>[]</code> operator may be used with the added restriction that the “array” operand (the pointer-typed
+operand) must be the name of a constexpr object declared with complete array type, before parameter
+adjustment. This is the sole exception to the rule that otherwise prohibits the use of * to access
+the value of an object (<code>[]</code> is otherwise defined in terms of <code>*</code>). The index operand must be an
+integer constant expression and its value must be greater than or equal to zero, and less than the
+dimension of the array.</p>
+<p>Therefore, the <code>[]</code> operator must have either a (possibly-parenthesized) identifier as the leading
+postfix-expression, or an element access expression itself designating an array element of either a
+structure object or a containing array, or a generic selection selecting one of the previous forms,
+rather than a generalized address constant expression of pointer type.</p>
+<p>This is symmetrical with the relaxation on the use of the function call operator with a function
+name in the postfix position.</p>
+<div class="markdown-heading"><h4 class="heading-element">6.1.2 <code>constexpr</code> functions</h4><a id="user-content-612-constexpr-functions" class="anchor" aria-label="Permalink: 6.1.2 constexpr functions" href="#612-constexpr-functions"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>A function declared with the <code>constexpr</code> function specifier is subject to stricter restrictions than
+other C functions, taken from the quite restrictive set of rules used by C++11 (ignoring those rules
+that are not applicable to C). The function body may only contain:</p>
+<ul>
+<li>null statements (plain semicolons)</li>
+<li>
+<code>static_assert</code> declarations</li>
+<li>
+<code>typedef</code> declarations</li>
+<li>tag declarations (not in C++11)</li>
+<li>object definitions with the <code>constexpr</code> storage class (not in C++11)</li>
+</ul>
+<p>...in addition to exactly one return statement, which is not allowed to treat any lvalue as <em>modifiable</em>.
+The function must return a non-<code>void</code> value. The function may invoke itself recursively in a
+conditionally-evaluated expression branch (note that if this recursive invocation is <em>not</em> in a
+conditional branch, the function will definitely never halt). The return statement may be a <code>return goto</code>
+statement if supported by the implementation. (<code>return goto</code>'s support for the <em>CX</em> and <em>LX</em> expression
+classes is intended to enable this usage.)</p>
+<p>A constexpr function is implicitly also an inline function, allowing it to be defined in a header.
+All other considerations for the use of the C inline specifier apply in the same way to C constexpr
+functions (C++ has slightly different inline rules, which <em>do not</em> apply).</p>
+<p>An invocation of a constexpr function with arguments that are all themselves constant expressions is
+a constant expression. A constexpr function may also be called with non-constant arguments, and in
+that case behaves like any other function call; such a call is not a constant expression. The address
+of a constexpr function may be taken and used as any other function pointer can; this does not
+preserve the <code>constexpr</code> specifier, which is not part of the function’s type (in the same way that
+<code>inline</code> is not part of the type).</p>
+<p>All kinds of constant expression may therefore make use of the function call operator in addition to
+the other operators permitted by C23 in a constant context, with the added restriction that the call
+must be to the name of a defined constexpr function. Generalized function pointers cannot be invoked
+in a constant expression because the <code>constexpr</code> specifier is not preserved as part of a called
+function’s type. Therefore, the function call operator must have a (possibly-parenthesized, possibly
+generic-selected) identifier as the leading postfix-expression, rather than a generalized address
+constant expression of pointer-to-function type.</p>
+<p>This is symmetrical with the relaxation on the use of the <code>[]</code> operator with an array name in the
+postfix position.</p>
+<p>When the name of an array defined with the <code>constexpr</code> storage class is passed as an argument to a
+constexpr function, if (and only if) the corresponding parameter is declared with the type of an
+array of the same element and the same or smaller constant dimension (before adjustment), that
+parameter is treated as a constexpr array within the function return expression according to the
+rules in 4.1.1, and may be indexed by integer constant expressions that make use of the values of
+any other parameters.</p>
+<p>Further discussion of the rationale for adopting the C++11 ruleset (as far as relevant to C) can be
+found in WG14 document <a href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n2917.pdf" rel="nofollow">n2917</a>. Of note
+is that this ruleset does not require any interpreter semantics to be added to the C translator, as
+all value-uses are side-effect-free and all function calls can therefore be expanded essentially like
+macros, by direct, scope-aware, substitution of the result expression into the call site, to be
+evaluated using the existing constant evaluation engine required for C23.</p>
+<p>An implementation choosing to provide more fully-featured constexpr functions, as found in C++14 or
+later (mutable local state, loops, etc.), is therefore very strongly encouraged to also provide the
+user with portability warnings. See Clause 7 for the specification of such a feature set that builds
+directly upon the expression evaluator and aims to avoid such problems.</p>
+<div class="markdown-heading"><h3 class="heading-element">6.2 Detailed changes to ISO/IEC 9899:2024</h3><a id="user-content-62-detailed-changes-to-isoiec-98992024" class="anchor" aria-label="Permalink: 6.2 Detailed changes to ISO/IEC 9899:2024" href="#62-detailed-changes-to-isoiec-98992024"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Changes are relative to Working Draft <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3220.pdf" rel="nofollow">n3220</a>,
+the last public draft of C23 before release.</p>
+<p>The modifications are ordered according to the clauses of ISO/IEC 9899:2024 to which they refer. If
+a clause of ISO/IEC 9899:2024 is not mentioned, no changes to that clause are needed. New clauses
+are indicated with (NEW CLAUSE), however resulting changes in the existing numbering are not
+indicated; the clause number <em>mm.nn</em><em><strong>a</strong></em> of a new clause indicates that this clause follows
+immediately clause <em>mm.nn</em> at the same level. Bolded text within an existing clause is new text.</p>
+<p>Add two new bulleted entries to 5.2.4.1 “Translation limits”, with values matching those in
+<a href="https://open-std.org/jtc1/sc22/wg21/docs/papers/2020/n4868.pdf" rel="nofollow">C++20</a>:</p>
+<blockquote>
+<ul>
+<li>512 nested constexpr function invocations</li>
+<li>1048576 nested constant expressions within the evaluation of a single constant expression</li>
+</ul>
+</blockquote>
+<p>Modify 6.3.2.3 “Pointers”:</p>
+<p>Modify paragraph 3:</p>
+<blockquote>
+<p>An integer constant expression with the value 0, or such an expression cast to type <code>void *</code>, the
+predefined constant <code>nullptr</code>, <strong>or such an expression returned from a constexpr function,</strong> is
+called <em>a null pointer constant</em>.</p>
+</blockquote>
+<p>Add a forward reference:</p>
+<blockquote>
+<p>equality operators (6.5.9), <strong>function specifiers (6.7.4),</strong> integer types capable of holding
+object pointers (7.20.1.4)</p>
+</blockquote>
+<p>Modify 6.6 "Constant expressions":</p>
+<p>Paragraph 3, relax the constraint against function calls:</p>
+<blockquote>
+<p>Constant expressions shall not contain assignment, increment, decrement, or comma operators, except
+when they are contained within a subexpression that is not evaluated. <strong>If a function-call operator</strong>
+<strong>appears in an evaluated part of a constant expression, the postfix-expression designating the</strong>
+<strong>function to call shall consist only of the (possibly-parenthesized) identifier of a function</strong>
+<strong>declared with the <code>constexpr</code> function specifier, or a generic selection evaluating to such, and</strong>
+<strong>all argument expressions shall themselves be constant expressions. The function to call shall be</strong>
+<strong>defined in the translation unit before the evaluation of the outermost constant-expression</strong>
+<strong>containing the (possibly-nested) call.</strong></p>
+</blockquote>
+<p>Add a new sentence to paragraph 7 explaining that array elements can be constants:</p>
+<blockquote>
+<p>An expression accessing an element of an array using the subscript operator is a <em>named constant</em>
+if the pointer-typed operand is an identifier that was declared with the <code>constexpr</code> storage-class
+specifier and complete array type<sup>footnote)</sup>, and the subscript index is an integer
+constant expression greater than or equal to zero and less than the declared length of the array
+type.</p>
+<p>footnote) before any parameter type adjustment.</p>
+</blockquote>
+<p>Paragraph 8, include function calls returning integer values in the first sentence:</p>
+<blockquote>
+<p>An <em>integer constant expression</em><sup>117)</sup> shall have integer type and shall only have operands
+that are integer constants, named and compound literal constants of integer type, character constants,
+<code>sizeof</code> expressions whose results are integer constants, <code>alignof</code> expressions, and floating, named,
+or compound literal constants of arithmetic type, <strong>or calls to constexpr functions that return a</strong>
+<strong>value with integer type,</strong> that are the immediate operands of casts.</p>
+</blockquote>
+<p>Paragraph 10, include function calls in the first sentence:</p>
+<blockquote>
+<p>An <em>arithmetic constant expression</em> shall have arithmetic type and shall only have operands that
+are integer constants, floating constants, named or compound literal constants of arithmetic type,
+character constants, <code>sizeof</code> expressions whose results are integer constants, <code>alignof</code> expressions,
+<strong>and calls to constexpr functions that return a value with arithmetic type</strong>.</p>
+</blockquote>
+<p>Paragraph 12, modify dereferencing rules to allow member/element access:</p>
+<blockquote>
+<p>but the value of an object shall not be accessed by use of <strong>the <code>*</code> or <code>-&gt;</code> operators<sup>footnote1)</sup>.</strong>
+<strong>A value shall only be accessed by use of the subscript operator if its pointer-typed operand is</strong>
+<strong>an <em>address constant</em> designating a <code>constexpr</code> array with static storage duration<sup>footnote2)</sup>,</strong>
+<strong>or if it is a parameter of a constexpr function and the argument passed to that parameter itself</strong>
+<strong>such an array (possibly recursively).<sup>footnote3)</sup></strong></p>
+<p>footnote1) therefore a constexpr function may receive an <em>address constant</em> as an argument,
+but may not dereference it using <code>*</code>.</p>
+<p>footnote2) to designate a <code>constexpr</code> array, the array must have already been defined and
+initialized before the subscript operator expression is evaluated, because a <code>constexpr</code> object
+declaration is a definition; or be a parameter of a constexpr function declared with complete
+array type.</p>
+<p>footnote3) an address constant that is not the address of an array defined with the <code>constexpr</code>
+specifier can be passed to and returned from a constexpr function, but not subscripted with <code>[]</code>.</p>
+</blockquote>
+<p>Add a new paragraph after paragraph 12:</p>
+<blockquote>
+<p>An address constant that is returned from a constexpr function remains an address constant in the
+calling context.</p>
+</blockquote>
+<p>Add a new final paragraph after paragraph 17:</p>
+<blockquote>
+<p>If the evaluation of any subexpression produces undefined behavior, the entire containing expression
+is not a constant expression.</p>
+</blockquote>
+<p>Add a forward reference:</p>
+<blockquote>
+<p>array declarators (6.7.6.2), <strong>function specifiers (6.7.4),</strong> initialization (6.7.9).</p>
+</blockquote>
+<p>Modify 6.7.1 "Storage-class specifiers":</p>
+<p>Add one new paragraph after paragraph 5:</p>
+<blockquote>
+<p>The <code>constexpr</code> specifier is treated as a function specifier when applied to a function declaration.</p>
+</blockquote>
+<p>Add a forward reference:</p>
+<blockquote>
+<p>type definitions (6.7.8)<strong>, function specifiers (6.7.4)</strong>.</p>
+</blockquote>
+<p>Modify 6.7.5 "Function specifiers":</p>
+<p>Add a new subheading and paragraph after paragraph 1:</p>
+<blockquote>
+<p><strong>Description</strong></p>
+<p>A function declared with an <code>inline</code> function specifier is an <em>inline function</em>.
+A function declared with a <code>constexpr</code> function specifier is a <em>constexpr function</em>.</p>
+</blockquote>
+<p>Paragraph 1, add the <code>constexpr</code> specifier:</p>
+<blockquote>
+<p>function-specifier:<br>
+<code>inline</code><br>
+<code>_Noreturn</code><br>
+<code>constexpr</code></p>
+</blockquote>
+<p>Add five new paragraphs after paragraph 4:</p>
+<blockquote>
+<p>A constexpr function shall not have void return type.</p>
+<p>A constexpr function shall return a value, and shall not contain any statement except a single
+return statement with an expression, and zero or more:</p>
+<ul>
+<li>null statements</li>
+<li>static assertions</li>
+<li>typedef and tag declarations</li>
+<li>definitions of objects with the <code>constexpr</code> storage class</li>
+</ul>
+<p>Apart from parameters declared with an array type before parameter adjustment, which shall only use
+constant expressions and the identifiers of other parameters as subexpressions of the array size
+expression<sup>footnote1)</sup>, a constexpr function shall not contain any specification of a
+variably-modified type, including via the typeof operators, except within the operand of <code>sizeof</code>,
+<code>alignof</code> or the typeof operators <sup>footnote2)</sup>.</p>
+<p>footnote1) therefore a parameter declared with an array type can depend on the values of
+other parameters for its dimension, implying that for calls with constant arguments the declared
+size of the array parameter is statically known even if it depends on argument values.</p>
+<p>footnote2) therefore if a variably-modified type appears in the operand of a typeof operator,
+this typeof operator will ultimately appear within the operand of <code>sizeof</code> or <code>alignof</code>.</p>
+<p>The return statement expression in a constexpr function shall not evaluate the address of any
+object, except via the implicit conversion of an array expression to a pointer to its first element
+during value conversion. The expression shall not contain any subexpression that would require the
+parameter objects (if any) to be <em>modifiable lvalues</em> except within an unevaluated operand of the
+<code>sizeof</code>, <code>alignof</code> or typeof operators.</p>
+<p>If any declaration of a function has a <code>constexpr</code> specifier, then all of its declarations shall
+contain a <code>constexpr</code> specifier.</p>
+</blockquote>
+<p>Delete the first sentence of paragraph 6 (which has been moved to the top of the section).</p>
+<p>Add five new paragraphs after paragraph 8:</p>
+<blockquote>
+<p>A call to a constexpr function identifier with arguments that are all constant expressions is
+itself a constant expression of the same category as its return expression, and can be used in
+contexts such as static assertions or initialization of objects with static storage duration after
+it has been defined.</p>
+<p>When called with constant arguments, the result of a constexpr function that has an integer
+return type is an integer constant expression, and the result of a constexpr function that has a
+pointer return type is a null pointer constant if its value is a null pointer.</p>
+<p>An implementation may allow constexpr functions to return any additional categories of constant
+expression that it defines (6.6).</p>
+<p>A constexpr function does not modify any state, or observe any state outside of its own argument
+values. Any constexpr function implicitly fulfills the requirements of the <code>[[unsequenced]]</code> or
+<code>[[reproducible]]</code> attributes.</p>
+<p>A constexpr function is implicitly also an inline function.</p>
+</blockquote>
+<p><em>(DRAFT NOTE is this simplifying integer constant expressions too much? don't want it to be more
+restrictive than this)</em></p>
+<p>Add two NOTEs:</p>
+<blockquote>
+<p><strong>NOTE:</strong> a constexpr function may also be called with non-constant values or have its address
+taken, in which case it behaves like any other function. The type of the function is not affected
+by the <code>constexpr</code> specifier.</p>
+<p><strong>NOTE:</strong> the <code>constexpr</code> specifier may be applied to a forward definition, but a call to it is
+not a constant expression unless the definition is visible when the outermost constant-expression
+containing the (possibly-nested) call is evaluated.</p>
+</blockquote>
+<p>Add a Recommended Practice:</p>
+<blockquote>
+<p><strong>Recommended Practice</strong></p>
+<p>Implementations are encouraged to issue a diagnostic message when a constexpr function is called
+with constant arguments and the definition is not visible, as this is never a constant expression.</p>
+<p>Implementations are encouraged to issue a diagnostic if the declared size of an array parameter
+before adjustment does not match the actual size of the buffer passed as the argument.</p>
+</blockquote>
+<p>Add an example:</p>
+<blockquote>
+<p><strong>EXAMPLE 2</strong>  A constexpr function can be called as part of a constant expression from a call site
+appearing syntactically before its definition, so long as the originating call appears after the
+definition:</p>
+<pre><code>constexpr int inner (int x);
+
+constexpr int outer (int x) {
+  return inner (x + 1); // 
+}
+static_assert (outer (3) == 6); // not a constant expression
+                                // because inner is not yet defined
+
+constexpr int inner (int x) {
+  return x + 2;
+}
+static_assert (outer (3) == 6); // valid constant expression, because
+                                // inner is defined before use by outer
+</code></pre>
+</blockquote>
+<p>Add a forward reference:</p>
+<blockquote>
+<p>Forward references: function definitions (6.9.1), Attributes (6.7.12).</p>
+</blockquote>
+<p>No modifications are made to the Standard Library.</p>
+<div class="markdown-heading"><h2 class="heading-element">7. Extended constexpr functions</h2><a id="user-content-7-extended-constexpr-functions" class="anchor" aria-label="Permalink: 7. Extended constexpr functions" href="#7-extended-constexpr-functions"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<div class="markdown-heading"><h3 class="heading-element">Introduction</h3><a id="user-content-introduction-2" class="anchor" aria-label="Permalink: Introduction" href="#introduction-2"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>After C++11 introduced heavily-restricted constexpr functions similar to those specified by Clause 6,
+users immediately started asking for more flexibility in what could be expressed. Particularly users
+without a functional programming background disliked the restriction to recursion and ternary
+expressions for implementing anything with any kind of looping behavior.</p>
+<p><a href="https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3797.pdf" rel="nofollow">C++14</a> therefore relaxed the
+restrictions on constexpr functions to allow for more kinds of local statefulness, making statements
+other than <code>return</code> and declarations usable within the definition. Such functions still have no
+external side effects, but being able to assign to local variables does simplify expressing loops
+and related constructs.</p>
+<p>This request was immediately made by members of the C Community as well, even before the first draft
+of TS 25007 was published. Although the original intent was not to explore this path for the Standard,
+the overwhelming response from the Community means that it cannot be ignored either. Therefore,
+additional extensions to constexpr function definitions are specified n a second separate clause so
+that the Community has greater flexibility in what it chooses to adopt.</p>
+<p>The original reason for staying strictly within the C++11 rule set was to ensure that constexpr
+functions could always be evaluated by simple inline substitution. With no assignment expressions
+and no statements, the return expression can be inlined directly into a caller context and any
+parameters have their values simply copied into the inlined expression. This strategy means that no
+additional interpreter machinery (except for 5-10 lines to inline the expression) is needed in order
+to support basic constexpr functions beyond the existing evaluator already demanded by C23 constant
+expression evaluation (and the versions of the language before it).</p>
+<p>There is great concern in the Committee that the Standard should <em>never</em> require implementers to
+have to ship a stateful interpreter VM as part of a compiler offering, as this is a high burden on
+lightweight implementations.</p>
+<p>In order to support this stance, the following extended constexpr function functionality is defined
+entirely in terms of rewrites to the expression-oriented forms permitted by Clause 6. Every statement
+provided by Clause 7 can be rewritten and inlined into a single-<code>return</code> function form, in some
+cases extracting intermediate steps into helper constexpr function bodies.</p>
+<p>This enables an implementation to provide statement support without providing an interpreter. This
+also provides a better definition of the semantics of each statement by ensuring every form is
+expressed in terms of expression evaluation.</p>
+<p>An implementation that does wish to support local statements inside constexpr functions is in no way
+required to implement the functionality in this way, so long as the end result has identical
+semantics: if adding a statement-oriented interpreter is an easier implementation strategy, that is
+a decision for the tool maintainer. (Actually evaluating the rewritten forms as-specified is likely
+to be extremely inefficient.)</p>
+<div class="markdown-heading"><h3 class="heading-element">7.1 Informative semantic description</h3><a id="user-content-71-informative-semantic-description" class="anchor" aria-label="Permalink: 7.1 Informative semantic description" href="#71-informative-semantic-description"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p><em>(DRAFT NOTE this wording should probably go into an Annex if adopted by the IS)</em></p>
+<p>This clause extends the definition of constexpr functions to allow the following statement kinds to
+appear within the body of such a function, in addition to constant/type declarations and the single
+return statement allowed by Clause 6:</p>
+<ul>
+<li>compound statement, null statement</li>
+<li>local variable declaration with initialization</li>
+<li>expression statement, where the top-level operator is an assignment or increment operator</li>
+<li>
+<code>if</code> statement</li>
+<li>
+<code>for</code>, <code>while</code> and <code>do</code> iteration statements</li>
+<li>
+<code>break</code> and <code>continue</code> statements</li>
+<li><code>goto</code></li>
+<li>
+<code>switch</code> statement</li>
+</ul>
+<p>The semantics of each of these is defined in terms of rewrites to simpler statement forms, eventually
+reaching a fully-rewritten form consisting entirely of calls to function definitions whose bodies
+satisfy the basic constraints expressed in Clause 6, of a single return statement accompanied by
+translation-time declarations only. The order of clauses aims to present more complex rewrites later
+in the sequence.</p>
+<p>In order to simplify the description of the rewrites, the "functional update" feature from Clause 4.2
+and the "function literal" feature from Clause 4.3 are used as though they were built-in language
+features. These can in turn be rewritten and eliminated according to the descriptions provided in
+Clause 4.</p>
+<p>This is a <em>continuation</em>-oriented approach.
+For all statements other than jump statements, the <em>continuation</em> of the current statement is the
+lexically-subsequent <em>block-item</em> of the containing statement's <em>block-item-list</em>; or if it is the
+last item in a <em>block-item-list</em>, the <em>continuation</em> is the same as the <em>continuation</em> of the
+enclosing statement.</p>
+<p>The declarations already permitted by Clause 6 do not form the <em>continuation</em> of any statement
+(as they do not form part of regular control flow), and are ignored for the purposes of identifying
+the next <em>block-item</em>, as are labels.</p>
+<p>A return statement has no local continuation and ends execution of the containing function.
+Every other declaration or statement shall have a non-empty continuation. A function definition's
+outermost compound statement has no continuation and therefore ends with a return statement.</p>
+<p>Rewriting begins with the outermost compound statement forming the body of the function definition.
+Each statement kind defines the order in which its subsequent and nested statements are rewritten.
+The end result shall be a single return statement. During rewriting, because the order proceeds
+in reverse, the continuation is always already a return statement.</p>
+<p>The scope of identifiers introduced by declarations as used in expressions is not affected by
+rewriting unless otherwise specified (i.e. if a typedef, constant, or possibly-predefined identifier
+is used in an expression, it will continue to be valid in that expression with its original meaning,
+regardless of how rewriting moves the expression around).</p>
+<div class="markdown-heading"><h4 class="heading-element">7.1.0 Compound statements, null statements, and labels</h4><a id="user-content-710-compound-statements-null-statements-and-labels" class="anchor" aria-label="Permalink: 7.1.0 Compound statements, null statements, and labels" href="#710-compound-statements-null-statements-and-labels"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p><strong>Feature:</strong> compound and null statements provide structure for imperative programming constructs
+and to create new explicit lexical scopes. Labels name a statement for use as a jump target.</p>
+<p><strong>Description:</strong> The null statement is discarded.</p>
+<p>A label is not a statement and does not have a continuation of its own. Labels may be used in the
+same ways as in the core language.</p>
+<p>After rewriting has converted any given statement to a <code>return</code> statement, any label naming the
+original statement names the rewritten <code>return</code> statement. As per 7.1 this does not affect the
+scope or visibility of the label (although it may exist in a different generated function, it is
+still the same jump target).</p>
+<p>The compound statement is rewritten by rewriting the items in its <em>block-item-list</em> in reverse
+lexical order (starting with the last <em>block-item</em>), so that the continuation of each item has
+already been rewritten when it is being handled.</p>
+<p>After this process is complete, there will be at most one <em>block-item</em> remaining, which replaces the
+compound statement within the containing statement, or forms the return statement of a function
+definition's body.</p>
+<p>As in the core language, a compound statement introduces a new explicit lexical scope.</p>
+<div class="markdown-heading"><h4 class="heading-element">7.1.1 Local variable declaration</h4><a id="user-content-711-local-variable-declaration" class="anchor" aria-label="Permalink: 7.1.1 Local variable declaration" href="#711-local-variable-declaration"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p><strong>Feature:</strong> objects with block scope and automatic storage duration may be declared in a constexpr
+function definition.</p>
+<p><strong>Description:</strong> all block scope objects within a constexpr function are considered <em>underspecified</em>.
+This prevents them from relying on any indeterminate values and requires every object to be initialized.
+The implementation is encouraged to define declarations that declare more than one identifier as
+supported where they are not already <em>underspecified</em> according to C23.</p>
+<p>A local variable adds a new identifier binding for a value into the subsequent scope. Each declaration
+marks the beginning of a new scope, regardless of block depth (this is the same as in Standard C -
+scopes extend "downward" lexically). Rewriting can therefore always insert a new implicit compound
+level around the start of a declaration continuing until the end of the block scope in which the
+declaration appears syntactically, which forms the core mechanism.</p>
+<p>Since a parameter also introduces an identifier binding, any declaration with automatic storage
+duration can be rewritten to be expressed in terms of parameters to the continuation, extracted
+into a new function body:</p>
+<pre><code>constexpr int foo1 (int x, int y) {
+    int z = x + 1, w = x * y;
+    int u = y * z, v = u + 1;  // u is complete at the comma
+    
+    return (u + v + w) - (x + y);
+}
+
+// is exactly equivalent to
+
+constexpr int foo2 (int x, int y) {
+    // we can get away with rewriting two declarations into one call
+    // here only because they do not depend on each other
+    return foo2_helper1 (x, y
+                       , /*z*/ x + 1, /*w*/ x * y);
+}
+
+constexpr int foo2_helper1 (int x, int y  // (assume forward declarations were inserted)
+                          , int z, int w) {
+    // more generally, each declaration needs a new function
+    return foo2_helper2 (x, y, z, w     // because subsequent objects may
+                       , /*u*/ y * z);  // depend on it, like v does on u
+}
+constexpr int foo2_helper2 (int x, int y
+                          , int z, int w
+                          , int u) {
+    return foo2_helper3 (x, y, z, w, u
+                       , /*v*/ u + 1);
+}
+constexpr int foo2_helper3 (int x, int y
+                          , int z, int w
+                          , int u
+                          , int v) {
+    // finally everything is named and in scope
+    return (u + v + w) - (x + y);
+}
+</code></pre>
+<p>Or, henceforth using function literal notation, for brevity and readability:</p>
+<pre><code>constexpr int foo3 (int x, int y) {
+    return [] (int z) {
+        return [] (int w) {
+            return [] (int u) {
+                return [] (int v) {
+                    return (u + v + w) - (x + y);
+                } (u + 1);
+            } (y * z);
+        } (x * y);
+    } (x + 1);
+}
+</code></pre>
+<p>A local declaration therefore rewrites as if by extracting its continuation to a new function body,
+which is parameterized with the new object's identifier and called with the initializing value.</p>
+<p>A declaration that is the last <em>block-item</em> in the <em>block-item-list</em> is discarded and replaced by
+its continuation.</p>
+<p>A declaration that defines an array is rewritten as-if it defines an object of an appropriate "box"
+type, and all subsequent expressions making use of the declared identifier are rewritten to access
+the "box" member:</p>
+<pre><code>int arr[] = { 1, 2, 3 };
+return arr[1] + arr[2];
+
+// rewrites as
+
+struct ArrBox { int box[3]; };
+return [] (ArrBox arr) {
+    return arr.box[1] + arr.box[2];
+} ((struct ArrBox){ .box = { 1, 2, 3 } });
+
+// and NOT as
+
+return [] (int arr[3]) { // &lt;-- this is a pointer after adjustment
+    return arr[1] + arr[2];
+} ((int[3]){ 1, 2, 3 }); // &lt;-- this is implicitly converted 
+</code></pre>
+<p>Therefore rewriting does not introduce array-to-pointer adjustment.</p>
+<div class="markdown-heading"><h4 class="heading-element">7.1.2 Modifying assignment</h4><a id="user-content-712-modifying-assignment" class="anchor" aria-label="Permalink: 7.1.2 Modifying assignment" href="#712-modifying-assignment"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p><strong>Feature:</strong> a modifiable object or sub-object defined with automatic storage duration may be updated
+by means of an assignment, increment, or decrement operator.</p>
+<p><strong>Description:</strong> a statement may be an expression statement where the top-level operator, ignoring
+any parenthesization and after generic selection, is an assignment, increment, or decrement operator.
+These operators may not appear in subexpression operands nested within the expression, except in the
+unevaluated operand of <code>sizeof</code>, <code>alignof</code>, or the typeof operators and any discarded generic
+associations.</p>
+<p>Because there is no nested appearance, no semantic distinction is made between prefix and postfix
+increment or decrement operators.</p>
+<p>The increment operator is treated as though it is an assignment operator expressing <code>E += 1</code>.
+The decrement operator is treated as though it is an assignment operator expressing <code>E -= 1</code>.</p>
+<p>A compound assignment is then treated as though it was written as a simple assignment:</p>
+<pre><code>L @= E
+// unconditionally becomes
+L = L @ E
+</code></pre>
+<p><strong>NOTE</strong> Because there are no internal or external side effects allowed in <code>L</code>, there is no observable
+difference in repeating the evaluation.</p>
+<p>The lvalue expression <code>L</code> shall designate an object defined in the containing function with automatic
+storage duration, or a sub-object of such an object accessed by means of the <code>.</code> or <code>[]</code> operators.
+The lvalue expression <code>L</code> shall not designate an element of an array passed as a pointer parameter
+to the containing function (which is not an object defined locally), or any sub-object of such an
+element.</p>
+<p>When the lvalue expression <code>L</code>, ignoring parenthesization and after generic selection, is a
+<em>postfix-expression</em> designating a member or element of an object, it is rewritten to use the
+equivalent functional update form, by removing all postfix-expressions from the lvalue and using
+them directly as the sub-object designator:</p>
+<pre><code>obj.a1[expr].m2 = X;
+
+// is rewritten as
+
+obj = (typeof (obj)){ obj; .a1[expr].m2 = X };
+</code></pre>
+<p>The expression is now in a form <code>ID = expr</code> where <code>ID</code> is the identifier designating a local object.
+This is rewritten into a declaration of a new identifier of the same type, and all references to the
+identifier <code>ID</code> in the continuation are replaced by references to the new identifier:</p>
+<pre><code>L = expr;
+... (L + 1, ...
+
+// is rewritten as
+
+typeof (L) L@1 = expr;
+... (L@1 + 1, ...
+</code></pre>
+<p>The statement is then finally re-examined for rewriting as a declaration.</p>
+<p><strong>NOTE</strong> whole-object copying does not change the semantics of subsequent expressions as the object
+does not have its address taken with <code>&amp;</code>.</p>
+<div class="markdown-heading"><h4 class="heading-element">7.1.3 <code>if</code> statement</h4><a id="user-content-713-if-statement" class="anchor" aria-label="Permalink: 7.1.3 if statement" href="#713-if-statement"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p><strong>Feature:</strong> two statements may be selected between by a controlling expression, evaluating only one
+sequence of sub-statements.</p>
+<p><strong>Description:</strong> any <code>if</code> statement is informally equivalent to a conditional expression that selects
+the result of two function calls, each encapsulating the statement for the respective branch:</p>
+<pre><code>if (x &gt; 10)
+    STMT1;
+else
+    STMT2;
+CONT;
+
+// is exactly equivalent to
+
+x &gt; 10 ? [] (int x) { STMT1; } (x)
+       : [] (int x) { STMT1; } (x);
+CONT;
+</code></pre>
+<p>This forms the basis of the rewrite strategy.</p>
+<p>An <code>if</code> statement is therefore rewritten by moving a copy of its continuation to the end of each of
+its <em>secondary-blocks</em>:</p>
+<pre><code>if (COND)
+  STMT1;
+else
+  STMT2;
+CONT;
+
+// is rewritten as
+
+if (COND) {
+    STMT1;
+    CONT;
+} else {
+    STMT2;
+    CONT;
+}
+</code></pre>
+<p>Both <em>secondary-blocks</em> are then rewritten with their new continuation, and each encapsulated in a
+function body parameterized with the values of the objects in scope (as-if to redeclare them using
+the rules from 7.1.1), which are finally used as the second and third operands of a conditional
+expression forming the operand expression to <code>return</code>:</p>
+<pre><code>// and therefore as
+
+return COND ? [] (Local l) {
+               // (after local rewriting to thread STMT1 into CONT)
+               return [STMT1 with CONT];
+              } (l)
+            : [] (Local l) {
+               return [STMT2 with CONT];
+              } (l);
+</code></pre>
+<p>An <code>if</code> statement with only one branch creates an implicit empty <em>secondary-block</em> for the <code>else</code>
+branch before appending to it:</p>
+<pre><code>if (COND)
+  STMT1;
+CONT;
+
+// is rewritten as
+
+if (COND) {
+    STMT1;
+    CONT;
+} else {
+    CONT;
+}
+
+// and therefore as
+
+return COND ? [] (Local l) {
+               return [STMT1 with CONT];
+              } (l)
+            : [] (Local l) {
+               return CONT;
+              } (l);
+</code></pre>
+<p><strong>NOTE</strong> an <code>if</code> statement rewrites to a <code>return</code> because its continuation already encapsulates
+evaluation of the remainder of the function body.</p>
+<p><strong>NOTE</strong> discarding one branch when the condition is a constant is a valid optimization, but has
+no effect on the evaluation semantics.</p>
+<div class="markdown-heading"><h4 class="heading-element">7.1.4 Iteration statements</h4><a id="user-content-714-iteration-statements" class="anchor" aria-label="Permalink: 7.1.4 Iteration statements" href="#714-iteration-statements"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p><strong>Feature:</strong> a statement may be repeated zero or more times for its local side effects before
+continuing execution of the containing block.</p>
+<p><strong>Description:</strong> any loop can be rewritten as a recursive function that selects between returning
+immediately or re-entering itself.</p>
+<p>A <code>while</code> statement is rewritten as a function encapsulating an <code>if</code> statement that selects between
+the <code>while</code> statement's continuation, and the loop body statement with a recursive call to the
+generated function added as its <em>generated local continuation</em>:</p>
+<pre><code>STMT1;
+while (x &lt; 10)
+  STMT2;
+CONT;
+
+// is rewritten as
+
+STMT1; // executed once, not part of the recursion
+
+return [] (int x) {       // &lt;-- recursion jumps to here
+    if (!(x &lt; 10)) {      // not-branch first
+        [return] CONT;    // (CONT is already a return)
+    } else {
+        STMT2;
+        return _Self (x); // local continuation of body
+    }
+} (x);
+</code></pre>
+<p><strong>NOTE</strong> The rewrite rules for <code>if</code> will implicitly place all subsequent statements into the exit
+branch via the continuation.</p>
+<p>The body of the added encapsulating function is then re-examined for rewriting.</p>
+<p>A <code>do</code> statement is rewritten as a function encapsulating the loop body, followed by an <code>if</code> statement
+that selects between the <code>do</code> statement's continuation, and a recursive call to the generated function
+as the <em>generated local continuation</em>:</p>
+<pre><code>STMT1;
+do
+  STMT2;
+while (x &lt; 10);
+CONT;
+
+// is rewritten as
+
+STMT1; // executed once, not part of the recursion
+
+return [] (int x) {       // &lt;-- recursion jumps to here
+    STMT2;
+
+    if (!(x &lt; 10)) {      // not-branch first
+        [return] CONT;    // (CONT is already a return)
+    } else {
+        return _Self (x); // repeat loop
+    }
+} (x);
+</code></pre>
+<p>The body of the added encapsulating function is then re-examined for rewriting.</p>
+<p>A <code>for</code> statement is rewritten as a <code>while</code> loop, extracting <em>for-clause-1</em> to a new <em>block-item</em>
+at the same level immediately preceding the generated <code>while</code> loop; moving <em>for-clause-3</em> to a new
+<em>block-item</em> placed at the end of a generated compound statement containing the body statement; and
+using <em>for-clause-2</em> as the controlling expression of the generated <code>while</code> loop.</p>
+<pre><code>STMT1;
+for (CL1; CL2; CL3)
+  STMT2;
+CONT;
+
+// is rewritten as
+
+STMT1;
+CL1;
+while (CL2) {
+    STMT2;
+    CL3;
+}
+CONT;
+</code></pre>
+<p>The body of the generated <code>while</code> loop is then re-examined for rewriting. As per 7.1, the
+scope of any identifiers introduced in the <code>for</code>-clauses shall not be affected by this rewrite.</p>
+<p><strong>NOTE</strong> it is the implementation's responsibility to either rename identifiers or bind them to an
+entity before the rewriting step, so that scope is not affected.</p>
+<pre><code>// ...ultimately producing a result equivalent to
+
+STMT1; // executed once, not part of the recursion
+CL1;   // also only once
+
+return [] (Locals ...ls) { // &lt;-- recursion jumps to here
+    if (!(CL2)) {          // not-branch first
+        [return] CONT;     // (CONT is already a return)
+    } else {
+        STMT2;
+        CL3;
+        return _Self (ls); // repeat loop
+    }
+} (...);
+</code></pre>
+<p>In all three cases the resultant encapsulating function is parameterized by all objects in scope
+that are used in the statement and its continuation (including any objects declared by <code>CL1</code>).</p>
+<div class="markdown-heading"><h4 class="heading-element">7.1.5 <code>return</code>
+</h4><a id="user-content-715-return" class="anchor" aria-label="Permalink: 7.1.5 return" href="#715-return"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p><strong>Feature:</strong> terminate execution of the function and produce its final result value.</p>
+<p><strong>Description::</strong> a return statement has no local continuation.</p>
+<p>Correspondingly, a continuation will be a return statement building up the exit value from the
+containing function.</p>
+<p>When a return statement appears in a position that implies that a continuation is appended to it,
+the continuation is discarded:</p>
+<pre><code>if (COND) {
+    return V;
+}
+CONT;
+
+// would normally be rewritten as
+
+if (COND) {
+    return V;
+    CONT; // &lt;-- but this is discarded
+} else {
+    CONT;
+}
+
+// so instead:
+
+if (COND) {
+    return V;
+} else {
+    CONT;
+}
+</code></pre>
+<p>No rewrite operations are applied to the return statement itself.</p>
+<div class="markdown-heading"><h4 class="heading-element">7.1.6 <code>break</code> statement</h4><a id="user-content-716-break-statement" class="anchor" aria-label="Permalink: 7.1.6 break statement" href="#716-break-statement"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p><strong>Feature:</strong> terminate execution of a loop or <code>switch</code> and move to the next statement.</p>
+<p><strong>Description:</strong> a <code>break</code> statement is rewritten by discarding it and replacing it with a copy of
+the continuation of its associated loop or selection statement. The associated statement is the one
+identified by the description of the <code>break</code> statement in C23 section 6.8.7.4.</p>
+<pre><code>while (COND1) {
+    STMT1;
+    if (COND2)
+        break;
+}
+CONT;
+
+// is rewritten equivalently to
+
+while (COND1) {
+    STMT1;
+    if (COND2)
+        CONT;
+}
+CONT;
+
+// and then rewritten (per 7.1.3) as
+
+return [] (Locals ...ls) {
+    if (!(COND1) {
+        CONT;
+    } else {
+        STMT1;
+        if (COND2)  // this will be rewritten in a subsequent step
+            CONT;
+        return _Self (x);
+    }
+} (x);
+</code></pre>
+<p>The continuation has already been rewritten by this point.</p>
+<p>Any existing continuation that would otherwise apply to the <code>break</code> statement is discarded:</p>
+<pre><code>while (COND) {
+    STMT1;
+    break;
+    STMT2; // inaccessible
+}
+CONT;
+
+// is rewritten equivalently to
+
+while (COND) {
+    STMT1;
+    CONT;
+    // STMT2 discarded
+}
+CONT;
+</code></pre>
+<div class="markdown-heading"><h4 class="heading-element">7.1.7 <code>continue</code> statement</h4><a id="user-content-717-continue-statement" class="anchor" aria-label="Permalink: 7.1.7 continue statement" href="#717-continue-statement"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p><strong>Feature:</strong> terminate execution of one iteration of a loop and move on to the next iteration.</p>
+<p><strong>Description:</strong> a <code>continue</code> statement is rewritten by discarding it and replacing it with a copy
+of the <em>generated local continuation</em> for the body of its associated loop or selection statement.
+The associated statement is the one identified by the description of the <code>continue</code> statement in
+C23 section 6.8.7.3.</p>
+<p><strong>NOTE</strong> the generated local continuation is defined in 7.1.4 as the continuation inserted during
+rewriting of the loop, as <code>return _Self ( ...</code>.</p>
+<pre><code>while (COND1) {
+    STMT1;
+    if (COND2)
+        continue;
+    STMT2;
+}
+CONT;
+
+// is rewritten (per 7.1.3) as
+
+return [] (Locals ...ls) {
+    if (!(COND1) {
+        CONT;
+    } else {
+        STMT1;
+        if (COND2)  // this will be rewritten in a subsequent step
+            return _Self (x);
+        STMT2;
+        return _Self (x);
+    }
+} (x);
+</code></pre>
+<p>Any existing continuation that would otherwise apply to the <code>continue</code> statement is discarded.</p>
+<div class="markdown-heading"><h4 class="heading-element">7.1.7 <code>goto</code> statement</h4><a id="user-content-717-goto-statement" class="anchor" aria-label="Permalink: 7.1.7 goto statement" href="#717-goto-statement"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p><strong>Feature:</strong> unconditional jump to a labelled statement.</p>
+<p><strong>Description:</strong> the <code>goto</code> statement shall jump to a statement that exists within the continuation
+of its immediately enclosing statement, as defined by 7.1 (therefore, not including statements only
+reachable through the <em>generated local continuation</em> of a loop body), or within the continuation
+that would be the <code>goto</code> statement's continuation if it was not a jump statement.</p>
+<p><strong>NOTE</strong> this means that <code>goto</code> does not describe a "backwards jump".</p>
+<p>The <code>goto</code> statement is rewritten by discarding it and replacing it with a copy of the continuation
+named by the label. The named continuation has already been rewritten by this point.</p>
+<pre><code>void foo (int n) {
+    if (n)
+        goto skip;
+    CONT1;
+skip:
+    CONT2;
+}
+
+// is rewritten as
+
+void foo (int n) {
+    if (n)         // (mid-process of rewriting the if)
+        CONT2;     // this already leads to a final return
+    CONT1;
+    CONT2;
+}
+</code></pre>
+<p>Any existing continuation that would otherwise apply to the <code>goto</code> statement is discarded.</p>
+<div class="markdown-heading"><h4 class="heading-element">7.1.9 <code>switch</code> statement</h4><a id="user-content-719-switch-statement" class="anchor" aria-label="Permalink: 7.1.9 switch statement" href="#719-switch-statement"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p><strong>Feature:</strong> jump to a labelled nested statement depending on the value of a controlling expression.</p>
+<p><strong>Description:</strong> The <code>switch</code> statement is rewritten as follows:</p>
+<p>First, the <em>secondary-block</em> is rewritten.</p>
+<p>Each <code>case</code> and <code>default</code> label within the <em>secondary-block</em> and associated with the <code>switch</code> per
+the description in C23 section 6.8.5.3 is then identified and replaced by a generated named
+label.</p>
+<p>The list of <code>case</code> and <code>default</code> statements is used to build an equivalent <code>if</code> statement:</p>
+<pre><code>switch (EXPR) {
+case 1:
+    STMT1;
+case 2:
+    STMT2;
+default:
+    STMT3;
+case 5:
+    STMT4;
+}
+
+// is rewritten as
+
+if      ((EXPR) == 1) goto @case_1;   // goes to STMT1
+else if ((EXPR) == 2) goto @case_2;   // goes to STMT2
+else if ((EXPR) == 5) goto @case_5;   // goes to STMT4
+else                  goto @default;  // goes to STMT3
+</code></pre>
+<p>The <code>switch</code> statement is removed and replaced by this <code>if</code> statement, which is then is then
+re-examined for rewriting.</p>
+<p><strong>NOTE</strong> the rewritten statements within the discarded <code>switch</code> will be selected to replace the
+<code>goto</code> statements in a subsequent step, so they are not completely discarded.</p>
+<p><strong>NOTE</strong> per 7.1 the label targets remain valid and identify continuations to replace the added
+<code>goto</code> statements, even though they are not present in the statement tree mid-rewrite.</p>
+<p>If there is no <code>default</code> label associated with the <code>switch</code>, an <code>else</code> branch is not added to the
+generated <code>if</code>:</p>
+<pre><code>switch (EXPR) {
+case 1:
+    STMT1;
+case 2:
+    STMT2;
+case 5:
+    STMT3;
+}
+
+// is rewritten as
+
+if      ((EXPR) == 1) goto @case_1;   // goes to STMT1
+else if ((EXPR) == 2) goto @case_2;   // goes to STMT2
+else if ((EXPR) == 5) goto @case_5;   // goes to STMT3
+</code></pre>
+<p>If there are no <code>case</code> labels and only a <code>default</code> label associated with the <code>switch</code>, the <code>if</code> is
+not generated and the single <code>goto</code> for the <code>default</code> label replaces it:</p>
+<pre><code>switch (EXPR) {
+    struct SomeTag { ... };
+default:
+    STMT1;
+}
+
+// is rewritten as
+
+goto @default;  // SomeTag is defined to still be in scope in the continuation
+</code></pre>
+<p>If there are no <code>case</code> or <code>default</code> labels associated with the <code>switch</code>, it is discarded without any
+replacement.</p>
+<div class="markdown-heading"><h3 class="heading-element">7.2 Detailed changes to ISO/IEC 9899:2024 plus Clause 6</h3><a id="user-content-72-detailed-changes-to-isoiec-98992024-plus-clause-6" class="anchor" aria-label="Permalink: 7.2 Detailed changes to ISO/IEC 9899:2024 plus Clause 6" href="#72-detailed-changes-to-isoiec-98992024-plus-clause-6"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Changes are relative to Working Draft <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3220.pdf" rel="nofollow">n3220</a>,
+the last public draft of C23 before release.</p>
+<p>The modifications are ordered according to the clauses of ISO/IEC 9899:2024 to which they refer. If
+a clause of ISO/IEC 9899:2024 is not mentioned, no changes to that clause are needed. New clauses
+are indicated with (NEW CLAUSE), however resulting changes in the existing numbering are not
+indicated; the clause number <em>mm.nn</em><em><strong>a</strong></em> of a new clause indicates that this clause follows
+immediately clause <em>mm.nn</em> at the same level. Bolded text within an existing clause is new text.</p>
+<p>These changes assume the changes present in 6.2 have been applied.</p>
+<p>Modify 6.7.5 "Function specifiers":</p>
+<p><strong>Instead of the change specified in 6.2</strong> that adds five new paragraphs after paragraph 4,
+add nine new paragraphs after paragraph 4:</p>
+<blockquote>
+<p>A constexpr function shall not have void return type.</p>
+<p>A constexpr function shall return a value.
+<em>(DRAFT NOTE do not think wording is needed here to ensure every path returns)</em></p>
+<p><em>(if the <code>defer</code> statement has been implemented)</em>
+A constexpr function shall not register any deferred operations to be
+executed on exit from any scope within its definition.</p>
+<p>Apart from parameters declared with an array type before parameter adjustment, which shall only use
+constant expressions and the identifiers of other parameters as subexpressions of the array size
+expression<sup>footnote1)</sup>, a constexpr function shall not contain any specification of a
+variably-modified type, including via the typeof operators, except within the operand of <code>sizeof</code>,
+<code>alignof</code> or the typeof operators <sup>footnote2)</sup>.</p>
+<p>footnote1) therefore a parameter declared with an array type can depend on the values of
+other parameters for its dimension, implying that for calls with constant arguments the declared
+size of the array parameter is statically known even if it depends on argument values.</p>
+<p>footnote2) therefore if a variably-modified type appears in the operand of a typeof operator,
+this typeof operator will ultimately appear within the operand of <code>sizeof</code> or <code>alignof</code>.</p>
+<p>No expression in a constexpr function shall evaluate the address of any object, except via the
+implicit conversion of an array expression to a pointer to its first element during value conversion.
+No expression within the definition of a constexpr function shall dereference any pointer with the
+unary <code>*</code> operator, except within an unevaluated operand of the <code>sizeof</code>, <code>alignof</code> or typeof
+operators.</p>
+<p>If the definition of a constexpr function contains a <code>goto</code> statement, the label named by the
+identifier shall not appear before the <code>goto</code> statement within the function definition.</p>
+<p>No expression within the definition of a constexpr function shall contain any subexpression that
+would require any identifiers appearing as operands to be <em>modifiable lvalues</em>, except within an
+unevaluated operand of the <code>sizeof</code>, <code>alignof</code> or typeof operators; or as the left-hand operand
+of an assignment expression, increment, or decrement, that is (ignoring parentheses and generic
+selection) the top-level operator of an expression statement.</p>
+<p>Within an assignment, increment, or decrement expression, the lvalue operand shall designate an
+object defined in the containing function with automatic storage duration, or a sub-object of such
+an object accessed by means of the <code>.</code> or <code>[]</code> operators. The lvalue operand shall not designate
+an element of an array passed as a pointer parameter to the containing function, or any sub-object
+of such an element.</p>
+<p>If any declaration of a function has a <code>constexpr</code> specifier, then all of its declarations shall
+contain a <code>constexpr</code> specifier.</p>
+</blockquote>
+</article></body></html>

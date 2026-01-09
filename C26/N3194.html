@@ -1,0 +1,1415 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>@font-face {
+  font-family: octicons-link;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+body {
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+    color:#333;
+    background:#fff;
+}
+
+body .markdown-body {
+    padding: 45px;
+    word-wrap: break-word;
+}
+
+.markdown-body .octicon-link:before {
+  font: normal normal normal 16px/1 octicons-link;
+  display: inline-block;
+  text-decoration: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  content: '\f05c';
+  vertical-align: middle;
+}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #1b1f23;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #24292e;
+  line-height: 1.5;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .pl-c {
+  color: #6a737d;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #005cc5;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #6f42c1;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #24292e;
+}
+
+.markdown-body .pl-ent {
+  color: #22863a;
+}
+
+.markdown-body .pl-k {
+  color: #d73a49;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #032f62;
+}
+
+.markdown-body .pl-smw,
+.markdown-body .pl-v {
+  color: #e36209;
+}
+
+.markdown-body .pl-bu {
+  color: #b31d28;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b31d28;
+  color: #fafbfc;
+}
+
+.markdown-body .pl-c2 {
+  background-color: #d73a49;
+  color: #fafbfc;
+}
+
+.markdown-body .pl-c2:before {
+  content: "^M";
+}
+
+.markdown-body .pl-sr .pl-cce {
+  color: #22863a;
+  font-weight: 700;
+}
+
+.markdown-body .pl-ml {
+  color: #735c0f;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  color: #005cc5;
+  font-weight: 700;
+}
+
+.markdown-body .pl-mi {
+  color: #24292e;
+  font-style: italic;
+}
+
+.markdown-body .pl-mb {
+  color: #24292e;
+  font-weight: 700;
+}
+
+.markdown-body .pl-md {
+  background-color: #ffeef0;
+  color: #b31d28;
+}
+
+.markdown-body .pl-mi1 {
+  background-color: #f0fff4;
+  color: #22863a;
+}
+
+.markdown-body .pl-mc {
+  background-color: #ffebda;
+  color: #e36209;
+}
+
+.markdown-body .pl-mi2 {
+  background-color: #005cc5;
+  color: #f6f8fa;
+}
+
+.markdown-body .pl-mdr {
+  color: #6f42c1;
+  font-weight: 700;
+}
+
+.markdown-body .pl-ba {
+  color: #586069;
+}
+
+.markdown-body .pl-sg {
+  color: #959da5;
+}
+
+.markdown-body .pl-corl {
+  color: #032f62;
+  text-decoration: underline;
+}
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #dfe2e5;
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+.markdown-body hr:before {
+  content: "";
+  display: table;
+}
+
+.markdown-body hr:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.markdown-body .border {
+  border: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .border-0 {
+  border: 0!important;
+}
+
+.markdown-body .border-bottom {
+  border-bottom: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .rounded-1 {
+  border-radius: 3px!important;
+}
+
+.markdown-body .bg-white {
+  background-color: #fff!important;
+}
+
+.markdown-body .bg-gray-light {
+  background-color: #fafbfc!important;
+}
+
+.markdown-body .text-gray-light {
+  color: #6a737d!important;
+}
+
+.markdown-body .mb-0 {
+  margin-bottom: 0!important;
+}
+
+.markdown-body .my-2 {
+  margin-bottom: 8px!important;
+  margin-top: 8px!important;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .py-0 {
+  padding-bottom: 0!important;
+  padding-top: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .py-2 {
+  padding-bottom: 8px!important;
+  padding-top: 8px!important;
+}
+
+.markdown-body .pl-3,
+.markdown-body .px-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .px-3 {
+  padding-right: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .f6 {
+  font-size: 12px!important;
+}
+
+.markdown-body .lh-condensed {
+  line-height: 1.25!important;
+}
+
+.markdown-body .text-bold {
+  font-weight: 600!important;
+}
+
+.markdown-body:before {
+  content: "";
+  display: table;
+}
+
+.markdown-body:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+
+.markdown-body hr {
+  background-color: #e1e4e8;
+  border: 0;
+  height: .25em;
+  margin: 24px 0;
+  padding: 0;
+}
+
+.markdown-body blockquote {
+  border-left: .25em solid #dfe2e5;
+  color: #6a737d;
+  padding: 0 1em;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #fafbfc;
+  border: 1px solid #c6cbd1;
+  border-bottom-color: #959da5;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #959da5;
+  color: #444d56;
+  display: inline-block;
+  font-size: 11px;
+  line-height: 10px;
+  padding: 3px 5px;
+  vertical-align: middle;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 16px;
+  margin-top: 24px;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: .3em;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+}
+
+.markdown-body h6 {
+  color: #6a737d;
+  font-size: .85em;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+  margin-top: 16px;
+  padding: 0;
+}
+
+.markdown-body dl dd {
+  margin-bottom: 16px;
+  padding: 0 16px;
+}
+
+.markdown-body table {
+  display: block;
+  overflow: auto;
+  width: 100%;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  border: 1px solid #dfe2e5;
+  padding: 6px 13px;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+.markdown-body img {
+  background-color: #fff;
+  box-sizing: content-box;
+  max-width: 100%;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  background-color: rgba(27,31,35,.05);
+  border-radius: 3px;
+  font-size: 85%;
+  margin: 0;
+  padding: .2em .4em;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  background: transparent;
+  border: 0;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  word-break: normal;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  background-color: #f6f8fa;
+  border-radius: 3px;
+  font-size: 85%;
+  line-height: 1.45;
+  overflow: auto;
+  padding: 16px;
+}
+
+.markdown-body pre code {
+  background-color: transparent;
+  border: 0;
+  display: inline;
+  line-height: inherit;
+  margin: 0;
+  max-width: auto;
+  overflow: visible;
+  padding: 0;
+  word-wrap: normal;
+}
+
+.markdown-body .commit-tease-sha {
+  color: #444d56;
+  display: inline-block;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 90%;
+}
+
+.markdown-body .blob-wrapper {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.markdown-body .blob-wrapper-embedded {
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.markdown-body .blob-num {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  color: rgba(27,31,35,.3);
+  cursor: pointer;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+  line-height: 20px;
+  min-width: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: right;
+  user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 1%;
+}
+
+.markdown-body .blob-num:hover {
+  color: rgba(27,31,35,.6);
+}
+
+.markdown-body .blob-num:before {
+  content: attr(data-line-number);
+}
+
+.markdown-body .blob-code {
+  line-height: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  vertical-align: top;
+}
+
+.markdown-body .blob-code-inner {
+  color: #24292e;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+  overflow: visible;
+  white-space: pre;
+  word-wrap: normal;
+}
+
+.markdown-body .pl-token.active,
+.markdown-body .pl-token:hover {
+  background: #ffea7f;
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-bottom-color: #c6cbd1;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #c6cbd1;
+  color: #444d56;
+  display: inline-block;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  line-height: 10px;
+  padding: 3px 5px;
+  vertical-align: middle;
+}
+
+.markdown-body :checked+.radio-label {
+  border-color: #0366d6;
+  position: relative;
+  z-index: 1;
+}
+
+.markdown-body .tab-size[data-tab-size="1"] {
+  -moz-tab-size: 1;
+  tab-size: 1;
+}
+
+.markdown-body .tab-size[data-tab-size="2"] {
+  -moz-tab-size: 2;
+  tab-size: 2;
+}
+
+.markdown-body .tab-size[data-tab-size="3"] {
+  -moz-tab-size: 3;
+  tab-size: 3;
+}
+
+.markdown-body .tab-size[data-tab-size="4"] {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+.markdown-body .tab-size[data-tab-size="5"] {
+  -moz-tab-size: 5;
+  tab-size: 5;
+}
+
+.markdown-body .tab-size[data-tab-size="6"] {
+  -moz-tab-size: 6;
+  tab-size: 6;
+}
+
+.markdown-body .tab-size[data-tab-size="7"] {
+  -moz-tab-size: 7;
+  tab-size: 7;
+}
+
+.markdown-body .tab-size[data-tab-size="8"] {
+  -moz-tab-size: 8;
+  tab-size: 8;
+}
+
+.markdown-body .tab-size[data-tab-size="9"] {
+  -moz-tab-size: 9;
+  tab-size: 9;
+}
+
+.markdown-body .tab-size[data-tab-size="10"] {
+  -moz-tab-size: 10;
+  tab-size: 10;
+}
+
+.markdown-body .tab-size[data-tab-size="11"] {
+  -moz-tab-size: 11;
+  tab-size: 11;
+}
+
+.markdown-body .tab-size[data-tab-size="12"] {
+  -moz-tab-size: 12;
+  tab-size: 12;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+
+.markdown-body hr {
+  border-bottom-color: #eee;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .pl-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .pl-7 {
+  padding-left: 48px!important;
+}
+
+.markdown-body .pl-8 {
+  padding-left: 64px!important;
+}
+
+.markdown-body .pl-9 {
+  padding-left: 80px!important;
+}
+
+.markdown-body .pl-10 {
+  padding-left: 96px!important;
+}
+
+.markdown-body .pl-11 {
+  padding-left: 112px!important;
+}
+
+.markdown-body .pl-12 {
+  padding-left: 128px!important;
+}
+</style><title>case-ranges</title></head><body><article class="markdown-body"><pre><code>Proposal for C2y
+WG14 3194
+
+Title:               Case range expressions
+Author, affiliation: Alex Celeste, Perforce
+Date:                2023-12-06
+Proposal category:   New feature
+Target audience:     Compiler implementers, users
+</code></pre>
+<h2><a id="user-content-abstract" class="anchor" aria-hidden="true" tabindex="-1" href="#abstract"><span aria-hidden="true" class="octicon octicon-link"></span></a>Abstract</h2>
+<p>GCC supports an expression syntax to allow the user to describe a contiguous
+range of integer constant expression in certain contexts. We propose adopting
+this expression kind and the simplest use case supported by GCC, along with
+comments on its integration and future directions for expansion of the feature.</p>
+<hr>
+<h1><a id="user-content-case-range-expressions" class="anchor" aria-hidden="true" tabindex="-1" href="#case-range-expressions"><span aria-hidden="true" class="octicon octicon-link"></span></a>Case range expressions</h1>
+<pre><code>Reply-to:     Alex Celeste (aceleste@perforce.com)
+Document No:  N3194
+Revises:      (n/a)
+Date:         2023-12-06
+</code></pre>
+<h2><a id="user-content-summary-of-changes" class="anchor" aria-hidden="true" tabindex="-1" href="#summary-of-changes"><span aria-hidden="true" class="octicon octicon-link"></span></a>Summary of Changes</h2>
+<h3><a id="user-content-n3194" class="anchor" aria-hidden="true" tabindex="-1" href="#n3194"><span aria-hidden="true" class="octicon octicon-link"></span></a>N3194</h3>
+<ul>
+<li>original proposal</li>
+</ul>
+<h2><a id="user-content-introduction" class="anchor" aria-hidden="true" tabindex="-1" href="#introduction"><span aria-hidden="true" class="octicon octicon-link"></span></a>Introduction</h2>
+<p>The GNU C dialect includes an operator which can be used to describe a range
+of integer constant expressions, which is valid in two contexts where the kind
+of repetition implied makes sense:</p>
+<pre><code>switch (n) {
+  case 1 ... 10:
+    something ();
+    break;
+}
+</code></pre>
+<p><a href="https://gcc.gnu.org/onlinedocs/gcc/Case-Ranges.html" rel="nofollow">which is equivalent to writing</a></p>
+<pre><code>if (n &gt;= 1 &amp;&amp; n &lt;= 10) {
+  something ();
+}
+</code></pre>
+<p>except that <code>n</code> is only evaluated once; and</p>
+<pre><code>int arr[] = {
+  [3 ... 6] = n,
+};
+</code></pre>
+<p><a href="https://gcc.gnu.org/onlinedocs/gcc/Designated-Inits.html" rel="nofollow">which is equivalent to writing</a></p>
+<pre><code>int arr[] = {
+  [3] = n,
+  [4] = n,
+  [5] = n,
+  [6] = n,
+};
+</code></pre>
+<p>except that again, <code>n</code> is only evaluated once.</p>
+<p>A range expression is defined as:</p>
+<pre><code>integer-constant-expression  ellipsis  integer-constant-expression
+</code></pre>
+<p>and does not describe a kind of value that otherwise exists in the language;
+in GNU C, the <code>case</code> and designator syntactic constructs can accept either a
+single integer constant expression, or a range expression, and the evaluation
+or interpretation of the range does not result in a value that can be copied or
+passed around further.</p>
+<p>Range expressions are very useful for both conciseness of expression, and also
+to avoid repeated evaluations in the designator case (by avoiding the need for
+a temporary variable). If a <code>switch</code> has a large number of possible ranges it
+can be expressed much more easily by a "wide" range than by stacking the <code>case</code>
+labels (e.g. <code>case 1 ... 1000:</code> is quite plausible but would not be readable if
+written out normally). While any <code>switch</code> can be expressed as an <code>if</code>, the
+readability of the code may be affected and the choice between the two is
+important when deciding how best to convey the author's intent.</p>
+<p>There are some complexities in the designator case that arise from the fact
+that designators within an initializer do not need to be unique, and the lack
+of specification for evaluation order and effects in the existing initializer
+semantics. Therefore, while we propose introducing range expressions as a
+general reusable construct, we do not propose adding them for designators until
+the order of evaluation issues with existing initializer syntax are cleaned up.</p>
+<h2><a id="user-content-proposal" class="anchor" aria-hidden="true" tabindex="-1" href="#proposal"><span aria-hidden="true" class="octicon octicon-link"></span></a>Proposal</h2>
+<p>We propose that a <em>constant-range-expression</em> is added as a toplevel expression
+kind alongside <em>constant-expression</em> and <em>expression</em> for use by selected
+syntactic forms.</p>
+<p>We propose that the <code>case</code> label construct be allowed to admit either a
+<em>constant-expression</em> or a <em>constant-range-expression</em> as its operand. The
+constraints this range would be subject to are largely the same as those which
+currently apply to the <em>constant-expression</em> operand.</p>
+<p>The <em>constant-range-expression</em> can be reused in other contexts as and when they
+emerge, so we do not believe this should be a property locked to <code>case</code> itself
+specifically. There are several other compelling use cases for ranges, including
+GCC's own use to describe designator ranges.</p>
+<h3><a id="user-content-case-constraints" class="anchor" aria-hidden="true" tabindex="-1" href="#case-constraints"><span aria-hidden="true" class="octicon octicon-link"></span></a>Case constraints</h3>
+<p>Extending the constraints on the current <code>case</code> label form is relatively simple
+as there are no repeated-side effects to consider.</p>
+<pre><code>void foo (void);
+
+void use (int n)
+{
+  switch (n) {
+    case 1:
+      foo ();
+      break;
+    // case 4 : // error, overlaps 2 ... 5
+    //   foo ();
+    //   break;
+    case 2 ... 5:
+      foo ();
+      break;
+    case 6 ... 6: // OK (but questionable)
+      foo ();
+      break;
+    case 8 ... 7: // not a GCC error
+      foo ();
+      break;
+    case 10 ... 4: // not a GCC error despite overlap
+      foo ();
+      break;
+  }
+}
+</code></pre>
+<p><code>case 4</code> and <code>case 2 ... 5</code> clearly and unambiguously overlap. This should be
+treated as a violation of 6.4.8.2 paragraph 3, which says "no two of the <code>case</code>
+constant expressions ... shall have the same value". The order of the two labels
+produces a slightly different error message in tools, but this is a UX issue and
+does not make the code more or less valid either way - we <strong>do not</strong> propose
+that single-expression cases should be able to override parts of a range
+expression, as this is not existing practice and seems highly likely to lead to
+user confusion. (Subjectively, such forms would seem to invalidate the argument
+that range-based <code>case</code> labels would be clearer, too.)</p>
+<p>Because a range describes a sequence of value from <em>low</em> to <em>high</em>, GCC does
+not consider <code>8 ... 7</code> to be an error, but an empty range which cannot match
+<code>n</code>. We optionally propose making this a constraint violation.</p>
+<p>Because <code>10 ... 4</code> also describes an empty range, tools will usually ignore the
+<em>apparent</em> overlap with <code>2 ... 5</code>. This does not need any special constraint if
+the reversed range is already a constraint violation its own right.</p>
+<p>Tools allow <code>6 ... 6</code> because the range contains at least one value. We believe
+this is fine, as the resulting <code>case</code> label will have a value that can match.
+Tools should probably warn for this situation.</p>
+<h3><a id="user-content-operator-syntax" class="anchor" aria-hidden="true" tabindex="-1" href="#operator-syntax"><span aria-hidden="true" class="octicon octicon-link"></span></a>Operator syntax</h3>
+<p>Although the use of the <code>...</code> operator is existing practice in GCC and compatible
+compilers, it does have a significant problem in practice:</p>
+<pre><code>case 11...12: // syntax error, PP-number with too many dots
+  foo ();
+  break;
+</code></pre>
+<p>A space is needed between the <em>low</em> and <em>high</em> values and the range operator,
+because a dot is a valid part of a PP-number in the preprocessor syntax and
+therefore the above form <code>11...12</code> is lexed by most tools as a single number,
+which then fails translation into a valid C-language token.</p>
+<p>Worse, this is inconsistent:</p>
+<pre><code>enum {
+  ELEVEN = 11,
+  TWELVE = 12,
+};
+
+case ELEVEN...TWELVE: // this is fine 🍵🔥
+  foo ();
+  break;
+</code></pre>
+<p>The above snippet parses, because dots do not form part of an identifier, but
+is fragile and will break if the code is edited. For instance, if the named
+constants were implemented as macros:</p>
+<pre><code>#define ELEVEN 11
+#define TWELVE 12
+</code></pre>
+<p>the source file would parse correctly on a normal translation pass (where the
+preprocessor would correctly split the macro name and ellipsis first), but be
+broken if the user attempted to generate and use a preprocessed output file
+(<code>-E</code> in GCC).</p>
+<p>Essentially this operator is making the same mistake that compound assignment
+did in the original B language with the <code>=+</code>, <code>=-</code>, <code>=*</code> operators.</p>
+<p>We therefore suggest that some other operator may be a better choice for this
+syntax. <code>::</code> is available in the language thanks to C23 attributes, but currently
+unused for any expression purpose, and may be a good fit as it is visually
+similar to the "slice" syntax used in other languages. <code>-&gt;</code> is also an option,
+which while not unused, is not valid with arithmetic operands. A new operator
+such as <code>^^</code>, <code>~&gt;</code>, etc. might also be possible.</p>
+<p>(The problem with <code>...</code> is not unresolvable and it would be fairly simple to
+add a conversion from "PP-number containing <code>...</code>" to a sequence of two or three
+C-language tokens; but this still seems confusing as it breaks the 1-1 between
+preprocessor and C tokens; and anyway neither Clang nor GCC have done so.)</p>
+<p>For the rest of this document we assume that <code>::</code> and <code>-&gt;</code> have been chosen as
+range operators, but are not wedded to this and welcome feedback about alternative
+choices.</p>
+<h3><a id="user-content-open-intervals" class="anchor" aria-hidden="true" tabindex="-1" href="#open-intervals"><span aria-hidden="true" class="octicon octicon-link"></span></a>Open intervals</h3>
+<p>The GCC feature describes a closed interval (in the range expression <code>low ... high</code>,
+the values in the range include both <code>low</code> and <code>high</code>).</p>
+<pre><code>case 1 ... 4:
+
+// exactly equivalent to
+case 1:
+case 2:
+case 3:
+case 4:
+</code></pre>
+<p>A right-open interval is often also intuitive, especially for future uses in
+array contexts, as it can refer to the element count as the right hand operator.
+We may wish to allow this with a separate operator. This is included below as
+an optional part of the proposal.</p>
+<pre><code>case 1 ~&gt; 4: // pretend ~&gt; operator exists for right-open
+
+// would be equivalent to
+case 1:
+case 2:
+case 3:
+// 4 is past-the-end
+</code></pre>
+<p>A fully-open and left-open interval seem less likely to be useful in practice
+and on balance it is probably not worth assigning dedicated syntax for these,
+but this decision could be revisited if the demand exists.</p>
+<h2><a id="user-content-prior-art" class="anchor" aria-hidden="true" tabindex="-1" href="#prior-art"><span aria-hidden="true" class="octicon octicon-link"></span></a>Prior Art</h2>
+<p>This is a core GNU C language feature and is supported by most compilers that
+claim any level of GCC compatibility. GCC itself, as well as <a href="https://clang.llvm.org/doxygen/classclang_1_1CaseStmt.html" rel="nofollow">Clang</a>, and
+third party tools emulating GNU C such as <a href="https://www.perforce.com/products/helix-qac" rel="nofollow">QAC</a>, all support this feature.</p>
+<p>Experience implementing the feature in Helix QAC suggests that the burden on
+implementers is minimal for both current usages. The <code>case</code> feature is essentially
+trivial as the relevant <code>case</code> labels can, if necessary, be expanded out just
+after parsing-time without even needing the backend to be aware of them (though
+in practice we found that large ranges expanded this way could potentially
+cause surprising slowdowns in an optimizing or dataflow backend, and that it was
+better to integrate a backend-aware form of support; this was not complicated but
+will depend on the tool architecture, if it can handle <code>if</code> style expressions in
+the branches).</p>
+<p>The designator feature is not complicated to implement at all, but does raise
+potential user confusion issues as the designators can allow repetition, the
+overriding of side effects, etc. These are issues that already exist within the
+Standard initializer rules. GCC also surprisingly allows empty ranges to compile
+in this context, which it rejects for <code>case</code> labels; these introduce some more
+potential for user confusion as there is now another way for side effects to be
+silently eliminated even without the user overriding an initializer. As a result
+we think the syntax should be reserved but addition of this part of the feature
+held off until the existing issues are cleaned up.</p>
+<h3><a id="user-content-slice-syntax" class="anchor" aria-hidden="true" tabindex="-1" href="#slice-syntax"><span aria-hidden="true" class="octicon octicon-link"></span></a>Slice syntax</h3>
+<p>A very related use to designator ranges, which initialize a subrange of an array,
+is slices, which read from an initialized object (or perhaps describe an lvalue).
+<a href="https://en.wikipedia.org/wiki/Array_slicing" rel="nofollow">A number of languages</a> provide this feature and use a range-like expression
+as the operand to the subscript operator or its equivalent in order to create a
+slice value (whatever value category that is in the respective language).</p>
+<p>We do not propose standardizing anything like this at this time, but by making
+the range expression its own expression kind instead of baking it directly into
+the syntax of <code>case</code> specifically, we leave the door open to reuse a single
+syntax for all range- and slice-related features that may be introduced in
+future. This will keep the language as consistent as possible.</p>
+<p>In languages which support slices, one or both operands to the range operator
+can be omitted and implicitly refer to the maximum extent of the range. Since
+we are not currently proposing slices, we do not include this in the current
+proposal. It may prove useful to add in future.</p>
+<h2><a id="user-content-proposed-wording" class="anchor" aria-hidden="true" tabindex="-1" href="#proposed-wording"><span aria-hidden="true" class="octicon octicon-link"></span></a>Proposed wording</h2>
+<p>The proposed changes are based on the latest public draft of C23, which is
+<a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3096.pdf" rel="nofollow">N3096</a>. Bolded text is new text when inlined into an existing sentence.</p>
+<h3><a id="user-content-constant-expressions" class="anchor" aria-hidden="true" tabindex="-1" href="#constant-expressions"><span aria-hidden="true" class="octicon octicon-link"></span></a>Constant expressions</h3>
+<p>Add a new section within 6.6 "Constant expressions":</p>
+<blockquote>
+<h4><a id="user-content-661--constant-range-expressions" class="anchor" aria-hidden="true" tabindex="-1" href="#661--constant-range-expressions"><span aria-hidden="true" class="octicon octicon-link"></span></a>6.6.1  Constant range expressions</h4>
+<p><strong>Syntax</strong></p>
+<blockquote>
+<p><em>constant-range-expression:</em><br>
+<em>constant-expression</em>  <code>::</code>  <em>constant-expression</em><br>
+<em>constant-expression</em>  <code>-&gt;</code>  <em>constant-expression</em></p>
+</blockquote>
+<p><strong>Description</strong></p>
+<p>A <em>constant range expression</em> is a special form to describe a sequence of constant
+expressions with contiguous incrementing values, from a low value on the left, to
+a high value on the right.</p>
+<p>The resulting sequence cannot be used as a value expression and is only permitted
+in specific contexts.</p>
+<p><strong>Constraints</strong></p>
+<p>The left-hand value and the right-hand value shall be integer constant expressions
+that each evaluate to a representable value in the converted expression type.</p>
+<p>(optionally) When the <code>::</code> operator is used, the right-hand value shall not have
+a value less  than the left-hand value.</p>
+<p>(optionally) When the <code>-&gt;</code> operator is used, the right-hand value shall not have
+a value less than or equal to the left-hand value.</p>
+<p><strong>Semantics</strong></p>
+<p>A range expression describes a sequence of integer constant expressions without
+listing each intermediate value explicitly. This is permitted as the operand to
+a <code>case</code> label to indicate that a single label matches multiple values.</p>
+<p>The usual arithmetic conversions are applied to the left-hand and right-hand
+operands. Each value in the result sequence of integer constant values has
+the common type of the converted values.</p>
+<p>A range expression that uses the <code>::</code> operator to describe the sequence is a
+<em>closed range</em>. The resulting sequence contains all integer values in sequence
+starting from and including the left, low value, up to and including the right,
+high value.</p>
+<p>A range expression that uses the <code>-&gt;</code> operator to describe the sequence is a
+<em>right-open range</em>. The resulting sequence contains all integer values in sequence
+starting from and including the left, low value, up to the value one less than
+the right, high value, but not including the high value itself.</p>
+<p>(optional, only if the optional constraints are not included) If the right-hand
+value of a <em>closed range</em> is less than the left-hand value, or the right-hand
+value of a <em>right-open range</em> is less than or equal to the left-hand value, the
+sequence described by the range is empty.</p>
+<p><strong>Recommended practice</strong></p>
+<p>Implementations are encouraged to emit a diagnostic message when a closed range
+only describes a single value, that is, when the low and high value are the same.</p>
+<p>(optional, only if the optional constraints are not included)
+Implementations are encouraged to emit a diagnostic message when a range is empty.</p>
+<p><strong>EXAMPLE 1</strong>  Range expressions may be used as the operand to a <code>case</code> label to
+concisely describe a sequence of matching values in one label:</p>
+<pre><code>switch (n) {
+  case 2::5:   // equivalent to
+               //   case 2:
+               //   case 3:
+               //   case 4:
+               //   case 5:
+    f ();
+    break;
+    
+  case 6-&gt;10:  // equivalent to
+               //   case 6:
+               //   case 7:
+               //   case 8:
+               //   case 9:
+    f ();
+    break;
+}
+</code></pre>
+<p><strong>EXAMPLE 2</strong>  The <em>right-open range</em> is useful when a value describes a
+past-the-end index, such as the size of an array:</p>
+<pre><code>int arr[N];
+switch (i) {
+  case 0-&gt;N:  // matches the range of arr
+    f (arr[i]);
+    break;
+}
+</code></pre>
+<p><strong>EXAMPLE 3</strong>  The type of the values in the range is the arithmetic converted
+type of the left and right operands, so the elements of this range all have
+the type <code>unsigned int</code>:</p>
+<pre><code>case 1 :: 10u:
+</code></pre>
+<p><strong>EXAMPLE 4</strong>  This range expression describes a range with elements that have
+the type <code>unsigned long</code> and where the low value is greater than the high value
+after conversion to the unsigned type,<br>
+(optionally) which is a constraint violation:<br>
+(alternatively) resulting in an empty range:</p>
+<pre><code>case -10 :: 10ul:
+</code></pre>
+<p><strong>Forward references:</strong> <code>switch</code> statements (6.8.4.2)</p>
+</blockquote>
+<p>We prefer to include the optional constraints instead of the recommended practice.</p>
+<h3><a id="user-content-case" class="anchor" aria-hidden="true" tabindex="-1" href="#case"><span aria-hidden="true" class="octicon octicon-link"></span></a>Case</h3>
+<p>Within 6.8.1 "Labeled statements", Syntax, paragraph 1 (the grammar), add a new
+production to <em>label</em>:</p>
+<blockquote>
+<p><em>label:</em><br>
+<em>attribute-specifier-sequence</em> <sub>opt</sub> <em>identifier</em>  <code>:</code><br>
+<strong><em>attribute-specifier-sequence</em> <sub>opt</sub> <code>case</code> <em>constant-range-expression</em>  <code>:</code></strong><br>
+<em>attribute-specifier-sequence</em> <sub>opt</sub> <code>case</code> <em>constant-expression</em>  <code>:</code><br>
+<em>attribute-specifier-sequence</em> <sub>opt</sub> <code>default</code>  <code>:</code></p>
+</blockquote>
+<p>Constraints are added to the description of the range expression itself and are
+therefore not needed in this section.</p>
+<p>Add a new paragraph after paragraph 4:</p>
+<blockquote>
+<p>A <code>case</code> label <em>specifies</em> the value of the following constant expression, if
+followed by a single <em>constant expression</em>, or each value in the sequence described
+by the following range, if followed by a <em>constant range expression</em>.</p>
+</blockquote>
+<h3><a id="user-content-switch" class="anchor" aria-hidden="true" tabindex="-1" href="#switch"><span aria-hidden="true" class="octicon octicon-link"></span></a>Switch</h3>
+<p>Within 6.8.4.2 "The <code>switch</code> statement", modify paragraph 3:</p>
+<blockquote>
+<p>The expression of each <code>case</code> label shall be an integer constant expression <strong>or</strong>
+<strong>a constant range expression</strong> and no two of the <code>case</code> constant expressions
+associated to the same <code>switch</code> statement shall <strong>specify</strong> the same value after
+conversion. There may be at most one <code>default</code> label associated to a <code>switch</code> statement.
+(Any enclosed <code>switch</code> statement may have a <code>default</code> label or <code>case</code><strong>-specified</strong>
+<strong>values</strong> that duplicate <code>case</code><strong>-specified values</strong> in the enclosing
+<code>switch</code> statement.)</p>
+</blockquote>
+<p>Modify paragraph 4:</p>
+<blockquote>
+<p>...and on the presence of a <code>default</code> label and the <strong>specified</strong> values of any
+<code>case</code> labels on or in the <code>switch</code> body...</p>
+</blockquote>
+<p>Modify paragraph 5:</p>
+<blockquote>
+<p>The integer promotions are performed on the controlling expression. The
+<strong>values specified by</strong> each <code>case</code> label <strong>are</strong> converted to the promoted
+type of the controlling expression. If a converted value matches that of the
+promoted controlling expression, control jumps to the statement or declaration
+following the matched <code>case</code> label. Otherwise, if there is a <code>default</code> label,
+control jumps to the statement or declaration following the <code>default</code> label.
+If no converted <code>case</code> <strong>value</strong> matches and there is no <code>default</code> label, no
+part of the <code>switch</code> body is executed.</p>
+</blockquote>
+<p>Optionally (if the constraint against empty ranges was not added), add a new
+sentence to the end of paragraph 5:</p>
+<blockquote>
+<p>A <code>case</code> label with a <em>range expression</em> that describes an <em>empty range</em> (which
+occurs when the low value has a value greater than the high value, or equal to
+the high value for a <em>right-open range</em>) never matches any value of the
+controlling expression footnote.</p>
+<p>footnote) even if the controlling expression has the same value as one of the
+operands to the <em>empty range</em> expression.</p>
+</blockquote>
+<p>Modify paragraph 6:</p>
+<blockquote>
+<p>As discussed in 5.2.4.1, the implementation may limit the number of <code>case</code>
+<strong>labels</strong> in a <code>switch</code> statement.</p>
+</blockquote>
+<p>Add a new example after paragraph 7:</p>
+<blockquote>
+<p><strong>EXAMPLE 2</strong>  A value specified as part of the sequence in a range expression
+argument to <code>case</code> shall not be repeated by a different label:</p>
+<pre><code>switch (expr)
+{
+case 1 :: 5:
+  // ...
+  break;
+case 6:   // OK, 6 has not been specified
+  // ...
+case 4:   // constraint violation:
+  // ...  // 4 was specified by 1 :: 5
+  break;
+case 3 :: 8: // constraint violation:
+  // ...     // 3, 4, 5 were specified above
+  break;
+}
+</code></pre>
+</blockquote>
+<h2><a id="user-content-questions-for-wg14" class="anchor" aria-hidden="true" tabindex="-1" href="#questions-for-wg14"><span aria-hidden="true" class="octicon octicon-link"></span></a>Questions for WG14</h2>
+<p>Does WG14 want to add <em>constant-range-expression</em> as a toplevel expression kind?</p>
+<p>Would WG14 like to allow a second toplevel range expression that does not require
+its operands to be constant? (not proposed here)</p>
+<p>Does WG14 want to include the constraint that the <em>low</em> value must be less than or
+equal to the <em>high</em> value (i.e. that a range cannot be empty)?</p>
+<p>Does WG14 prefer to use some other operators than <code>::</code> and <code>-&gt;</code> for the range
+expressions?</p>
+<p>Would WG14 like to see further work on ranges for designators?</p>
+<h2><a id="user-content-references" class="anchor" aria-hidden="true" tabindex="-1" href="#references"><span aria-hidden="true" class="octicon octicon-link"></span></a>References</h2>
+<p><a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3096.pdf" rel="nofollow">C23 public draft</a></p>
+<p><a href="https://gcc.gnu.org/onlinedocs/gcc/Case-Ranges.html" rel="nofollow">GCC case ranges</a></p>
+<p><a href="https://gcc.gnu.org/onlinedocs/gcc/Designated-Inits.html" rel="nofollow">GCC designator ranges</a></p>
+<p><a href="https://www.perforce.com/products/helix-qac" rel="nofollow">Helix QAC</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Array_slicing" rel="nofollow">Wikipedia examples of array slicing</a></p>
+<p><a href="https://clang.llvm.org/doxygen/classclang_1_1CaseStmt.html" rel="nofollow">Clang <code>case</code> implementation details</a></p>
+</article></body></html>
