@@ -3,7 +3,7 @@
 
     Title:               Allow arrays of incomplete element type
     Author, affiliation: Alex Celeste, Perforce
-    Date:                2026-01-05
+    Date:                2026-...
     Proposal category:   Undefined behaviour removal, Constraint refinement, Demon slaying
     Target audience:     Compiler implementers
 
@@ -22,11 +22,17 @@ the uses of such types in value expressions to the definition of completeness.
 # AT ITS CENTRE, A HOLLOWNESS
 
     Reply-to:     Alex Celeste (aceleste@perforce.com)
-    Document No:  N3777
-    Revises:      N/A
-    Date:         2026-01-05
+    Document No:  Nxxxx
+    Revises:      N3777
+    Date:         2026-...
 
 ## Summary of Changes
+
+### Nxxxx
+ - wording for flexible array members to use "incomplete size" instead of general incompleteness
+ - wording for array initialization to use "incomplete size" instead of general incompleteness
+   and specify that the size, not the type in general, is completed at the end
+ - comments to the impact section (extern, parameters)
 
 ### N3777
  - original proposal
@@ -173,6 +179,13 @@ to enforce bounds checks against.
 Array-of-function types are unusable as objects and therefore harmless. There may be potential uses
 in type traits, since `_Generic` would support matching them, or as a starting point for further
 development not proposed here. Allowing them to be specified makes the language more consistent.
+
+With this change it becomes possible to _declare_ an array with incomplete element type and external
+linkage, and then complete the element type with a flexible array member. It is not actually possible
+to _define_ this array object (in any TU), so the effect is essentially similar to using dynamic
+storage to allocate a buffer of such objects - currently no Constraint stops the user trying to
+index such a buffer, which may be worth addressing in a separate change. Tools should warn about
+completed types that would violate previous implied Constraints as a matter of QoI.
 
 ## Proposed wording
 
