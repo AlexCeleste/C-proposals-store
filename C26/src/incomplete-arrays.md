@@ -32,6 +32,8 @@ the uses of such types in value expressions to the definition of completeness.
  - wording for flexible array members to use "incomplete size" instead of general incompleteness
  - wording for array initialization to use "incomplete size" instead of general incompleteness
    and specify that the size, not the type in general, is completed at the end
+ - include `alignof` as well as `_Countof`
+ - do not imply functions are objects or have a notion of completeness by themselves
  - comments to the impact section (extern, parameters)
 
 ### N3777
@@ -194,19 +196,20 @@ The proposed changes are based on the latest public draft of C2y, which is
 
 Modify 6.2.5 "Types":
 
-Delete the _shall_-clause requiring an array type to have a complete object type as its element type
-from paragraph 25:
+Modify the first sentence of paragraph 25; and delete the original second sentence with the
+_shall_-clause that required an array type to have a complete object type as its element type:
 
-> An array type describes a contiguously allocated nonempty set of objects with a particular
-> member object type, called the element type. Array types are characterized by their element type
-> and by the number of elements in the array. An array type is said to be ...
+> An array type describes an **indexable set of members with a particular type**, called the
+> _element type_. **Member objects of an object of array type are allocated contiguously.**
+> Array types are characterized by their element type and by the number of elements in the
+> array. An array type is said to be ...
 
 Modify the first two sentences of paragraph 28:
 
 > An array type of unknown size **or with an element type that is not a complete object type** is an
 > incomplete type. It **becomes complete when both the size is completed and the element type is**
-> **complete**. **The size is completed** for an identifier of that type by specifying the size in a later
-> declaration (with internal or external linkage).
+> **a complete object type**. **The size is completed** for an identifier of that type by specifying
+> the size in a later declaration (with internal or external linkage).
 
 **NOTE** is "completed" the right word for the size? Would "provided" be better?
 
@@ -222,17 +225,19 @@ Modify 6.5.3.2 "Array subscripting", making the requirement for arrays and point
 > _type_", the other operand, called the subscript, shall have ...
 
 Modify 6.5.4.5 "The `sizeof`, `_Countof`, and `alignof` operators", second sentence of paragraph 1,
-to partially relax the completeness requirement for the operand of `_Countof`:
+to partially relax the completeness requirement for the operand of `_Countof` or `alignof`:
 
 > The `_Countof` operator shall only be applied to an expression that has **an array type with a**
-> **completed size**, or to the parenthesized name of such a type.
+> **completed size**, or to the parenthesized name of such a type. The `alignof` operator shall be
+> applied to a complete object type or an array **type. If applied to an array type, removing all**
+> **array derivations from the type shall yield a complete object type.**
 
 (**NOTE** see above w.r.t "completed")
 
 Modify 6.7.3.2, "Structure and union specifiers", paragraph 3:
 
 > ..., except that the last member of a structure with more than one named member can have
-> **an array type with complete element type but incomplete size**; ...
+> **an array type with complete object element type but incomplete size**; ...
 
 Modify 6.7.7.3 "Array declarators", deleting the sentence providing the Constraint on the element
 type from paragraph 1:
@@ -241,8 +246,8 @@ type from paragraph 1:
 
 Modify 6.7.11 "Initialization", first sentence of paragraph 4:
 
-> The type of the entity to be initialized shall be an array of **complete element type and** unknown
-> size**,** or a complete object type.
+> The type of the entity to be initialized shall be an array of **complete object element type and**
+> unknown size**,** or a complete object type.
 
 Modify 6.7.11, paragraph 26:
 
@@ -253,6 +258,10 @@ Modify 6.7.11, paragraph 26:
 
 Does WG14 want to accept the proposed change to relax the rule against specifying an array type with
 an element type that is not a complete object type?
+
+## Acknowledgements
+
+Thanks to Jay Ghiron and Joseph Myers for detailed review comments!
 
 ## References
 

@@ -1,9 +1,9 @@
     Proposal for C2y
-    WG14 3581
+    WG14 3786
 
     Title:               Remove the imaginary I, v2
     Author, affiliation: Alex Celeste, Perforce
-    Date:                2025-02-25
+    Date:                2026-01-12
     Proposal category:   Feature removal
     Target audience:     Library implementers, users
 
@@ -21,11 +21,18 @@ As of Fall 2024, a macro is no longer required, as C2Y provides a true literal.
 # Remove the imaginary I, v2
 
     Reply-to:     Alex Celeste (aceleste@perforce.com)
-    Document No:  N3581
-    Revises:      N3390
-    Date:         2025-02-25
+    Document No:  N3786
+    Revises:      N3581
+    Date:         2025-01-12
 
 ## Summary of Changes
+
+### N3786
+ - additional Committee feedback
+   - the name `j` is not a suitable substitute for the name `i`
+   - CFP request to include the NOTE with user definition of `I`
+ - rebase on latest working draft
+   - remove changes to `cproj` and Annex G, already fixed by [N3536][4] and [N3537][5]
 
 ### N3581
  - finalized with Committee feedback, recommending delete outright without replacement
@@ -125,7 +132,7 @@ particularly burdensome.
 Code that uses `I` and wants to continue to compile in C2Y can always simply add
 the definition explicitly:
 
-    #include <complex>
+    #include <complex.h>
     #define I _Complex_I
     // or
     constexpr auto I = _Complex_I;
@@ -140,41 +147,53 @@ but not helpful).
 ## Proposed wording
 
 The proposed changes are based on the latest public draft of C2y, which is
-[N3550][0]. Bolded text is new text when inlined into an existing sentence.
+[N3685][0]. Bolded text is new text when inlined into an existing sentence.
 
 Modify 7.3 "Complex arithmetic `<complex.h>`":
   
 Modify paragraph 3, deleting the references to `I` as a macro:
 
 > The macro `complex` expands to `_Complex`; the macro `_Complex_I` expands to an
-> arithmetic constant expression of type `float _Complex` with the value of the 
-> imaginary unit;<sup>227)</sup>. Notwithstanding the provisions of 7.1.3
+> arithmetic constant expression of type `float _Complex` with the value of its real
+> part being positive or unsigned zero and the value of its imaginary part being one.
+> Notwithstanding the provisions of 7.1.3
 >
 > - a program may undefine and perhaps then redefine the macro `complex`;
 >
 > ...
 
-Replace references to `I` in the rest of the text with `1.0fi`:
+Add a new paragraph to 7.3.1 after paragraph 4:
+
+> NOTE  Previous editions of this document also provided a constant `I`, which might
+> be defined in user code as follows:
+>
+>     #include <complex.h>
+>     
+>     #define I _Complex_I
+>     // or
+>     constexpr auto I = _Complex_I;
+
+Replace references to `I` in the rest of the text with `1.0fi` or equivalent:
+
+Modify 6.7.2 paragraph 21 (example 5), definition of `fc3`:
+
+>     constexpr float _Complex fc3 = 3.0i; // ok
+
+(this example is demonstrating that the conversion does not lose value and should
+therefore **not** be changed to use `3.0fi`)
 
 Modify 6.7.11 paragraph 28:
 
 >  **EXAMPLE 1**  Provided that `<complex.h>` has been included, the declarations
 >
->     int j = 3.5;
+>     int n = 3.5;
 >     double complex c = 5 + 3.0i;
 >
-> define and initialize `j` with the value 3 and c with the value 5.0 + _i_ 3.0.
+> define and initialize **`n`** with the value 3 and `c` with the value **5 + _i_ 3**.
 
-(Editorial note: this renames the variable `i` in the example to `j`, to avoid confusion
-with the imaginary unit invoked by the text description of the subsequent line)
-
-Modify 7.3.9.5 "The `cproj` functions", example at the end of paragraph 2:
-
->     INFINITY + 1.0fi * copysign(0.0, cimag(z))
-
-Modify G.3.2 paragraph 5 as appropriate w.r.t the changes in [N3274][1]:
-delete the second prose sentence of paragraph 5, and replace `I` in the
-`return` statement of the example with `1.0fi`.
+(Editorial note: this renames the variable `i` in the example to `n`, to avoid confusion
+with the imaginary unit invoked by the text description of the subsequent line; this also
+changes the spelling of the value expression of `c` to be math, not code, at CFP request)
 
 ## Questions for WG14
 
@@ -189,8 +208,12 @@ Would WG14 like to replace the `I` macro with a C declaration of a named constan
 [N3274 Remove imaginary types, v3][1]  
 [N3298 Introduce complex literals, v2][2]  
 [N3779 User-defined literals for std::complex][3]  
+[N3536 Clarify wording for 7.3.9.5 - cproj][4]  
+[N3537 Correct and clarify 7.3.1 Introduction of Complex arithmetic][5]  
 
-[0]: https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3550.pdf
+[0]: https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3685.pdf
 [1]: https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3274.pdf
 [2]: https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3298.htm
 [3]: https://isocpp.org/files/papers/N3779.pdf
+[4]: https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3536.pdf
+[5]: https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3537.pdf
