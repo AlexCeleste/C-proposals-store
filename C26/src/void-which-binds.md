@@ -1,9 +1,9 @@
     Proposal for C2y
-    WG14 3316
+    WG14 3586
 
-    Title:               The `void`-_which-binds_, v2: typesafe parametric polymorphism
+    Title:               The `void`-_which-binds_, v3: typesafe parametric polymorphism
     Author, affiliation: Alex Celeste, Perforce
-    Date:                2024-08-19
+    Date:                2026-06-01
     Proposal category:   New feature
     Target audience:     Compiler/tooling developers, library developers, application developers
 
@@ -20,14 +20,22 @@ The mechanism does not impose any runtime or ABI burden.
 
 -------------------------------------------------------------------------------
 
-# The `void`-_which-binds_, v2: typesafe parametric polymorphism
+# The `void`-_which-binds_, v3: typesafe parametric polymorphism
 
     Reply-to:     Alex Celeste (aceleste@perforce.com)
-    Document No:  N3316
-    Revises:      N2853
-    Date:         2024-08-30
+    Document No:  N3586
+    Revises:      N3316
+    Date:         2026-06-01
 
 ## Summary of Changes
+
+### N3586
+ - remove everything related to rejected `qual_var` and `qual_with` features
+ - remove `bind_var` from return, overcomplicates specification and not used
+ - change "the same" to "compatible" for types, as compatibility is the property needed
+ - add example of collaborating with `_Type`
+ - address review comments and add clarifying examples
+ - rebase proposed changes against the latest draft
 
 ### N3316
  - add discussion of function pointer usability issues, proposal for conversion
@@ -61,6 +69,24 @@ definitions), or to bind _consistently_ with other `void` pointers within the sa
 function signature. Because these are attributes, they impose no runtime cost, and if they are
 removed from a correct program, ensure it will remain binary-identical to the type-safe version.
 This has the convenient impact that implementation conformance can be achieved by doing nothing.
+
+### Proposal history
+
+This proposal was previously discussed in Fall 2024, where the Committee indicated:
+
+ - strong enthusiasm for "something along these lines", but concern about the exact details
+ - a preference for constraints introduced by attributes to be expressed as real Constraints,
+   not as Recommended Practice
+ - strong aversion to pursuing qualifier-generic notation at this time
+ - weak dislike for implicit "shim function" generation
+
+Discussion did not proceed as far as generic data structures or changes to the Standard Library.
+Generic data structures remain a future direction for this change, while qualifier-generic
+functions (generalized using attributes) have been removed and will not be revisited in the near
+future.
+
+Function pointer casts are separated into their own question for WG14 as this was not fully
+addressed.
 
 ## Rationale
 
@@ -114,14 +140,12 @@ relative verbosity and the improvements in readabilty of the full feature.
 
 ## Proposal
 
-We propose to add four new attributes which can appertain to the type `void`, when it appears as the
+We propose to add two new attributes which can appertain to the type `void`, when it appears as the
 _referenced type_ of a pointer type used as either a function parameter or a function return. These
 are:
 
     [[bind_var (id)]]
     [[bind_type (type)]]
-    [[qual_var (id)]]
-    [[qual_with (id)]]
 
 where `id` is an identifier that introduces a _type variable_, and `type` is a concrete _type name_
 other than `void` (it does not otherwise need to be complete).
@@ -129,8 +153,7 @@ other than `void` (it does not otherwise need to be complete).
 The names of these attributes are tentative.
 
 Syntactically, because `bind_var` and `bind_type` appertain to the type `void` itself, they appear
-after it in a pointer type specifier. They may also appertain to a typedef of `void`. `qual_var`
-and `qual_with` also appertain to the pointed-to type, but are not limited to `void`.
+after it in a pointer type specifier. They may also appertain to a typedef of `void`.
 
 (note that the syntax requires them to appear at the end of the specifier list, so if the type is
 qualified-`void` e.g. `void const`, they have to appear `void const [[here]]` and not
@@ -142,8 +165,9 @@ parameter or return value may be converted to without an explicit cast. Effectiv
 attributes add virtual qualifiers that associate with the pointed-to type and therefore cannot be
 discarded except by explicit cast-off.
 
-`qual_with` adds a similar constraint based on the qualifier deduced by `qual_var`, enforcing that
-the pointer type annotated with it must only be converted _as if_ it had a deduced qualifier.
+Only `bind_type` can be used with a return type. While it is possible to specify a system that also
+deduces signatures from return types, in practice users do not seem to need this and it reduces the
+number of "surprising" errors.
 
 ### `bind_type`
 
@@ -184,21 +208,20 @@ to be passed to the actual polymorphic function (but see below for more on both 
 
 ### `bind_var`
 
-This attribute is used on the parameters and return type of the actual polymorphic function. It is
-also appertained to the parameters and return type of any callback operators accepted by the
-polymorphic function, within its own signature.
+This attribute is used on the parameters of the actual polymorphic function. It is also appertained
+to the parameters of any callback operators accepted by the polymorphic function, within its own
+signature.
 
 `bind_var` adds the _constraint_ that whatever the referenced types of the pointers that are
-converted to or from (possibly-qualified) `void *` in the argument types and returned value
-conversion, must be consistent between all `void` pointers annotated with the same `id`, within
-each instance of a call to that function.
+converted from (possibly-qualified) `void *` in the argument types, must be consistent between all
+`void` pointers annotated with the same `id`, within each instance of a call to that function.
 
 In other words it introduces a _type variable_ and all `void *` annotated with the same _type
 variable_ must convert to or from the same (ignoring qualifiers) pointer type.
 
 For example:
 
-    void [[bind_var (A)]] *
+    void [[bind_type (A)]] *   // (don't deduce from return)
     select_first (void [[bind_var (A)]] * a, void [[bind_var (A)]] * b, void [[bind_var (B)]] * c)
     {
       return a; // OK, a must have bound to an A*
@@ -231,7 +254,7 @@ higher-order polymorphic function:
 The distinction is that `bind_var` deduces a value for the type variable from context, while
 `bind_type` enforces that the conversion is consistent when there is no input context (it is for
 conversions that will occur within the function body, from typed-`void` to typed-`void`, and can
-therefore be used in declarations local to the definition).
+therefore be used in declarations local to the definition and in the return type).
 
 `bind_type` therefore works with untyped callbacks and enforces a type for their arguments _within_
 the function's scope only. If the callback had typed-`void` parameters already, `bind_var` could
@@ -253,11 +276,11 @@ Therefore:
     void float_op (void const [[bind_type (float)]] *, void [[bind_type (float)]] *);
     void [[bind_type (float)]] * float_step (void [[bind_type (float)]] *);
     
-    map (i1, i2, int_op, int_step); // OK, all void * bind to int *
+    map (i1, i2, int_op, int_step);     // OK, all void * bind to int *
     map (f1, f2, float_op, float_step); // OK, all void * bind to float *
     
     map (i1, i2, float_op, float_step); // new constraint violation - operator types do not match data
-    map (i1, f2, int_op, float_step); // new constraint violation - operator and data types mismatch
+    map (i1, f2, int_op, float_step);   // new constraint violation - operator and data types mismatch
 
 Finally, if a polymorphic function is called from within another polymorphic function, the _type
 variables_ bind to the _type variables_ of the `void *` pointers passed directly to it, rather than
@@ -291,50 +314,18 @@ has the same constraint (consistent with the constraint if it had named a concre
 
 ### `qual_var` and `qual_with`
 
-`qual_var` is very similar to `bind_var`, in that it introduces a type-level variable that binds
-to part of the type that the appertained pointed-to type was implicitly converted from. However,
-instead of introducing a variable for the pointed-to object type, it introduces a variable for
-the _qualification_ of the pointed-to object type.
+Previous versions of this proposal introduced two further attributes, `qual_var` and `qual_with`,
+which introduced variables for _qualification_ of a pointed-to object type.
 
-Like `bind_var`, `qual_var` can bind to the qualifiers of the type named in a `bind_type` attribute,
-or to the qualifier variable named by another `qual_var` attribute if one polymorphic function
-calls another polymorphic function. Just like `bind_var`, if two `qual_var` attributes declare the
-same _qualifier variable_ in the same scope, they must bind to exactly the same qualifiers on the
-pre-conversion type.
-
-Unlike `bind_var`, which works with `void` as the object type and therefore has no other object
-information to work with, it is possible for a pointer to be declared as pointing to a qualified
-type and also to `qual_var`. This is actually necessary: if a pointer is declared as pointing to
-_unqualified_ void, only pointers to _unqualified_ object types would be able to convert to it,
-so the listed qualifiers on the pointed-to type actually describe the maximum qualification that
-`qual_var` can bind (i.e. it can bind to _less_ qualification than whatever is declared using
-qualifier specifiers).
-
-This same restriction doesn't exist in the return type (or whatever other "output" type is annotated
-by `qual_with`), which can (and generally should) be a pointer to an _unqualified_ object type, and
-must either be immediately implicitly converted back to a pointer with at-least as much
-qualification of the pointed-to type annotated by the corresponding `qual_var`, or discarded (in
-practice functions using this are likely to be logically `nodiscard`).
-
-This attribute implements a feature which is already in C23 but currently uses ad-hoc signatures,
+These attributes implemented a feature which is already in C23 but currently uses ad-hoc signatures,
 namely the qualifier-generic search functions. These provide the best examples:
 
     char [[qual_with (Q)]] * strchr (const char [[qual_var (Q)]] * s, int c);
 
-The `strchr` function is already defined to return a pointer with the same qualification as its
-argument (not as its formal parameter), and this signature is able to capture that: if the
-argument applied to `s` was `char const *`, `Q` binds `const`, and therefore the return type
-`char Q *` must be converted to `char const *`; or if the argument to `s` was `char *`, `Q`
-binds nothing and `char Q *` is allowed to convert to `char *` or a pointer to a more qualified
-`char`. However, `Q` can _never_ bind to `volatile` because the parameter is not a pointer to
-a `volatile`-qualified type, so no such pointer can be used as an argument value.
-
-As is demonstrated by the example, `qual_var` can be used with complete object types, unlike
-`bind_var`, because it captures a different part of the pointed-to type.
-
-The relationship between `qual_var` and `qual_with` is symmetric to the relationship between
-`bind_var` and `bind_type`: `qual_with` does not _deduce_ any qualifiers from the conversion,
-because its purpose is to ensure that appropriate qualification is added by the "output" conversion.
+This part of the proposal was separately rejected by WG14 during the Fall 2024 meeting as being
+too complicated to introduce in the first version of the change. It may be revisited in a future
+proposal, building atop `bind_var` and `bind_type` if they have been accepted into the document.
+For the time being, we already have the _QVoid_ notation.
 
 ### Casting to generic function types
 
@@ -406,14 +397,11 @@ needed anyway, the conversion back will always be a no-op too)
 
 ### Library changes
 
-We would propose that the `bind_var` and `qual_var` attributes apply immediately to the functions
-`qsort` and `bsearch` in `<stdlib.h>` and to `memchr` in `<string.h>`; and that the `qual_var`
-attribute apply immediately to the functions `strchr`, `strpbrk`, `strrchr` and `strstr` from
-`<string.h>`; and to the functions `wcschr`, `wcspbrk`, `wcsrchr`, `wcsstr` and `wmemchr` from
-`<wchar.h>`:
+We would propose that the `bind_type` and `bind_var` attributes apply immediately to the functions
+`qsort` and `bsearch` in `<stdlib.h>` and to `memchr` in `<string.h>`:
 
-    void [[qual_with (Q), bind_type (T)]] * bsearch (void const * key
-        , void const [[qual_var (Q), bind_var (T)]] * base
+    void [[bind_type (T)]] * bsearch (void const * key
+        , void const [[bind_var (T)]] * base
         , size_t nmemb
         , size_t size
         , int (*compar)(void const [[bind_type (T)]] *, void const [[bind_type (T)]] *));
@@ -423,21 +411,13 @@ attribute apply immediately to the functions `strchr`, `strpbrk`, `strrchr` and 
         , size_t size
         , int (*compar)(void const [[bind_type (T)]] *, void const [[bind_type (T)]] *));
     
-    void [[qual_with (Q)]] * memchr  (void const [[qual_var (Q)]] * s,  int c, size_t n);
-    char [[qual_with (Q)]] * strchr  (char const [[qual_var (Q)]] * s,  int c);
-    char [[qual_with (Q)]] * strpbrk (char const [[qual_var (Q)]] * s1, const char * s2);
-    char [[qual_with (Q)]] * strrchr (char const [[qual_var (Q)]] * s,  int c);
-    char [[qual_with (Q)]] * strstr  (char const [[qual_var (Q)]] * s1, const char * s2);
-    
-    wchar_t [[qual_with (Q)]] * wcschr  (wchar_t const [[qual_var (Q)]] * s,  wchar_t c);
-    wchar_t [[qual_with (Q)]] * wcspbrk (wchar_t const [[qual_var (Q)]] * s1, const wchar_t *s2);
-    wchar_t [[qual_with (Q)]] * wcsrchr (wchar_t const [[qual_var (Q)]] * s,  wchar_t c);
-    wchar_t [[qual_with (Q)]] * wcsstr  (wchar_t const [[qual_var (Q)]] * s1, const wchar_t *s2);
-    wchar_t [[qual_with (Q)]] * wmemchr (wchar_t const [[qual_var (Q)]] * s,  wchar_t c, size_t n);
+    void [[bind_type (T)]] * memchr  (void const [[bind_var (T)]] * s,  int c, size_t n);
 
-(i.e. none of the functions deduce object type or qualification from the return conversion, and
-neither `bsearch` nor `qsort` deduce object type from `compar`, even though doing so is possible,
-only from `base`)
+i.e. the functions do not deduce object type from the return conversion, and
+neither `bsearch` nor `qsort` deduce object type from `compar`, only from `base`.
+
+(The bulk of the originally-proposed library changes concerned attributes which are no longer part
+of this proposal.)
 
 ## Alternatives
 
@@ -563,7 +543,8 @@ polymorphic types would need to have the type explicitly declared:
 
 Note it is not possible to write `auto [[bind_type (int)]] * head =` in the current version of the
 language because of syntax limitations on `auto` (the star is an implementation-defined extension).
-This could be a separate improvement that composes well.
+This is a separate change proposed by [N3579 "`auto` as a placeholder type specifier"][5] which
+has not yet been integrated.
 
 We do not propose wording for this feature at this time, though overall the development should be
 simpler than the basis established for function types, and the extension seems reasonable.
@@ -577,29 +558,55 @@ dynamically-typed argument. For instance:
     void generic_from_to (_Type T
         , _Var(T) const * from
         , _Var(T)       * to) {
-        T temporary;
-        // work using the temporary, from, and to
+      T temporary;
+      // work using the temporary, from, and to
     }
 
 could avoid having, and needing to check, a _dependent type_ in the signature by using `void *`:
 
     void generic_from_to (_Type T
-        , void const [[bind_var (A)]] * from
-        , void       [[bind_var (A)]] * to) {
-        T temporary;  // can still do this bit
-        // same work because `_Var(X) *` is defined to be a `void *` in ABI
+        , void const [[bind_type (T)]] * from
+        , void       [[bind_type (T)]] * to) {
+      T temporary;  // can still do this bit
+      // same work because `_Var(X) *` is defined to be a `void *` in ABI
     }
+
+... by using `bind_type` to say that the pointed-to type of `from` and `to` is _statically_ known
+to be (compatible with) `T`, even though `T` itself is dynamic.
+
+Wording to enable this integration between static and dynamic polymorphic types is not included
+in the proposed wording below because dynamic polymorphic types have not been adopted, but should
+certainly be investigated as a future direction if they are integrated into C2y. Such wording
+would only need to allow the use of the _object_ identifier declared as a `_Type` as the operand to
+`bind_type`, and should form a straightforward enhancement.
 
 ## Proposed wording
 
 The proposed changes are based on the latest public draft of C2y, which is
-[N3220][1]. Bolded text is new text when inlined into an existing sentence.
+[N3886][0]. Bolded text is new text when inlined into an existing sentence.
+
+### Constraints and conformance
+
+Modify 5.2.1.3 "Diagnostics", paragraph 1:
+
+> A conforming implementation shall produce at least one diagnostic message (identified in an
+> implementation-defined manner) if a preprocessing translation unit or translation unit contains
+> a violation of any syntax rule or constraint, even if the behavior is also explicitly specified
+> as undefined or implementation-defined **, unless the rule or constraint is introduced by an**
+> **optionally-supported attribute that the implementation does not support.** Diagnostic messages
+> are not required to be produced in other circumstances.
+
+This allows _implementations_ to remain conforming without actively enforcing the constraints
+introduced by `bind_var` and `bind_type`.
+
+(**NOTE** this is not intended to imply that _user code_ stops violating the Constraints simply by
+moving it to a tool that doesn't check for them.)
 
 ### New attributes
 
-Modify 6.7.13 "Attributes":
+Modify 6.7.12 "Attributes":
 
-Modify 6.7.13.2 to add the four new standard attribute names:
+Modify 6.7.12.2 to add the four new standard attribute names:
 
 > The identifier in a standard attribute shall be one of:  
 >   **`bind_type`**  
@@ -610,31 +617,29 @@ Modify 6.7.13.2 to add the four new standard attribute names:
 >   `nodiscard`  
 >   `noreturn`  
 >   `_Noreturn`  
->   **`qual_var`**  
->   **`qual_with`**  
 >   `unsequenced`  
 >   `reproducible`  
 
-(ED: not in alphabetical order?)
+(EDITORIAL: not in alphabetical order?)
 
-Note that 6.7.13.2 paragraph 3 and footnote 173 **remain true** for the new attributes without
+Note that 6.7.12.2 paragraph 3 and footnote 145 **remain true** for the new attributes without
 changes.
 
-Add two new sections after 6.7.13.8:
+Add a new section after 6.7.12.8:
 
-> **6.7.13.9 The `bind_var` and `bind_type` attributes**
+> **6.7.12.9 The `bind_var` and `bind_type` attributes**
 >
 > **Constraints**
 >
-> The `bind_var` attribute shall be applied to the referenced type of a pointer in the return
-> or parameter types of a function declaration or function pointer.
+> The `bind_var` attribute shall be applied to the referenced type of a pointer in the parameter
+> types of a function declarator.
 >
 > `bind_var` shall have an argument clause, which shall have the form  
 >    `(` _identifier_ `)`
 >
 > The `bind_type` attribute shall be applied to the referenced type of a pointer in the return or
-> parameter types of a function declaration or function pointer, or to the referenced type of a
-> pointer type specified within the scope of a function that uses `bind_var` in its signature.
+> parameter types of a function declarator, or to the referenced type of a pointer type specified
+> within the definition of a function that uses `bind_var` in its signature.
 >
 > `bind_type` shall have an argument clause, which shall have the form  
 >    `(` _type-name_ `)`  
@@ -644,21 +649,9 @@ Add two new sections after 6.7.13.8:
 > function signature.
 >
 > The `bind_var` and `bind_type` attributes shall not be applied to any type other than
-> possibly-qualified `void`. <sup>footnote)</sup>
+> a qualified or unqualified version of `void`. <sup>footnote)</sup>
 >
 > <small>footnote) they can therefore apply to aliases for `void` created by `typedef`.</small>
->
-> **Semantics**
->
-> The `bind_var` and `bind_type` attributes indicate that a pointer declared as a
-> possibly-qualified pointer to `void` is intended to be used with statically-checked types.
->
-> A pointer that specifies the `bind_var` attribute is a _binding pointer_. A _binding pointer_
-> with an identifier _A_ as its attribute argument is _binding to A_.
->
-> A pointer that specifies the `bind_type` attribute is a _constrained pointer_. A _constrained_
-> _pointer_ with an identifier _A_ as its attribute argument is _constrained to A_. A
-> _constrained pointer_ with a type name _T_ as its attribute argument is _constrained to T_.
 >
 > Within the scope of its declaration, a _binding pointer_ shall only be converted to a pointer
 > binding to the same identifier, or to a pointer constrained to the same identifier, except by
@@ -668,41 +661,71 @@ Add two new sections after 6.7.13.8:
 > binding to the same identifier, or to a pointer constrained to the same identifier or type name,
 > or to a pointer to (possibly-qualified) `void`, except by means of an explicit cast.
 >
-> For a function call expression, if a parameter of the called function, or the return type, is or
-> derives from a _binding pointer_; the corresponding type ignoring qualification in the type of
-> the argument, or the type that the return type is converted or assigned to, determines the
-> _actual type_. If the _actual type_ is a binding pointer or constrained pointer in the calling
-> scope, the _actual type_ is the identifier or type name it is binding or constrained to;
-> otherwise, the _actual type_ is the referenced type; or `void` if the corresponding type in the
-> calling context is not a pointer.
->
 > For each binding pointer in the type of the called function that binds to the same identifier,
-> the _actual type_ shall be the same <sup>footnote)</sup>.
->
-> <small>footnote) two types that are compatible might not be the same type.</small>
+> the determined _actual types_ shall all be compatible.
 >
 > For each constrained pointer in the type of the called function that is constrained to an
-> identifier, the _actual type_ shall be the same as the _actual type_ of all binding pointers
+> identifier, the actual type shall be compatible with the actual type of all binding pointers
 > in the type of the called function that bind to that identifier.
 >
 > For each constrained pointer in the type of the called function that is constrained to a type
-> name, the _actual type_ shall be compatible with the constrained type, or `void`.
+> name, the actual type shall be compatible with the constrained type, or `void`.
 >
-> The `__has_c_attribute` conditional inclusion expression (6.10.2) shall return the value ######L
-> when given `bind_var` or `bind_type` as the _pp-tokens_ operand.
+> **Semantics**
+>
+> The `bind_var` and `bind_type` attributes indicate that a pointer declared as a
+> possibly-qualified pointer to `void` is intended to be used with statically-checked types.
+>
+> A pointer that specifies the `bind_var` attribute is a _binding pointer_. A _binding pointer_
+> with an identifier _A_ as its attribute argument is _binding to A_. The identifier _A_ is
+> introduced into a virtual scope beginning from the first token of the nearest containing function
+> declarator and terminating at the end of that declarator's associated definition or declaration. <sup>footnote)</sup>
+> Multiple uses of `bind_var` with the same identifier in the same declarator refer to the same
+> binding.
+>
+> <small>footnote) this means a `bind_var` can introduce an identifier to be used by a `bind_type`
+> that appears in an earlier parameter or in the return type, and also in the function body.</small>
+>
+> A pointer that specifies the `bind_type` attribute is a _constrained pointer_. A _constrained_
+> _pointer_ with an identifier _A_, that is introduced into the virtual scope by `bind_var`,
+> is _constrained to A_. A _constrained pointer_ with a type name _T_ as its attribute argument is
+> _constrained to T_.
 >
 > If an identifier has been bound by `bind_var` in the current scope, and is also visible in the
 > current scope as a typedef name, the `bind_type` attribute interprets it as the identifier
 > bound by `bind_var`.
 >
+> For a function call expression, if a parameter of the called function is or derives from a
+> _binding pointer_, then the corresponding type ignoring qualification in the type
+> of the argument, or the type that the return type is converted or assigned to, determines the
+> _actual type_<sup>footnote)</sup>. If the _actual type_ is a binding pointer or constrained pointer
+> in the calling scope, the _actual type_ is the identifier or type name it is binding or constrained
+> to; otherwise, the _actual type_ is the referenced type; or `void` if the corresponding type in the
+> calling context is not a pointer.
+>
+> <small>footnote) this means that two instances of `bind_var` appearing in two different parameter
+> types, either determine the same _actual type_, or violate a constraint.
+>
 > **NOTE** there is no restriction against two binding pointers with distinct identifiers
-> binding to or from the same type outside the function, but internally the function
+> binding to or from the compatible types outside the function, but internally the function
 > treats them as unrelated.
+>
+> The constraints imposed by the binding pointers and constrained pointers within a type also
+> apply to uses of that type when specified by a typedef name or by the result of `typeof`. Any
+> uses of a composite type formed from two such types are subject to the union of both sets of
+> constraints. Such constraints do not affect whether two types are compatible.
+>
+> Any constraints that apply to the type of an expression used to initialize an object with inferred
+> type also apply to the type of the declared object.
+>
+> The `__has_c_attribute` conditional inclusion expression (6.10.2) shall return the value ######L
+> when given `bind_var` or `bind_type` as the _pp-tokens_ operand, if the implementation supports
+> the attribute.
 >
 > **Recommended Practice**
 >
-> The `bind_var` attribute should be used in the parameters or return type of a polymorphic
-> function to indicate that two separate generic pointers in its signature are intended to work
+> The `bind_var` attribute should be used in the parameters of a polymorphic function to indicate
+> that two separate generic pointers in its signature are intended to work
 > on the same concrete type, in any given invocation.
 >
 > This attribute allows usage of the polymorphic function to be type-checked against the concrete
@@ -710,7 +733,11 @@ Add two new sections after 6.7.13.8:
 > callback operators passed to it.
 >
 > An implementation is encouraged to emit a diagnostic if the _identifier_ introduced by `bind_var`
-> has also been declared in any name space in the current scope when the attribute is encountered.
+> has also been declared in any name space in the current scope when the attribute is encountered,
+> or is used to declare an ordinary identifier within the range of the virtual scope of the
+> binding. An implementation is encouraged to emit a diagnostic if the same identifier is reused
+> in a virtual scope nested within a surrounding virtual scope (i.e. within the parameters of a
+> parameter).
 >
 > An implementation is encouraged to emit a diagnostic if two declarations of a function do not
 > make consistent use of the `bind_var` and `bind_type` attributes.
@@ -721,9 +748,10 @@ Add two new sections after 6.7.13.8:
 > intended to operate on values with a concrete type.
 >
 > The `bind_type` attribute used with an identifier should be used to indicate when the concrete
-> type of the pointed-to object is expected to be the same as the concrete type pointed to by a
+> type of the pointed-to object is expected to be compatible with the concrete type pointed to by a
 > binding pointer. This can for instance communicate that a return type is the same as a parameter
-> type, but that it doesn't contribute to "deduction" and be discarded or cast to some other type.
+> type; or that an output parameter points to the same type as an input parameter but that it
+> doesn't contribute to "deduction".
 >
 > **EXAMPLE 1**  This polymorphic function returns a reference to an element within the first
 > buffer. It cannot correctly return a reference to an element within the second buffer:
@@ -731,8 +759,8 @@ Add two new sections after 6.7.13.8:
 >     int i1[10];
 >     float f1[10];
 >     
->     void [[bind_var (A)]] * first (void [[bind_var (A)]] * p1
->                                  , void [[bind_var (B)]] * p2) {
+>     void [[bind_type (A)]] * first (void [[bind_var (A)]] * p1
+>                                   , void [[bind_var (B)]] * p2) {
 >         return p1; // correct
 >         // return p2; // constraint violation
 >     }
@@ -748,11 +776,15 @@ Add two new sections after 6.7.13.8:
 >     void my_qsort (void [[bind_var (T)]] * base
 >                  , size_t nmemb
 >                  , size_t size
->                  , int (*compar)(void const [[bind_var (T)]] *
->                                , void const [[bind_var (T)]] *));)
+>                  , int (*compar)(void const [[bind_type (T)]] *
+>                                , void const [[bind_type (T)]] *));)
 >     
 >     my_qsort (f1, 10, sizeof (float), float_compare); // OK
 >     my_qsort (i1, 10, sizeof (int), float_compare); // constraint violation, A and A do not match
+>
+> The declaration of `compar` must use `bind_type`, not `bind_var`, because it needs to be consistent
+> with the _actual type_ deduced for `base`; but it doesn't make sense for `compar` itself to be used
+> to deduce the element type.
 >
 > **EXAMPLE 3**  This callback is intended to be passed to `qsort` to sort an array of `float`
 > values. Its operating parameter types are float pointers, but the signature of `qsort` requires
@@ -792,131 +824,118 @@ Add two new sections after 6.7.13.8:
 >                                                // doesn't contribute to deduction so
 >                                                // the (nop) conversion to void* is OK
 >                                                // even though the actual type is int*
-
-> **6.7.13.10 The `qual_var` and `qual_with` attributes**
 >
-> **Constraints**
+> **EXAMPLE 5**  Calls to a polymorphic function from within the body of another polymorphic
+> function consider the binding identifiers the caller introduced, binding to those identifiers
+> as the _actual types_ when they are available (rather than using `void` as the _actual type_):
 >
-> The `qual_var`  attribute shall be applied to the referenced type of a pointer in the parameter
-> types of a function declaration or function pointer.
->
-> The `qual_with` attribute shall be applied to the referenced type of a pointer in the return or
-> parameter types of a function declaration or function pointer.
->
-> The `qual_var` and `qual_with` attributes shall have an argument clause, which shall have the
-> form  
->    `(` _identifier_ `)`
->
-> The `qual_with` attribute shall only appear in the declaration of a function that also contains
-> a `qual_var` attribute with the same argument clause.
->
-> **Semantics**
->
-> The `qual_with` attribute applied to a pointed-to type indicates that it is intended to be
-> treated as if it had the same qualification as the type that is converted to the parameter
-> type with the `qual_var` attribute with a matching identifier, within the arguments for a given
-> function call expression.
->
-> If the return type of the function contains the `qual_with` attribute, its return value shall
-> not be used in a way that would discard any qualification existing before implicit conversion,
-> from the type at the corresponding position in the type of the argument value assigned to a
-> parameter containing the `qual_var` attribute with a matching identifier.
->
-> If two `qual_var` attributes appear in the function's parameter types, the qualification
-> associated with the identifier is the combined qualification of the types at the corresponding
-> positions in both argument types, before implicit conversion.
->
-> The `__has_c_attribute` conditional inclusion expression (6.10.2) shall return the value ######L
-> when given `qual_var` or `qual_with` as the _pp-tokens_ operand.
->
-> **Recommended practice**
->
-> The `qual_var` and `qual_type` arguments should be used to indicate that the result of a
-> function call has the same qualification as the input(s) before implicit conversion. This is
-> useful for functions that intended to return a pointer to an unqualified element if given an
-> unqualified array, and to a qualified element if given a qualified array.
->
-> An implementation is encouraged to emit a diagnostic if the _identifier_ introduced by `qual_var`
-> has also been declared in any name space in the current scope when the attribute is encountered.
->
-> **EXAMPLE 1**  The canonical example is the search functions from the Standard Library, which
-> may be used to search both `const` and non-`const` arrays:
->
->     // declared in string.h
+>     void callee (void const [[bind_var(T)]] *, void const [[bind_var(T)]] *);
 >     
->     // if the input pointer is to const, the result is to const
->     void [[qual_with (Q)]] * memchr  (void const [[qual_var (Q)]] * s,  int c, size_t n);
->     char [[qual_with (Q)]] * strchr  (char const [[qual_var (Q)]] * s,  int c);
+>     void caller (void const [[bind_var(A)]] * x
+>                , void const [[bind_var(A)]] * y
+>                , void const [[bind_var(B)]] * z
+>                , void const [[bind_var(B)]] * w) {
 >     
->     char const a1[100] = ...
->     char       a2[100] = ...
+>       callee (x, y);  // OK - T binds to A, T binds to A, consistent
+>       callee (z, w);  // OK - T binds to B, T binds to B, consistent
 >     
->     char const * pcc;
->     char       * pcm;
->     pcc = strchr (a1, '6');  // valid: a1 is pointer to const, result goes to pointer to const
->     pcm = strchr (a2, '6');  // valid: a2 is unqualified, result goes to unqualified
->     pcc = strchr (a2, '6');  // valid: a2 is unqualified, result goes to pointer to const
->     pcm = strchr (a1, '6');  // diagnostic: a1 is pointer to const, result goes to unqualified
+>       callee (x, z);  // error - T binds to A, then T binds to B, wrong
+>       callee (w, y);  // error - T binds to B, then T binds to A, wrong
+>     
+>     }
 >
-> **EXAMPLE 2**  Using `qual_var` on a pointer to an unqualified type doesn't make sense:
+> This maintains the property that `callee` is only called with arguments that point to compatible
+> types by using the guarantees established by `caller`.
 >
->     char [[qual_with (Q)]] * get_elem (char [[qual_var (Q)]] *, size_t at);
->     
->     char const a1[100] = ...
->     char       a2[100] = ...
->     
->     char const * p1 = get_elem (a1, 6);  // error: can't pass a1 to this parameter!
->     char       * p2 = get_elem (a2, 10); // valid, but the attributes don't add anything
+> **EXAMPLE 6**  The composite type of two polymorphic function types combines the effect of both
+> of their bindings and constraints. Given:
 >
-> **EXAMPLE 3**  When two parameters use the same identifier, the qualification associated with
-> the identifier by `qual_with` is combined from both parameters:
->
->     void [[qual_with (Q)]] * one_of (void const volatile [[qual_var (Q)]] * l
->                                    , void const volatile [[qual_var (Q)]] * r);
->     void const          * pcv;
->     void volatile       * pvv;
->     void const volatile * pcvv;
+>     // first declaration: says x and w are compatible, y and z are compatible
+>     void f1 (void const [[bind_var (A)]] * x
+>            , void const [[bind_var (B)]] * y
+>            , void const [[bind_var (B)]] * z
+>            , void const [[bind_var (A)]] * w);
 >     
->     pcv  = one_of (pcv, pcv); // valid, only const qualified
->     pcv  = one_of (pcv, pvv); // diagnostic, lost volatile qualification
->     pvv  = one_of (pcv, pvv); // diagnostic, lost const qualification
->     pcvv = one_of (pcv, pvv); // valid
+>     // second declaration: says x and y are compatible, z and w unknown
+>     void f1 (void const [[bind_var (A)]] * x
+>            , void const [[bind_var (A)]] * y
+>            , void const                  * z
+>            , void const                  * w);
+> 
+> ...the resulting composite type is as though it had been written:
+>
+>     void f1 (void const [[bind_var (A1), bind_var (A2)]] * x
+>            , void const [[bind_var (B1), bind_var (A2)]] * y
+>            , void const [[bind_var (B1)]]                * z
+>            , void const [[bind_var (A1)]]                * w);
+>
+> ...implying that all four parameters are to compatible types. However, the reuse of the lexeme
+> introduces two separate bindings with distinct virtual scopes, so given:
+>
+>     // first declaration: says x and w are compatible, y and z are compatible
+>     void f2 (void const [[bind_var (A)]] * x
+>            , void const [[bind_var (B)]] * y
+>            , void const [[bind_var (B)]] * z
+>            , void const [[bind_var (A)]] * w);
+>     
+>     // second declaration: says x and w are compatible, y and z are compatible
+>     void f2 (void const [[bind_var (B)]] * x
+>            , void const [[bind_var (A)]] * y
+>            , void const [[bind_var (A)]] * z
+>            , void const [[bind_var (B)]] * w);
+> 
+> ...the resulting composite type has no overlapping binding effects, as though it had been written:
+>
+>     void f2 (void const [[bind_var (AB1)]] * x
+>            , void const [[bind_var (BA1)]] * y
+>            , void const [[bind_var (BA1)]] * z
+>            , void const [[bind_var (AB1)]] * w);
+>
+> For both of these cases, the recommended practice encourages a diagnostic.
+>
+> **EXAMPLE 7**  When an object is declared with inferred type using a value whose type is or is
+> derived from a _constrained pointer_, the type of the declared object is similarly-constrained:
+>
+>     void const [[bind_type (T)]] * get (void const [[bind_var (T)]] *);
+>     
+>     auto p1 = get (float_ptr);  // p1 is constrained as if it was declared
+>                                 // void const [[bind_type (float)]] * p1 = ...
+>     
+>     auto p2 = get (int_ptr);    // p2 is constrained as if it was declared
+>                                 // void const [[bind_type (int)]] * p2 = ...
 
 ### Permissive function casts
 
-Modify 6.3.2.3, paragraph 8:
+OPTIONALLY (this change is subject to its own question and poll):
+
+Modify 6.3.3.3 "Pointers", paragraph 11:
 
 > A pointer to a function of one type may be converted to a pointer to a function of another type
 > and back again; the result shall compare equal to the original pointer. **If the return type or**
 > **any parameter type of the converted type is a pointer to possibly-qualified void, and the **
 > **corresponding return type or parameter type of the type before conversion is a pointer to an**
 > **identically-qualified object type, and the expression being converted is an identifier declared**
-> **as having function type <sup>footnote)</sup>, using the converted pointer to call the underlying**
-> **function has the same effect as a call through a pointer of the original type. Otherwise, **
-> if a converted pointer is used to call a function whose type is not compatible with the referenced
-> type, the behavior is undefined.
+> **as having function type <sup>footnote1)</sup>, using the converted pointer to call the underlying**
+> **function has the same effect as a call through a pointer of the original type<sup>footnote2)</sup>.
+> Otherwise, ** if a converted pointer is used to call a function whose type is not compatible with
+> the referenced type, the behavior is undefined.
 >
-> <small>footnote) as opposed to an identifier declared as having pointer to function type.</small>
+> <small>footnote1) as opposed to an identifier declared as having pointer to function type.</small>
+>
+> <small>footnote2) however, these pointers might have different address representations.</small>
 
 ### Library changes
 
-Modify 7.24.5.1 "The `bsearch` generic function", changing the signature in the synopsis:
+Modify 7.25.6.2 "The `bsearch` generic function", changing the signature in the synopsis:
 
 >     #include <stdlib.h>
->     void [[qual_with (Q), bind_type (T)]] * bsearch (void const * key
->         , void const [[qual_var (Q), bind_var (T)]] * base
+>     QVoid [[bind_type (T)]] * bsearch (void const * key
+>         , QVoid [[bind_var (T)]] * base
 >         , size_t nmemb
 >         , size_t size
 >         , int (*compar)(void const [[bind_type (T)]] *, void const [[bind_type (T)]] *));
 
-Replace "the `bsearch` generic function" with "the `bsearch` function" in paragraph 2 and
-paragraph 4, and the clause title.
-
-Leave paragraph 5 as-is for clarity.
-
-Remove paragraph 6 "The external declaration ... is visible" and footnote 355.
-
-Modify 7.24.5.2 "The `qsort` function", changing the signature in the synopsis:
+Modify 7.25.6.3 "The `qsort` function", changing the signature in the synopsis:
 
 >     #include <stdlib.h>
 >     void qsort (void [[bind_var (T)]] * base
@@ -924,107 +943,28 @@ Modify 7.24.5.2 "The `qsort` function", changing the signature in the synopsis:
 >         , size_t size
 >         , int (*compar)(void const [[bind_type (T)]] *, void const [[bind_type (T)]] *));
 
-Remove 7.26.5 "Search functions", paragraph 2 "The external declarations ...", paragraph 3,
-and footnote 365.
-
-Modify 7.26.5.2 "The `memchr`generic function", changing the signature in the synopsis:
+Modify 7.28.5.2 "The `memchr`generic function", changing the signature in the synopsis:
 
 >     #include <string.h>
->     void [[qual_with (Q)]] * memchr  (void const [[qual_var (Q)]] * s,  int c, size_t n);
-
-Replace "the `memchr` generic function" with "the `memchr` function" in paragraph 2 and
-paragraph 3, and the clause title.
-
-Modify 7.26.5.3 "The `strchr`generic function", changing the signature in the synopsis:
-
->     #include <string.h>
->     char [[qual_with (Q)]] * strchr  (char const [[qual_var (Q)]] * s,  int c);
-
-Replace "the `strchr` generic function" with "the `strchr` function" in paragraph 2 and
-paragraph 3, and the clause title.
-
-Modify 7.26.5.5 "The `strpbrk`generic function", changing the signature in the synopsis:
-
->     #include <string.h>
->     char [[qual_with (Q)]] * strpbrk (char const [[qual_var (Q)]] * s1, const char * s2);
-
-Replace "the `strpbrk` generic function" with "the `strpbrk` function" in paragraph 2 and
-paragraph 3, and the clause title.
-
-Modify 7.26.5.6 "The `strrchr`generic function", changing the signature in the synopsis:
-
->     #include <string.h>
->     char [[qual_with (Q)]] * strrchr (char const [[qual_var (Q)]] * s,  int c);
-
-Replace "the `strrchr` generic function" with "the `strrchr` function" in paragraph 2 and
-paragraph 3, and the clause title.
-
-Modify 7.26.5.8 "The `strstr`generic function", changing the signature in the synopsis:
-
->     #include <string.h>
->     char [[qual_with (Q)]] * strstr  (char const [[qual_var (Q)]] * s1, const char * s2);
-
-Replace "the `strstr` generic function" with "the `strstr` function" in paragraph 2 and
-paragraph 3, and the clause title.
-
-Remove 7.31.4.5 "Wide string search functions", paragraph 2 "The external declarations ...",
-paragraph 3, and footnote 413.
-
-Modify 7.31.4.5.2 "The `wcschr` generic function", changing the signature in the synopsis:
-
->     #include <wchar.h>
->     wchar_t [[qual_with (Q)]] * wcschr (wchar_t const [[qual_var (Q)]] * s,  wchar_t c);
-
-Replace "the `wcschr` generic function" with "the `wcschr` function" in paragraph 2 and
-paragraph 3, and the clause title.
-
-Modify 7.31.4.5.4 "The `wcspbrk` generic function", changing the signature in the synopsis:
-
->     #include <wchar.h>
->     wchar_t [[qual_with (Q)]] * wcspbrk (wchar_t const [[qual_var (Q)]] * s1, const wchar_t *s2);
-
-Replace "the `wcspbrk` generic function" with "the `wcspbrk` function" in paragraph 2 and
-paragraph 3, and the clause title.
-
-Modify 7.31.4.5.5 "The `wcsrchr` generic function", changing the signature in the synopsis:
-
->     #include <wchar.h>
->     wchar_t [[qual_with (Q)]] * wcsrchr (wchar_t const [[qual_var (Q)]] * s, wchar_t c);
-
-Replace "the `wcsrchr` generic function" with "the `wcsrchr` function" in paragraph 2 and
-paragraph 3, and the clause title.
-
-Modify 7.31.4.5.7 "The `wcsstr` generic function", changing the signature in the synopsis:
-
->     #include <wchar.h>
->     wchar_t [[qual_with (Q)]] * wcsstr (wchar_t const [[qual_var (Q)]] * s1, const wchar_t *s2);
-
-Replace "the `wcsstr` generic function" with "the `wcsstr` function" in paragraph 2 and
-paragraph 3, and the clause title.
-
-Modify 7.31.4.5.5 "The `wmemchr` generic function", changing the signature in the synopsis:
-
->     #include <wchar.h>
->     wchar_t [[qual_with (Q)]] * wmemchr (wchar_t const [[qual_var (Q)]] * s, wchar_t c, size_t n);
-
-Replace "the `wmemchr` generic function" with "the `wmemchr` function" in paragraph 2 and
-paragraph 3, and the clause title.
+>     QVoid [[bind_type (T)]] * memchr (QVoid [[bind_var (T)]] * s, int c, size_t n);
 
 ## Questions for WG14
 
-Would WG14 like to add something along the lines of the `bind_type`, `bind_var`, `qual_var` and
-`qual_with` attributes specified in N3316 to C2y?
+Would WG14 like to add something along the lines of the `bind_type` and `bind_var` attributes
+specified in N3586 to C2y?
 
 Would WG14 like to allow function designator expressions to be cast to more-generic function
-pointers, as specified in N3316, in C2y?
+pointers, as specified in N3586, in C2y?
 
 Would WG14 like to change the specification of the generic search and sort functions `bsearch`,
-`qsort`, `memchr`, `strchr`, `strpbrk`, `strrchr`, `strstr`, `wcschr`, `wcspbrk`, `wcsrchr`,
-`wcsstr` and `wmemchr` to include the `bind_var` and `qual_var` attributes instead of _QVoid_
-et al.?
+`qsort`, and `memchr` to include the `bind_var` and `bind_type` attributes?
 
 Would WG14 like to see something along the lines of `bind_var` and `bind_type` for structure
 or container types?
+
+## Acknowledgements
+
+Thanks to Joseph Myers, Jens Gustedt, and Martin Uecker, for detailed review comments!
 
 ## References
 
@@ -1032,11 +972,13 @@ or container types?
 [Parametric polymorphism][2]  
 [Towards type-checked polymorphism][3]  
 [Polymorphic Types][4]  
+[`auto` as a placeholder type specifer][5]  
 
-[1]: https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3220.pdf
+[1]: https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3886.pdf
 [2]: https://en.wikipedia.org/wiki/Parametric_polymorphism
 [3]: https://gist.github.com/Leushenko/ad2db35940a77d7dc8575cf9744402f9
 [4]: https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3212.pdf
+[5]: https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3579.htm
 
 ## Examples
 
@@ -1083,7 +1025,7 @@ or container types?
       map (ia, ia, 10, addOneFloat, step_float);
     }
 
-### Example 2: semiautomatic typechecking with brittle verbosity (C11)
+### Example 2: semiautomatic typechecking with brittle verbosity (C11+)
 
     // basic array mapper
     // enhanced with type checking despite accepting arrays of any type - checks
@@ -1155,7 +1097,7 @@ or container types?
       // map (ia, fa, 10, addOneInt, step_float);
       // map (ia, ia, 10, addOneInt, step_float);
       // map (fa, fa, 10, addOneInt, step_int);
-
+    
       // map (ia, ia, 10, addOneFloat, step_int);
       // map (ia, fa, 10, addOneFloat, step_int);
       // map (ia, ia, 10, addOneFloat, step_int);

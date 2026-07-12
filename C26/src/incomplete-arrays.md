@@ -1,9 +1,9 @@
     Proposal for C2y
-    WG14 3777
+    WG14 3839
 
-    Title:               Allow arrays of incomplete element type
+    Title:               Allow arrays of incomplete element type, v2
     Author, affiliation: Alex Celeste, Perforce
-    Date:                2026-...
+    Date:                2026-06-01
     Proposal category:   Undefined behaviour removal, Constraint refinement, Demon slaying
     Target audience:     Compiler implementers
 
@@ -22,19 +22,22 @@ the uses of such types in value expressions to the definition of completeness.
 # AT ITS CENTRE, A HOLLOWNESS
 
     Reply-to:     Alex Celeste (aceleste@perforce.com)
-    Document No:  Nxxxx
+    Document No:  N3839
     Revises:      N3777
-    Date:         2026-...
+    Date:         2026-06-01
 
 ## Summary of Changes
 
-### Nxxxx
+### N3839
  - wording for flexible array members to use "incomplete size" instead of general incompleteness
  - wording for array initialization to use "incomplete size" instead of general incompleteness
    and specify that the size, not the type in general, is completed at the end
+ - require an array to have a complete element type in order to be initialized
  - include `alignof` as well as `_Countof`
  - do not imply functions are objects or have a notion of completeness by themselves
  - comments to the impact section (extern, parameters)
+ - do not imply an incomplete, non-VLA, has a known constant size
+ - rebase on working draft N3886
 
 ### N3777
  - original proposal
@@ -178,10 +181,6 @@ is just that `void[1]`, `void[2]`, `void[n]` etc. are distinct types that the ty
 becomes able to distinguish, understand, and use existing dependency-tracking or dataflow mechanisms
 to enforce bounds checks against.
 
-Array-of-function types are unusable as objects and therefore harmless. There may be potential uses
-in type traits, since `_Generic` would support matching them, or as a starting point for further
-development not proposed here. Allowing them to be specified makes the language more consistent.
-
 With this change it becomes possible to _declare_ an array with incomplete element type and external
 linkage, and then complete the element type with a flexible array member. It is not actually possible
 to _define_ this array object (in any TU), so the effect is essentially similar to using dynamic
@@ -189,40 +188,75 @@ storage to allocate a buffer of such objects - currently no Constraint stops the
 index such a buffer, which may be worth addressing in a separate change. Tools should warn about
 completed types that would violate previous implied Constraints as a matter of QoI.
 
+Array-of-function types are unusable as objects and therefore appear to be harmless. There may be
+potential uses in type traits, since `_Generic` would support matching them, or as a starting point
+for further development not proposed here. Allowing them to be specified potentially makes the language
+more consistent, but for the time being we recommend retaining the explicit Constraint in order to
+avoid confusion, and because nobody is asking for them.
+
+### Tool representation
+
+There is an implementability question with regard to how tools such as debuggers might represent
+objects declared with these kinds of incomplete array types.
+
+In practice, this mostly seemed to be a problem for arrays of function type, which are nonsensical
+as objects, and consequently we propose not allowing those at this time. Implementations are
+unofficially encouraged to admit such types under a warning to see what users do with them, rather
+than emitting an early hard error.
+
+For incomplete object types the situation is simpler. An array of incomplete object type has
+representation concerns fundamentally similar to when a user requests the dereferenced value of a
+pointer to an incomplete type (including to `void`). Depending on the tool settings and the
+information available to the debugger, it may be able to resolve the "actual" original defined
+type of the array from its defining declaration; or it may not, in which case tools would have to
+produce something similar to what they do now when the original defining declaration is not visible.
+In all cases, there is no "actual object" of an incomplete array type - it will always be a pointer
+or an external reference to an object defined elsewhere (possibly in another language or in a TU
+compiled without debugging information), and either the information about that definition is
+visible to the debugger, or it is similar to the current case of a `void` pointer to something
+unknown.
+
 ## Proposed wording
 
 The proposed changes are based on the latest public draft of C2y, which is
-[N3685][0]. Bolded text is new text when inlined into an existing sentence.
+[N3886][0]. Bolded text is new text when inlined into an existing sentence.
 
 Modify 6.2.5 "Types":
 
-Modify the first sentence of paragraph 25; and delete the original second sentence with the
-_shall_-clause that required an array type to have a complete object type as its element type:
+Modify the first sentence of the first bullet point within paragraph 30; and delete the original
+second sentence with the _shall_-clause that required an array type to have a complete object type
+as its element type:
 
-> An array type describes an **indexable set of members with a particular type**, called the
-> _element type_. **Member objects of an object of array type are allocated contiguously.**
+> An array type describes an **indexable set of members with a particular object type**, called the
+> _element type_. **Member objects of an object of complete array type are allocated contiguously.**
 > Array types are characterized by their element type and by the number of elements in the
 > array. An array type is said to be ...
 
-Modify the first two sentences of paragraph 28:
+**OPTIONAL:** see below in case we want to remove the word "object" here.
+
+Modify the first two sentences of paragraph 34:
 
 > An array type of unknown size **or with an element type that is not a complete object type** is an
 > incomplete type. It **becomes complete when both the size is completed and the element type is**
 > **a complete object type**. **The size is completed** for an identifier of that type by specifying
 > the size in a later declaration (with internal or external linkage).
 
-**NOTE** is "completed" the right word for the size? Would "provided" be better?
+**NOTE** (editor) is "completed" the right word for the size? Would "provided" be better?
 
-(EDITORIALLY) Suggest that the remainder of paragraph 28, beginning "A structure or union type", is
+(EDITORIALLY) Suggest that the remainder of paragraph 34, beginning "A structure or union type", is
 split to a new paragraph.
 
-(It does not appear necessary to over-complicate the wording by specifying when the element type becomes
-complete, as part of the specification of the array type - this is handled elsewhere/recursively.)
+It does not appear necessary to over-complicate the wording by specifying when the element type becomes
+complete, as part of the specification of the array type - this is handled elsewhere/recursively.
 
-Modify 6.5.3.2 "Array subscripting", making the requirement for arrays and pointers symmetrical:
+Modify 6.5.3.2 "Array subscripting", paragraph 2, making the requirement for arrays and pointers
+symmetrical:
 
 > One of the operands shall have type "pointer to complete object _type_" or "array of **complete object**
 > _type_", the other operand, called the subscript, shall have ...
+
+**NOTE:** should subscripting an array with incomplete elements be allowed within `typeof`?
+(possible future enhancement, not for this change)
 
 Modify 6.5.4.5 "The `sizeof`, `_Countof`, and `alignof` operators", second sentence of paragraph 1,
 to partially relax the completeness requirement for the operand of `_Countof` or `alignof`:
@@ -232,7 +266,7 @@ to partially relax the completeness requirement for the operand of `_Countof` or
 > applied to a complete object type or an array **type. If applied to an array type, removing all**
 > **array derivations from the type shall yield a complete object type.**
 
-(**NOTE** see above w.r.t "completed")
+(**NOTE** see above w.r.t "completed size")
 
 Modify 6.7.3.2, "Structure and union specifiers", paragraph 3:
 
@@ -244,12 +278,23 @@ type from paragraph 1:
 
 > ... it shall have a value greater than zero. The optional type qualifiers and ...
 
+**OPTIONALLY:** reintroduce the Constraint against function element types specifically, in a new
+paragraph after paragraph 2:
+
+> **The element type shall not be a function type.**
+
+Replace the final sentence of paragraph 4 (keeping footnote 133 in the marked position):
+
+> **If the array length expression is not an integer constant expression, or the element type is itself**
+> **a variable length array type, the array type is a variable length array type <sup>133)</sup>;**
+> **otherwise, if the element type is complete, the array type has a known constant size.**
+
 Modify 6.7.11 "Initialization", first sentence of paragraph 4:
 
 > The type of the entity to be initialized shall be an array of **complete object element type and**
 > unknown size**,** or a complete object type.
 
-Modify 6.7.11, paragraph 26:
+Modify 6.7.11, paragraph 27:
 
 > If an array of unknown size is initialized, its size is determined by the largest indexed element with
 > an explicit initializer. The **size of the** array type is completed at the end of its initializer list.
@@ -259,13 +304,15 @@ Modify 6.7.11, paragraph 26:
 Does WG14 want to accept the proposed change to relax the rule against specifying an array type with
 an element type that is not a complete object type?
 
+Does WG14 want to explicitly maintain the Constraint against function types as element types?
+
 ## Acknowledgements
 
 Thanks to Jay Ghiron and Joseph Myers for detailed review comments!
 
 ## References
 
-[C2y public draft N3685][0]  
+[C2y public draft N3886][0]  
 [C11 public draft][1]  
 [C99 public draft][2]  
 [C90 public draft][3]  
@@ -273,7 +320,7 @@ Thanks to Jay Ghiron and Joseph Myers for detailed review comments!
 [N3441 `_Generic` and VLA Realignment and Improvement][5]  
 [N3428 Comments on Array Sizes][6]  
 
-[0]: https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3685.pdf
+[0]: https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3886.pdf
 [1]: https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf
 [2]: https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1256.pdf
 [3]: https://www.open-std.org/jtc1/sc22/wg14/www/docs/n423.pdf

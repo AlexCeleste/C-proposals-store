@@ -1,9 +1,9 @@
     Proposal for C2y
-    WG14 3203
+    WG14 3585
 
     Title:               Strict order of expression evaluation
     Author, affiliation: Alex Celeste, Perforce
-    Date:                2023-12-14
+    Date:                2026-06-01
     Proposal category:   Clarification/simplification
     Target audience:     All
 
@@ -21,14 +21,17 @@ expression evaluation should be sequenced by default.
 # Strict order of expression evaluation
 
     Reply-to:     Alex Celeste (aceleste@perforce.com)
-    Document No:  N3203
-    Revises:      (n/a)
-    Date:         2023-12-14
+    Document No:  N3585
+    Revises:      N3203
+    Date:         2026-06-01
 
 ## Summary of Changes
 
-### xxxx
- - ; other languages; typo/phrasing fixes
+### N3585
+ - Prior art section; other languages; typo/phrasing fixes
+ - address concern about efficient initialization (do sequence evaluation,
+   but don't require overridden values to actually be stored and overwritten)
+ - rebase on working draft N3886 (base document has changed significantly)
 
 ### N3203
  - original proposal
@@ -157,9 +160,36 @@ relevant as any compiler advanced _enough_ to use for a performance case is now
 so advanced it doesn't need this permission in order to emit the best possible
 machine instructions.
 
+### Proposal history
+
+This proposal was previously discussed in Spring 2024, where the Committee indicated:
+
+ - strong enthusiasm for "something along these lines", but concern about the exact details
+ - a preference for C++-style "semantic ordering" (i.e. specify right-to-left in assignment)
+ - appropriate caution w.r.t unknown impacts of the change
+ - desire to keep some of the existing "override" properties for initializers
+   as the proposal in N3203 would have significantly affected initialization optimization
+
 ## Impact
 
 Words are cheap. What about timings?
+
+### Update 1 (N3585)
+
+In the intervening time between discussion of N3203 and N3585 we were **unable to find**
+any legitimate cases of code that would be affected by this change. There are very few
+examples of code containing these kinds of unordered side effects and in **every case**
+the unordering appeared to be either insignificant (no dependency) or was a bug.
+
+There continue to be only three cases:
+
+ - the compiler can safely, unobservably reorder evaluation because it can determine that
+   there are no side effects that interact;
+ - the compiler cannot determine this, in which case reordering is not correct;
+ - the user can use `[[unsequenced]]` to give the compiler more information.
+
+At some point we acknowledge that lack of data is itself a form of data.
+**Nobody is relying on this.**
 
 ### Measurements
 
@@ -196,7 +226,7 @@ case that it might actually do better here.
 
 ### Semantics
 
-For all that, we do not consider the impact on performance to be instrumental.
+For all that, we do not consider the impact on performance to be paramount.
 As noted above, for C code, the considerations are different and in practice,
 code that would be affected by evaluation order is generally required by 
 Guidelines to be rewritten so that it is not, e.g. [CERT EXP30-C][3].
@@ -345,93 +375,128 @@ expressions.
 
 ## Prior Art
 
-C++
-Java, C#
-Rust
-Go, D, Swift
-Javascript, Python, etc.
+### C++
+
+From C++17, C++ defines some (but not all) compound expressions to have stricter sequencing
+than in prior versions:
+
+ - function calls explicitly sequence the function designator before the arguments
+ - subscript expressions explicitly sequence the "array" operand before the "index"
+   (this is more related to `operator[]` becoming a generalization of `operator()`)
+ - assignment sequences the right operand before the left operand, which is different
+   from most other languages - but at least it's specified
+ - shift operators, but not other arithmetic operators, sequence the left operand
+   before the right operand
+ - some language features that do not exist in C (`->*`, `new`, etc.) are also sequenced
+
+Originally Dos Reis _et al_ proposed sequencing all operators; as discussed above, this
+was significantly wound back.
+
+We consider C++'s decision here to be prior art of a _mistake we should not repeat_.
+
+### Java, C#, Rust, ...
+
+Essentially every other mainstream systems programming language, and almost all scripting
+languages, define a strict order of evaluation. There are too many to enumerate here.
+
+Java, C#, Rust, Go, D, Swift, Javascript, Python, _etc._
+
+These do appear to differ from C++ in consistently using left-to-right sequencing
+for all kinds of expression.
 
 ## Proposed wording
 
 The proposed changes are based on the latest public draft of C23, which is
-[N3096][0]. Bolded text is new text when inlined into an existing sentence.
+[N3886][0]. Bolded text is new text when inlined into an existing sentence.
 
 This change set is incomplete and we expect a revised document to be needed.
 
-**Delete** paragraph 16 from 5.1.2.3 "Program execution" (EXAMPLE 7).
+**Delete** paragraph 17 from 5.2.2.4 "Program semantics" (EXAMPLE 7).
 
-Leave 6.5 "Expressions", paragraph 2 in place, for the time being, in case some
-other way to have unsequenced effects remains uncaught. This leaves the core
+(QUESTION should there be a sentence added to paragraph 5 explicitly stating that
+sequenced effects may be reordered?
+
+> to an object). **An implementation is also not required to evaluate _sequenced_**
+> **expressions in sequence order if it can deduce that no value or side effect in**
+> **one expression is depended upon by the other.**
+)
+
+**Leave** paragraph 4 for now (even if the intent is that much of it ceases to
+apply, the definition is harmless).
+
+**Leave** 6.5.1 "Expressions", paragraph 3 in place, for the time being, in case
+some other way to have unsequenced effects remains uncaught. This leaves the core
 UB in place right now.
 
-Modify paragraph 3:
+Modify paragraph 4:
 
-> The grouping of operators and operands is indicated by the syntax.<super>96)</super>
+> The grouping of operators and operands is indicated by the syntax.<super>67)</super>
 > Except as specified later, side effects and value computations of subexpressions
 > are **sequenced from left to right <super>footnote)</super>**.
 >
 > **footnote) therefore in a binary expression such as `E1 + E2 * E3`, evaluation**
 > **of `E1`, including side effects, is sequenced before `E2`, and `E2` is similarly**
-> **sequenced before `E3`. The same is true in `(E1 + E2) * E3` because order does**
-> **not depend on precedence or binding.**
+> **sequenced before `E3`. The same is true in `(E1 + E2) * E3` because order of**
+> **evaluation does not depend on precedence or binding.**
 
 (This change provides the bulk of the intent.)
 
-**Delete** current footnote 97.
+**Delete** current footnote 68.
 
-Add a new paragraph after 6.5.1 "Primary expressions", paragraph 7:
+Add a new paragraph after 6.5.2 "Primary expressions", paragraph 7:
 
 > A primary expression does not introduce a sequence point.
 
-Modify the second sentence of 6.5.2.1 "Array subscripting", paragraph 2:
+Add a new paragraph after 6.5.3.2 "Array subscripting", paragraph 4:
 
-> The definition of the subscript operator `[]` is that `E1[E2]` is identical
-> to `(*((E1)+(E2)))` **(including in the sequence of subexpression evaluation)**.
+> In both cases, in an expression `E1[E2]`, evaluation of the expression `E1` is
+> sequenced before evaluation of the expression `E2`.
 
-Replace 6.5.2.2 "Function calls", paragraph 8:
+Replace 6.5.3.3 "Function calls", paragraph 8:
 
 > Evaluation of the function designator is sequenced before evaluation of any
 > function arguments. Evaluation of each argument is fully sequenced before the
 > evaluation of the subsequent argument in left-to-right order. All operations
 > within the execution of the body of the called function are sequenced after
 > evaluation of the designator and arguments, and sequenced before the value
-> of the called function is returned to the calling expression. <super>106)</super>
+> of the called function is returned to the calling expression. <super>78)</super>
 
-Modify footnote 106 to delete "in other words":
+Modify footnote 78 to delete "in other words":
 
-> 106) Function executions do not interleave with each other.
+> 78) Function executions do not interleave with each other.
 
-Modify 6.5.2.4 "Postfix increment and decrement operators", paragraph 2:
+Modify 6.5.3.5 "Postfix increment and decrement operators", paragraph 2, fourth sentence:
 
-> The result of the postfix `++` operator is the value of the operand. As a side
-> effect, the value of the operand object is incremented (that is, the value 1
-> of the appropriate type is added to it). See the discussions of additive
-> operators and compound assignment for information on constraints, types, and
-> conversions and the effects of operations on pointers. The value computation
-> of the result is sequenced before the side effect of updating the stored value
-> of the operand **, which is sequenced before any further evaluations or use**
-> **of the result value in the enclosing expression.**. With respect to an
-> indeterminately sequenced function call, the operation of postfix `++` is a
-> single evaluation. Postfix `++` on an object with atomic type is a
-> read-modify-write operation with `memory_order_seq_cst` memory order semantics.<super>110)</super>
+> ... on pointers. The value computation of the result is sequenced before the side
+> effect of updating the stored value of the operand **, which is sequenced before**
+> **any further evaluations or use of the result value in the enclosing expression**.
+> With respect to ...
 
-**Delete** the first sentence of 6.5.13 "Logical AND operator", paragraph 4.
+**Delete** the fifth sentence "With respect to ..." as this no longer applies
+after the changes to function call semantics.
 
-**Delete** the first sentence of 6.5.14 "Logical OR operator", paragraph 4.
+**Delete** the first sentence of 6.5.14 "Logical AND operator", paragraph 4.
+(Leave only "If the first operand ...".)
 
-**Delete** the last sentence of 6.5.16 "Assignment operators", paragraph 3.
+**Delete** the first sentence of 6.5.15 "Logical OR operator", paragraph 4.
+(Leave only "If the first operand ...".)
+
+**Delete** the last sentence of 6.5.17 "Assignment operators", paragraph 3 ("The
+evaluations of the operands ...").
 
 Add a new paragraph here after paragraph 3:
 
 > Evaluation of the right operand is sequenced before evaluation of the left
 > operand.
 
-(this is the major exception to the left-to-right ordering and matches C++)
+(this is the major exception to the left-to-right ordering, and matches C++)
 
 6.5.17 "Comma operator" does not strictly need to change, although the wording
-becomes redundant.
+becomes redundant. OPTIONALLY remove the second half of the first sentence ("there
+is a sequence point ...") as this is now implicit in the definition of expressions
+in general.
 
-Modify 6.7.10 "Initialization", paragraph 20:
+Modify 6.7.11 "Initialization", paragraph 24:
 
 > The initialization shall occur in initializer list order, each initializer
 > provided for a particular subobject overriding any previously listed
@@ -439,91 +504,90 @@ Modify 6.7.10 "Initialization", paragraph 20:
 > **value of that subobject**; all subobjects that are not initialized explicitly
 > are subject to default initialization.
 
-**Delete** footnote 184.
+> The initialization shall occur in initializer list order, each initializer
+> provided for a particular subobject overriding any previously listed
+> initializer for the same subobject**<sup>footnote)</sup>**; all subobjects that are
+> not initialized explicitly are subject to default initialization. **It is**
+> **implementation-defined whether the value of an overridden initializer is ever**
+> **stored into the object being initialized.**
+>
+> **<small>footnote)</small> every initializer is evaluated in sequence, even if it**
+> **is subsequently overridden.</small>**
 
-Modify paragraph 24:
+**Delete** existing footnote 142.
+
+Modify paragraph 28:
 
 > The evaluations of the initialization list expressions are **sequenced in the**
-> **order they are specified in the list. The effect of assigning the result value**
-> **to the _current object_ is sequenced before evaluation of the next initialization**
-> **expression in the initializer list. If two expressions initialize the same**
-> **subobject, they are both evaluated in the specified sequence and the initialized**
-> **value of the subobject is updated with the second value.**
+> **order they are specified in the list. If two expressions initialize the same**
+> **subobject, they are both evaluated in the specified sequence.**
 
-**Delete** footnote 185.
+**Delete** footnote 143.
 
-(The change in initialized value is not usually observable unless the object is
-`volatile`, but this should be left implicit and may change if "designator expressions"
-are edded later that would make previously-initialized members accesisble as values.)
+EDITORIALLY move paragraph 28 to immediately follow paragraph 24 (?).
+The new sentence at the end of 24 might be clearer if placed at the end of 28 (?).
 
 Modify 6.8 "Statements and blocks", paragraph 4, **deleting** the second half of the
 second sentence ("; within that full expression...").
 
-In 7.1.4 "Use of library functions", paragraph 1, **delete** footnote 237.
+In 7.1.4 "Use of library functions", paragraph 1, **delete** footnote 198.
 
-(is paragraph 3 ever necessary?)
+(QUESTION is paragraph 3 ever necessary? safe to leave it in)
 
 DO NOT modify 7.17.3 "Order and consistency" or 7.17.4 "Fences".
 
-**NOTE** Is 7.24.5 "Searching and sorting utilities", paragraph 5 redundant?
+DO NOT modify 7.25.6 "Searching and sorting utilities", paragraph 5 "A sequence point
+occurs ...".
 
-(Leave 7.31.2 "Formatted wide character input/output functions" paragraph 1 as-is?)
+DO NOT modify 7.33.2 "Formatted wide character input/output functions".
 
 Modify Annex C "Sequence points":
 
 > The following are the sequence points described in 5.1.2.3:
 >
 > - **Between the evaluation of the postfix and index expressions in a subscript**
->   **expression (regardless of their types). (6.5.2.1).**
+>   **expression (regardless of their types). (6.5.3.2).**
 >
 > - **Between the evaluation of the function designator in a function call, and the**
->   **evaluation of any arguments. (6.5.2.2).**
+>   **evaluation of any arguments. (6.5.3.3).**
 >
 > - **Between the evaluation of an argument to a function call, and the evaluation**
->   **of any subsequent arguments. (6.5.2.2).**
+>   **of any subsequent arguments. (6.5.3.3).**
 >
 > - Between the evaluations of the function designator and actual arguments in a
->   function call and the actual call. (6.5.2.2).
+>   function call and the actual call. (6.5.3.3).
 >
 > - **Between the evaluations of the left and right operands of all binary operators**
->   **except for the assignment operators. (6.5.5; 6.5.6; 6.5.7; 6.5.8; 6.5.9; 6.5.10;**
->   **6.5.11; 6.5.12; 6.5.13; 6.5.14; 6.5.17).**
+>   **except for the assignment operators. (6.5.6; 6.5.7; 6.5.8; 6.5.9; 6.5.10;**
+>   **6.5.11; 6.5.12; 6.5.13; 6.5.14; 6.5.15; 6.5.18).**
 >
 > - Between the evaluations of the first operand of the conditional `?:` operator
->   and whichever of the second and third operands is evaluated (6.5.15).
+>   and whichever of the second and third operands is evaluated (6.5.16).
 >
 > - **Between the evaluations of the right and left operands of all assignment**
->   **operators (the right operator is sequenced before the left). (6.5.16).**
+>   **operators (the right operand is sequenced before the left). (6.5.17).**
 >
 > - Between the evaluation of a full expression and the next full expression to be
 >   evaluated. The following are full expressions: a full declarator for a variably
->   modified type; an initializer that is not part of a compound literal (6.7.10);
->   the expression in an expression statement (6.8.3); the controlling expression
->   of a selection statement (if or switch) (6.8.4); the controlling expression
->   of a while or do statement (6.8.5); each of the (optional) expressions of a
->   `for` statement (6.8.5.3); the (optional) expression in a `return` statement (6.8.6.4).
+>   modified type; an initializer that is not part of a compound literal (6.7.11);
+>   the expression in an expression statement (6.8.4); the controlling expression
+>   of a selection statement (if or switch) (6.8.5); the controlling expression
+>   of a while or do statement (6.8.6); each of the (optional) expressions of a
+>   `for` statement (6.8.6.4); the (optional) expression in a `return` statement (6.8.7.5).
 >
 > - **(deleted: before a library function returns?)**
 >
 > - After the actions associated with each formatted input/output function
->   conversion specifier (7.23.6, 7.31.2).
+>   conversion specifier (7.24.6, 7.33.2).
 >
 > - Immediately before and immediately after each call to a comparison function,
 >   and also between any call to a comparison function and any movement of the
->   objects passed as arguments to that call (7.24.5).
+>   objects passed as arguments to that call (7.25.6).
 
 ## Questions for WG14
 
 Would WG14 like to see something along the lines of this proposal to enforce
 strict evaluation order in expressions?
-
-Would WG14 like to enforce strict evaluation order for initializers?
-
-Would WG14 like to enforce strict evaluation for all subexpressions rather than
-just those changed in C++17?
-
-Would WG14 prefer Java-like left-to-right order in all situations, or C++-like
-right to left order for assignment and other specified exception cases?
 
 ## References
 
@@ -534,7 +598,7 @@ right to left order for assignment and other specified exception cases?
 [GNU C Statement expressions][4]  
 [N3194 range expressions][5]  
 
-[0]: https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3096.pdf
+[0]: https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3886.pdf
 [1]: https://en.wikipedia.org/wiki/The_C_Programming_Language
 [2]: https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0145r3.pdf
 [3]: https://wiki.sei.cmu.edu/confluence/display/c/EXP30-C.+Do+not+depend+on+the+order+of+evaluation+for+side+effects

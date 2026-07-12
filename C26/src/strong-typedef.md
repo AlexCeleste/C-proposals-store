@@ -1,9 +1,9 @@
     Proposal for C2y
-    WG14 3320
+    WG14 3587
 
     Title:               Strong typedefs
     Author, affiliation: Alex Celeste, Perforce
-    Date:                2024-08-20
+    Date:                2026-06-01
     Proposal category:   New feature
     Target audience:     Compiler implementers, safety-critical users
 
@@ -21,11 +21,18 @@ compatibility and implicit convertibility respectively.
 # Strong typedefs
 
     Reply-to:     Alex Celeste (aceleste@perforce.com)
-    Document No:  N3320
-    Revises:      N/A
-    Date:         2024-08-20
+    Document No:  N3587
+    Revises:      N3320
+    Date:         2026-06-01
 
 ## Summary of Changes
+
+### N3587
+ - changes in response to Committee feedback
+   (keeping the attribute _for now_)
+ - accepting Committee feedback on VWB here too, to prefer Constraints over RP
+ - make the text significantly more normative
+ - rebase on working draft N3886
 
 ### N3320
  - original proposal
@@ -99,26 +106,32 @@ efficiently as if the builtin types were used (mostly for historical reasons).
 C would therefore be dramatically improved by a feature which allowed a similar
 degree of type-checking that integrates seamlessly with the expression language.
 
+### Proposal history
+
+This proposal was previously discussed in Fall 2024, where the Committee indicated:
+
+ - strong enthusiasm for "something along these lines" of the core `[[strong]]`
+   feature
+ - tentative support, pending further investigation, for `_Newtype`
+ - no real direction on whether `[[strong]]` should become a keyword
+
+In response to this feedback, we have simplified the proposal by removing `_Newtype`
+for the time being; it will return as an independent feature proposal.
+
 ### Related work
 
-In [N3321][6] we propose a related mechanism to allow the user to define new
-type qualifiers. A qualifier creates a distinct type from the unqualified type,
-so creating new qualifiers is another way to allow the user to arbitrarily
-create new types.
+In [N3321][6] we proposed a related mechanism to allow the user to define new
+type qualifiers.
 
-However, the mechanisms are quite distinct: `[[strong]]` creates types that
-describe _values_, whereas qualifiers are always a property of the _objects_
-that hold values. A qualifier on a type is always discarded during value
-conversion, whereas the goal of this proposal is to allow the definition of
-useful value types that thread through evaluation of an expression. Therefore,
-while related, the proposals serve distinct purposes.
+This proposal was strongly rejected by the Committee. As a result, the parts of these
+features that would impact type qualification have been removed.
 
 ## Proposal
 
-We propose two new features are added to the language, with semantics that
-directly complement each other: one new attribute, and one new keyword.
+We propose one new features to add to the language, currently in attribute
+form but with scope to be promoted to a keyword later.
 
-The spelling of either feature can be altered and is not critical.
+The spelling of the feature can be altered and is not critical.
 
 ### `[[strong]]`
 
@@ -201,59 +214,6 @@ of the result is not the same as the strong operand type:
 An explicit cast always overrides strong typing (but should be used
 sparingly).
 
-### `_Newtype`
-
-The `_Newtype` keyword behaves _exactly_ like the `typedef` keyword for
-syntactic purposes, acting as a storage class and creating identifiers with
-no linkage in exactly the same way.
-
-The keyword differs from `typedef` in one respect only, which is that the
-declaration creates a _new_ type with the exact same representation and
-other properties as the type used in the declaration, but which is _not_
-_compatible_ with that declaring type (i.e. it is [generative][5]):
-
-    typedef int Int;
-    _Generic (x
-        , int: 0
-        , Int: 1); // Constraint violation: int appears twice
-    
-    _Newtype float Real;
-    _Generic (x
-        , float: 0
-        , Real:  1); // OK, two distinct, incompatible types
-
-This functionality requires a keyword rather than an attribute as the
-behaviour would change if `_Newtype` was replaced by `typedef`.
-
-By default, a type created by `_Newtype` is implicitly convertible to the
-underlying type, which is always a NOP:
-
-    typedef int Int1;
-    typedef int Int2;
-    
-    Int1 i1 = 0;
-    Int2 i2 = 1;
-    int i3 = 2;
-    
-    i1 = i2;         // OK
-    i3 = i1;         // OK
-    (i2 + i3) * i1;  // OK
-
-In addition, if a tag type is aliased with `_Newtype`, the resulting new
-tag type is also implicitly convertible to the underlying type, and vice
-versa, even though normally tag types have no conversions.
-
-`_Newtype` creates a type without restrictions against implicit conversion
-because if such restrictions are required, they can be added with `[[strong]]`
-at the same time:
-
-    [[strong]] int Int1;
-    [[strong]] int Int2;
-    
-    Int1 x;
-    Int2 y;
-    x = y;  // Error
-
 ## Prior Art
 
 The `[[strong]]` attribute draws heavily on ideas found in [MISRA C][2]'s 
@@ -303,27 +263,7 @@ representations:
 
 In practice this means a tool capable of enforcing the Essential Type system
 must already have implicit support for _the same mechanism as_ `[[strong]]`,
-although it may not expose any general way of invoking it to the user.
-
-`_Newtype` has equivalents in [Standard ML and related languages][4] where
-it is possible to define a module with opaque types. `datatype` with a single
-constructor (and its equivalents in other languages) can also often be used
-in a similar practical fashion, although what it does is closer to the "box"
-idiom (and it can unfortunately be misused in the same way).
-
-C++ of course allows for any type to be boxed within a class:
-
-    StrongType <int, struct MY_TAG_1> x;
-    StrongType <int, struct MY_TAG_2> y;
-    
-    x = y;  // type error
-
-`StrongType` can be defined to allow implicit conversions only one way or neither.
-However, this requires significant language machinery not available in C.
-It is also possible to define any number of drop-in replacements for the basic
-arithmetic types thanks to operator overloading, which is also not available in C
-and is also very verbose even in C++. This also has similar _de-facto_ ABI
-limitations to the "box" idiom, for the same reasons.
+although it might not expose any general way of invoking it to the user.
 
 ## Impact
 
@@ -335,32 +275,43 @@ compiler support for the overloading/class-based solution that is idiomatic
 in C++. Any tool that can currently enforce the MISRA C Essential Type system
 can enforce the `[[strong]]` attribute, while tools that do not do this can
 also simply choose to ignore the attribute and leave enforcement to others.
-`_Newtype` can be treated as equivalent to `typedef` in most contexts, while
-_all_ compilers already have the ability to introduce new types through the
-`struct` keyword; all this feature requires is that they can be used like the
-underlying type.
 
-Implementations already generally have the ability to understand that two
-types can be distinct but identical, as (for instance) on most targets `long`
-will be identical to either `int` or to `long long` and only be distinguished
-at compile-time by the type system. `char` is similarly already defined by the
-Standard to be identical to either `signed char` or `unsigned char` and again
-cannot be distinguished from either one at runtime.
+(Implementation of the currently-withdrawn `_Newtype` feature is even simpler
+and requires no new compiler machinery at all.)
 
 ## Proposed wording
 
 The proposed changes are based on the latest public draft of C2y, which is
-[N3220][1]. Bolded text is new text when inlined into an existing sentence.
+[N3886][1]. Bolded text is new text when inlined into an existing sentence.
 
-These changes assume the spellings described above. The features can be
-renamed without substantially affecting the proposed wording changes.
+These changes assume direction to adopt as an attribute.
+Adding a keyword would integrate similar wording elsewhere in the document.
+
+### Constraints and conformance
+
+Modify 5.2.1.3 "Diagnostics", paragraph 1:
+
+> A conforming implementation shall produce at least one diagnostic message (identified in an
+> implementation-defined manner) if a preprocessing translation unit or translation unit contains
+> a violation of any syntax rule or constraint, even if the behavior is also explicitly specified
+> as undefined or implementation-defined **, unless the rule or constraint is introduced by an**
+> **optionally-supported attribute that the implementation does not support.** Diagnostic messages
+> are not required to be produced in other circumstances.
+
+This allows _implementations_ to remain conforming without actively enforcing the constraints
+introduced by `bind_var` and `bind_type`.
+
+(**NOTE** this is not intended to imply that _user code_ stops violating the Constraints simply by
+moving it to a tool that doesn't check for them.)
+
+EDITOR note this change is also present in/required by N3586.
 
 ### `[[strong]]`
 
 This change should be introduced in a single place, in the clauses describing
 attributes:
 
-Modify 6.7.13.2, paragraph 2, to add the new attribute name:
+Modify 6.7.12.2, paragraph 2, to add the new attribute name:
 
 > `deprecated`  
 > `fallthrough`  
@@ -372,31 +323,69 @@ Modify 6.7.13.2, paragraph 2, to add the new attribute name:
 > `reproducible`  
 > **`strong`**  
 
-Add a new section after 6.7.13.8:
+(EDITORIAL: not in alphabetical order?)
 
-> #### 6.7.13.9 The `strong` attribute
+Add a new section after 6.7.12.8:
+
+> #### 6.7.12.9 The `strong` attribute
 >
-> **Constraints** The `strong` attribute shall be applied to the declaration of
-> a typedef name.
+> **Constraints**
 >
-> **Semantics** The **strong** attribute marks a typedef name as _strongly-typed_.
+> The `strong` attribute shall be applied to the declaration of a typedef name.
 >
-> The `__has_c_attribute` conditional inclusion expression (6.10.2) shall return
-> the value _XXXXXXL_ when given `strong` as the pp-tokens operand if the
-> implementation supports the attribute.
+> A value with a _strongly-typed_ type shall not be converted to a value, or assigned
+> to an lvalue, that is not strongly typed at the same position within the type
+> derivation, other than by means of an explicit cast or default argument promotion.
 >
-> **Recommended Practice** Implementations are encouraged to issue a diagnostic
-> when a value originating from a declaration using a _strongly-typed_ typedef name
-> is converted to a value, or assigned to an lvalue, originating from a declaration
-> that did not use the same typedef name (possibly via a second typedef name that
-> was itself declared using the first typedef), other than by means of an explicit
-> cast; except when the conversion is part of the usual arithmetic conversions,
-> in which case the same check is moved to any use of the result of the subexpression.
+> **Semantics**
 >
-> _Strongly-typed_ typedefs behave as though a unique, virtual qualifier is added
+> The `strong` attribute marks a typedef name as _strongly-typed_.
+
+> Strongly-typed typedefs behave as though a unique, virtual qualifier is added
 > onto a type at the position within the type derivation that the typedef name was
 > used. Unlike a concrete qualifier, the virtual qualification is not removed by
-> value conversion, and may be "added" at any level of derivation.
+> value conversion, and may appear at any level of derivation.
+>
+> The resulting type is _strongly typed_ at the position where this virtual qualification
+> would appear (i.e. at the position where the typedef name was used).
+>
+> This strong typing applies to the result of value conversion and to the result of
+> any expression that uses a strongly-typed expression as a subexpression, except:
+> 
+> - strong types in the type of the left operand of a comma operator do not affect the
+>   type of its result, only the type of the right operand;
+> - strong types in the type of an integer value added to or subtracted from a pointer
+>   do not affect the type of the result, only the type of the pointer operand;
+> - strong types in the controlling operand and in unselected associations of a generic
+>   selection do not affect the type of the result, only the type of the selected
+>   association;
+> - an explicit cast discards the strong typing of the operand expression and replaces
+>   it with the strong typing associated with the type named by the cast (if any);
+> - strong types are silently discarded by the default argument promotions.
+>
+> The composite type of a strongly-typed typedef name with another type inherits
+> the strong typing associated with that typedef name. The composite type of two
+> different strongly-typed typedef names inherits the strong typing associated with
+> both names.
+>
+> Two distinct typedef names describe two distinct strong types, even if they
+> have the same name. When the same typedef name is redefined in the same scope,
+> its strong typing is the composite strong typing of the previous definition
+> and the current definition.
+>
+> A typedef name that specifies a strongly-typed typedef name in its definition inherits
+> the strong typing associated with the specified name, in addition to any strong typing
+> it might introduce itself by also using the `strong` attribute.
+>
+> Strong types do not affect compatibility.<sup>footnote)</sup>
+>
+> <small>footnote) it is therefore not an error to declare a name with external linkage
+> using a strong type in one translation unit, an unrelated strong type in another
+> translation unit, and define it using the underlying type in a third translation unit.
+>
+> The `__has_c_attribute` conditional inclusion expression (6.10.2) shall return
+> the value _XXXXXXL_ when given `strong` as the pp-tokens operand, if the
+> implementation supports the attribute.
 >
 > EXAMPLE 1  No diagnostic is encouraged against conversions _to_ strong types,
 > in order to permit initialization, but conversion between strong types should
@@ -424,8 +413,8 @@ Add a new section after 6.7.13.8:
 > EXAMPLE 2  A typedef of a strong type inherits its strong type, and also has the
 > opportunity to introduce a new layer of typing:
 >
->     [[strong]] typedef int Int1;
->                typedef int Int2;
+>     [[strong]] typedef int  Int1;
+>                typedef Int1 Int2;
 >     Int1 i1;
 >     Int2 i2;
 >     
@@ -499,104 +488,55 @@ Add a new section after 6.7.13.8:
 >
 > An implementation might choose to emit a secondary diagnostic against the cast
 > directly between unrelated strong types, but should not use the main warning.
-
-### `_Newtype`
-
-We do not introduce a new term of art and consider the identifiers introduced by
-`_Newtype` to be a second kind of _typedef-name_. In most of the document the
-term is not used as a monospaced-keyword and does not need to change.
-
-Add a new clause to 6.3.2 "Other operands", after 6.3.2.4:
-
-> **6.3.2.5 `_Newtype`s**
 >
-> Any type created by means of the `_Newtype` specifier may be converted to the
-> type used in its definition, and vice-versa. Such a conversion shall not change
-> the representation of the value.
-
-Add the new keyword to 6.4.1 Keywords:
-
-> `_Newtype`
-
-Modify 6.5.17.2 "Simple assignment", paragraph 1, adding a bullet point to
-the end of the list:
-
-> - the left operand has a type created by the `_Newtype` specifier from the type
-> of the right operand; or the right operand has a type created by the `_Newtype`
-> specifier from the type of the left operand.
-
-Modify 6.7.9 "Type definitions":
-
-Modify paragraph 3, breaking it into four new paragraphs:
-
-> In a declaration whose storage-class specifier is `typedef` **or `_Newtype`**,
-> each declarator defines an identifier to be a typedef name that denotes the
-> type specified for the identifier in the way described in 6.7.7. Any array size
-> expressions associated with variable length array declarators and typeof operators
-> are evaluated each time the declaration of the typedef name is reached in the
-> order of execution.
+> EXAMPLE 6  Composite types and the type of composite operators can both be used to
+> combine strong types, creating a value or type with the union of both original strongly
+> typed attributes:
 >
-> A `typedef` declaration does not introduce a new type, only a synonym for the type
-> so specified. That is, in the following declarations:
->
->     typedef T type_ident;
->     type_ident D;
->
-> `type_ident` is defined as a typedef name with the type specified by the declaration
-> specifiers in `T` (known as _T_), and the identifier in `D` has the type
-> "_derived-declarator-type-list T_" where the derived-declarator-type-list is
-> specified by the declarators of `D`.
->
-> **A `_Newtype` declaration has the same effect as the `typedef` specifier except**
-> **that a new type is also defined alongside each declarator in the declaration,**
-> **with an identical representation to the type specified in the declaration, but**
-> **not compatible with it. That is, in the following declarations:**
->
->     _Newtype T type_ident;
->     type_ident D1;
->     T D2;
->
-> **the identifier in D1 has a distinct and incompatible type from the identifier in**
-> **D2, but their representations are the same.**
->
-> **The type defined by a `_Newtype` declaration is convertible to the type used in
-> **its definition, and vice versa.**
->
-> A typedef name shares the same name space as other identifiers declared in ordinary
-> declarators. If the identifier is redeclared in an enclosed block, the type of the
-> inner declaration shall not be inferred (6.7.10).
-
-Add a new EXAMPLE after paragraph 8:
-
-> EXAMPLE 6  The `typedef` and `_Newtype` storage classes are the same except that
-> `typedef` creates a transparent alias for a type, while `_Newtype` creates a new
-> and incompatible type:
->
->     typedef  int Int1;
->     _Newtype int Int2;
+>     [[strong]] typedef int S1;
+>     [[strong]] typedef int S2; // unrelated to each other
 >     
->     int x;
->     _Generic (x
->         , int : 1
->         , Int1 : 2); // Constraint violation, int specified twice
+>     extern int f (int);
+>     extern S1  f (int);   // composite type of f is now S1(int)
+>     extern int f (S2);    // composite type of f is now S1(S2)
 >     
->     _Generic (x
->         , int : 1
->         , Int2 : 2); // two distinct types specified, result is 1
+>     S1 s1 = ...;
+>     S2 s2 = ...;
 >     
->     Int2 y;
->     y = x; x = y;    // conversion both ways is a no-op
+>     s1 = s1 + s2;         // Diagnose an attempt to convert a value with S1 and S2 to S1
+>     typeof (s1 + s2) s3 = s1 + s2;  // OK
+>     
+>     typedef typeof (s1 + s2) S4;    // Inherits the strong typing as previously
+>     S4 s4 = s1 + s2;                // OK
+>
+> Usual arithmetic conversions might change the underlying type, making it possible to
+> specify distinct underlying types with a common strong type, forming a "universe":
+>
+>     [[strong]] typedef long Steps;
+>                typedef typeof ((Steps){0} + 0.0) PartSteps;
+>     [[strong]] typedef typeof ((Steps){0} + 0.0) StrongPartSteps;
+>     
+>     Steps sl = ...;
+>     PartSteps sd1 = sl;        // OK - converted to double, but still strongly Steps
+>     StrongPartSteps sd2 = sl;  // OK - converted to a refinement of Steps
+>     
+>     sd2 = sd1;   // OK - normal assignment to a refined/stronger type
+>     sd1 = sd2;   // Diagnose an attempt to convert to an underlying type
+>     sl  = sd1;   // OK - converts back to long but within Steps
+>     sl  = sd2;   // Diagnose an attempt to convert to an underlying strong type
+>                  // (even though the double-to-long conversion is OK)
 
 ## Questions for WG14
 
 Would WG14 like to add something along the lines of the `[[strong]]`
 attribute into C2y?
 
-Would WG14 like to add something along the lines of the `_Newtype`
-keyword into C2y?
+Would WG14 like to make use of `[[strong]]` in the specification of
+any library features?
 
-Would WG14 like to make use of either `[[strong]]` or `_Newtype` in the
-specification of any library features?
+## Acknowledgements
+
+Thanks to Joseph Myers for detailed review comments!
 
 ## References
 
@@ -607,7 +547,7 @@ specification of any library features?
 [User-defined types in ML][5]  
 [User-defined qualifiers][6]  
 
-[1]: https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3220.pdf
+[1]: https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3886.pdf
 [2]: https://en.wikipedia.org/wiki/Mars_Climate_Orbiter
 [3]: https://misra.org.uk/product/misra-c2023/
 [4]: https://smlfamily.github.io/sml97-defn.pdf#page=114
