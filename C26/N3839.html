@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>@font-face {
+  font-family: octicons-link;
+  src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM+8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB/aFGpk3jaTY6xa8JAGMW/O62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v+k/0an2i+itHDw3v2+9+DBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3/I7AtxEJLtzzuZfI+VVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy/Lt7Kc+0vWY/gAgIIEqAN9we0pwKXreiMasxvabDQMM4riO+qxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw+ymhce7vwM9jSqO8JyVd5RH9gyTt2+J/yUmYlIR0s04n6+7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv/ocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi+W2+MjCzMIDApSwvXzC97Z4Ig8N/BxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh/8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT+AEjAwuDFpBmA9KMDEwMCh9i/v8H8sH0/4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9/lqYwOGZxeUelN2U2R6+cArgtCJpauW7UQBqnFkUsjAY/kOU1cP+DAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl+vvmM/byA48e6tWrKArm4ZJlCbdsrxksL1AwWn/yBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO//sdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd/89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF+9JOS0nbaaYDCQfwCJ7Au3AHj+LO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm+EBXuAbHmIMSRMs+4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL+hD7C1xoaHeLJSEao0FEW14ckxC+TU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13/+lm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl+9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O/AdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB///AA8AAQAAAAAAAAAAAAAAAAABAAAAAA==) format('woff');
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  [data-theme="auto"],
+  [data-theme="dark"] {
+    /*dark*/
+    --color-prettylights-syntax-comment: #8b949e;
+    --color-prettylights-syntax-constant: #79c0ff;
+    --color-prettylights-syntax-entity: #d2a8ff;
+    --color-prettylights-syntax-storage-modifier-import: #c9d1d9;
+    --color-prettylights-syntax-entity-tag: #7ee787;
+    --color-prettylights-syntax-keyword: #ff7b72;
+    --color-prettylights-syntax-string: #a5d6ff;
+    --color-prettylights-syntax-variable: #ffa657;
+    --color-prettylights-syntax-brackethighlighter-unmatched: #f85149;
+    --color-prettylights-syntax-invalid-illegal-text: #f0f6fc;
+    --color-prettylights-syntax-invalid-illegal-bg: #8e1519;
+    --color-prettylights-syntax-carriage-return-text: #f0f6fc;
+    --color-prettylights-syntax-carriage-return-bg: #b62324;
+    --color-prettylights-syntax-string-regexp: #7ee787;
+    --color-prettylights-syntax-markup-list: #f2cc60;
+    --color-prettylights-syntax-markup-heading: #1f6feb;
+    --color-prettylights-syntax-markup-italic: #c9d1d9;
+    --color-prettylights-syntax-markup-bold: #c9d1d9;
+    --color-prettylights-syntax-markup-deleted-text: #ffdcd7;
+    --color-prettylights-syntax-markup-deleted-bg: #67060c;
+    --color-prettylights-syntax-markup-inserted-text: #aff5b4;
+    --color-prettylights-syntax-markup-inserted-bg: #033a16;
+    --color-prettylights-syntax-markup-changed-text: #ffdfb6;
+    --color-prettylights-syntax-markup-changed-bg: #5a1e02;
+    --color-prettylights-syntax-markup-ignored-text: #c9d1d9;
+    --color-prettylights-syntax-markup-ignored-bg: #1158c7;
+    --color-prettylights-syntax-meta-diff-range: #d2a8ff;
+    --color-prettylights-syntax-brackethighlighter-angle: #8b949e;
+    --color-prettylights-syntax-sublimelinter-gutter-mark: #484f58;
+    --color-prettylights-syntax-constant-other-reference-link: #a5d6ff;
+    --color-fg-default: #e6edf3;
+    --color-fg-muted: #848d97;
+    --color-fg-subtle: #6e7681;
+    --color-canvas-default: #0d1117;
+    --color-canvas-subtle: #161b22;
+    --color-border-default: #30363d;
+    --color-border-muted: #21262d;
+    --color-neutral-muted: rgba(110,118,129,0.4);
+    --color-accent-fg: #2f81f7;
+    --color-accent-emphasis: #1f6feb;
+    --color-success-fg: #3fb950;
+    --color-success-emphasis: #238636;
+    --color-attention-fg: #d29922;
+    --color-attention-emphasis: #9e6a03;
+    --color-attention-subtle: rgba(187,128,9,0.15);
+    --color-danger-fg: #f85149;
+    --color-danger-emphasis: #da3633;
+    --color-done-fg: #a371f7;
+    --color-done-emphasis: #8957e5;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  [data-theme="auto"],
+  [data-theme="light"] {
+    /*light*/
+    --color-prettylights-syntax-comment: #57606a;
+    --color-prettylights-syntax-constant: #0550ae;
+    --color-prettylights-syntax-entity: #6639ba;
+    --color-prettylights-syntax-storage-modifier-import: #24292f;
+    --color-prettylights-syntax-entity-tag: #116329;
+    --color-prettylights-syntax-keyword: #cf222e;
+    --color-prettylights-syntax-string: #0a3069;
+    --color-prettylights-syntax-variable: #953800;
+    --color-prettylights-syntax-brackethighlighter-unmatched: #82071e;
+    --color-prettylights-syntax-invalid-illegal-text: #f6f8fa;
+    --color-prettylights-syntax-invalid-illegal-bg: #82071e;
+    --color-prettylights-syntax-carriage-return-text: #f6f8fa;
+    --color-prettylights-syntax-carriage-return-bg: #cf222e;
+    --color-prettylights-syntax-string-regexp: #116329;
+    --color-prettylights-syntax-markup-list: #3b2300;
+    --color-prettylights-syntax-markup-heading: #0550ae;
+    --color-prettylights-syntax-markup-italic: #24292f;
+    --color-prettylights-syntax-markup-bold: #24292f;
+    --color-prettylights-syntax-markup-deleted-text: #82071e;
+    --color-prettylights-syntax-markup-deleted-bg: #ffebe9;
+    --color-prettylights-syntax-markup-inserted-text: #116329;
+    --color-prettylights-syntax-markup-inserted-bg: #dafbe1;
+    --color-prettylights-syntax-markup-changed-text: #953800;
+    --color-prettylights-syntax-markup-changed-bg: #ffd8b5;
+    --color-prettylights-syntax-markup-ignored-text: #eaeef2;
+    --color-prettylights-syntax-markup-ignored-bg: #0550ae;
+    --color-prettylights-syntax-meta-diff-range: #8250df;
+    --color-prettylights-syntax-brackethighlighter-angle: #57606a;
+    --color-prettylights-syntax-sublimelinter-gutter-mark: #8c959f;
+    --color-prettylights-syntax-constant-other-reference-link: #0a3069;
+    --color-fg-default: #1F2328;
+    --color-fg-muted: #656d76;
+    --color-fg-subtle: #6e7781;
+    --color-canvas-default: #ffffff;
+    --color-canvas-subtle: #f6f8fa;
+    --color-border-default: #d0d7de;
+    --color-border-muted: hsla(210,18%,87%,1);
+    --color-neutral-muted: rgba(175,184,193,0.2);
+    --color-accent-fg: #0969da;
+    --color-accent-emphasis: #0969da;
+    --color-success-fg: #1a7f37;
+    --color-success-emphasis: #1f883d;
+    --color-attention-fg: #9a6700;
+    --color-attention-emphasis: #9a6700;
+    --color-attention-subtle: #fff8c5;
+    --color-danger-fg: #d1242f;
+    --color-danger-emphasis: #cf222e;
+    --color-done-fg: #8250df;
+    --color-done-emphasis: #8250df;
+  }
+}
+
+body {
+    max-width: 980px;
+    margin: 16px auto;
+    background-color: var(--color-canvas-default);
+}
+
+.markdown-body .octicon-link:before {
+  color: var(--color-fg-default);
+  font: normal normal normal 16px/1 octicons-link;
+  display: inline-block;
+  text-decoration: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  content: '\f05c';
+  vertical-align: middle;
+}
+
+.markdown-body {
+  padding: 45px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  margin: 0;
+  color: var(--color-fg-default);
+  background-color: var(--color-canvas-default);
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body .markdown-heading:hover .anchor {
+  opacity: 1;
+}
+
+.markdown-body .markdown-heading:hover .anchor .octicon-link::before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-color: currentColor;
+  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' aria-hidden='true'><path fill-rule='evenodd' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'></path></svg>");
+  mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' aria-hidden='true'><path fill-rule='evenodd' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'></path></svg>");
+}
+
+.markdown-body details,
+.markdown-body figcaption,
+.markdown-body figure {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body [hidden] {
+  display: none !important;
+}
+
+.markdown-body a {
+  background-color: transparent;
+  color: var(--color-accent-fg);
+  text-decoration: none;
+}
+
+.markdown-body abbr[title] {
+  border-bottom: none;
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: var(--base-text-weight-semibold, 600);
+}
+
+.markdown-body dfn {
+  font-style: italic;
+}
+
+.markdown-body h1 {
+  margin: .67em 0;
+  font-weight: var(--base-text-weight-semibold, 600);
+  padding-bottom: .3em;
+  font-size: 2em;
+  border-bottom: 1px solid var(--color-border-muted);
+}
+
+.markdown-body mark {
+  background-color: var(--color-attention-subtle);
+  color: var(--color-fg-default);
+}
+
+.markdown-body small {
+  font-size: 90%;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body sup {
+  top: -0.5em;
+}
+
+.markdown-body img {
+  border-style: none;
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: var(--color-canvas-default);
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace;
+  font-size: 1em;
+}
+
+.markdown-body figure {
+  margin: 1em 40px;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  overflow: hidden;
+  background: transparent;
+  border-bottom: 1px solid var(--color-border-muted);
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: var(--color-border-default);
+  border: 0;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+  overflow: visible;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body [type=button],
+.markdown-body [type=reset],
+.markdown-body [type=submit] {
+  -webkit-appearance: button;
+  appearance: button;
+}
+
+.markdown-body [type=checkbox],
+.markdown-body [type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body [type=number]::-webkit-inner-spin-button,
+.markdown-body [type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.markdown-body [type=search]::-webkit-search-cancel-button,
+.markdown-body [type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body ::-webkit-input-placeholder {
+  color: inherit;
+  opacity: .54;
+}
+
+.markdown-body ::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body ::placeholder {
+  color: var(--color-fg-subtle);
+  opacity: 1;
+}
+
+.markdown-body hr::before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  overflow: auto;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body details:not([open])>*:not(summary) {
+  display: none !important;
+}
+
+.markdown-body a:focus,
+.markdown-body [role=button]:focus,
+.markdown-body input[type=radio]:focus,
+.markdown-body input[type=checkbox]:focus {
+  outline: 2px solid var(--color-accent-fg);
+  outline-offset: -2px;
+  box-shadow: none;
+}
+
+.markdown-body a:focus:not(:focus-visible),
+.markdown-body [role=button]:focus:not(:focus-visible),
+.markdown-body input[type=radio]:focus:not(:focus-visible),
+.markdown-body input[type=checkbox]:focus:not(:focus-visible) {
+  outline: solid 1px transparent;
+}
+
+.markdown-body a:focus-visible,
+.markdown-body [role=button]:focus-visible,
+.markdown-body input[type=radio]:focus-visible,
+.markdown-body input[type=checkbox]:focus-visible {
+  outline: 2px solid var(--color-accent-fg);
+  outline-offset: -2px;
+  box-shadow: none;
+}
+
+.markdown-body a:not([class]):focus,
+.markdown-body a:not([class]):focus-visible,
+.markdown-body input[type=radio]:focus,
+.markdown-body input[type=radio]:focus-visible,
+.markdown-body input[type=checkbox]:focus,
+.markdown-body input[type=checkbox]:focus-visible {
+  outline-offset: 0;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  line-height: 10px;
+  color: var(--color-fg-default);
+  vertical-align: middle;
+  background-color: var(--color-canvas-subtle);
+  border: solid 1px var(--color-neutral-muted);
+  border-bottom-color: var(--color-neutral-muted);
+  border-radius: 6px;
+  box-shadow: inset 0 -1px 0 var(--color-neutral-muted);
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: var(--base-text-weight-semibold, 600);
+  line-height: 1.25;
+}
+
+.markdown-body h2 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  padding-bottom: .3em;
+  font-size: 1.5em;
+  border-bottom: 1px solid var(--color-border-muted);
+}
+
+.markdown-body h3 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  font-size: 1.25em;
+}
+
+.markdown-body h4 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  font-size: 1em;
+}
+
+.markdown-body h5 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  font-size: .875em;
+}
+
+.markdown-body h6 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  font-size: .85em;
+  color: var(--color-fg-muted);
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+  padding: 0 1em;
+  color: var(--color-fg-muted);
+  border-left: .25em solid var(--color-border-default);
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body tt,
+.markdown-body code,
+.markdown-body samp {
+  font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  font-size: 12px;
+  word-wrap: normal;
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-body input::-webkit-outer-spin-button,
+.markdown-body input::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body .mr-2 {
+  margin-right: var(--base-size-8, 8px) !important;
+}
+
+.markdown-body::before {
+  display: table;
+  content: "";
+}
+
+.markdown-body::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body .absent {
+  color: var(--color-danger-fg);
+}
+
+.markdown-body .markdown-heading {
+  position:  relative;
+}
+
+.markdown-body .anchor {
+  position: absolute;
+  top: 30%;
+  left: -28px;
+  display: flex;
+  width: 28px;
+  height: 28px;
+  margin: auto;
+  line-height: 1;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-50%);
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body details {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: var(--color-fg-default);
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1 tt,
+.markdown-body h1 code,
+.markdown-body h2 tt,
+.markdown-body h2 code,
+.markdown-body h3 tt,
+.markdown-body h3 code,
+.markdown-body h4 tt,
+.markdown-body h4 code,
+.markdown-body h5 tt,
+.markdown-body h5 code,
+.markdown-body h6 tt,
+.markdown-body h6 code {
+  padding: 0 .2em;
+  font-size: inherit;
+}
+
+.markdown-body summary h1,
+.markdown-body summary h2,
+.markdown-body summary h3,
+.markdown-body summary h4,
+.markdown-body summary h5,
+.markdown-body summary h6 {
+  display: inline-block;
+}
+
+.markdown-body summary h1 .anchor,
+.markdown-body summary h2 .anchor,
+.markdown-body summary h3 .anchor,
+.markdown-body summary h4 .anchor,
+.markdown-body summary h5 .anchor,
+.markdown-body summary h6 .anchor {
+  margin-left: -40px;
+}
+
+.markdown-body summary h1,
+.markdown-body summary h2 {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.markdown-body ul.no-list,
+.markdown-body ol.no-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.markdown-body ol[type="a s"] {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body ol[type="A s"] {
+  list-style-type: upper-alpha;
+}
+
+.markdown-body ol[type="i s"] {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol[type="I s"] {
+  list-style-type: upper-roman;
+}
+
+.markdown-body ol[type="1"] {
+  list-style-type: decimal;
+}
+
+.markdown-body div>ol:not([type]) {
+  list-style-type: decimal;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: var(--base-text-weight-semibold, 600);
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body table th {
+  font-weight: var(--base-text-weight-semibold, 600);
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid var(--color-border-default);
+}
+
+.markdown-body table td>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table tr {
+  background-color: var(--color-canvas-default);
+  border-top: 1px solid var(--color-border-muted);
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: var(--color-canvas-subtle);
+}
+
+.markdown-body table img {
+  background-color: transparent;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body .emoji {
+  max-width: none;
+  vertical-align: text-top;
+  background-color: transparent;
+}
+
+.markdown-body span.frame {
+  display: block;
+  overflow: hidden;
+}
+
+.markdown-body span.frame>span {
+  display: block;
+  float: left;
+  width: auto;
+  padding: 7px;
+  margin: 13px 0 0;
+  overflow: hidden;
+  border: 1px solid var(--color-border-default);
+}
+
+.markdown-body span.frame span img {
+  display: block;
+  float: left;
+}
+
+.markdown-body span.frame span span {
+  display: block;
+  padding: 5px 0 0;
+  clear: both;
+  color: var(--color-fg-default);
+}
+
+.markdown-body span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+
+.markdown-body span.align-center>span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.markdown-body span.align-center span img {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.markdown-body span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+
+.markdown-body span.align-right>span {
+  display: block;
+  margin: 13px 0 0;
+  overflow: hidden;
+  text-align: right;
+}
+
+.markdown-body span.align-right span img {
+  margin: 0;
+  text-align: right;
+}
+
+.markdown-body span.float-left {
+  display: block;
+  float: left;
+  margin-right: 13px;
+  overflow: hidden;
+}
+
+.markdown-body span.float-left span {
+  margin: 13px 0 0;
+}
+
+.markdown-body span.float-right {
+  display: block;
+  float: right;
+  margin-left: 13px;
+  overflow: hidden;
+}
+
+.markdown-body span.float-right>span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: right;
+}
+
+.markdown-body code,
+.markdown-body tt {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  white-space: break-spaces;
+  background-color: var(--color-neutral-muted);
+  border-radius: 6px;
+}
+
+.markdown-body code br,
+.markdown-body tt br {
+  display: none;
+}
+
+.markdown-body del code {
+  text-decoration: inherit;
+}
+
+.markdown-body samp {
+  font-size: 85%;
+}
+
+.markdown-body pre code {
+  font-size: 100%;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  color: var(--color-fg-default);
+  background-color: var(--color-canvas-subtle);
+  border-radius: 6px;
+}
+
+.markdown-body pre code,
+.markdown-body pre tt {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body .csv-data td,
+.markdown-body .csv-data th {
+  padding: 5px;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 1;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.markdown-body .csv-data .blob-num {
+  padding: 10px 8px 9px;
+  text-align: right;
+  background: var(--color-canvas-default);
+  border: 0;
+}
+
+.markdown-body .csv-data tr {
+  border-top: 0;
+}
+
+.markdown-body .csv-data th {
+  font-weight: var(--base-text-weight-semibold, 600);
+  background: var(--color-canvas-subtle);
+  border-top: 0;
+}
+
+.markdown-body [data-footnote-ref]::before {
+  content: "[";
+}
+
+.markdown-body [data-footnote-ref]::after {
+  content: "]";
+}
+
+.markdown-body .footnotes {
+  font-size: 12px;
+  color: var(--color-fg-muted);
+  border-top: 1px solid var(--color-border-default);
+}
+
+.markdown-body .footnotes ol {
+  padding-left: 16px;
+}
+
+.markdown-body .footnotes ol ul {
+  display: inline-block;
+  padding-left: 16px;
+  margin-top: 16px;
+}
+
+.markdown-body .footnotes li {
+  position: relative;
+}
+
+.markdown-body .footnotes li:target::before {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -24px;
+  pointer-events: none;
+  content: "";
+  border: 2px solid var(--color-accent-emphasis);
+  border-radius: 6px;
+}
+
+.markdown-body .footnotes li:target {
+  color: var(--color-fg-default);
+}
+
+.markdown-body .footnotes .data-footnote-backref g-emoji {
+  font-family: monospace;
+}
+
+.markdown-body .pl-c {
+  color: var(--color-prettylights-syntax-comment);
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: var(--color-prettylights-syntax-constant);
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: var(--color-prettylights-syntax-entity);
+}
+
+.markdown-body .pl-smi,
+.markdown-body .pl-s .pl-s1 {
+  color: var(--color-prettylights-syntax-storage-modifier-import);
+}
+
+.markdown-body .pl-ent {
+  color: var(--color-prettylights-syntax-entity-tag);
+}
+
+.markdown-body .pl-k {
+  color: var(--color-prettylights-syntax-keyword);
+}
+
+.markdown-body .pl-s,
+.markdown-body .pl-pds,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sre,
+.markdown-body .pl-sr .pl-sra {
+  color: var(--color-prettylights-syntax-string);
+}
+
+.markdown-body .pl-v,
+.markdown-body .pl-smw {
+  color: var(--color-prettylights-syntax-variable);
+}
+
+.markdown-body .pl-bu {
+  color: var(--color-prettylights-syntax-brackethighlighter-unmatched);
+}
+
+.markdown-body .pl-ii {
+  color: var(--color-prettylights-syntax-invalid-illegal-text);
+  background-color: var(--color-prettylights-syntax-invalid-illegal-bg);
+}
+
+.markdown-body .pl-c2 {
+  color: var(--color-prettylights-syntax-carriage-return-text);
+  background-color: var(--color-prettylights-syntax-carriage-return-bg);
+}
+
+.markdown-body .pl-sr .pl-cce {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-string-regexp);
+}
+
+.markdown-body .pl-ml {
+  color: var(--color-prettylights-syntax-markup-list);
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-markup-heading);
+}
+
+.markdown-body .pl-mi {
+  font-style: italic;
+  color: var(--color-prettylights-syntax-markup-italic);
+}
+
+.markdown-body .pl-mb {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-markup-bold);
+}
+
+.markdown-body .pl-md {
+  color: var(--color-prettylights-syntax-markup-deleted-text);
+  background-color: var(--color-prettylights-syntax-markup-deleted-bg);
+}
+
+.markdown-body .pl-mi1 {
+  color: var(--color-prettylights-syntax-markup-inserted-text);
+  background-color: var(--color-prettylights-syntax-markup-inserted-bg);
+}
+
+.markdown-body .pl-mc {
+  color: var(--color-prettylights-syntax-markup-changed-text);
+  background-color: var(--color-prettylights-syntax-markup-changed-bg);
+}
+
+.markdown-body .pl-mi2 {
+  color: var(--color-prettylights-syntax-markup-ignored-text);
+  background-color: var(--color-prettylights-syntax-markup-ignored-bg);
+}
+
+.markdown-body .pl-mdr {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-meta-diff-range);
+}
+
+.markdown-body .pl-ba {
+  color: var(--color-prettylights-syntax-brackethighlighter-angle);
+}
+
+.markdown-body .pl-sg {
+  color: var(--color-prettylights-syntax-sublimelinter-gutter-mark);
+}
+
+.markdown-body .pl-corl {
+  text-decoration: underline;
+  color: var(--color-prettylights-syntax-constant-other-reference-link);
+}
+
+.markdown-body g-emoji {
+  display: inline-block;
+  min-width: 1ch;
+  font-family: "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 1em;
+  font-style: normal !important;
+  font-weight: var(--base-text-weight-normal, 400);
+  line-height: 1;
+  vertical-align: -0.075em;
+}
+
+.markdown-body g-emoji img {
+  width: 1em;
+  height: 1em;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item label {
+  font-weight: var(--base-text-weight-normal, 400);
+}
+
+.markdown-body .task-list-item.enabled label {
+  cursor: pointer;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 4px;
+}
+
+.markdown-body .task-list-item .handle {
+  display: none;
+}
+
+.markdown-body .task-list-item-checkbox {
+  margin: 0 .2em .25em -1.4em;
+  vertical-align: middle;
+}
+
+.markdown-body .contains-task-list:dir(rtl) .task-list-item-checkbox {
+  margin: 0 -1.6em .25em .2em;
+}
+
+.markdown-body .contains-task-list {
+  position: relative;
+}
+
+.markdown-body .contains-task-list:hover .task-list-item-convert-container,
+.markdown-body .contains-task-list:focus-within .task-list-item-convert-container {
+  display: block;
+  width: auto;
+  height: 24px;
+  overflow: visible;
+  clip: auto;
+}
+
+.markdown-body ::-webkit-calendar-picker-indicator {
+  filter: invert(50%);
+}
+
+.markdown-body .markdown-alert {
+  padding: var(--base-size-8, 8px) var(--base-size-16, 16px);
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid var(--color-border-default);
+}
+
+.markdown-body .markdown-alert>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body .markdown-alert>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body .markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: var(--base-text-weight-medium, 500);
+  align-items: center;
+  line-height: 1;
+}
+
+.markdown-body .markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-accent-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-accent-fg);
+}
+
+.markdown-body .markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-done-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-done-fg);
+}
+
+.markdown-body .markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-attention-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-attention-fg);
+}
+
+.markdown-body .markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-success-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-success-fg);
+}
+
+.markdown-body .markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-danger-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-danger-fg);
+}
+</style><title>incomplete-arrays</title></head><body data-theme="auto"><article class="markdown-body"><pre><code>Proposal for C2y
+WG14 3839
+
+Title:               Allow arrays of incomplete element type, v2
+Author, affiliation: Alex Celeste, Perforce
+Date:                2026-06-01
+Proposal category:   Undefined behaviour removal, Constraint refinement, Demon slaying
+Target audience:     Compiler implementers
+</code></pre>
+<div class="markdown-heading"><h2 class="heading-element">Abstract</h2><a id="user-content-abstract" class="anchor" aria-label="Permalink: Abstract" href="#abstract"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>The Constraint against specifying an array type with an element that is not a complete
+object type is overly strict.</p>
+<p>This proposal argues that removing the Constraint entirely
+and replacing it with words defining that such arrays are themselves incomplete types,
+results in the same level of allowed behaviour, by deferring all of the restrictions against
+the uses of such types in value expressions to the definition of completeness.</p>
+<hr>
+<div class="markdown-heading"><h1 class="heading-element">AT ITS CENTRE, A HOLLOWNESS</h1><a id="user-content-at-its-centre-a-hollowness" class="anchor" aria-label="Permalink: AT ITS CENTRE, A HOLLOWNESS" href="#at-its-centre-a-hollowness"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<pre><code>Reply-to:     Alex Celeste (aceleste@perforce.com)
+Document No:  N3839
+Revises:      N3777
+Date:         2026-06-01
+</code></pre>
+<div class="markdown-heading"><h2 class="heading-element">Summary of Changes</h2><a id="user-content-summary-of-changes" class="anchor" aria-label="Permalink: Summary of Changes" href="#summary-of-changes"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<div class="markdown-heading"><h3 class="heading-element">N3839</h3><a id="user-content-n3839" class="anchor" aria-label="Permalink: N3839" href="#n3839"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<ul>
+<li>wording for flexible array members to use "incomplete size" instead of general incompleteness</li>
+<li>wording for array initialization to use "incomplete size" instead of general incompleteness
+and specify that the size, not the type in general, is completed at the end</li>
+<li>require an array to have a complete element type in order to be initialized</li>
+<li>include <code>alignof</code> as well as <code>_Countof</code>
+</li>
+<li>do not imply functions are objects or have a notion of completeness by themselves</li>
+<li>comments to the impact section (extern, parameters)</li>
+<li>do not imply an incomplete, non-VLA, has a known constant size</li>
+<li>rebase on working draft N3886</li>
+</ul>
+<div class="markdown-heading"><h3 class="heading-element">N3777</h3><a id="user-content-n3777" class="anchor" aria-label="Permalink: N3777" href="#n3777"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<ul>
+<li>original proposal</li>
+</ul>
+<div class="markdown-heading"><h2 class="heading-element">Introduction</h2><a id="user-content-introduction" class="anchor" aria-label="Permalink: Introduction" href="#introduction"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<div class="markdown-heading"><h3 class="heading-element">The language restriction</h3><a id="user-content-the-language-restriction" class="anchor" aria-label="Permalink: The language restriction" href="#the-language-restriction"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Section 6.7.7.3 "Array declarators" specifies among the Constraints that when declaring an
+identifier with array type</p>
+<blockquote>
+<p>The element type shall not be an incomplete or function type.</p>
+</blockquote>
+<p>In practice this is a Constraint against specifying any array type with an incomplete or
+function element type, because this section defines the syntax used to specify array types
+generally. The Constraint was added in C99 but is not described by the C99 Rationale.</p>
+<p>The Constraint against the declaration is supported by a UB against the type itself, in
+Section 6.2.5 "Types" specifies in the definition of array types that</p>
+<blockquote>
+<p>The element type shall be complete whenever the array type is specified.</p>
+</blockquote>
+<p>This creates an opening for undefined behaviour when an array type is "somehow" specified
+that uses <code>void</code> or another incomplete type as its element type. The undefined behaviour
+itself is a potential language extension point, almost impossible to access without also
+encountering the Constraint, and is not generally a runtime risk, making it a demon-class UB
+(it is not a ghost-class UB if the compiler provides builtin means of specifying an array
+type without using declarator syntax).</p>
+<p>The undefined behaviour is not listed explicitly in Annex J and was made explicit for
+C11. Previously, the same UB existed in C99 and C90 but was fully implicit (with a footnote
+that simply claimed "an array of incomplete type cannot be constructed", because incomplete
+types were not considered object types prior to C11).</p>
+<div class="markdown-heading"><h3 class="heading-element">The problem in practice</h3><a id="user-content-the-problem-in-practice" class="anchor" aria-label="Permalink: The problem in practice" href="#the-problem-in-practice"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>The Constraint has the effect of preventing code with apparently-reasonable meanings from
+being accepted, and can appear arbitrarily-contradictory. For instance, it is possible to
+declare an identifier with external linkage if the identifier has an incomplete, <em>non</em>-array
+object type; but not if the identifier has array type. The meaning of the declarations is
+not substantially different since the non-array identifier can already only be used in very
+limited ways (i.e. it has an address, but unknown footprint):</p>
+<pre><code>struct Incomplete;
+
+extern struct Incomplete EI;        // OK even though we can't do much with it
+
+extern struct Incomplete EA[];      // Not OK, for some reason
+extern struct Incomplete EA10[10];  // Not OK
+
+extern void EV[];                   // Not OK even though we can do exactly as much
+
+void f0 (void * p) {
+  p = &amp;EI;                          // all of these operations are effectively the same
+  p = &amp;EA;
+  p = &amp;EA10;
+  p = &amp;EV;
+}
+</code></pre>
+<p>Declaring an external identifier with "array of <code>void</code>" type is a common extension that
+indicates it is intended to provide some amount of byte storage. If the compiler allows
+the code to translate, taking its address produces a value of <code>void *</code> that can potentially
+be used like allocated memory.</p>
+<p>Related to this, there is a <em>completely</em> artificial Constraint imposed against function
+parameters that do not even have array type, if they are specified using array <em>syntax</em>,
+because the order in which the compiler interprets the syntax requires it to first encounter
+and reject the array <em>declarator</em> that would, if it was accepted, otherwise be adjusted to
+a non-array type:</p>
+<pre><code>void f1 (struct Incomplete * pi) { }   // OK
+void f2 (struct Incomplete pi[1]) { }  // Not OK despite same apparent meaning
+
+void f3 (void * pv) { }   // OK
+void f4 (void pv[1]) { }  // Not OK despite same apparent meaning
+</code></pre>
+<p>The language also contains a pre-emptive Constraint against specifying arrays of incomplete
+array types or of function types. There are potential use cases for such types under discussion
+(especially for arrays, potentially in the extension of <code>_Generic</code> by <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3348.pdf" rel="nofollow">N3348</a>, <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3441.htm" rel="nofollow">N3441</a>, <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3428.pdf" rel="nofollow">N3428</a>)
+and in any case, also no mechanism in the language to "misuse" such types, so the Constraint
+is probably overly-aggressive here too.</p>
+<div class="markdown-heading"><h2 class="heading-element">Proposed improvement</h2><a id="user-content-proposed-improvement" class="anchor" aria-label="Permalink: Proposed improvement" href="#proposed-improvement"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>The Constraint should be removed from 6.7.7.3 "Array declarators" and the corresponding
+<em>shall</em>-clause should be removed from 6.2.5 "Types".</p>
+<p>To replace this, it should be made explicit a few lines down in 6.2.5 that an array derivation
+of an incomplete or non-object element type is itself an incomplete type.</p>
+<p>This should be the only normative wording required - everything else should be covered by the
+general restrictions that already exist on the use of any expression with an incomplete type.
+For instance, <code>sizeof</code> already requires its operand to have or be a complete object type.</p>
+<p>The only missing space should be the definition of the subscript operator, and only because the
+operator is no longer (as of C2Y) defined in terms of an intervening decay-to-pointer - in all
+prior versions of C this would also have been an implicit change.</p>
+<p>6.7.1 in combination with 6.7.7.4 contains an apparent exception to allow function parameters
+to only be complete <em>after</em> adjustment, and therefore does not appear to require modification by
+itself; however, this exception does not appear to be usable by parameters declared with
+syntactic array type because it directly conflicts with the Constraint against using the declarator
+syntax for them. This may warrant non-normative clarification.</p>
+<p>The <code>_Countof</code> operator does not realistically need to consider the element type and could
+also be refined to only require the element count to be provided, enabling additional uses.
+This might have useful applications if the extension to combine <code>_Countof</code> with array-parameter
+syntax is adopted later.</p>
+<p>We do <strong>not</strong> propose adding any definition or meaning to "<code>void</code> pointer arithmetic" as part of
+this change.</p>
+<div class="markdown-heading"><h2 class="heading-element">Impact</h2><a id="user-content-impact" class="anchor" aria-label="Permalink: Impact" href="#impact"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>All existing conforming code remains valid.</p>
+<p>Existing code making use of language extensions to allow linking to externally-defined objects
+of unusual types (usually, <code>void[]</code>) become conforming.</p>
+<p>Type derivations that make sense in the type system, such as "array of <code>void</code>" or "array of array
+of unknown size", become possible to specify. The type system is not concerned with their use as
+objects and does not depend on completeness in order to distinguish and match types, so this
+simplifies the restrictions and allows more generality in what derivations can be applied; this
+may allow more library-based traits to be defined using <code>_Generic</code> and similar interesting things.
+All existing tools should be able to implement this at the type level simply by removing/silencing
+the existing error raised by the Constraint violation.</p>
+<p>Types such as <code>int[2][]</code> become available for use by additional refinements to <code>_Generic</code> in the
+realm of array matching. This may be an attractive replacement for the currently-adopted star
+syntax, or complement it with a new meaning. During adoption of <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3348.pdf" rel="nofollow">N3348</a> it was observed that
+the existing Constraint was an unfortunate obstacle.</p>
+<p>Array-of-<code>void</code> types become available for use as the type of function parameters. This can be used
+in conjunction with <code>static</code> to make clear that a <code>void *</code> argument should not be null or that the
+size of the referenced storage should depend on another parameter. This might also be clearer than
+use of <code>unsigned char[]</code> for this purpose for some function signatures.</p>
+<p>The meaning of the size of a <code>void</code> array does not need to be defined in general. It can be defined
+by the specification of each individual library function that uses such syntax; the important thing
+is just that <code>void[1]</code>, <code>void[2]</code>, <code>void[n]</code> etc. are distinct types that the type system instantly
+becomes able to distinguish, understand, and use existing dependency-tracking or dataflow mechanisms
+to enforce bounds checks against.</p>
+<p>With this change it becomes possible to <em>declare</em> an array with incomplete element type and external
+linkage, and then complete the element type with a flexible array member. It is not actually possible
+to <em>define</em> this array object (in any TU), so the effect is essentially similar to using dynamic
+storage to allocate a buffer of such objects - currently no Constraint stops the user trying to
+index such a buffer, which may be worth addressing in a separate change. Tools should warn about
+completed types that would violate previous implied Constraints as a matter of QoI.</p>
+<p>Array-of-function types are unusable as objects and therefore appear to be harmless. There may be
+potential uses in type traits, since <code>_Generic</code> would support matching them, or as a starting point
+for further development not proposed here. Allowing them to be specified potentially makes the language
+more consistent, but for the time being we recommend retaining the explicit Constraint in order to
+avoid confusion, and because nobody is asking for them.</p>
+<div class="markdown-heading"><h3 class="heading-element">Tool representation</h3><a id="user-content-tool-representation" class="anchor" aria-label="Permalink: Tool representation" href="#tool-representation"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>There is an implementability question with regard to how tools such as debuggers might represent
+objects declared with these kinds of incomplete array types.</p>
+<p>In practice, this mostly seemed to be a problem for arrays of function type, which are nonsensical
+as objects, and consequently we propose not allowing those at this time. Implementations are
+unofficially encouraged to admit such types under a warning to see what users do with them, rather
+than emitting an early hard error.</p>
+<p>For incomplete object types the situation is simpler. An array of incomplete object type has
+representation concerns fundamentally similar to when a user requests the dereferenced value of a
+pointer to an incomplete type (including to <code>void</code>). Depending on the tool settings and the
+information available to the debugger, it may be able to resolve the "actual" original defined
+type of the array from its defining declaration; or it may not, in which case tools would have to
+produce something similar to what they do now when the original defining declaration is not visible.
+In all cases, there is no "actual object" of an incomplete array type - it will always be a pointer
+or an external reference to an object defined elsewhere (possibly in another language or in a TU
+compiled without debugging information), and either the information about that definition is
+visible to the debugger, or it is similar to the current case of a <code>void</code> pointer to something
+unknown.</p>
+<div class="markdown-heading"><h2 class="heading-element">Proposed wording</h2><a id="user-content-proposed-wording" class="anchor" aria-label="Permalink: Proposed wording" href="#proposed-wording"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>The proposed changes are based on the latest public draft of C2y, which is
+<a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3886.pdf" rel="nofollow">N3886</a>. Bolded text is new text when inlined into an existing sentence.</p>
+<p>Modify 6.2.5 "Types":</p>
+<p>Modify the first sentence of the first bullet point within paragraph 30; and delete the original
+second sentence with the <em>shall</em>-clause that required an array type to have a complete object type
+as its element type:</p>
+<blockquote>
+<p>An array type describes an <strong>indexable set of members with a particular object type</strong>, called the
+<em>element type</em>. <strong>Member objects of an object of complete array type are allocated contiguously.</strong>
+Array types are characterized by their element type and by the number of elements in the
+array. An array type is said to be ...</p>
+</blockquote>
+<p><strong>OPTIONAL:</strong> see below in case we want to remove the word "object" here.</p>
+<p>Modify the first two sentences of paragraph 34:</p>
+<blockquote>
+<p>An array type of unknown size <strong>or with an element type that is not a complete object type</strong> is an
+incomplete type. It <strong>becomes complete when both the size is completed and the element type is</strong>
+<strong>a complete object type</strong>. <strong>The size is completed</strong> for an identifier of that type by specifying
+the size in a later declaration (with internal or external linkage).</p>
+</blockquote>
+<p><strong>NOTE</strong> (editor) is "completed" the right word for the size? Would "provided" be better?</p>
+<p>(EDITORIALLY) Suggest that the remainder of paragraph 34, beginning "A structure or union type", is
+split to a new paragraph.</p>
+<p>It does not appear necessary to over-complicate the wording by specifying when the element type becomes
+complete, as part of the specification of the array type - this is handled elsewhere/recursively.</p>
+<p>Modify 6.5.3.2 "Array subscripting", paragraph 2, making the requirement for arrays and pointers
+symmetrical:</p>
+<blockquote>
+<p>One of the operands shall have type "pointer to complete object <em>type</em>" or "array of <strong>complete object</strong>
+<em>type</em>", the other operand, called the subscript, shall have ...</p>
+</blockquote>
+<p><strong>NOTE:</strong> should subscripting an array with incomplete elements be allowed within <code>typeof</code>?
+(possible future enhancement, not for this change)</p>
+<p>Modify 6.5.4.5 "The <code>sizeof</code>, <code>_Countof</code>, and <code>alignof</code> operators", second sentence of paragraph 1,
+to partially relax the completeness requirement for the operand of <code>_Countof</code> or <code>alignof</code>:</p>
+<blockquote>
+<p>The <code>_Countof</code> operator shall only be applied to an expression that has <strong>an array type with a</strong>
+<strong>completed size</strong>, or to the parenthesized name of such a type. The <code>alignof</code> operator shall be
+applied to a complete object type or an array <strong>type. If applied to an array type, removing all</strong>
+<strong>array derivations from the type shall yield a complete object type.</strong></p>
+</blockquote>
+<p>(<strong>NOTE</strong> see above w.r.t "completed size")</p>
+<p>Modify 6.7.3.2, "Structure and union specifiers", paragraph 3:</p>
+<blockquote>
+<p>..., except that the last member of a structure with more than one named member can have
+<strong>an array type with complete object element type but incomplete size</strong>; ...</p>
+</blockquote>
+<p>Modify 6.7.7.3 "Array declarators", deleting the sentence providing the Constraint on the element
+type from paragraph 1:</p>
+<blockquote>
+<p>... it shall have a value greater than zero. The optional type qualifiers and ...</p>
+</blockquote>
+<p><strong>OPTIONALLY:</strong> reintroduce the Constraint against function element types specifically, in a new
+paragraph after paragraph 2:</p>
+<blockquote>
+<p><strong>The element type shall not be a function type.</strong></p>
+</blockquote>
+<p>Replace the final sentence of paragraph 4 (keeping footnote 133 in the marked position):</p>
+<blockquote>
+<p><strong>If the array length expression is not an integer constant expression, or the element type is itself</strong>
+<strong>a variable length array type, the array type is a variable length array type <sup>133)</sup>;</strong>
+<strong>otherwise, if the element type is complete, the array type has a known constant size.</strong></p>
+</blockquote>
+<p>Modify 6.7.11 "Initialization", first sentence of paragraph 4:</p>
+<blockquote>
+<p>The type of the entity to be initialized shall be an array of <strong>complete object element type and</strong>
+unknown size**,** or a complete object type.</p>
+</blockquote>
+<p>Modify 6.7.11, paragraph 27:</p>
+<blockquote>
+<p>If an array of unknown size is initialized, its size is determined by the largest indexed element with
+an explicit initializer. The <strong>size of the</strong> array type is completed at the end of its initializer list.</p>
+</blockquote>
+<div class="markdown-heading"><h2 class="heading-element">Questions for WG14</h2><a id="user-content-questions-for-wg14" class="anchor" aria-label="Permalink: Questions for WG14" href="#questions-for-wg14"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Does WG14 want to accept the proposed change to relax the rule against specifying an array type with
+an element type that is not a complete object type?</p>
+<p>Does WG14 want to explicitly maintain the Constraint against function types as element types?</p>
+<div class="markdown-heading"><h2 class="heading-element">Acknowledgements</h2><a id="user-content-acknowledgements" class="anchor" aria-label="Permalink: Acknowledgements" href="#acknowledgements"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p>Thanks to Jay Ghiron and Joseph Myers for detailed review comments!</p>
+<div class="markdown-heading"><h2 class="heading-element">References</h2><a id="user-content-references" class="anchor" aria-label="Permalink: References" href="#references"><span aria-hidden="true" class="octicon octicon-link"></span></a></div>
+<p><a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3886.pdf" rel="nofollow">C2y public draft N3886</a><br>
+<a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf" rel="nofollow">C11 public draft</a><br>
+<a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1256.pdf" rel="nofollow">C99 public draft</a><br>
+<a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n423.pdf" rel="nofollow">C90 public draft</a><br>
+<a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3348.pdf" rel="nofollow">N3348 Matching of Multi-Dimensional Arrays in Generic Selection Expressions</a><br>
+<a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3441.htm" rel="nofollow">N3441 <code>_Generic</code> and VLA Realignment and Improvement</a><br>
+<a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3428.pdf" rel="nofollow">N3428 Comments on Array Sizes</a></p>
+</article></body></html>
